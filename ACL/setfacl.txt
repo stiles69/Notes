@@ -1,0 +1,21 @@
+====== setfacl ======
+
+
+Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
+
+
+setfacl
+
+
+Created Tuesday 15 May 2018
+
+
+
+setfacl - set file access control lists</b>
+
+
+
+SYNOPSIS
+<div style='padding-left: 30pt'>
+	setfacl [-bkndRLPvh] [{-m|-x} acl_spec] [{-M|-X} acl_file] file ...</b>
+	setfacl --restore=file</b>

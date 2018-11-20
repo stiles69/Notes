@@ -1,0 +1,13 @@
+====== List all installed packages that are in the repo name repository ======
+
+Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
+
+
+List all installed packages that are in the repo name repository
+
+
+Created Sunday 06 May 2018
+
+
+
+comm -12 &lt;(pacman -Qq | sort) &lt;(pacman -Slq repo_name | sort)</b>

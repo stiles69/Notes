@@ -1,0 +1,21 @@
+====== Share Antergos Public Folder ======
+
+
+
+
+
+Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
+
+
+Share Antergos Public Folder
+
+
+Created Tuesday 20 March 2018
+
+
+
+dav://antergos.local
+
+
+
+Need password.

@@ -1,0 +1,13 @@
+====== Format a Partition ======
+
+Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
+
+
+Format a Partition
+
+
+Created Saturday 17 February 2018
+
+
+
+mkfs.btrfs -L mylabel /dev/partition</b>

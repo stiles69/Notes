@@ -1,0 +1,90 @@
+====== Transform XML ======
+
+Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
+
+
+Transform XML
+
+
+Created Sunday 21 October 2018
+
+
+
+I am having one xml file (test.xml) looks like this:</b>
+
+<div class="zim-object">
+    <pre><code class="xml">&lt;hudson&gt;
+&lt;job&gt;
+&lt;name&gt;cedge&lt;/name&gt; 
+&lt;/job&gt;
+&lt;job&gt;
+&lt;name&gt;techM&lt;/name&gt; 
+&lt;/job&gt;
+&lt;job&gt;
+&lt;name&gt;infy&lt;/name&gt; 
+&lt;/job&gt;
+&lt;job&gt;
+&lt;name&gt;DevP&lt;/name&gt; 
+&lt;job&gt;
+&lt;name&gt;line&lt;/name&gt; 
+&lt;nextBuildNumber&gt;14&lt;/nextBuildNumber&gt; 
+&lt;/job&gt;
+&lt;job&gt;
+&lt;name&gt;ment&lt;/name&gt; 
+&lt;nextBuildNumber&gt;85&lt;/nextBuildNumber&gt; 
+&lt;/job&gt;
+&lt;job&gt;
+&lt;name&gt;FreeS&lt;/name&gt; 
+&lt;nextBuildNumber&gt;96&lt;/nextBuildNumber&gt; 
+&lt;/job&gt;
+&lt;job&gt;
+&lt;name&gt;test&lt;/name&gt; 
+&lt;/job&gt;
+&lt;/job&gt;
+&lt;job&gt;
+&lt;name&gt;Email&lt;/name&gt; 
+&lt;/job&gt;
+&lt;job&gt;
+&lt;name&gt;investigate&lt;/name&gt; 
+&lt;nextBuildNumber&gt;26&lt;/nextBuildNumber&gt; 
+&lt;/job&gt;
+&lt;job&gt;
+&lt;name&gt;Java&lt;/name&gt; 
+&lt;/job&gt;
+&lt;job&gt;
+&lt;name&gt;Tools&lt;/name&gt; 
+&lt;/job&gt;
+&lt;/hudson&gt;</code></pre>
+
+
+
+
+
+    xsltproc x.xslt test.xml</b>
+
+
+
+    Try this XSLT
+
+    <div class="zim-object">
+        <pre><code class="xml">&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+
+ &lt;xsl:output method="text" /&gt;
+
+ &lt;xsl:template match="/"&gt;
+ &lt;xsl:apply-templates select="//job[nextBuildNumber]" /&gt;
+ &lt;/xsl:template&gt;
+
+ &lt;xsl:template match="job"&gt;
+&lt;xsl:text&gt;"&lt;/xsl:text&gt;
+&lt;xsl:value-of select="name"/&gt;
+&lt;xsl:text&gt;" = "&lt;/xsl:text&gt;
+&lt;xsl:value-of select="nextBuildNumber"/&gt;
+&lt;xsl:text&gt;"&amp;#10;&lt;/xsl:text&gt;
+ &lt;/xsl:template&gt;
+ &lt;/xsl:stylesheet&gt;</code></pre>
+
+
+
+
+        xsltproc x.xslt test.xml</b>

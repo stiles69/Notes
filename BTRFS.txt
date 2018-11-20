@@ -1,0 +1,32 @@
+====== BTRFS ======
+
+Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
+
+
+BTRFS
+
+
+Created Wednesday 16 May 2018
+
+
+
++Creating a FSTAB Entry
++Creating a subvolume
++Creating
+lightweight copies
++Deleting a subvolume
+<a href="./BTRFS/disable_copy-on-write_for_single_filesdirectories.html" title="+disable copy-on-write for single filesdirectories"
+    class="page">+disable copy-on-write for single filesdirectories
+    <a href="./BTRFS/disable_copy-on-write_on_existing_files_in_a_directory.html" title="+disable copy-on-write on existing files in a directory"
+        class="page">+disable copy-on-write on existing files in a directory
+        +Displaying usedfree
+        space
+        +Format a Partition
+        +Listing subvolumes
+        +Mount a snapshot
+        +Mount a Subvolume
+        +Sendreceive Subvolume
+        +To
+        apply compression to existing files
+        <a href="./BTRFS/Unmount_a_snapshot_or_subvolume_or_volume.html" title="+Unmount a snapshot or subvolume or volume"
+            class="page">+Unmount a snapshot or subvolume or volume

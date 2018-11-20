@@ -1,0 +1,51 @@
+====== Permantly Delete Files ======
+
+Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
+
+
+Permantly Delete Files
+
+
+Created Sunday 13 May 2018
+
+
+
+shred [OPTION]... FILE...
+
+
+
+DESCRIPTION
+<div style='padding-left: 30pt'>
+  Overwrite the specified FILE(s) repeatedly, in order to make it harder
+  for even very expensive hardware probing to recover the data.
+
+
+
+
+  <div style='padding-left: 30pt'>
+    If FILE is -, shred standard output.
+
+
+
+
+    <div style='padding-left: 30pt'>
+      Mandatory arguments to long options are mandatory for short options
+      too.
+
+
+
+
+      <div style='padding-left: 30pt'>
+        -f, --force
+
+        <div style='padding-left: 90pt'>
+          change permissions to allow writing if necessary
+
+
+
+
+          <div style='padding-left: 30pt'>
+            -n, --iterations=N
+
+            <div style='padding-left: 90pt'>
+              overwrite N times instead of the default (3)

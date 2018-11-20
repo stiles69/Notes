@@ -1,0 +1,13 @@
+====== Unmount a snapshot or subvolume or volume ======
+
+Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
+
+
+Unmount a snapshot or subvolume or volume
+
+
+Created Saturday 17 February 2018
+
+
+
+umount /path/to/mointpoint

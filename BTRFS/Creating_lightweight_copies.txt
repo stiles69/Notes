@@ -1,0 +1,13 @@
+====== Creating lightweight copies ======
+
+Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
+
+
+Creating lightweight copies
+
+
+Created Saturday 17 February 2018
+
+
+
+$ cp --reflink source dest</b>

@@ -1,0 +1,24 @@
+====== Mount a Subvolume ======
+
+Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
+
+
+Mount a Subvolume
+
+
+Created Saturday 17 February 2018
+
+
+
+Get the volid
+btrfs subvolume list -p path</b>
+Will return something like:
+<u>ID 257</u> gen 17 top level 5 path <u>Media</u>
+<u>ID 258</u> gen 17 top level 5 path <u>Data</u>
+
+
+
+Now mount the subvolume.
+mount -t btrfs -o subvolid=</b><u>257</u> /dev/sda? /mnt/</b><u>Media</u>
+mount -t btrfs -o subvolid=</b><u>258</u> /dev/sda? /mnt/</b><u>Data</u>
+-t = type (in this case btrfs, not needed on all systems)

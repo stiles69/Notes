@@ -1,0 +1,78 @@
+====== Symbolic Links ======
+
+Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
+
+
+Symbolic Links
+
+
+Created Tuesday 15 May 2018
+
+
+
+Usage: ln [OPTION]... [-T] TARGET LINK_NAME</b> (1st form)
+or: ln [OPTION]... TARGET</b> (2nd form)
+or: ln [OPTION]... TARGET... DIRECTORY</b> (3rd form)
+or: ln [OPTION]... -t DIRECTORY TARGET...</b> (4th form)
+
+
+
+<u>Soft Link File</u>
+$ ln -s {source-filename} {symbolic-filename}</b>
+
+
+
+<u>Hard Link File</u>
+
+<div class="zim-object">
+  <pre><code class="sh">$ ln src_original.txt dst_link.txt
+
+$ ls -i dst_link.txt
+253564 dst_link.txt
+
+$ ls -i src_original.txt</code></pre>
+
+
+
+
+  To create a <u>Hard Link File</u>, do the following (ln command with no option):
+  $ ln /full/path/of/original/file /full/path/of/hard/link/file</b>
+
+
+
+  Create a <u>Symbolic Link Directory</u>
+
+  <div class="zim-object">
+    <pre><code class="sh">$ mkdir /home/chris/obj
+
+$ cd tmp
+
+$ ln -s /home/chris/obj objects
+
+$ ls -l objects</code></pre>
+
+
+
+
+    Options
+    Mandatory arguments to long options are mandatory for short options too.
+    --backup[=CONTROL] make a backup of each existing destination file</b>
+     -b like --backup but does not accept an argument</b>
+     -d, -F, --directory allow the superuser to attempt to hard link</b>
+     directories (note: will probably fail due to</b>
+     system restrictions, even for the superuser)</b>
+     -f, --force remove existing destination files</b>
+     -i, --interactive prompt whether to remove destinations</b>
+     -L, --logical dereference TARGETs that are symbolic links</b>
+     -n, --no-dereference treat LINK_NAME as a normal file if</b>
+     it is a symbolic link to a directory</b>
+     -P, --physical make hard links directly to symbolic links</b>
+     -r, --relative create symbolic links relative to link location</b>
+     -s, --symbolic make symbolic links instead of hard links</b>
+     -S, --suffix=SUFFIX override the usual backup suffix</b>
+     -t, --target-directory=DIRECTORY specify the DIRECTORY in which to create</b>
+     the links</b>
+     -T, --no-target-directory treat LINK_NAME as a normal file always</b>
+     -v, --verbose print name of each linked file</b>
+     --help display this help and exit</b>
+     --version output version information and exit</b>

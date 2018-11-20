@@ -1,0 +1,13 @@
+====== disable copy-on-write for single filesdirectories ======
+
+Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
+
+
+disable copy-on-write for single filesdirectories
+
+
+Created Saturday 17 February 2018
+
+
+
+$ chattr +C /dir/file</b>
