@@ -47,7 +47,7 @@ rsync(1)                                        rsync(1)
 
 
 NAME
-<div style='padding-left: 30pt'>
+
    rsync  -  a  fast,  versatile, remote (and local)
    file-copying tool
 
@@ -55,41 +55,41 @@ NAME
 
 
 SYNOPSIS
-<div style='padding-left: 30pt'>
+
    Local:  rsync [OPTION...] SRC... [DEST]
 
 
 
 
-<div style='padding-left: 30pt'>
+
    Access via remote shell:
 
-<div style='padding-left: 60pt'>
+
  Pull: rsync [OPTION...] [USER@]HOST:SRC... [DEST]
  Push: rsync [OPTION...] SRC... [USER@]HOST:DEST
 
 
 
 
-<div style='padding-left: 30pt'>
+
    Access via rsync daemon:
 
-<div style='padding-left: 60pt'>
+
  Pull: rsync [OPTION...] [USER@]HOST::SRC... [DEST]
 
-<div style='padding-left: 90pt'>
+
    rsync [OPTION...] rsync://[USER@]HOST[:PORT]/SRC... [DEST]
 
-<div style='padding-left: 60pt'>
+
  Push: rsync [OPTION...] SRC... [USER@]HOST::DEST
 
-<div style='padding-left: 90pt'>
+
    rsync [OPTION...] SRC... rsync://[USER@]HOST[:PORT]/DEST
 
 
 
 
-<div style='padding-left: 30pt'>
+
    Usages with just one SRC arg and no DEST arg will
    list the source files instead of copying.
 
@@ -97,7 +97,7 @@ SYNOPSIS
 
 
 DESCRIPTION
-<div style='padding-left: 30pt'>
+
    Rsync  is  a  fast  and extraordinarily versatile
    file copying tool.  It can copy locally,  to/from
    another  host over any remote shell, or to/from a
@@ -115,7 +115,7 @@ DESCRIPTION
 
 
 
-<div style='padding-left: 30pt'>
+
    Rsync  finds  files  that  need to be transferred
    using a "quick check" algorithm (by default) that
    looks  for  files that have changed in size or in
@@ -128,74 +128,74 @@ DESCRIPTION
 
 
 
-<div style='padding-left: 30pt'>
+
    Some of the additional features of rsync are:
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      support for copying links,  devices,  own‐
 
-<div style='padding-left: 90pt'>
+
   ers, groups, and permissions
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      exclude  and  exclude-from options similar
 
-<div style='padding-left: 90pt'>
+
   to GNU tar
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      a CVS exclude mode for ignoring  the  same
 
-<div style='padding-left: 90pt'>
+
   files that CVS would ignore
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      can  use  any  transparent  remote  shell,
 
-<div style='padding-left: 90pt'>
+
   including ssh or rsh
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      does not require super-user privileges
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      pipelining of file transfers  to  minimize
 
-<div style='padding-left: 90pt'>
+
   latency costs
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      support  for  anonymous  or  authenticated
 
-<div style='padding-left: 90pt'>
+
   rsync daemons (ideal for mirroring)
 
 
 
 
 GENERAL
-<div style='padding-left: 30pt'>
+
    Rsync copies files either to  or  from  a  remote
    host, or locally on the current host (it does not
    support copying files between two remote hosts).
@@ -203,7 +203,7 @@ GENERAL
 
 
 
-<div style='padding-left: 30pt'>
+
    There are two different ways for rsync to contact
    a  remote system: using a remote-shell program as
    the transport (such as ssh or rsh) or  contacting
@@ -222,7 +222,7 @@ GENERAL
 
 
 
-<div style='padding-left: 30pt'>
+
    As  a  special  case,  if  a single source arg is
    specified without a destination,  the  files  are
    listed in an output format similar to "ls -l".
@@ -230,7 +230,7 @@ GENERAL
 
 
 
-<div style='padding-left: 30pt'>
+
    As expected, if neither the source or destination
    path specify  a  remote  host,  the  copy  occurs
    locally (see also the --list-only option).
@@ -238,7 +238,7 @@ GENERAL
 
 
 
-<div style='padding-left: 30pt'>
+
    Rsync  refers  to  the local side as the "client"
    and the remote side as the "server".  Don’t  con‐
    fuse "server" with an rsync daemon -- a daemon is
@@ -249,14 +249,14 @@ GENERAL
 
 
 SETUP
-<div style='padding-left: 30pt'>
+
    See  the  file  README  for installation instruc‐
    tions.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    Once installed, you can use rsync to any  machine
    that  you  can access via a remote shell (as well
    as some that you can access using the rsync  dae‐
@@ -268,7 +268,7 @@ SETUP
 
 
 
-<div style='padding-left: 30pt'>
+
    You can also specify any remote shell  you  like,
    either by using the -e command line option, or by
    setting the RSYNC_RSH environment variable.
@@ -276,7 +276,7 @@ SETUP
 
 
 
-<div style='padding-left: 30pt'>
+
    Note that rsync must be  installed  on  both  the
    source and destination machines.
 
@@ -284,7 +284,7 @@ SETUP
 
 
 USAGE
-<div style='padding-left: 30pt'>
+
    You  use  rsync  in the same way you use rcp. You
    must specify a source and a destination,  one  of
    which may be remote.
@@ -292,20 +292,20 @@ USAGE
 
 
 
-<div style='padding-left: 30pt'>
+
    Perhaps  the  best  way  to explain the syntax is
    with some examples:
 
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync -t *.c foo:src/
 
 
 
 
-<div style='padding-left: 30pt'>
+
    This would transfer all files matching  the  pat‐
    tern *.c from the current directory to the direc‐
    tory src on the machine foo. If any of the  files
@@ -321,13 +321,13 @@ USAGE
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync -avz foo:src/bar /data/tmp
 
 
 
 
-<div style='padding-left: 30pt'>
+
    This would recursively transfer  all  files  from
    the directory src/bar on the machine foo into the
    /data/tmp/bar directory on the local machine. The
@@ -341,13 +341,13 @@ USAGE
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync -avz foo:src/bar/ /data/tmp
 
 
 
 
-<div style='padding-left: 30pt'>
+
    A trailing  slash  on  the  source  changes  this
    behavior  to  avoid creating an additional direc‐
    tory level at the destination.  You can think  of
@@ -364,14 +364,14 @@ USAGE
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync -av /src/foo /dest
   rsync -av /src/foo/ /dest/foo
 
 
 
 
-<div style='padding-left: 30pt'>
+
    Note  also  that host and module references don’t
    require a trailing slash to copy the contents  of
    the  default  directory.   For  example,  both of
@@ -381,14 +381,14 @@ USAGE
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync -av host: /dest
   rsync -av host::module /dest
 
 
 
 
-<div style='padding-left: 30pt'>
+
    You  can also use rsync in local-only mode, where
    both the source and destination don’t have a  ’:’
    in  the  name.  In  this  case it behaves like an
@@ -397,7 +397,7 @@ USAGE
 
 
 
-<div style='padding-left: 30pt'>
+
    Finally, you can list all the (listable)  modules
    available from a particular rsync daemon by leav‐
    ing off the module name:
@@ -405,20 +405,20 @@ USAGE
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync somehost.mydomain.com::
 
 
 
 
-<div style='padding-left: 30pt'>
+
    See the following section for more details.
 
 
 
 
 ADVANCED USAGE
-<div style='padding-left: 30pt'>
+
    The syntax for requesting multiple files  from  a
    remote  host  is  done  by  specifying additional
    remote-host args in the same style as the  first,
@@ -428,7 +428,7 @@ ADVANCED USAGE
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync -av host:file1 :file2 host:file{3,4}
   /dest/
   rsync      -av     host::modname/file{1,2}
@@ -439,14 +439,14 @@ ADVANCED USAGE
 
 
 
-<div style='padding-left: 30pt'>
+
    Older  versions  of  rsync  required using quoted
    spaces in the SRC, like these examples:
 
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync  -av  host:'dir1/file1   dir2/file2'
   /dest
   rsync    host::'modname/dir1/file1    mod‐
@@ -455,7 +455,7 @@ ADVANCED USAGE
 
 
 
-<div style='padding-left: 30pt'>
+
    This word-splitting still works (by  default)  in
    the  latest  rsync,  but is not as easy to use as
    the first method.
@@ -463,7 +463,7 @@ ADVANCED USAGE
 
 
 
-<div style='padding-left: 30pt'>
+
    If you need to transfer a filename that  contains
    whitespace,  you  can  either  specify the --pro‐
    tect-args (-s) option, or you’ll need  to  escape
@@ -473,7 +473,7 @@ ADVANCED USAGE
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync -av host:'file\ name\ with\  spaces'
   /dest
 
@@ -481,7 +481,7 @@ ADVANCED USAGE
 
 
 CONNECTING TO AN RSYNC DAEMON
-<div style='padding-left: 30pt'>
+
    It is also possible to use rsync without a remote
    shell as the transport.  In this  case  you  will
    directly  connect to a remote rsync daemon, typi‐
@@ -494,84 +494,84 @@ CONNECTING TO AN RSYNC DAEMON
 
 
 
-<div style='padding-left: 30pt'>
+
    Using rsync in this way is the same as  using  it
    with a remote shell except that:
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      you  either  use a double colon :: instead
 
-<div style='padding-left: 90pt'>
+
   of a single colon to separate the hostname
   from the path, or you use an rsync:// URL.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      the first word of the "path" is actually a
 
-<div style='padding-left: 90pt'>
+
   module name.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      the remote daemon may print a  message  of
 
-<div style='padding-left: 90pt'>
+
   the day when you connect.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      if  you specify no path name on the remote
 
-<div style='padding-left: 90pt'>
+
   daemon then the list of  accessible  paths
   on the daemon will be shown.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      if you specify no local destination then a
 
-<div style='padding-left: 90pt'>
+
   listing of  the  specified  files  on  the
   remote daemon is provided.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      you   must  not  specify  the  --rsh  (-e)
 
-<div style='padding-left: 90pt'>
+
   option.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    An example that copies all the files in a  remote
    module named "src":
 
 
 
 
-<div style='padding-left: 60pt'>
+
    rsync -av host::src /dest
 
 
 
 
-<div style='padding-left: 30pt'>
+
    Some  modules  on  the  remote daemon may require
    authentication. If so, you will receive  a  pass‐
    word  prompt  when you connect. You can avoid the
@@ -583,7 +583,7 @@ CONNECTING TO AN RSYNC DAEMON
 
 
 
-<div style='padding-left: 30pt'>
+
    WARNING:  On  some  systems environment variables
    are visible to all users. On those systems  using
    --password-file is recommended.
@@ -591,7 +591,7 @@ CONNECTING TO AN RSYNC DAEMON
 
 
 
-<div style='padding-left: 30pt'>
+
    You  may establish the connection via a web proxy
    by setting the environment  variable  RSYNC_PROXY
    to  a  hostname:port  pair  pointing  to your web
@@ -601,7 +601,7 @@ CONNECTING TO AN RSYNC DAEMON
 
 
 
-<div style='padding-left: 30pt'>
+
    You  may also establish a daemon connection using
    a program as a proxy by setting  the  environment
    variable  RSYNC_CONNECT_PROG  to the commands you
@@ -614,7 +614,7 @@ CONNECTING TO AN RSYNC DAEMON
 
 
 
-<div style='padding-left: 60pt'>
+
  export RSYNC_CONNECT_PROG='ssh proxyhost nc %H 873'
  rsync -av targethost1::module/src/ /dest/
  rsync -av rsync:://targethost2/module/src/ /dest/
@@ -622,7 +622,7 @@ CONNECTING TO AN RSYNC DAEMON
 
 
 
-<div style='padding-left: 30pt'>
+
    The command specified above uses ssh  to  run  nc
    (netcat)  on a proxyhost, which forwards all data
    to port 873 (the rsync daemon) on the  targethost
@@ -632,7 +632,7 @@ CONNECTING TO AN RSYNC DAEMON
 
 
 USING  RSYNC-DAEMON  FEATURES VIA A REMOTE-SHELL CONNEC‐
-<div style='padding-left: 30pt'>
+
    TION
    It is sometimes useful to use various features of
    an  rsync  daemon (such as named modules) without
@@ -656,7 +656,7 @@ USING  RSYNC-DAEMON  FEATURES VIA A REMOTE-SHELL CONNEC‐
 
 
 
-<div style='padding-left: 30pt'>
+
    From  the  user’s  perspective, a daemon transfer
    via a remote-shell  connection  uses  nearly  the
    same command-line syntax as a normal rsync-daemon
@@ -669,13 +669,13 @@ USING  RSYNC-DAEMON  FEATURES VIA A REMOTE-SHELL CONNEC‐
 
 
 
-<div style='padding-left: 60pt'>
+
    rsync -av --rsh=ssh host::module /dest
 
 
 
 
-<div style='padding-left: 30pt'>
+
    If you need to specify a  different  remote-shell
    user, keep in mind that the user@ prefix in front
    of the host is specifying  the  rsync-user  value
@@ -688,13 +688,13 @@ USING  RSYNC-DAEMON  FEATURES VIA A REMOTE-SHELL CONNEC‐
 
 
 
-<div style='padding-left: 60pt'>
+
    rsync -av -e "ssh -l ssh-user" rsync-user@host::module /dest
 
 
 
 
-<div style='padding-left: 30pt'>
+
    The "ssh-user" will be used at the ssh level; the
    "rsync-user" will be used to log-in to the  "mod‐
    ule".
@@ -703,7 +703,7 @@ USING  RSYNC-DAEMON  FEATURES VIA A REMOTE-SHELL CONNEC‐
 
 
 STARTING AN RSYNC DAEMON TO ACCEPT CONNECTIONS
-<div style='padding-left: 30pt'>
+
    In  order  to  connect  to  an  rsync daemon, the
    remote system needs to have a daemon already run‐
    ning  (or  it  needs to have configured something
@@ -719,7 +719,7 @@ STARTING AN RSYNC DAEMON TO ACCEPT CONNECTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    If  you’re  using  one of the remote-shell trans‐
    ports for the transfer, there is no need to manu‐
    ally start an rsync daemon.
@@ -728,7 +728,7 @@ STARTING AN RSYNC DAEMON TO ACCEPT CONNECTIONS
 
 
 SORTED TRANSFER ORDER
-<div style='padding-left: 30pt'>
+
    Rsync  always  sorts the specified filenames into
    its internal transfer  list.   This  handles  the
    merging  together  of the contents of identically
@@ -740,7 +740,7 @@ SORTED TRANSFER ORDER
 
 
 
-<div style='padding-left: 30pt'>
+
    If  you  need a particular file to be transferred
    prior to another, either separate the files  into
    different   rsync   calls,   or   consider  using
@@ -752,13 +752,13 @@ SORTED TRANSFER ORDER
 
 
 EXAMPLES
-<div style='padding-left: 30pt'>
+
    Here are some examples of how I use rsync.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    To backup my wife’s home  directory,  which  con‐
    sists  of large MS Word files and mail folders, I
    use a cron job that runs
@@ -766,45 +766,45 @@ EXAMPLES
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync -Cavz . arvidsjaur:backup
 
 
 
 
-<div style='padding-left: 30pt'>
+
    each night over a PPP connection to  a  duplicate
    directory on my machine "arvidsjaur".
 
 
 
 
-<div style='padding-left: 30pt'>
+
    To  synchronize  my  samba source trees I use the
    following Makefile targets:
 
 
 
 
-<div style='padding-left: 60pt'>
+
    get:
 
 <div style='padding-left: 120pt'>
    rsync -avuzb --exclude '*~' samba:samba/ .
 
-<div style='padding-left: 60pt'>
+
    put:
 
 <div style='padding-left: 120pt'>
    rsync -Cavuzb . samba:samba/
 
-<div style='padding-left: 60pt'>
+
    sync: get put
 
 
 
 
-<div style='padding-left: 30pt'>
+
    this allows me to sync with a  CVS  directory  at
    the  other  end  of the connection. I then do CVS
    operations on the remote machine, which  saves  a
@@ -814,28 +814,28 @@ EXAMPLES
 
 
 
-<div style='padding-left: 30pt'>
+
    I mirror a directory between my "old"  and  "new"
    ftp sites with the command:
 
 
 
 
-<div style='padding-left: 30pt'>
+
    rsync  -az  -e  ssh  --delete ~ftp/pub/samba nim‐
    bus:"~ftp/pub/tridge"
 
 
 
 
-<div style='padding-left: 30pt'>
+
    This is launched from cron every few hours.
 
 
 
 
 OPTIONS SUMMARY
-<div style='padding-left: 30pt'>
+
    Here is a short summary of the options  available
    in  rsync.  Please refer to the detailed descrip‐
    tion below for a complete description.
@@ -843,103 +843,103 @@ OPTIONS SUMMARY
 
 
 
-<div style='padding-left: 60pt'>
+
 -v, --verbose               increase verbosity
 
-<div style='padding-left: 90pt'>
+
 --info=FLAGS            fine-grained informational verbosity
 --debug=FLAGS           fine-grained debug verbosity
 --msgs2stderr           special output handling for debugging
 
-<div style='padding-left: 60pt'>
+
 -q, --quiet                 suppress non-error messages
 
-<div style='padding-left: 90pt'>
+
 --no-motd               suppress daemon-mode MOTD (see caveat)
 
-<div style='padding-left: 60pt'>
+
 -c, --checksum              skip based on checksum, not mod-time &amp; size
 -a, --archive               archive mode; equals -rlptgoD (no -H,-A,-X)
 
-<div style='padding-left: 90pt'>
+
 --no-OPTION             turn off an implied OPTION (e.g. --no-D)
 
-<div style='padding-left: 60pt'>
+
 -r, --recursive             recurse into directories
 -R, --relative              use relative path names
 
-<div style='padding-left: 90pt'>
+
 --no-implied-dirs       don't send implied dirs with --relative
 
-<div style='padding-left: 60pt'>
+
 -b, --backup                make backups (see --suffix &amp; --backup-dir)
 
-<div style='padding-left: 90pt'>
+
 --backup-dir=DIR        make backups into hierarchy based in DIR
 --suffix=SUFFIX         backup suffix (default ~ w/o --backup-dir)
 
-<div style='padding-left: 60pt'>
+
 -u, --update                skip files that are newer on the receiver
 
-<div style='padding-left: 90pt'>
+
 --inplace               update destination files in-place
 --append                append data onto shorter files
 --append-verify         --append w/old data in file checksum
 
-<div style='padding-left: 60pt'>
+
 -d, --dirs                  transfer directories without recursing
 -l, --links                 copy symlinks as symlinks
 -L, --copy-links            transform symlink into referent file/dir
 
-<div style='padding-left: 90pt'>
+
 --copy-unsafe-links     only "unsafe" symlinks are transformed
 --safe-links            ignore symlinks that point outside the tree
 --munge-links           munge symlinks to make them safer
 
-<div style='padding-left: 60pt'>
+
 -k, --copy-dirlinks         transform symlink to dir into referent dir
 -K, --keep-dirlinks         treat symlinked dir on receiver as dir
 -H, --hard-links            preserve hard links
 -p, --perms                 preserve permissions
 -E, --executability         preserve executability
 
-<div style='padding-left: 90pt'>
+
 --chmod=CHMOD           affect file and/or directory permissions
 
-<div style='padding-left: 60pt'>
+
 -A, --acls                  preserve ACLs (implies -p)
 -X, --xattrs                preserve extended attributes
 -o, --owner                 preserve owner (super-user only)
 -g, --group                 preserve group
 
-<div style='padding-left: 90pt'>
+
 --devices               preserve device files (super-user only)
 --specials              preserve special files
 
-<div style='padding-left: 60pt'>
+
 -D                          same as --devices --specials
 -t, --times                 preserve modification times
 -O, --omit-dir-times        omit directories from --times
 -J, --omit-link-times       omit symlinks from --times
 
-<div style='padding-left: 90pt'>
+
 --super                 receiver attempts super-user activities
 --fake-super            store/recover privileged attrs using xattrs
 
-<div style='padding-left: 60pt'>
+
 -S, --sparse                handle sparse files efficiently
 
-<div style='padding-left: 90pt'>
+
 --preallocate           allocate dest files before writing
 
-<div style='padding-left: 60pt'>
+
 -n, --dry-run               perform a trial run with no changes made
 -W, --whole-file            copy files whole (w/o delta-xfer algorithm)
 -x, --one-file-system       don't cross filesystem boundaries
 -B, --block-size=SIZE       force a fixed checksum block-size
 -e, --rsh=COMMAND           specify the remote shell to use
 
-<div style='padding-left: 90pt'>
+
 --rsync-path=PROGRAM    specify the rsync to run on remote machine
 --existing              skip creating new files on receiver
 --ignore-existing       skip updating files that exist on receiver
@@ -962,10 +962,10 @@ OPTIONS SUMMARY
 --partial-dir=DIR       put a partially transferred file into DIR
 --delay-updates         put all updated files into place at end
 
-<div style='padding-left: 60pt'>
+
 -m, --prune-empty-dirs      prune empty directory chains from file-list
 
-<div style='padding-left: 90pt'>
+
 --numeric-ids           don't map uid/gid values by user/group name
 --usermap=STRING        custom username mapping
 --groupmap=STRING       custom groupname mapping
@@ -973,30 +973,30 @@ OPTIONS SUMMARY
 --timeout=SECONDS       set I/O timeout in seconds
 --contimeout=SECONDS    set daemon connection timeout in seconds
 
-<div style='padding-left: 60pt'>
+
 -I, --ignore-times          don't skip files that match size and time
 
-<div style='padding-left: 90pt'>
+
 --size-only             skip files that match in size
 --modify-window=NUM     compare mod-times with reduced accuracy
 
-<div style='padding-left: 60pt'>
+
 -T, --temp-dir=DIR          create temporary files in directory DIR
 -y, --fuzzy                 find similar file for basis if no dest file
 
-<div style='padding-left: 90pt'>
+
 --compare-dest=DIR      also compare received files relative to DIR
 --copy-dest=DIR         ... and include copies of unchanged files
 --link-dest=DIR         hardlink to files in DIR when unchanged
 
-<div style='padding-left: 60pt'>
+
 -z, --compress              compress file data during the transfer
 
-<div style='padding-left: 90pt'>
+
 --compress-level=NUM    explicitly set compression level
 --skip-compress=LIST    skip compressing files with suffix in LIST
 
-<div style='padding-left: 60pt'>
+
 -C, --cvs-exclude           auto-ignore files in the same way CVS does
 -f, --filter=RULE           add a file-filtering RULE
 -F                          same as --filter='dir-merge /.rsync-filter'
@@ -1004,18 +1004,18 @@ OPTIONS SUMMARY
 <div style='padding-left: 270pt'>
 repeated: --filter='- .rsync-filter'
 
-<div style='padding-left: 90pt'>
+
 --exclude=PATTERN       exclude files matching PATTERN
 --exclude-from=FILE     read exclude patterns from FILE
 --include=PATTERN       don't exclude files matching PATTERN
 --include-from=FILE     read include patterns from FILE
 --files-from=FILE       read list of source-file names from FILE
 
-<div style='padding-left: 60pt'>
+
 -0, --from0                 all *from/filter files are delimited by 0s
 -s, --protect-args          no space-splitting; wildcard chars only
 
-<div style='padding-left: 90pt'>
+
 --address=ADDRESS       bind address for outgoing socket to daemon
 --port=PORT             specify double-colon alternate port number
 --sockopts=OPTIONS      specify custom TCP options
@@ -1023,19 +1023,19 @@ repeated: --filter='- .rsync-filter'
 --outbuf=N|L|B          set out buffering to None, Line, or Block
 --stats                 give some file-transfer stats
 
-<div style='padding-left: 60pt'>
+
 -8, --8-bit-output          leave high-bit chars unescaped in output
 -h, --human-readable        output numbers in a human-readable format
 
-<div style='padding-left: 90pt'>
+
 --progress              show progress during transfer
 
-<div style='padding-left: 60pt'>
+
 -P                          same as --partial --progress
 -i, --itemize-changes       output a change-summary for all updates
 -M, --remote-option=OPTION  send OPTION to the remote side only
 
-<div style='padding-left: 90pt'>
+
 --out-format=FORMAT     output updates using the specified FORMAT
 --log-file=FILE         log what we're doing to the specified FILE
 --log-file-format=FMT   log updates using the specified FMT
@@ -1051,43 +1051,43 @@ repeated: --filter='- .rsync-filter'
 --iconv=CONVERT_SPEC    request charset conversion of filenames
 --checksum-seed=NUM     set block/file checksum seed (advanced)
 
-<div style='padding-left: 60pt'>
+
 -4, --ipv4                  prefer IPv4
 -6, --ipv6                  prefer IPv6
 
-<div style='padding-left: 90pt'>
+
 --version               print version number
 
-<div style='padding-left: 30pt'>
+
    (-h) --help                  show this help (see below for -h comment)
 
 
 
 
-<div style='padding-left: 30pt'>
+
    Rsync can also be run as a daemon, in which  case
    the following options are accepted:
 
 
 
 
-<div style='padding-left: 90pt'>
+
 --daemon                run as an rsync daemon
 --address=ADDRESS       bind to the specified address
 --bwlimit=RATE          limit socket I/O bandwidth
 --config=FILE           specify alternate rsyncd.conf file
 
-<div style='padding-left: 60pt'>
+
 -M, --dparam=OVERRIDE       override global daemon config parameter
 
-<div style='padding-left: 90pt'>
+
 --no-detach             do not detach from the parent
 --port=PORT             listen on alternate port number
 --log-file=FILE         override the "log file" setting
 --log-file-format=FMT   override the "log format" setting
 --sockopts=OPTIONS      specify custom TCP options
 
-<div style='padding-left: 60pt'>
+
 -v, --verbose               increase verbosity
 -4, --ipv4                  prefer IPv4
 -6, --ipv6                  prefer IPv6
@@ -1097,7 +1097,7 @@ repeated: --filter='- .rsync-filter'
 
 
 OPTIONS
-<div style='padding-left: 30pt'>
+
    Rsync  accepts both long (double-dash + word) and
    short (single-dash + letter) options.   The  full
    list  of  the  available  options  are  described
@@ -1120,10 +1120,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --help Print a short  help  page  describing  the
 
-<div style='padding-left: 90pt'>
+
   options  available in rsync and exit.  For
   backward-compatibility with older versions
   of  rsync, the help will also be output if
@@ -1133,19 +1133,19 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --version
 
-<div style='padding-left: 90pt'>
+
   print the rsync version number and exit.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    -v, --verbose
 
-<div style='padding-left: 90pt'>
+
   This option increases the amount of infor‐
   mation you are given during the  transfer.
   By default, rsync works silently. A single
@@ -1161,7 +1161,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   In a modern rsync, the -v option is equiv‐
   alent to the setting of groups  of  --info
   and  --debug  options.   You can choose to
@@ -1176,7 +1176,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   However, do keep in mind that  a  daemon’s
   "max  verbosity"  setting  will  limit how
   high of a  level  the  various  individual
@@ -1190,10 +1190,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --info=FLAGS
 
-<div style='padding-left: 90pt'>
+
   This option  lets  you  have  fine-grained
   control  over  the  information output you
   want to see.  An individual flag name  may
@@ -1217,7 +1217,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Note that --info=name’s output is affected
   by the --out-format and  --itemize-changes
   (-i)  options.  See those options for more
@@ -1226,7 +1226,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   This option was  added  to  3.1.0,  so  an
   older  rsync  on  the  server  side  might
   reject your attempts at fine-grained  con‐
@@ -1239,10 +1239,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --debug=FLAGS
 
-<div style='padding-left: 90pt'>
+
   This  option  lets  you  have fine-grained
   control over the debug output you want  to
   see.   An individual flag name may be fol‐
@@ -1266,7 +1266,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Note that some debug messages will only be
   output  when  --msgs2stderr  is specified,
   especially those  pertaining  to  I/O  and
@@ -1275,7 +1275,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   This  option  was  added  to  3.1.0, so an
   older  rsync  on  the  server  side  might
   reject  your attempts at fine-grained con‐
@@ -1288,10 +1288,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --msgs2stderr
 
-<div style='padding-left: 90pt'>
+
   This option changes rsync to send all  its
   output  directly  to stderr rather than to
   send messages to the client side  via  the
@@ -1315,7 +1315,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   This option has the side-effect of  making
   stderr  output  get  line-buffered so that
   the merging of the output  of  3  programs
@@ -1324,10 +1324,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -q, --quiet
 
-<div style='padding-left: 90pt'>
+
   This option decreases the amount of infor‐
   mation you are given during the  transfer,
   notably  suppressing  information messages
@@ -1337,10 +1337,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --no-motd
 
-<div style='padding-left: 90pt'>
+
   This  option  affects the information that
   is output by the client at the start of  a
   daemon transfer.  This suppresses the mes‐
@@ -1355,10 +1355,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -I, --ignore-times
 
-<div style='padding-left: 90pt'>
+
   Normally rsync will skip  any  files  that
   are  already  the  same  size and have the
   same modification timestamp.  This  option
@@ -1368,10 +1368,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --size-only
 
-<div style='padding-left: 90pt'>
+
   This modifies rsync’s "quick check"  algo‐
   rithm  for  finding  files that need to be
   transferred, changing it from the  default
@@ -1386,10 +1386,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --modify-window
 
-<div style='padding-left: 90pt'>
+
   When   comparing   two  timestamps,  rsync
   treats the timestamps as  being  equal  if
   they  differ  by  no  more  than  the mod‐
@@ -1406,10 +1406,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -c, --checksum
 
-<div style='padding-left: 90pt'>
+
   This changes the way rsync checks  if  the
   files have been changed and are in need of
   a transfer.  Without  this  option,  rsync
@@ -1429,7 +1429,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   The sending side generates  its  checksums
   while  it  is  doing  the file-system scan
   that builds  the  list  of  the  available
@@ -1444,7 +1444,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Note  that rsync always verifies that each
   transferred  file  was  correctly   recon‐
   structed on the receiving side by checking
@@ -1458,7 +1458,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   For  protocol  30  and  beyond (first sup‐
   ported in 3.0.0),  the  checksum  used  is
   MD5.   For  older  protocols, the checksum
@@ -1467,10 +1467,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -a, --archive
 
-<div style='padding-left: 90pt'>
+
   This is equivalent to -rlptgoD.  It  is  a
   quick way of saying you want recursion and
   want to preserve almost  everything  (with
@@ -1482,7 +1482,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Note that -a does not preserve  hardlinks,
   because  finding  multiply-linked files is
   expensive.  You  must  separately  specify
@@ -1491,10 +1491,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --no-OPTION
 
-<div style='padding-left: 90pt'>
+
   You  may  turn  off  one  or  more implied
   options by prefixing the option name  with
   "no-".   Not  all  options may be prefixed
@@ -1511,7 +1511,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   For example: if you want to use -a  (--ar‐
   chive)   but   don’t  want  -o  (--owner),
   instead of converting -a into -rlptgD, you
@@ -1521,7 +1521,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   The order of the options is important:  if
   you specify --no-r -a, the -r option would
   end up being turned on, the opposite of -a
@@ -1535,17 +1535,17 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -r, --recursive
 
-<div style='padding-left: 90pt'>
+
   This  tells  rsync  to  copy   directories
   recursively.  See also --dirs (-d).
 
 
 
 
-<div style='padding-left: 90pt'>
+
   Beginning  with rsync 3.0.0, the recursive
   algorithm used is now an incremental  scan
   that uses much less memory than before and
@@ -1560,7 +1560,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Some options require  rsync  to  know  the
   full  file  list, so these options disable
   the  incremental  recursion  mode.   These
@@ -1578,7 +1578,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Incremental  recursion  can  be   disabled
   using the --no-inc-recursive option or its
   shorter --no-i-r alias.
@@ -1586,10 +1586,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -R, --relative
 
-<div style='padding-left: 90pt'>
+
   Use relative paths. This  means  that  the
   full  path  names specified on the command
   line are sent to the  server  rather  than
@@ -1608,7 +1608,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   ...  this  would create a file named baz.c
   in /tmp/ on the remote machine. If instead
   you used
@@ -1622,7 +1622,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   then a file named /tmp/foo/bar/baz.c would
   be created on the remote machine, preserv‐
   ing  its full path.  These extra path ele‐
@@ -1633,7 +1633,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Beginning with rsync 3.0.0,  rsync  always
   sends  these  implied  directories as real
   directories in the file list,  even  if  a
@@ -1652,7 +1652,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   It is also possible to limit the amount of
   path information that is sent  as  implied
   directories  for  each  path  you specify.
@@ -1667,13 +1667,13 @@ OPTIONS
 <div style='padding-left: 120pt'>
  rsync       -avR       /foo/./bar/baz.c
 
-<div style='padding-left: 90pt'>
+
   remote:/tmp/
 
 
 
 
-<div style='padding-left: 90pt'>
+
   That would create  /tmp/bar/baz.c  on  the
   remote  machine.   (Note that the dot must
   be followed by a slash, so "/foo/."  would
@@ -1688,13 +1688,13 @@ OPTIONS
 <div style='padding-left: 120pt'>
  (cd   /foo;   rsync   -avR    bar/baz.c
 
-<div style='padding-left: 90pt'>
+
   remote:/tmp/)
 
 
 
 
-<div style='padding-left: 90pt'>
+
   (Note that the parens put the two commands
   into a sub-shell, so that the "cd" command
   doesn’t  remain  in effect for future com‐
@@ -1708,7 +1708,7 @@ OPTIONS
 <div style='padding-left: 120pt'>
  rsync   -avR   --rsync-path="cd   /foo;
 
-<div style='padding-left: 90pt'>
+
   rsync" \
 
 <div style='padding-left: 150pt'>
@@ -1717,10 +1717,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --no-implied-dirs
 
-<div style='padding-left: 90pt'>
+
   This  option  affects the default behavior
   of the  --relative  option.   When  it  is
   specified,  the  attributes of the implied
@@ -1738,7 +1738,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   For  instance,  if a command-line arg or a
   files-from entry told  rsync  to  transfer
   the  file "path/foo/file", the directories
@@ -1761,7 +1761,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   When pulling files  from  an  rsync  older
   than  3.0.0,  you  may  need  to  use this
   option if the sending side has  a  symlink
@@ -1772,10 +1772,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -b, --backup
 
-<div style='padding-left: 90pt'>
+
   With  this option, preexisting destination
   files are renamed as each file  is  trans‐
   ferred  or deleted.  You can control where
@@ -1786,7 +1786,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Note   that   if   you    don’t    specify
   --backup-dir,   (1)  the  --omit-dir-times
   option  will  be  implied,  and   (2)   if
@@ -1808,10 +1808,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --backup-dir=DIR
 
-<div style='padding-left: 90pt'>
+
   In combination with the  --backup  option,
   this  tells  rsync to store all backups in
   the specified directory on  the  receiving
@@ -1825,7 +1825,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Note that if you specify a relative  path,
   the  backup  directory will be relative to
   the destination directory, so you probably
@@ -1839,10 +1839,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --suffix=SUFFIX
 
-<div style='padding-left: 90pt'>
+
   This option allows  you  to  override  the
   default   backup   suffix  used  with  the
   --backup (-b) option. The  default  suffix
@@ -1852,10 +1852,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -u, --update
 
-<div style='padding-left: 90pt'>
+
   This forces rsync to skip any files  which
   exist  on the destination and have a modi‐
   fied time that is newer  than  the  source
@@ -1867,7 +1867,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Note that this does not affect the copying
   of dirs, symlinks, or other special files.
   Also, a difference of file format  between
@@ -1882,7 +1882,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   This  option  is  a  transfer rule, not an
   exclude, so it  doesn’t  affect  the  data
   that goes into the file-lists, and thus it
@@ -1893,10 +1893,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --inplace
 
-<div style='padding-left: 90pt'>
+
   This option changes how rsync transfers  a
   file  when  its  data needs to be updated:
   instead of the default method of  creating
@@ -1908,13 +1908,13 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   This has several effects:
 
 
 
 
-<div style='padding-left: 90pt'>
+
   o      Hard links are  not  broken.   This
 
 <div style='padding-left: 150pt'>
@@ -1930,7 +1930,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   o      In-use binaries cannot  be  updated
 
 <div style='padding-left: 150pt'>
@@ -1942,7 +1942,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   o      The  file’s  data  will  be  in  an
 
 <div style='padding-left: 150pt'>
@@ -1954,7 +1954,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   o      A file that rsync cannot  write  to
 
 <div style='padding-left: 150pt'>
@@ -1967,7 +1967,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   o      The     efficiency    of    rsync’s
 
 <div style='padding-left: 150pt'>
@@ -1984,7 +1984,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   WARNING: you should not use this option to
   update  files  that  are being accessed by
   others, so be careful when choosing to use
@@ -1993,7 +1993,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   This  option  is  useful  for transferring
   large files with  block-based  changes  or
   appended  data,  and  also on systems that
@@ -2006,7 +2006,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   The option  implies  --partial  (since  an
   interrupted  transfer  does not delete the
   file), but  conflicts  with  --partial-dir
@@ -2017,10 +2017,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --append
 
-<div style='padding-left: 90pt'>
+
   This  causes  rsync  to  update  a file by
   appending data onto the end of  the  file,
   which  presumes that the data that already
@@ -2042,7 +2042,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   The  use  of  --append can be dangerous if
   you aren’t 100% sure that the  files  that
   are  longer have only grown by the append‐
@@ -2055,10 +2055,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --append-verify
 
-<div style='padding-left: 90pt'>
+
   This works just like the --append  option,
   but  the  existing  data  on the receiving
   side is included in the full-file checksum
@@ -2071,7 +2071,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Note:  prior  to rsync 3.0.0, the --append
   option worked like --append-verify, so  if
   you  are  interacting  with an older rsync
@@ -2082,10 +2082,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -d, --dirs
 
-<div style='padding-left: 90pt'>
+
   Tell  the  sending  side  to  include  any
   directories  that are encountered.  Unlike
   --recursive, a  directory’s  contents  are
@@ -2102,7 +2102,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   The   --dirs  option  is  implied  by  the
   --files-from  option  or  the  --list-only
   option  (including  an implied --list-only
@@ -2114,7 +2114,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   There  is  also  a  backward-compatibility
   helper  option,  --old-dirs  (or  --old-d)
   that  tells  rsync  to  use  a hack of "-r
@@ -2124,20 +2124,20 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -l, --links
 
-<div style='padding-left: 90pt'>
+
   When  symlinks  are  encountered, recreate
   the symlink on the destination.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    -L, --copy-links
 
-<div style='padding-left: 90pt'>
+
   When symlinks are  encountered,  the  item
   that  they  point  to  (the  referent)  is
   copied, rather than the symlink.  In older
@@ -2156,10 +2156,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --copy-unsafe-links
 
-<div style='padding-left: 90pt'>
+
   This  tells  rsync to copy the referent of
   symbolic  links  that  point  outside  the
   copied  tree.   Absolute symlinks are also
@@ -2172,10 +2172,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --safe-links
 
-<div style='padding-left: 90pt'>
+
   This tells rsync to  ignore  any  symbolic
   links which point outside the copied tree.
   All absolute symlinks  are  also  ignored.
@@ -2185,10 +2185,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --munge-links
 
-<div style='padding-left: 90pt'>
+
   This option tells rsync to (1) modify  all
   symlinks  on  the  receiving side in a way
   that makes them unusable  but  recoverable
@@ -2202,7 +2202,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   The way rsync disables the use of symlinks
   is  to  prefix  each  one  with the string
   "/rsyncd-munged/".   This   prevents   the
@@ -2215,7 +2215,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   The option only affects the client side of
   the transfer, so if you need it to  affect
   the     server,     specify     it     via
@@ -2225,7 +2225,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   This  option  has  no  affect on a daemon,
   since the  daemon  configures  whether  it
   wants  munged symlinks via its "munge sym‐
@@ -2236,10 +2236,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -k, --copy-dirlinks
 
-<div style='padding-left: 90pt'>
+
   This option causes  the  sending  side  to
   treat  a  symlink to a directory as though
   it were a real directory.  This is  useful
@@ -2250,7 +2250,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Without  this  option, if the sending side
   has replaced a directory with a symlink to
   a   directory,  the  receiving  side  will
@@ -2262,14 +2262,14 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   See  also --keep-dirlinks for an analogous
   option for the receiving side.
 
 
 
 
-<div style='padding-left: 90pt'>
+
   --copy-dirlinks applies to all symlinks to
   directories in the source.  If you want to
   follow only a few  specified  symlinks,  a
@@ -2281,14 +2281,14 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync  -r  --relative  src/./   src/./fol‐
   low-me/ dest/
 
 
 
 
-<div style='padding-left: 90pt'>
+
   This works because rsync calls lstat(2) on
   the source arg as given, and the  trailing
   slash  makes  lstat(2) follow the symlink,
@@ -2299,10 +2299,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -K, --keep-dirlinks
 
-<div style='padding-left: 90pt'>
+
   This option causes the receiving  side  to
   treat  a  symlink to a directory as though
   it were a real directory, but only  if  it
@@ -2314,7 +2314,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   For example, suppose you transfer a direc‐
   tory  "foo"  that  contains a file "file",
   but "foo" is a symlink to directory  "bar"
@@ -2328,7 +2328,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   One  note  of   caution:    if   you   use
   --keep-dirlinks,  you  must  trust all the
   symlinks in the copy!  If it  is  possible
@@ -2345,17 +2345,17 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   See  also --copy-dirlinks for an analogous
   option for the sending side.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    -H, --hard-links
 
-<div style='padding-left: 90pt'>
+
   This tells rsync to look  for  hard-linked
   files  in the source and link together the
   corresponding files  on  the  destination.
@@ -2366,7 +2366,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   This  option  does  NOT necessarily ensure
   that the pattern of hard links on the des‐
   tination   exactly  matches  that  on  the
@@ -2377,7 +2377,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   o      If the destination contains  extra‐
 
 <div style='padding-left: 150pt'>
@@ -2394,7 +2394,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   o      If you specify a --link-dest direc‐
 
 <div style='padding-left: 150pt'>
@@ -2408,7 +2408,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Note that rsync can only detect hard links
   between files that are inside the transfer
   set.   If  rsync  updates  a file that has
@@ -2425,7 +2425,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   If incremental recursion  is  active  (see
   --recursive), rsync may transfer a missing
   hard-linked  file  before  it  finds  that
@@ -2445,10 +2445,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -p, --perms
 
-<div style='padding-left: 90pt'>
+
   This option causes the receiving rsync  to
   set  the destination permissions to be the
   same as the source permissions.  (See also
@@ -2459,14 +2459,14 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   When  this  option is off, permissions are
   set as follows:
 
 
 
 
-<div style='padding-left: 90pt'>
+
   o      Existing files  (including  updated
 
 <div style='padding-left: 150pt'>
@@ -2478,7 +2478,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   o      New files get their  "normal"  per‐
 
 <div style='padding-left: 150pt'>
@@ -2497,7 +2497,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Thus, when --perms and --executability are
   both disabled,  rsync’s  behavior  is  the
   same as that of other file-copy utilities,
@@ -2506,7 +2506,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   In  summary:  to  give  destination  files
   (both old and new) the source permissions,
   use --perms.  To give new files the desti‐
@@ -2528,13 +2528,13 @@ OPTIONS
 <div style='padding-left: 120pt'>
  rsync    alias    -Z    --no-p   --no-g
 
-<div style='padding-left: 90pt'>
+
   --chmod=ugo=rwX
 
 
 
 
-<div style='padding-left: 90pt'>
+
   You could then use this new  option  in  a
   command such as this one:
 
@@ -2547,7 +2547,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   (Caveat: make sure that -a does not follow
   -Z, or it will re-enable the two  "--no-*"
   options mentioned above.)
@@ -2555,7 +2555,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   The preservation of the destination’s set‐
   gid bit on newly-created directories  when
   --perms  is  off was added in rsync 2.6.7.
@@ -2574,10 +2574,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -E, --executability
 
-<div style='padding-left: 90pt'>
+
   This option causes rsync to  preserve  the
   executability  (or  non-executability)  of
   regular files when --perms is not enabled.
@@ -2592,7 +2592,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   o      To   make  a  file  non-executable,
 
 <div style='padding-left: 150pt'>
@@ -2602,7 +2602,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   o      To  make  a  file executable, rsync
 
 <div style='padding-left: 150pt'>
@@ -2613,17 +2613,17 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   If --perms  is  enabled,  this  option  is
   ignored.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    -A, --acls
 
-<div style='padding-left: 90pt'>
+
   This  option  causes  rsync  to update the
   destination ACLs to be  the  same  as  the
   source  ACLs.   The  option  also  implies
@@ -2632,7 +2632,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   The source and  destination  systems  must
   have   compatible  ACL  entries  for  this
   option  to   work   properly.    See   the
@@ -2642,10 +2642,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -X, --xattrs
 
-<div style='padding-left: 90pt'>
+
   This option causes  rsync  to  update  the
   destination  extended attributes to be the
   same as the source ones.
@@ -2653,7 +2653,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   For       systems       that       support
   extended-attribute   namespaces,   a  copy
   being done  by  a  super-user  copies  all
@@ -2666,7 +2666,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   Note that this option does not copy rsyncs
   special xattr values (e.g. those  used  by
   --fake-super) unless you repeat the option
@@ -2676,10 +2676,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --chmod
 
-<div style='padding-left: 90pt'>
+
   This  option  tells  rsync to apply one or
   more comma-separated "chmod" modes to  the
   permission  of  the files in the transfer.
@@ -2693,7 +2693,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   In  addition  to  the normal parsing rules
   specified in the chmod(1) manpage, you can
   specify  an item that should only apply to
@@ -2710,25 +2710,25 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   --chmod=Dg+s,ug+w,Fo-w,+X
 
 
 
 
-<div style='padding-left: 90pt'>
+
   Using octal mode numbers is also allowed:
 
 
 
 
-<div style='padding-left: 90pt'>
+
   --chmod=D2775,F664
 
 
 
 
-<div style='padding-left: 90pt'>
+
   It  is  also  legal  to  specify  multiple
   --chmod options, as each additional option
   is just appended to the list of changes to
@@ -2737,7 +2737,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   See   the   --perms   and  --executability
   options for how the  resulting  permission
   value  can  be applied to the files in the
@@ -2746,10 +2746,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -o, --owner
 
-<div style='padding-left: 90pt'>
+
   This option causes rsync to set the  owner
   of  the destination file to be the same as
   the source file, but only if the receiving
@@ -2762,7 +2762,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   The  preservation  of ownership will asso‐
   ciate matching names by default,  but  may
   fall  back  to using the ID number in some
@@ -2772,10 +2772,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -g, --group
 
-<div style='padding-left: 90pt'>
+
   This  option causes rsync to set the group
   of the destination file to be the same  as
   the source file.  If the receiving program
@@ -2790,7 +2790,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   The preservation of group information will
   associate  matching  names by default, but
   may fall back to using the  ID  number  in
@@ -2801,10 +2801,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --devices
 
-<div style='padding-left: 90pt'>
+
   This option causes rsync to transfer char‐
   acter and block device files to the remote
   system  to  recreate  these devices.  This
@@ -2816,10 +2816,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --specials
 
-<div style='padding-left: 90pt'>
+
   This  option causes rsync to transfer spe‐
   cial  files  such  as  named  sockets  and
   fifos.
@@ -2827,19 +2827,19 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -D     The  -D  option is equivalent to --devices
 
-<div style='padding-left: 90pt'>
+
   --specials.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    -t, --times
 
-<div style='padding-left: 90pt'>
+
   This tells rsync to transfer  modification
   times along with the files and update them
   on the remote system.  Note that  if  this
@@ -2857,10 +2857,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -O, --omit-dir-times
 
-<div style='padding-left: 90pt'>
+
   This tells rsync to omit directories  when
   it  is  preserving modification times (see
   --times).  If NFS is sharing the  directo‐
@@ -2871,7 +2871,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   This  option  also  has the side-effect of
   avoiding early creation of directories  in
   incremental recursion copies.  The default
@@ -2894,10 +2894,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -J, --omit-link-times
 
-<div style='padding-left: 90pt'>
+
   This tells rsync to omit symlinks when  it
   is   preserving  modification  times  (see
   --times).
@@ -2905,10 +2905,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --super
 
-<div style='padding-left: 90pt'>
+
   This tells the receiving side  to  attempt
   super-user  activities even if the receiv‐
   ing rsync wasn’t run  by  the  super-user.
@@ -2928,10 +2928,10 @@ OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --fake-super
 
-<div style='padding-left: 90pt'>
+
   When this option is enabled,  rsync  simu‐
   lates   super-user   activities   by  sav‐
   ing/restoring  the  privileged  attributes
@@ -2955,7 +2955,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   This is a good way to backup data  without
   using a super-user, and to store ACLs from
   incompatible systems.
@@ -2963,7 +2963,7 @@ OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   The --fake-super option only  affects  the
   side  where the option is used.  To affect
   the remote side of a remote-shell  connec‐
@@ -2975,13 +2975,13 @@ OPTIONS
 <div style='padding-left: 120pt'>
 rsync     -av    -M--fake-super    /src/
 
-<div style='padding-left: 90pt'>
+
   host:/dest/
 
 
 
 
-<div style='padding-left: 90pt'>
+
   For a local copy, this option affects both
   the  source  and  the destination.  If you
   wish a local copy to  enable  this  option
@@ -2994,24 +2994,24 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   This  option is overridden by both --super
   and --no-super.
 
 
 
 
-<div style='padding-left: 90pt'>
+
   See also the "fake super" setting  in  the
   daemon’s rsyncd.conf file.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    -S, --sparse
 
-<div style='padding-left: 90pt'>
+
   Try  to handle sparse files efficiently so
   they take up less space  on  the  destina‐
   tion.   Conflicts  with  --inplace because
@@ -3021,10 +3021,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --preallocate
 
-<div style='padding-left: 90pt'>
+
   This  tells  the receiver to allocate each
   destination  file  to  its  eventual  size
   before  writing  data  to the file.  Rsync
@@ -3038,7 +3038,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Without  this option, larger files may not
   be entirely contiguous on the  filesystem,
   but  with  this option rsync will probably
@@ -3050,10 +3050,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    -n, --dry-run
 
-<div style='padding-left: 90pt'>
+
   This  makes rsync perform a trial run that
   doesn’t make  any  changes  (and  produces
   mostly the same output as a real run).  It
@@ -3066,7 +3066,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   The output of  --itemize-changes  is  sup‐
   posed  to be exactly the same on a dry run
   and a subsequent real run (barring  inten‐
@@ -3085,10 +3085,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    -W, --whole-file
 
-<div style='padding-left: 90pt'>
+
   With  this  option  rsync’s delta-transfer
   algorithm is not used and the  whole  file
   is  sent  as-is instead.  The transfer may
@@ -3105,10 +3105,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    -x, --one-file-system
 
-<div style='padding-left: 90pt'>
+
   This  tells  rsync  to  avoid  crossing  a
   filesystem  boundary when recursing.  This
   does not limit the user’s ability to spec‐
@@ -3124,7 +3124,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   If this option is  repeated,  rsync  omits
   all mount-point directories from the copy.
   Otherwise, it includes an empty  directory
@@ -3136,7 +3136,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   If rsync has been told  to  collapse  sym‐
   links       (via      --copy-links      or
   --copy-unsafe-links),  a  symlink   to   a
@@ -3148,10 +3148,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --existing, --ignore-non-existing
 
-<div style='padding-left: 90pt'>
+
   This tells rsync to  skip  creating  files
   (including  directories) that do not exist
   yet on the destination.  If this option is
@@ -3163,7 +3163,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   This option is a  transfer  rule,  not  an
   exclude,  so  it  doesn’t  affect the data
   that goes into the file-lists, and thus it
@@ -3174,10 +3174,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --ignore-existing
 
-<div style='padding-left: 90pt'>
+
   This  tells  rsync  to skip updating files
   that  already  exist  on  the  destination
   (this  does  not  ignore existing directo‐
@@ -3187,7 +3187,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   This  option  is  a  transfer rule, not an
   exclude, so it  doesn’t  affect  the  data
   that goes into the file-lists, and thus it
@@ -3198,7 +3198,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   This option can be useful for those  doing
   backups  using the --link-dest option when
   they need to continue a  backup  run  that
@@ -3215,10 +3215,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --remove-source-files
 
-<div style='padding-left: 90pt'>
+
   This  tells rsync to remove from the send‐
   ing side the files  (meaning  non-directo‐
   ries)  that are a part of the transfer and
@@ -3228,7 +3228,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Note  that you should only use this option
   on source files that  are  quiescent.   If
   you are using this to move files that show
@@ -3250,7 +3250,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Starting  with  3.1.0, rsync will skip the
   sender-side removal (and output an  error)
   if  the file’s size or modify time has not
@@ -3259,10 +3259,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --delete
 
-<div style='padding-left: 90pt'>
+
   This  tells  rsync  to  delete  extraneous
   files  from  the receiving side (ones that
   aren’t on the sending side), but only  for
@@ -3285,7 +3285,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Prior  to  rsync  2.6.7, this option would
   have  no  effect  unless  --recursive  was
   enabled.   Beginning with 2.6.7, deletions
@@ -3296,7 +3296,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   This  option  can  be  dangerous  if  used
   incorrectly!   It  is  a very good idea to
   first try a run using the --dry-run option
@@ -3306,7 +3306,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   If  the  sending  side  detects  any   I/O
   errors,  then the deletion of any files at
   the destination will be automatically dis‐
@@ -3320,7 +3320,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   The --delete option may be  combined  with
   one  of  the --delete-WHEN options without
   conflict, as  well  as  --delete-excluded.
@@ -3335,10 +3335,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --delete-before
 
-<div style='padding-left: 90pt'>
+
   Request  that  the  file-deletions  on the
   receiving side be done before the transfer
   starts.   See  --delete (which is implied)
@@ -3347,7 +3347,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Deleting before the transfer is helpful if
   the  filesystem  is  tight  for  space and
   removing extraneous files  would  help  to
@@ -3364,10 +3364,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --delete-during, --del
 
-<div style='padding-left: 90pt'>
+
   Request  that  the  file-deletions  on the
   receiving side be  done  incrementally  as
   the  transfer  happens.  The per-directory
@@ -3384,10 +3384,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --delete-delay
 
-<div style='padding-left: 90pt'>
+
   Request that  the  file-deletions  on  the
   receiving  side  be  computed  during  the
   transfer (like --delete-during), and  then
@@ -3413,10 +3413,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --delete-after
 
-<div style='padding-left: 90pt'>
+
   Request that  the  file-deletions  on  the
   receiving  side be done after the transfer
   has completed.  This is useful if you  are
@@ -3434,10 +3434,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --delete-excluded
 
-<div style='padding-left: 90pt'>
+
   In addition to deleting the files  on  the
   receiving side that are not on the sending
   side, this tells rsync to also delete  any
@@ -3453,10 +3453,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --ignore-missing-args
 
-<div style='padding-left: 90pt'>
+
   When rsync is first processing the explic‐
   itly  requested  source  files  (e.g. com‐
   mand-line   arguments   or    --files-from
@@ -3471,10 +3471,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --delete-missing-args
 
-<div style='padding-left: 90pt'>
+
   This  option  takes  the  behavior of (the
   implied)  --ignore-missing-args  option  a
   step   farther:   each  missing  arg  will
@@ -3490,7 +3490,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   The  missing  source files are represented
   by special file-list entries which display
   as  a  "*missing" entry in the --list-only
@@ -3499,20 +3499,20 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --ignore-errors
 
-<div style='padding-left: 90pt'>
+
   Tells --delete  to  go  ahead  and  delete
   files even when there are I/O errors.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    --force
 
-<div style='padding-left: 90pt'>
+
   This   option  tells  rsync  to  delete  a
   non-empty  directory  when  it  is  to  be
   replaced by a non-directory.  This is only
@@ -3522,7 +3522,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Note  for  older  rsync  versions: --force
   used  to  still  be  required  when  using
   --delete-after,   and   it   used   to  be
@@ -3532,10 +3532,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --max-delete=NUM
 
-<div style='padding-left: 90pt'>
+
   This  tells  rsync not to delete more than
   NUM files or directories.  If  that  limit
   is  exceeded,  all  further  deletions are
@@ -3549,7 +3549,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Beginning  with  version  3.0.0,  you  may
   specify --max-delete=0 to be warned  about
   any  extraneous  files  in the destination
@@ -3565,10 +3565,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --max-size=SIZE
 
-<div style='padding-left: 90pt'>
+
   This tells rsync to avoid transferring any
   file that is  larger  than  the  specified
   SIZE.  The SIZE value can be suffixed with
@@ -3579,7 +3579,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   This option is a  transfer  rule,  not  an
   exclude,  so  it  doesn’t  affect the data
   that goes into the file-lists, and thus it
@@ -3590,7 +3590,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   The  suffixes  are  as  follows:  "K"  (or
   "KiB")  is  a  kibibyte  (1024),  "M"  (or
   "MiB")  is a mebibyte (1024*1024), and "G"
@@ -3606,7 +3606,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Examples:  --max-size=1.5mb-1  is  1499999
   bytes, and --max-size=2g+1  is  2147483649
   bytes.
@@ -3614,17 +3614,17 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Note  that  rsync  versions prior to 3.1.0
   did not allow --max-size=0.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    --min-size=SIZE
 
-<div style='padding-left: 90pt'>
+
   This tells rsync to avoid transferring any
   file  that  is  smaller than the specified
   SIZE, which can help in  not  transferring
@@ -3635,17 +3635,17 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Note  that  rsync  versions prior to 3.1.0
   did not allow --min-size=0.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    -B, --block-size=BLOCKSIZE
 
-<div style='padding-left: 90pt'>
+
   This forces the block size used in rsync’s
   delta-transfer algorithm to a fixed value.
   It is normally selected based on the  size
@@ -3655,10 +3655,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    -e, --rsh=COMMAND
 
-<div style='padding-left: 90pt'>
+
   This option allows you to choose an alter‐
   native  remote  shell  program  to use for
   communication between the local and remote
@@ -3669,7 +3669,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   If    this    option    is    used    with
   [user@]host::module/path, then the  remote
   shell COMMAND will be used to run an rsync
@@ -3684,7 +3684,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Command-line arguments  are  permitted  in
   COMMAND provided that COMMAND is presented
   to rsync as a single argument.   You  must
@@ -3707,13 +3707,13 @@ rsync     -av    -M--fake-super    /src/
   -e 'ssh -p 2234'
   -e  'ssh  -o  "ProxyCommand  nohup ssh
 
-<div style='padding-left: 90pt'>
+
   firewall nc -w1 %h %p"'
 
 
 
 
-<div style='padding-left: 90pt'>
+
   (Note that ssh users can alternately  cus‐
   tomize  site-specific  connect  options in
   their .ssh/config file.)
@@ -3721,7 +3721,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   You can also choose the remote shell  pro‐
   gram using the RSYNC_RSH environment vari‐
   able, which accepts the same range of val‐
@@ -3730,17 +3730,17 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   See also the --blocking-io option which is
   affected by this option.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    --rsync-path=PROGRAM
 
-<div style='padding-left: 90pt'>
+
   Use this to specify what program is to  be
   run  on  the  remote  machine  to start-up
   rsync.  Often used when rsync  is  not  in
@@ -3756,7 +3756,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   One tricky example is to set  a  different
   default  directory  on  the remote machine
   for use with the --relative  option.   For
@@ -3768,16 +3768,16 @@ rsync     -av    -M--fake-super    /src/
 <div style='padding-left: 120pt'>
   rsync  -avR  --rsync-path="cd  /a/b &amp;&amp;
 
-<div style='padding-left: 90pt'>
+
   rsync" host:c/d /e/
 
 
 
 
-<div style='padding-left: 30pt'>
+
    -M, --remote-option=OPTION
 
-<div style='padding-left: 90pt'>
+
   This option is used for more advanced sit‐
   uations  where you want certain effects to
   be limited to one  side  of  the  transfer
@@ -3791,13 +3791,13 @@ rsync     -av    -M--fake-super    /src/
 <div style='padding-left: 120pt'>
   rsync     -av     -M    --log-file=foo
 
-<div style='padding-left: 90pt'>
+
   -M--fake-super src/ dest/
 
 
 
 
-<div style='padding-left: 90pt'>
+
   If you want to have an option affect  only
   the  local side of a transfer when it nor‐
   mally affects both sides, send  its  nega‐
@@ -3812,7 +3812,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Be  cautious using this, as it is possible
   to toggle an option that will cause  rsync
   to  have  a different idea about what data
@@ -3822,7 +3822,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Note  that  it  is  best to use a separate
   --remote-option for each option  you  want
   to  pass.  This makes your useage compati‐
@@ -3835,7 +3835,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   When  performing  a  local  transfer,  the
   "local"   side   is  the  sender  and  the
   "remote" side is the receiver.
@@ -3843,7 +3843,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Note   some   versions   of    the    popt
   option-parsing  library have a bug in them
   that prevents you from using  an  adjacent
@@ -3856,10 +3856,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    -C, --cvs-exclude
 
-<div style='padding-left: 90pt'>
+
   This is a useful shorthand for excluding a
   broad range of files that you often  don’t
   want  to transfer between systems. It uses
@@ -3869,7 +3869,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   The exclude list is initialized to exclude
   the following items (these  initial  items
   are marked as perishable -- see the FILTER
@@ -3890,7 +3890,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   then, files listed in  a  $HOME/.cvsignore
   are added to the list and any files listed
   in the CVSIGNORE environment variable (all
@@ -3900,7 +3900,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Finally, any file is ignored if it  is  in
   the  same  directory  as a .cvsignore file
   and matches one  of  the  patterns  listed
@@ -3912,7 +3912,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   If  you’re  combining  -C  with  your  own
   --filter rules, you should note that these
   CVS excludes are appended at  the  end  of
@@ -3936,10 +3936,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    -f, --filter=RULE
 
-<div style='padding-left: 90pt'>
+
   This option allows you  to  add  rules  to
   selectively exclude certain files from the
   list of files to be transferred.  This  is
@@ -3949,7 +3949,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   You may use as many  --filter  options  on
   the  command  line as you like to build up
   the list of files to exclude.  If the fil‐
@@ -3963,17 +3963,17 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   See the FILTER RULES section for  detailed
   information on this option.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    -F     The  -F  option  is a shorthand for adding
 
-<div style='padding-left: 90pt'>
+
   two --filter rules to your  command.   The
   first  time  it is used is a shorthand for
   this rule:
@@ -3987,7 +3987,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   This tells rsync to look for per-directory
   .rsync-filter  files that have been sprin‐
   kled through the hierarchy and  use  their
@@ -4004,24 +4004,24 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   This  filters  out the .rsync-filter files
   themselves from the transfer.
 
 
 
 
-<div style='padding-left: 90pt'>
+
   See the FILTER RULES section for  detailed
   information on how these options work.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    --exclude=PATTERN
 
-<div style='padding-left: 90pt'>
+
   This  option  is  a simplified form of the
   --filter  option  that  defaults   to   an
   exclude  rule  and does not allow the full
@@ -4031,17 +4031,17 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   See  the FILTER RULES section for detailed
   information on this option.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    --exclude-from=FILE
 
-<div style='padding-left: 90pt'>
+
   This option is related  to  the  --exclude
   option,  but it specifies a FILE that con‐
   tains exclude  patterns  (one  per  line).
@@ -4053,10 +4053,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --include=PATTERN
 
-<div style='padding-left: 90pt'>
+
   This option is a simplified  form  of  the
   --filter   option   that  defaults  to  an
   include rule and does not allow  the  full
@@ -4066,17 +4066,17 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   See the FILTER RULES section for  detailed
   information on this option.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    --include-from=FILE
 
-<div style='padding-left: 90pt'>
+
   This  option  is  related to the --include
   option, but it specifies a FILE that  con‐
   tains  include  patterns  (one  per line).
@@ -4088,10 +4088,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --files-from=FILE
 
-<div style='padding-left: 90pt'>
+
   Using  this  option  allows you to specify
   the exact list of files  to  transfer  (as
   read  from  the  specified  FILE  or - for
@@ -4103,7 +4103,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      The   --relative   (-R)  option  is
 
 <div style='padding-left: 150pt'>
@@ -4116,7 +4116,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      The --dirs (-d) option is  implied,
 
 <div style='padding-left: 150pt'>
@@ -4129,7 +4129,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      The  --archive (-a) option’s behav‐
 
 <div style='padding-left: 150pt'>
@@ -4140,7 +4140,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      These   side-effects   change   the
 
 <div style='padding-left: 150pt'>
@@ -4155,7 +4155,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   The  filenames that are read from the FILE
   are all relative to the source dir --  any
   leading  slashes  are  removed and no ".."
@@ -4169,13 +4169,13 @@ rsync     -av    -M--fake-super    /src/
 <div style='padding-left: 120pt'>
  rsync  -a  --files-from=/tmp/foo   /usr
 
-<div style='padding-left: 90pt'>
+
   remote:/backup
 
 
 
 
-<div style='padding-left: 90pt'>
+
   If  /tmp/foo contains the string "bin" (or
   even "/bin"), the /usr/bin directory  will
   be  created  as  /backup/bin on the remote
@@ -4199,7 +4199,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   In  addition, the --files-from file can be
   read from the remote host instead  of  the
   local  host  if  you  specify a "host:" in
@@ -4215,13 +4215,13 @@ rsync     -av    -M--fake-super    /src/
 <div style='padding-left: 120pt'>
  rsync -a  --files-from=:/path/file-list
 
-<div style='padding-left: 90pt'>
+
   src:/ /tmp/copy
 
 
 
 
-<div style='padding-left: 90pt'>
+
   This would copy all the files specified in
   the /path/file-list file that was  located
   on the remote "src" host.
@@ -4229,7 +4229,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   If  the --iconv and --protect-args options
   are specified and the  --files-from  file‐
   names  are  being  sent  from  one host to
@@ -4240,7 +4240,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   NOTE: sorting the list  of  files  in  the
   --files-from  input helps rsync to be more
   efficient, as it  will  avoid  re-visiting
@@ -4255,10 +4255,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    -0, --from0
 
-<div style='padding-left: 90pt'>
+
   This  tells rsync that the rules/filenames
   it reads from a file are terminated  by  a
   null  (’\0’)  character,  not a NL, CR, or
@@ -4272,10 +4272,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    -s, --protect-args
 
-<div style='padding-left: 90pt'>
+
   This  option  sends all filenames and most
   options to the remote rsync without allow‐
   ing  the  remote  shell to interpret them.
@@ -4289,7 +4289,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   If  you  use this option with --iconv, the
   args related to the remote side will  also
   be translated from the local to the remote
@@ -4300,7 +4300,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   You may also control this option  via  the
   RSYNC_PROTECT_ARGS  environment  variable.
   If this variable  has  a  non-zero  value,
@@ -4319,7 +4319,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Rsync  can  also  be  configured (at build
   time)  to  have  this  option  enabled  by
   default  (with  is  overridden by both the
@@ -4331,10 +4331,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    -T, --temp-dir=DIR
 
-<div style='padding-left: 90pt'>
+
   This  option instructs rsync to use DIR as
   a scratch directory when  creating  tempo‐
   rary  copies  of  the files transferred on
@@ -4350,7 +4350,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   This  option  is  most often used when the
   receiving disk  partition  does  not  have
   enough  free  space  to hold a copy of the
@@ -4378,7 +4378,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   If  you  are using this option for reasons
   other than a shortage of disk  space,  you
   may   wish   to   combine   it   with  the
@@ -4404,10 +4404,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    -y, --fuzzy
 
-<div style='padding-left: 90pt'>
+
   This  option  tells  rsync  that it should
   look for a basis file for any  destination
   file  that  is missing.  The current algo‐
@@ -4421,7 +4421,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   If  the option is repeated, the fuzzy scan
   will also be done in any  matching  alter‐
   nate   destination  directories  that  are
@@ -4431,7 +4431,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Note  that  the use of the --delete option
   might get rid of any potential fuzzy-match
   files,  so  either  use  --delete-after or
@@ -4441,10 +4441,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --compare-dest=DIR
 
-<div style='padding-left: 90pt'>
+
   This  option instructs rsync to use DIR on
   the destination machine as  an  additional
   hierarchy  to  compare  destination  files
@@ -4462,7 +4462,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Beginning   in   version  2.6.4,  multiple
   --compare-dest  directories  may  be  pro‐
   vided,  which  will  cause rsync to search
@@ -4477,7 +4477,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   If DIR is a relative path, it is  relative
   to  the  destination  directory.  See also
   --copy-dest and --link-dest.
@@ -4485,7 +4485,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   NOTE: beginning with version 3.1.0,  rsync
   will remove a file from a non-empty desti‐
   nation hierarchy  if  an  exact  match  is
@@ -4496,10 +4496,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --copy-dest=DIR
 
-<div style='padding-left: 90pt'>
+
   This  option  behaves like --compare-dest,
   but rsync will also copy  unchanged  files
   found  in DIR to the destination directory
@@ -4512,7 +4512,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   Multiple --copy-dest  directories  may  be
   provided, which will cause rsync to search
   the list in the  order  specified  for  an
@@ -4523,7 +4523,7 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 90pt'>
+
   If  DIR is a relative path, it is relative
   to the destination  directory.   See  also
   --compare-dest and --link-dest.
@@ -4531,10 +4531,10 @@ rsync     -av    -M--fake-super    /src/
 
 
 
-<div style='padding-left: 30pt'>
+
    --link-dest=DIR
 
-<div style='padding-left: 90pt'>
+
   This  option behaves like --copy-dest, but
   unchanged files are hard linked  from  DIR
   to  the  destination directory.  The files
@@ -4549,13 +4549,13 @@ rsync     -av    -M--fake-super    /src/
 <div style='padding-left: 120pt'>
 rsync   -av   --link-dest=$PWD/prior_dir
 
-<div style='padding-left: 90pt'>
+
   host:src_dir/ new_dir/
 
 
 
 
-<div style='padding-left: 90pt'>
+
   If  file’s  aren’t  linking,  double-check
   their  attributes.   Also  check  if  some
   attributes are getting forced  outside  of
@@ -4568,7 +4568,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   Beginning   in   version  2.6.4,  multiple
   --link-dest directories may  be  provided,
   which  will cause rsync to search the list
@@ -4583,7 +4583,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   This option works best when  copying  into
   an  empty destination hierarchy, as exist‐
   ing  files  may   get   their   attributes
@@ -4599,7 +4599,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   Note that if you combine this option  with
   --ignore-times,  rsync  will  not link any
   files together because it only links iden‐
@@ -4610,7 +4610,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   If  DIR is a relative path, it is relative
   to the destination  directory.   See  also
   --compare-dest and --copy-dest.
@@ -4618,7 +4618,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   Note  that  rsync  versions prior to 2.6.1
   had a bug that could  prevent  --link-dest
   from working properly for a non-super-user
@@ -4630,10 +4630,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    -z, --compress
 
-<div style='padding-left: 90pt'>
+
   With  this  option,  rsync  compresses the
   file data as it is sent to the destination
   machine,  which reduces the amount of data
@@ -4643,7 +4643,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   Note  that  this option typically achieves
   better  compression  ratios  than  can  be
   achieved  by  using  a  compressing remote
@@ -4660,7 +4660,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   Note that if your  version  of  rsync  was
   compiled with an external zlib (instead of
   the zlib that comes packaged  with  rsync)
@@ -4673,7 +4673,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   The  client  rsync requests new-style com‐
   pression on the server via the  --new-com‐
   press  option,  so  if you see that option
@@ -4686,7 +4686,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   See the  --skip-compress  option  for  the
   default  list  of  file suffixes that will
   not be compressed.
@@ -4694,10 +4694,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --compress-level=NUM
 
-<div style='padding-left: 90pt'>
+
   Explicitly set the  compression  level  to
   use (see --compress) instead of letting it
   default.   Allowed  values  for  NUM   are
@@ -4709,10 +4709,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --skip-compress=LIST
 
-<div style='padding-left: 90pt'>
+
   Override the list of  file  suffixes  that
   will  not  be compressed.  The LIST should
   be one or more file suffixes (without  the
@@ -4721,14 +4721,14 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   You  may  specify an empty string to indi‐
   cate that no file should be skipped.
 
 
 
 
-<div style='padding-left: 90pt'>
+
   Simple character-class  matching  is  sup‐
   ported:  each  must  consist  of a list of
   letters inside the square  brackets  (e.g.
@@ -4739,14 +4739,14 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   The  characters  asterisk  (*)  and  ques‐
   tion-mark (?) have no special meaning.
 
 
 
 
-<div style='padding-left: 90pt'>
+
   Here’s an example that  specifies  6  suf‐
   fixes  to  skip  (since  1  of the 5 rules
   matches 2 suffixes):
@@ -4760,7 +4760,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   The default list of suffixes that will not
   be  compressed is this (in this version of
   rsync):
@@ -4768,7 +4768,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   7z ace avi bz2 deb gpg gz iso jpeg jpg  lz
   lzma  lzo mov mp3 mp4 ogg png rar rpm rzip
   tbz tgz tlz txz xz z zip
@@ -4776,7 +4776,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   This  list  will  be  replaced   by   your
   --skip-compress list in all but one situa‐
   tion: a copy from a daemon rsync will  add
@@ -4787,10 +4787,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --numeric-ids
 
-<div style='padding-left: 90pt'>
+
   With   this  option  rsync  will  transfer
   numeric group and  user  IDs  rather  than
   using  user  and  group  names and mapping
@@ -4799,7 +4799,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   By default rsync will use the username and
   groupname  to  determine what ownership to
   give files. The special uid 0 and the spe‐
@@ -4810,7 +4810,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   If  a  user  or  group  has no name on the
   source system or it has no  match  on  the
   destination  system,  then  the numeric ID
@@ -4825,10 +4825,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --usermap=STRING, --groupmap=STRING
 
-<div style='padding-left: 90pt'>
+
   These options allow you to  specify  users
   and  groups that should be mapped to other
   values by the receiving side.  The  STRING
@@ -4855,7 +4855,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   The  first  match  in  the list is the one
   that is used.  You should specify all your
   user  mappings  using  a  single --usermap
@@ -4865,7 +4865,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   Note that the sender’s name for the 0 user
   and  group  are  not  transmitted  to  the
   receiver, so you should either match these
@@ -4878,7 +4878,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   Any IDs that do not have  a  name  on  the
   sending  side  are  treated  as  having an
   empty name for the  purpose  of  matching.
@@ -4894,7 +4894,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   When the --numeric-ids option is used, the
   sender does not send any names, so all the
   IDs are treated as having an  empty  name.
@@ -4905,7 +4905,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   For  the  --usermap  option  to  have  any
   effect, the -o (--owner)  option  must  be
   used  (or  implied), and the receiver will
@@ -4919,10 +4919,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --chown=USER:GROUP
 
-<div style='padding-left: 90pt'>
+
   This  option  forces all files to be owned
   by USER with group GROUP.  This is a  sim‐
   pler  interface  than  using --usermap and
@@ -4938,7 +4938,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   If  you  specify "--chown=foo:bar, this is
   exactly    the    same    as    specifying
   "--usermap=*:foo  --groupmap=*:bar",  only
@@ -4947,10 +4947,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --timeout=TIMEOUT
 
-<div style='padding-left: 90pt'>
+
   This option allows you to  set  a  maximum
   I/O  timeout  in  seconds.  If  no data is
   transferred for the  specified  time  then
@@ -4960,10 +4960,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --contimeout
 
-<div style='padding-left: 90pt'>
+
   This option allows you to set  the  amount
   of  time that rsync will wait for its con‐
   nection to an rsync daemon to succeed.  If
@@ -4973,10 +4973,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --address
 
-<div style='padding-left: 90pt'>
+
   By default rsync will bind to the wildcard
   address  when  connecting to an rsync dae‐
   mon.  The --address option allows  you  to
@@ -4987,10 +4987,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --port=PORT
 
-<div style='padding-left: 90pt'>
+
   This  specifies an alternate TCP port num‐
   ber to use rather than the default of 873.
   This  is  only needed if you are using the
@@ -5003,10 +5003,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --sockopts
 
-<div style='padding-left: 90pt'>
+
   This option can provide  endless  fun  for
   people  who  like to tune their systems to
   the utmost degree. You can set  all  sorts
@@ -5023,10 +5023,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --blocking-io
 
-<div style='padding-left: 90pt'>
+
   This  tells rsync to use blocking I/O when
   launching a remote  shell  transport.   If
   the  remote  shell is either rsh or remsh,
@@ -5038,10 +5038,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --outbuf=MODE
 
-<div style='padding-left: 90pt'>
+
   This  sets the output buffering mode.  The
   mode can be None (aka  Unbuffered),  Line,
   or  Block  (aka Full).  You may specify as
@@ -5051,7 +5051,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   The  main  use of this option is to change
   Full  buffering  to  Line  buffering  when
   rsync’s output is going to a file or pipe.
@@ -5059,10 +5059,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    -i, --itemize-changes
 
-<div style='padding-left: 90pt'>
+
   Requests  a  simple  itemized  list of the
   changes that are being made to each  file,
   including   attribute  changes.   This  is
@@ -5077,7 +5077,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   The "%i" escape has a cryptic output  that
   is 11 letters long.  The general format is
   like the string YXcstpoguax,  where  Y  is
@@ -5089,15 +5089,15 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   The update types that replace the Y are as
   follows:
 
 
 
 
-<div style='padding-left: 90pt'>
-  o      A  &lt;  means  that  a  file is being
+
+  o      A  <  means  that  a  file is being
 
 <div style='padding-left: 150pt'>
  transferred  to  the  remote   host
@@ -5106,8 +5106,8 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
-  o      A  &gt;  means  that  a  file is being
+
+  o      A  >  means  that  a  file is being
 
 <div style='padding-left: 150pt'>
  transferred  to  the   local   host
@@ -5116,7 +5116,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   o      A  c means that a local change/cre‐
 
 <div style='padding-left: 150pt'>
@@ -5128,7 +5128,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   o      A  h  means that the item is a hard
 
 <div style='padding-left: 150pt'>
@@ -5138,7 +5138,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   o      A  .  means  that  the  item is not
 
 <div style='padding-left: 150pt'>
@@ -5149,7 +5149,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   o      A * means  that  the  rest  of  the
 
 <div style='padding-left: 150pt'>
@@ -5159,7 +5159,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   The file-types that replace the X  are:  f
   for  a file, a d for a directory, an L for
   a symlink, a D for a device, and a S for a
@@ -5169,7 +5169,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   The other letters in the string above  are
   the  actual letters that will be output if
   the associated attribute for the  item  is
@@ -5185,14 +5185,14 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   The attribute that is associated with each
   letter is as follows:
 
 
 
 
-<div style='padding-left: 90pt'>
+
   o      A  c  means  either  that a regular
 
 <div style='padding-left: 150pt'>
@@ -5208,7 +5208,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   o      A  s  means  the  size of a regular
 
 <div style='padding-left: 150pt'>
@@ -5218,7 +5218,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   o      A  t means the modification time is
 
 <div style='padding-left: 150pt'>
@@ -5240,7 +5240,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   o      A  p means the permissions are dif‐
 
 <div style='padding-left: 150pt'>
@@ -5250,7 +5250,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   o      An  o  means the owner is different
 
 <div style='padding-left: 150pt'>
@@ -5261,7 +5261,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   o      A g means the  group  is  different
 
 <div style='padding-left: 150pt'>
@@ -5273,7 +5273,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   o      The u slot is reserved  for  future
 
 <div style='padding-left: 150pt'>
@@ -5282,7 +5282,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   o      The  a  means that the ACL informa‐
 
 <div style='padding-left: 150pt'>
@@ -5291,7 +5291,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   o      The  x  means  that  the   extended
 
 <div style='padding-left: 150pt'>
@@ -5300,7 +5300,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   One other output is possible:  when delet‐
   ing files, the "%i" will output the string
   "*deleting"  for  each  item that is being
@@ -5312,10 +5312,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --out-format=FORMAT
 
-<div style='padding-left: 90pt'>
+
   This  allows  you  to specify exactly what
   the rsync client outputs to the user on  a
   per-update  basis.   The  format is a text
@@ -5333,7 +5333,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   Specifying the --out-format option implies
   the --info=name option, which will mention
   each  file, dir, etc. that gets updated in
@@ -5352,7 +5352,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   Rsync will output  the  out-format  string
   prior  to  a file’s transfer unless one of
   the    transfer-statistic    escapes    is
@@ -5368,10 +5368,10 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 30pt'>
+
    --log-file=FILE
 
-<div style='padding-left: 90pt'>
+
   This option causes rsync to log what it is
   doing  to  a file.  This is similar to the
   logging that a daemon  does,  but  can  be
@@ -5386,7 +5386,7 @@ rsync   -av   --link-dest=$PWD/prior_dir
 
 
 
-<div style='padding-left: 90pt'>
+
   Here’s a example command that requests the
   remote side to log what is happening:
 
@@ -5399,17 +5399,17 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   This is very useful if you need  to  debug
   why a connection is closing unexpectedly.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    --log-file-format=FORMAT
 
-<div style='padding-left: 90pt'>
+
   This  allows  you  to specify exactly what
   per-update logging is put  into  the  file
   specified  by the --log-file option (which
@@ -5424,7 +5424,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   The default FORMAT used if  --log-file  is
   specified  and  this  option is not is ’%i
   %n%L’.
@@ -5432,10 +5432,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --stats
 
-<div style='padding-left: 90pt'>
+
   This tells rsync to print a verbose set of
   statistics  on the file transfer, allowing
   you  to   tell   how   effective   rsync’s
@@ -5448,13 +5448,13 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   The current statistics are as follows:
 
 
 
 
-<div style='padding-left: 90pt'>
+
   o      Number of files is the count of all
 
 <div style='padding-left: 150pt'>
@@ -5474,7 +5474,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      Number  of  created  files  is  the
 
 <div style='padding-left: 150pt'>
@@ -5488,7 +5488,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      Number  of  deleted  files  is  the
 
 <div style='padding-left: 150pt'>
@@ -5506,7 +5506,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      Number of regular files transferred
 
 <div style='padding-left: 150pt'>
@@ -5521,7 +5521,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      Total file size is the total sum of
 
 <div style='padding-left: 150pt'>
@@ -5533,7 +5533,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      Total transferred file size is  the
 
 <div style='padding-left: 150pt'>
@@ -5543,7 +5543,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      Literal data is how much  unmatched
 
 <div style='padding-left: 150pt'>
@@ -5554,7 +5554,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      Matched  data  is how much data the
 
 <div style='padding-left: 150pt'>
@@ -5564,7 +5564,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      File  list  size  is  how  big  the
 
 <div style='padding-left: 150pt'>
@@ -5578,7 +5578,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      File  list  generation  time is the
 
 <div style='padding-left: 150pt'>
@@ -5591,7 +5591,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      File list transfer time is the num‐
 
 <div style='padding-left: 150pt'>
@@ -5602,7 +5602,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      Total  bytes  sent  is the count of
 
 <div style='padding-left: 150pt'>
@@ -5612,7 +5612,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   o      Total  bytes  received is the count
 
 <div style='padding-left: 150pt'>
@@ -5627,10 +5627,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    -8, --8-bit-output
 
-<div style='padding-left: 90pt'>
+
   This tells rsync  to  leave  all  high-bit
   characters unescaped in the output instead
   of trying to test them to see  if  they’re
@@ -5642,7 +5642,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   The escape idiom that started in 2.6.7  is
   to  output  a  literal backslash (\) and a
   hash (#), followed by exactly 3 octal dig‐
@@ -5654,10 +5654,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    -h, --human-readable
 
-<div style='padding-left: 90pt'>
+
   Output numbers in  a  more  human-readable
   format.  There are 3 possible levels:  (1)
   output numbers with  a  separator  between
@@ -5672,7 +5672,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   The  default  is  human-readable  level 1.
   Each -h option increases the level by one.
   You  can take the level down to 0 (to out‐
@@ -5682,7 +5682,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   The unit letters that are appended in lev‐
   els 2 and 3 are: K  (kilo),  M  (mega),  G
   (giga),  or  T  (tera).   For  example,  a
@@ -5693,7 +5693,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   Backward compatibility note:  versions  of
   rsync   prior  to  3.1.0  do  not  support
   human-readable level 1, and  they  default
@@ -5707,10 +5707,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --partial
 
-<div style='padding-left: 90pt'>
+
   By default, rsync  will  delete  any  par‐
   tially transferred file if the transfer is
   interrupted. In some circumstances  it  is
@@ -5723,10 +5723,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --partial-dir=DIR
 
-<div style='padding-left: 90pt'>
+
   A  better  way  to keep partial files than
   the --partial option is to specify  a  DIR
   that will be used to hold the partial data
@@ -5740,7 +5740,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   Note that if --whole-file is specified (or
   implied), any  partial-dir  file  that  is
   found  for  a  file  that is being updated
@@ -5751,7 +5751,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   Rsync will create the DIR if it is missing
   (just the last dir -- not the whole path).
   This makes it easy to use a relative  path
@@ -5764,7 +5764,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   If  the  partial-dir value is not an abso‐
   lute path, rsync will add an exclude  rule
   at  the end of all your existing excludes.
@@ -5780,7 +5780,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   If  you  are  supplying  your  own exclude
   rules,  you  may  need  to  add  your  own
   exclude/hide/protect  rule  for  the  par‐
@@ -5801,7 +5801,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   IMPORTANT: the --partial-dir should not be
   writable  by  other users or it is a secu‐
   rity risk.  E.g. AVOID "/tmp".
@@ -5809,7 +5809,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   You can also set the partial-dir value the
   RSYNC_PARTIAL_DIR   environment  variable.
   Setting this in the environment  does  not
@@ -5832,7 +5832,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   For  the  purposes  of the daemon-config’s
   "refuse  options"  setting,  --partial-dir
   does not imply --partial.  This is so that
@@ -5845,10 +5845,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --delay-updates
 
-<div style='padding-left: 90pt'>
+
   This option puts the temporary  file  from
   each updated file into a holding directory
   until the end of the  transfer,  at  which
@@ -5871,7 +5871,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   This   option  uses  more  memory  on  the
   receiving side (one bit  per  file  trans‐
   ferred) and also requires enough free disk
@@ -5890,7 +5890,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   See also the "atomic-rsync" perl script in
   the  "support"  subdir for an update algo‐
   rithm that is even more  atomic  (it  uses
@@ -5900,10 +5900,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    -m, --prune-empty-dirs
 
-<div style='padding-left: 90pt'>
+
   This option tells the receiving  rsync  to
   get  rid  of  empty  directories  from the
   file-list,  including  nested  directories
@@ -5917,7 +5917,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   Note that the use of transfer rules,  such
   as  the --min-size option, does not affect
   what goes into the  file  list,  and  thus
@@ -5928,7 +5928,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   Because  the  file-list  is actually being
   pruned,  this  option  also  affects  what
   directories  get  deleted when a delete is
@@ -5943,7 +5943,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   You can prevent  the  pruning  of  certain
   empty  directories  from  the file-list by
   using  a  global  "protect"  filter.   For
@@ -5954,13 +5954,13 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   --filter ’protect emptydir/’
 
 
 
 
-<div style='padding-left: 90pt'>
+
   Here’s  an  example  that  copies all .pdf
   files in a hierarchy,  only  creating  the
   necessary  destination directories to hold
@@ -5973,14 +5973,14 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync  -avm  --del  --include=’*.pdf’   -f
   ’hide,! */’ src/ dest
 
 
 
 
-<div style='padding-left: 90pt'>
+
   If  you  didn’t want to remove superfluous
   destination files, the  more  time-honored
   options  of "--include='*/' --exclude='*'"
@@ -5990,10 +5990,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --progress
 
-<div style='padding-left: 90pt'>
+
   This  option tells rsync to print informa‐
   tion showing the progress of the transfer.
   This  gives  a  bored  user  something  to
@@ -6007,7 +6007,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   While  rsync  is  transferring  a  regular
   file, it  updates  a  progress  line  that
   looks like this:
@@ -6021,7 +6021,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   In  this  example, the receiver has recon‐
   structed  782448  bytes  or  63%  of   the
   sender’s   file,  which  is  being  recon‐
@@ -6033,7 +6033,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   These  statistics  can  be  misleading  if
   rsync’s  delta-transfer  algorithm  is  in
   use.   For  example,  if the sender’s file
@@ -6049,7 +6049,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   When  the  file  transfer  finishes, rsync
   replaces the progress line with a  summary
   line that looks like this:
@@ -6063,7 +6063,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   In  this  example,  the file was 1,238,099
   bytes long in total, the average  rate  of
   transfer  for  the  whole  file was 146.38
@@ -6078,7 +6078,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   In an incremental  recursion  scan,  rsync
   won’t  know  the  total number of files in
   the file-list until it reaches the ends of
@@ -6099,10 +6099,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    -P     The  -P  option is equivalent to --partial
 
-<div style='padding-left: 90pt'>
+
   --progress.  Its purpose  is  to  make  it
   much  easier  to specify these two options
   for a long transfer  that  may  be  inter‐
@@ -6111,7 +6111,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   There  is  also  a --info=progress2 option
   that outputs statistics based on the whole
   transfer,  rather  than  individual files.
@@ -6126,10 +6126,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --password-file=FILE
 
-<div style='padding-left: 90pt'>
+
   This option allows you to provide a  pass‐
   word  for  accessing an rsync daemon via a
   file or via standard input if FILE  is  -.
@@ -6142,7 +6142,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   This  option does not supply a password to
   a remote shell transport such as  ssh;  to
   learn  how  to do that, consult the remote
@@ -6157,10 +6157,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --list-only
 
-<div style='padding-left: 90pt'>
+
   This option will cause the source files to
   be  listed  instead  of transferred.  This
   option is inferred if there  is  a  single
@@ -6185,7 +6185,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   Starting  with rsync 3.1.0, the sizes out‐
   put by --list-only  are  affected  by  the
   --human-readable  option.  By default they
@@ -6201,7 +6201,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   Compatibility  note:   when  requesting  a
   remote listing of files from an rsync that
   is   version   2.6.3  or  older,  you  may
@@ -6219,10 +6219,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --bwlimit=RATE
 
-<div style='padding-left: 90pt'>
+
   This option allows you to specify the max‐
   imum transfer rate for the data sent  over
   the socket, specified in units per second.
@@ -6240,7 +6240,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   For  backward-compatibility  reasons,  the
   rate limit will be rounded to the  nearest
   KiB  unit,  so  no  rate smaller than 1024
@@ -6249,7 +6249,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   Rsync  writes  data  over  the  socket  in
   blocks,  and  this  option both limits the
   size of the blocks that rsync writes,  and
@@ -6262,7 +6262,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   Due to the internal buffering of data, the
   --progress option may not be  an  accurate
   reflection  on  how fast the data is being
@@ -6276,10 +6276,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --stop-at=y-m-dTh:m
 
-<div style='padding-left: 90pt'>
+
   This  option allows you to specify at what
   time      to      stop      rsync,      in
   year-month-dayThour:minute  numeric format
@@ -6299,20 +6299,20 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --time-limit=MINS
 
-<div style='padding-left: 90pt'>
+
   This option allows you to specify the max‐
   imum number of minutes rsync will run for.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    --write-batch=FILE
 
-<div style='padding-left: 90pt'>
+
   Record a file that can later be applied to
   another    identical    destination   with
   --read-batch. See the "BATCH MODE" section
@@ -6322,10 +6322,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --only-write-batch=FILE
 
-<div style='padding-left: 90pt'>
+
   Works like --write-batch, except  that  no
   updates are made on the destination system
   when creating the batch.   This  lets  you
@@ -6336,7 +6336,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   Note  that  you can feel free to write the
   batch directly to some portable media:  if
   this  media  fills  to capacity before the
@@ -6351,7 +6351,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   Also note that  you  only  save  bandwidth
   when  pushing  changes  to a remote system
   because this allows the batched data to be
@@ -6364,10 +6364,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --read-batch=FILE
 
-<div style='padding-left: 90pt'>
+
   Apply all of the changes stored in FILE, a
   file     previously      generated      by
   --write-batch.   If  FILE  is -, the batch
@@ -6377,10 +6377,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --protocol=NUM
 
-<div style='padding-left: 90pt'>
+
   Force  an  older  protocol  version  to be
   used.  This is useful for creating a batch
   file that is compatible with an older ver‐
@@ -6397,10 +6397,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --iconv=CONVERT_SPEC
 
-<div style='padding-left: 90pt'>
+
   Rsync can convert filenames between  char‐
   acter  sets  using  this  option.  Using a
   CONVERT_SPEC of "." tells rsync to look up
@@ -6422,7 +6422,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   For a list  of  what  charset  names  your
   local  iconv library supports, you can run
   "iconv --list".
@@ -6430,7 +6430,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   If you specify the  --protect-args  option
   (-s),  rsync  will translate the filenames
   you specify on the command-line  that  are
@@ -6440,7 +6440,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   Note that rsync does not do any conversion
   of   names   in  filter  files  (including
   include/exclude files).  It is up  to  you
@@ -6454,7 +6454,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   When you pass  an  --iconv  option  to  an
   rsync  daemon  that  allows it, the daemon
   uses  the   charset   specified   in   its
@@ -6467,10 +6467,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    -4, --ipv4 or -6, --ipv6
 
-<div style='padding-left: 90pt'>
+
   Tells  rsync to prefer IPv4/IPv6 when cre‐
   ating sockets.  This only affects  sockets
   that  rsync  has direct control over, such
@@ -6481,7 +6481,7 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 90pt'>
+
   If rsync was complied without support  for
   IPv6,  the  --ipv6  option  will  have  no
   effect.  The --version  output  will  tell
@@ -6490,10 +6490,10 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 
-<div style='padding-left: 30pt'>
+
    --checksum-seed=NUM
 
-<div style='padding-left: 90pt'>
+
   Set  the checksum seed to the integer NUM.
   This 4 byte checksum seed is  included  in
   each  block and MD4 file checksum calcula‐
@@ -6513,17 +6513,17 @@ rsync -av --remote-option=--log-file=/tmp/rlog src/ dest/
 
 
 DAEMON OPTIONS
-<div style='padding-left: 30pt'>
+
    The options allowed when starting an rsync daemon
    are as follows:
 
 
 
 
-<div style='padding-left: 30pt'>
+
    --daemon
 
-<div style='padding-left: 90pt'>
+
   This  tells  rsync  that it is to run as a
   daemon.  The daemon you start running  may
   be  accessed  using  an rsync client using
@@ -6533,7 +6533,7 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   If  standard  input is a socket then rsync
   will assume  that  it  is  being  run  via
   inetd,  otherwise  it will detach from the
@@ -6547,10 +6547,10 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --address
 
-<div style='padding-left: 90pt'>
+
   By default rsync will bind to the wildcard
   address when run  as  a  daemon  with  the
   --daemon  option.   The  --address  option
@@ -6564,10 +6564,10 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --bwlimit=RATE
 
-<div style='padding-left: 90pt'>
+
   This option allows you to specify the max‐
   imum transfer rate for the data the daemon
   sends  over  the  socket.   The client can
@@ -6579,10 +6579,10 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --config=FILE
 
-<div style='padding-left: 90pt'>
+
   This  specifies  an  alternate config file
   than the default.  This is  only  relevant
   when  --daemon  is specified.  The default
@@ -6595,10 +6595,10 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -M, --dparam=OVERRIDE
 
-<div style='padding-left: 90pt'>
+
   This option can be  used  to  set  a  dae‐
   mon-config   parameter  when  starting  up
   rsync in daemon mode.  It is equivalent to
@@ -6617,10 +6617,10 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --no-detach
 
-<div style='padding-left: 90pt'>
+
   When  running  as  a  daemon,  this option
   instructs rsync to not detach  itself  and
   become  a background process.  This option
@@ -6636,10 +6636,10 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --port=PORT
 
-<div style='padding-left: 90pt'>
+
   This  specifies an alternate TCP port num‐
   ber for the daemon  to  listen  on  rather
   than  the  default  of  873.  See also the
@@ -6649,10 +6649,10 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --log-file=FILE
 
-<div style='padding-left: 90pt'>
+
   This  option tells the rsync daemon to use
   the given log-file name instead  of  using
   the "log file" setting in the config file.
@@ -6660,10 +6660,10 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --log-file-format=FORMAT
 
-<div style='padding-left: 90pt'>
+
   This  option tells the rsync daemon to use
   the given FORMAT string instead  of  using
   the  "log  format"  setting  in the config
@@ -6674,10 +6674,10 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    --sockopts
 
-<div style='padding-left: 90pt'>
+
   This overrides the socket options  setting
   in  the  rsyncd.conf file and has the same
   syntax.
@@ -6685,10 +6685,10 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -v, --verbose
 
-<div style='padding-left: 90pt'>
+
   This option increases the amount of infor‐
   mation  the daemon logs during its startup
   phase.  After  the  client  connects,  the
@@ -6700,10 +6700,10 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -4, --ipv4 or -6, --ipv6
 
-<div style='padding-left: 90pt'>
+
   Tells rsync to prefer IPv4/IPv6 when  cre‐
   ating  the incoming sockets that the rsync
   daemon will use to listen for connections.
@@ -6718,7 +6718,7 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 90pt'>
+
   If  rsync was complied without support for
   IPv6,  the  --ipv6  option  will  have  no
   effect.   The  --version  output will tell
@@ -6727,10 +6727,10 @@ DAEMON OPTIONS
 
 
 
-<div style='padding-left: 30pt'>
+
    -h, --help
 
-<div style='padding-left: 90pt'>
+
   When specified  after  --daemon,  print  a
   short  help  page  describing  the options
   available for starting an rsync daemon.
@@ -6739,7 +6739,7 @@ DAEMON OPTIONS
 
 
 FILTER RULES
-<div style='padding-left: 30pt'>
+
    The filter rules allow for flexible selection  of
    which files to transfer (include) and which files
    to skip (exclude).   The  rules  either  directly
@@ -6750,7 +6750,7 @@ FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    As  the  list of files/directories to transfer is
    built, rsync checks each name to  be  transferred
    against  the  list of include/exclude patterns in
@@ -6763,7 +6763,7 @@ FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    Rsync builds an ordered list of filter  rules  as
    specified on the command-line.  Filter rules have
    the following syntax:
@@ -6771,14 +6771,14 @@ FILTER RULES
 
 
 
-<div style='padding-left: 90pt'>
+
   RULE [PATTERN_OR_FILENAME]
   RULE,MODIFIERS [PATTERN_OR_FILENAME]
 
 
 
 
-<div style='padding-left: 30pt'>
+
    You have your choice of  using  either  short  or
    long  RULE names, as described below.  If you use
    a short-named rule, the ’,’ separating  the  RULE
@@ -6790,7 +6790,7 @@ FILTER RULES
 
 
 
-<div style='padding-left: 90pt'>
+
   exclude, - specifies an exclude pattern.
   include, + specifies an include pattern.
   merge, . specifies a  merge-file  to  read
@@ -6811,7 +6811,7 @@ FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    When  rules  are  being  read  from a file, empty
    lines are ignored,  as  are  comment  lines  that
    start with a "#".
@@ -6819,7 +6819,7 @@ FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    Note  that  the  --include/--exclude command-line
    options do not allow the full range of rule pars‐
    ing  as  described  above  -- they only allow the
@@ -6837,7 +6837,7 @@ FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    Note  also  that  the  --filter,  --include,  and
    --exclude options take one rule/pattern each.  To
    add  multiple ones, you can repeat the options on
@@ -6849,7 +6849,7 @@ FILTER RULES
 
 
 INCLUDE/EXCLUDE PATTERN RULES
-<div style='padding-left: 30pt'>
+
    You can include and exclude files  by  specifying
    patterns  using  the  "+", "-", etc. filter rules
    (as  introduced  in  the  FILTER  RULES   section
@@ -6861,10 +6861,10 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      if the pattern starts with a / then it  is
 
-<div style='padding-left: 90pt'>
+
   anchored to a particular spot in the hier‐
   archy of files, otherwise  it  is  matched
   against  the end of the pathname.  This is
@@ -6889,20 +6889,20 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      if the pattern ends with a / then it  will
 
-<div style='padding-left: 90pt'>
+
   only  match  a  directory,  not  a regular
   file, symlink, or device.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      rsync  chooses  between  doing  a   simple
 
-<div style='padding-left: 90pt'>
+
   string  match  and  wildcard  matching  by
   checking if the pattern  contains  one  of
   these three wildcard characters: ’*’, ’?’,
@@ -6911,46 +6911,46 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      a ’*’ matches any path component,  but  it
 
-<div style='padding-left: 90pt'>
+
   stops at slashes.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      use  ’**’  to  match  anything,  including
 
-<div style='padding-left: 90pt'>
+
   slashes.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      a ’?’ matches any character except a slash
 
-<div style='padding-left: 90pt'>
+
   (/).
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      a  ’[’  introduces a character class, such
 
-<div style='padding-left: 90pt'>
+
   as [a-z] or :alpha:.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      in a wildcard pattern, a backslash can  be
 
-<div style='padding-left: 90pt'>
+
   used  to  escape a wildcard character, but
   it is matched literally when no  wildcards
   are  present.  This means that there is an
@@ -6965,10 +6965,10 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      if the pattern contains a / (not  counting
 
-<div style='padding-left: 90pt'>
+
   a  trailing  /)  or  a  "**",  then  it is
   matched against the full pathname, includ‐
   ing  any  leading directories. If the pat‐
@@ -6983,10 +6983,10 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      a trailing "dir_name/***" will match  both
 
-<div style='padding-left: 90pt'>
+
   the  directory (as if "dir_name/" had been
   specified) and everything in the directory
   (as  if "dir_name/**" had been specified).
@@ -6995,7 +6995,7 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    Note that, when using the --recursive (-r) option
    (which  is  implied by -a), every subcomponent of
    every path is  visited  from  the  top  down,  so
@@ -7015,7 +7015,7 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 90pt'>
+
   + /some/path/this-file-will-not-be-found
   + /file-is-included
   - *
@@ -7023,7 +7023,7 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    This fails because the parent directory "some" is
    excluded  by  the ’*’ rule, so rsync never visits
    any of the files in  the  "some"  or  "some/path"
@@ -7039,7 +7039,7 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 90pt'>
+
   + /some/
   + /some/path/
   + /some/path/this-file-is-found
@@ -7049,45 +7049,45 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    Here are some examples of exclude/include  match‐
    ing:
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      "-  *.o"  would exclude all names matching
 
-<div style='padding-left: 90pt'>
+
   *.o
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      "- /foo" would exclude a file  (or  direc‐
 
-<div style='padding-left: 90pt'>
+
   tory)   named  foo  in  the  transfer-root
   directory
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      "- foo/" would exclude any directory named
 
-<div style='padding-left: 90pt'>
+
   foo
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      "-  /foo/*/bar"  would  exclude  any  file
 
-<div style='padding-left: 90pt'>
+
   named bar which is at two levels  below  a
   directory  named  foo in the transfer-root
   directory
@@ -7095,10 +7095,10 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      "- /foo/**/bar"  would  exclude  any  file
 
-<div style='padding-left: 90pt'>
+
   named  bar  two  or  more  levels  below a
   directory named foo in  the  transfer-root
   directory
@@ -7106,10 +7106,10 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      The combination of "+ */", "+ *.c", and "-
 
-<div style='padding-left: 90pt'>
+
   *" would include  all  directories  and  C
   source  files  but  nothing else (see also
   the --prune-empty-dirs option)
@@ -7117,10 +7117,10 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      The   combination   of   "+   foo/",    "+
 
-<div style='padding-left: 90pt'>
+
   foo/bar.c",  and  "- *" would include only
   the foo directory and foo/bar.c  (the  foo
   directory  must  be explicitly included or
@@ -7129,17 +7129,17 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    The following modifiers are accepted after a  "+"
    or "-":
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      A  /  specifies  that  the include/exclude
 
-<div style='padding-left: 90pt'>
+
   rule should be matched against  the  abso‐
   lute  pathname  of  the current item.  For
   example, "-/  /etc/passwd"  would  exclude
@@ -7153,10 +7153,10 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      A !  specifies  that  the  include/exclude
 
-<div style='padding-left: 90pt'>
+
   should take effect if the pattern fails to
   match.   For  instance,  "-!   */"   would
   exclude all non-directories.
@@ -7164,10 +7164,10 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      A  C  is  used  to  indicate  that all the
 
-<div style='padding-left: 90pt'>
+
   global   CVS-exclude   rules   should   be
   inserted as excludes in place of the "-C".
   No arg should follow.
@@ -7175,10 +7175,10 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      An s is used to  indicate  that  the  rule
 
-<div style='padding-left: 90pt'>
+
   applies  to the sending side.  When a rule
   affects  the  sending  side,  it  prevents
   files from being transferred.  The default
@@ -7192,10 +7192,10 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      An  r  is  used  to indicate that the rule
 
-<div style='padding-left: 90pt'>
+
   applies to the  receiving  side.   When  a
   rule  affects  the receiving side, it pre‐
   vents files from being deleted.  See the s
@@ -7207,10 +7207,10 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      A p indicates that a rule  is  perishable,
 
-<div style='padding-left: 90pt'>
+
   meaning  that it is ignored in directories
   that are being deleted.  For instance, the
   -C  option’s  default  rules  that exclude
@@ -7223,7 +7223,7 @@ INCLUDE/EXCLUDE PATTERN RULES
 
 
 MERGE-FILE FILTER RULES
-<div style='padding-left: 30pt'>
+
    You  can merge whole files into your filter rules
    by specifying either a merge (.) or  a  dir-merge
    (:)  filter  rule  (as  introduced  in the FILTER
@@ -7232,7 +7232,7 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    There are two  kinds  of  merged  files  --  sin‐
    gle-instance  (’.’)  and  per-directory (’:’).  A
    single-instance merge file is read one time,  and
@@ -7253,13 +7253,13 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    Some examples:
 
 
 
 
-<div style='padding-left: 90pt'>
+
   merge /etc/rsync/default.rules
   . /etc/rsync/default.rules
   dir-merge .per-dir-filter
@@ -7270,37 +7270,37 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    The following  modifiers  are  accepted  after  a
    merge or dir-merge rule:
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      A - specifies that the file should consist
 
-<div style='padding-left: 90pt'>
+
   of only exclude patterns,  with  no  other
   rule-parsing except for in-file comments.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      A + specifies that the file should consist
 
-<div style='padding-left: 90pt'>
+
   of only include patterns,  with  no  other
   rule-parsing except for in-file comments.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      A  C  is  a  way  to specify that the file
 
-<div style='padding-left: 90pt'>
+
   should be read in a CVS-compatible manner.
   This  turns on ’n’, ’w’, and ’-’, but also
   allows the list-clearing token (!)  to  be
@@ -7310,29 +7310,29 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      A e will exclude the merge-file name  from
 
-<div style='padding-left: 90pt'>
+
   the  transfer;  e.g.  "dir-merge,e .rules"
   is like "dir-merge .rules" and "- .rules".
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      An n specifies  that  the  rules  are  not
 
-<div style='padding-left: 90pt'>
+
   inherited by subdirectories.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    o      A   w   specifies   that   the  rules  are
 
-<div style='padding-left: 90pt'>
+
   word-split on whitespace  instead  of  the
   normal  line-splitting.   This  also turns
   off comments.  Note: the space that  sepa‐
@@ -7344,10 +7344,10 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    o      You may also specify any of the  modifiers
 
-<div style='padding-left: 90pt'>
+
   for  the "+" or "-" rules (above) in order
   to have the rules that are  read  in  from
   the  file  default to having that modifier
@@ -7366,7 +7366,7 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    Per-directory rules are inherited in  all  subdi‐
    rectories  of  the directory where the merge-file
    was found unless the ’n’ modifier was used.  Each
@@ -7385,7 +7385,7 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    Another  way  to  prevent  a  single  rule from a
    dir-merge file from being inherited is to  anchor
    it  with  a  leading  slash.  Anchored rules in a
@@ -7397,14 +7397,14 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    Here’s an example filter file which you’d specify
    via --filter=". file":
 
 
 
 
-<div style='padding-left: 90pt'>
+
   merge /home/user/.global-filter
   - *.gz
   dir-merge .rules
@@ -7414,7 +7414,7 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    This   will   merge   the   contents    of    the
    /home/user/.global-filter  file  at  the start of
    the list and also  turns  the  ".rules"  filename
@@ -7426,7 +7426,7 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    If a per-directory merge-file is specified with a
    path  that  is  a  parent  directory of the first
    transfer directory, rsync will scan all the  par‐
@@ -7437,13 +7437,13 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 90pt'>
+
   --filter=': /.rsync-filter'
 
 
 
 
-<div style='padding-left: 30pt'>
+
    That  rule  tells  rsync  to  scan  for  the file
    .rsync-filter in all directories  from  the  root
    down through the parent directory of the transfer
@@ -7456,14 +7456,14 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    Some examples of this pre-scanning for per-direc‐
    tory files:
 
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync -avF /src/path/ /dest/dir
   rsync -av --filter=': ../../.rsync-filter'
   /src/path/ /dest/dir
@@ -7473,7 +7473,7 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    The  first  two  commands  above  will  look  for
    ".rsync-filter" in "/" and "/src" before the nor‐
    mal   scan   begins   looking  for  the  file  in
@@ -7485,7 +7485,7 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    If you want to include the contents of a ".cvsig‐
    nore" in your patterns, you should use  the  rule
    ":C", which creates a dir-merge of the .cvsignore
@@ -7502,8 +7502,8 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 90pt'>
-  cat &lt;&lt;EOT | rsync -avC --filter='. -' a/ b
+
+  cat <<EOT | rsync -avC --filter='. -' a/ b
   + foo.o
   :C
   - *.old
@@ -7514,7 +7514,7 @@ MERGE-FILE FILTER RULES
 
 
 
-<div style='padding-left: 30pt'>
+
    Both  of  the above rsync commands are identical.
    Each one will merge all the per-directory .cvsig‐
    nore  rules in the middle of the list rather than
@@ -7532,7 +7532,7 @@ MERGE-FILE FILTER RULES
 
 
 LIST-CLEARING FILTER RULE
-<div style='padding-left: 30pt'>
+
    You can clear the current include/exclude list by
    using  the  "!" filter rule (as introduced in the
    FILTER RULES section above).  The "current"  list
@@ -7546,7 +7546,7 @@ LIST-CLEARING FILTER RULE
 
 
 ANCHORING INCLUDE/EXCLUDE PATTERNS
-<div style='padding-left: 30pt'>
+
    As mentioned earlier, global include/exclude pat‐
    terns are anchored at the "root of the  transfer"
    (as  opposed to per-directory patterns, which are
@@ -7561,7 +7561,7 @@ ANCHORING INCLUDE/EXCLUDE PATTERNS
 
 
 
-<div style='padding-left: 30pt'>
+
    Because the matching is relative  to  the  trans‐
    fer-root, changing the trailing slash on a source
    path or  changing  your  use  of  the  --relative
@@ -7573,7 +7573,7 @@ ANCHORING INCLUDE/EXCLUDE PATTERNS
 
 
 
-<div style='padding-left: 30pt'>
+
    Let’s say that we want to match two source files,
    one  with an absolute path of "/home/me/foo/bar",
    and one with a path of "/home/you/bar/baz".  Here
@@ -7583,7 +7583,7 @@ ANCHORING INCLUDE/EXCLUDE PATTERNS
 
 
 
-<div style='padding-left: 90pt'>
+
   Example cmd: rsync -a  /home/me  /home/you
   /dest
   +/- pattern: /me/foo/bar
@@ -7594,7 +7594,7 @@ ANCHORING INCLUDE/EXCLUDE PATTERNS
 
 
 
-<div style='padding-left: 90pt'>
+
   Example cmd: rsync -a /home/me/ /home/you/
   /dest
   +/- pattern: /foo/bar                (note
@@ -7607,7 +7607,7 @@ ANCHORING INCLUDE/EXCLUDE PATTERNS
 
 
 
-<div style='padding-left: 90pt'>
+
   Example cmd: rsync -a --relative /home/me/
   /home/you /dest
   +/-  pattern: /home/me/foo/bar       (note
@@ -7620,7 +7620,7 @@ ANCHORING INCLUDE/EXCLUDE PATTERNS
 
 
 
-<div style='padding-left: 90pt'>
+
   Example cmd: cd /home; rsync -a --relative
   me/foo you/ /dest
   +/- pattern: /me/foo/bar       (starts  at
@@ -7632,7 +7632,7 @@ ANCHORING INCLUDE/EXCLUDE PATTERNS
 
 
 
-<div style='padding-left: 30pt'>
+
    The  easiest way to see what name you should fil‐
    ter is to just look  at  the  output  when  using
    --verbose  and  put a / in front of the name (use
@@ -7643,7 +7643,7 @@ ANCHORING INCLUDE/EXCLUDE PATTERNS
 
 
 PER-DIRECTORY RULES AND DELETE
-<div style='padding-left: 30pt'>
+
    Without  a delete option, per-directory rules are
    only relevant on the sending  side,  so  you  can
    feel  free  to exclude the merge files themselves
@@ -7654,7 +7654,7 @@ PER-DIRECTORY RULES AND DELETE
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync     -av      --filter=':      .excl'
   --exclude=.excl host:src/dir /dest
   rsync -av --filter=':e .excl' host:src/dir
@@ -7663,7 +7663,7 @@ PER-DIRECTORY RULES AND DELETE
 
 
 
-<div style='padding-left: 30pt'>
+
    However, if you  want  to  do  a  delete  on  the
    receiving  side  AND  you  want  some files to be
    excluded from being deleted, you’ll  need  to  be
@@ -7678,14 +7678,14 @@ PER-DIRECTORY RULES AND DELETE
 
 
 
-<div style='padding-left: 90pt'>
+
   rsync   -avF  --delete-after  host:src/dir
   /dest
 
 
 
 
-<div style='padding-left: 30pt'>
+
    However, if the merge files are not a part of the
    transfer,  you’ll  need  to  either  specify some
    global exclude rules (i.e. specified on the  com‐
@@ -7697,16 +7697,16 @@ PER-DIRECTORY RULES AND DELETE
 
 
 
-<div style='padding-left: 30pt'>
+
    rsync -av --filter=’: .rules’ --filter=’. /my/extra.rules’
 
-<div style='padding-left: 60pt'>
+
   --delete host:src/dir /dest
 
 
 
 
-<div style='padding-left: 30pt'>
+
    In the above example  the  extra.rules  file  can
    affect  both  sides  of the transfer, but (on the
    sending side) the rules are  subservient  to  the
@@ -7717,7 +7717,7 @@ PER-DIRECTORY RULES AND DELETE
 
 
 
-<div style='padding-left: 30pt'>
+
    In  one final example, the remote side is exclud‐
    ing the .rsync-filter files  from  the  transfer,
    but we want to use our own .rsync-filter files to
@@ -7731,20 +7731,20 @@ PER-DIRECTORY RULES AND DELETE
 
 
 
-<div style='padding-left: 60pt'>
+
    rsync -av --filter=':e /.rsync-filter' --delete \
 
-<div style='padding-left: 90pt'>
+
    host:src/dir /dest
 
-<div style='padding-left: 60pt'>
+
    rsync -avFF --delete host:src/dir /dest
 
 
 
 
 BATCH MODE
-<div style='padding-left: 30pt'>
+
    Batch  mode  can be used to apply the same set of
    updates to many identical  systems.  Suppose  one
    has  a  tree  which  is replicated on a number of
@@ -7762,7 +7762,7 @@ BATCH MODE
 
 
 
-<div style='padding-left: 30pt'>
+
    Generating  the  batch  file once saves having to
    perform the file status, checksum, and data block
    generation  more than once when updating multiple
@@ -7774,7 +7774,7 @@ BATCH MODE
 
 
 
-<div style='padding-left: 30pt'>
+
    To apply the recorded changes to another destina‐
    tion tree, run rsync with the read-batch  option,
    specifying  the  name of the same batch file, and
@@ -7785,7 +7785,7 @@ BATCH MODE
 
 
 
-<div style='padding-left: 30pt'>
+
    For your convenience, a script file is also  cre‐
    ated  when  the  write-batch  option is used:  it
    will be named the same as  the  batch  file  with
@@ -7803,13 +7803,13 @@ BATCH MODE
 
 
 
-<div style='padding-left: 30pt'>
+
    Examples:
 
 
 
 
-<div style='padding-left: 90pt'>
+
   $     rsync      --write-batch=foo      -a
   host:/source/dir/ /adest/dir/
   $ scp foo* remote:
@@ -7818,16 +7818,16 @@ BATCH MODE
 
 
 
-<div style='padding-left: 90pt'>
+
   $  rsync --write-batch=foo -a /source/dir/
   /adest/dir/
   $  ssh  remote  rsync  --read-batch=-   -a
-  /bdest/dir/ &lt;foo
+  /bdest/dir/ <foo
 
 
 
 
-<div style='padding-left: 30pt'>
+
    In  these  examples,  rsync  is  used  to  update
    /adest/dir/ from /source/dir/ and the information
    to  repeat  this operation is stored in "foo" and
@@ -7840,10 +7840,10 @@ BATCH MODE
 
 
 
-<div style='padding-left: 30pt'>
+
    o      The first example shows that  the  initial
 
-<div style='padding-left: 90pt'>
+
   copy  doesn’t  have to be local -- you can
   push or pull data to/from  a  remote  host
   using  either  the  remote-shell syntax or
@@ -7852,10 +7852,10 @@ BATCH MODE
 
 
 
-<div style='padding-left: 30pt'>
+
    o      The  first  example   uses   the   created
 
-<div style='padding-left: 90pt'>
+
   "foo.sh"  file  to  get  the  right  rsync
   options when running the  read-batch  com‐
   mand on the remote host.
@@ -7863,10 +7863,10 @@ BATCH MODE
 
 
 
-<div style='padding-left: 30pt'>
+
    o      The  second  example  reads the batch data
 
-<div style='padding-left: 90pt'>
+
   via standard input so that the batch  file
   doesn’t  need  to  be copied to the remote
   machine first.  This  example  avoids  the
@@ -7881,13 +7881,13 @@ BATCH MODE
 
 
 
-<div style='padding-left: 30pt'>
+
    Caveats:
 
 
 
 
-<div style='padding-left: 30pt'>
+
    The  read-batch  option  expects  the destination
    tree that it is updating to be identical  to  the
    destination  tree  that  was  used  to create the
@@ -7911,7 +7911,7 @@ BATCH MODE
 
 
 
-<div style='padding-left: 30pt'>
+
    The  rsync  version used on all destinations must
    be at least as new as the one  used  to  generate
    the  batch file.  Rsync will die with an error if
@@ -7927,7 +7927,7 @@ BATCH MODE
 
 
 
-<div style='padding-left: 30pt'>
+
    When  reading  a batch file, rsync will force the
    value of certain options to match the data in the
    batch  file if you didn’t set them to the same as
@@ -7941,7 +7941,7 @@ BATCH MODE
 
 
 
-<div style='padding-left: 30pt'>
+
    The  code  that  creates the BATCH.sh file trans‐
    forms any filter/include/exclude options  into  a
    single list that is appended as a "here" document
@@ -7955,7 +7955,7 @@ BATCH MODE
 
 
 
-<div style='padding-left: 30pt'>
+
    The  original  batch  mode  in rsync was based on
    "rsync+", but  the  latest  version  uses  a  new
    implementation.
@@ -7964,7 +7964,7 @@ BATCH MODE
 
 
 SYMBOLIC LINKS
-<div style='padding-left: 30pt'>
+
    Three  basic  behaviors  are  possible when rsync
    encounters a symbolic link in the  source  direc‐
    tory.
@@ -7972,7 +7972,7 @@ SYMBOLIC LINKS
 
 
 
-<div style='padding-left: 30pt'>
+
    By default, symbolic links are not transferred at
    all.  A message "skipping  non-regular"  file  is
    emitted for any symlinks that exist.
@@ -7980,7 +7980,7 @@ SYMBOLIC LINKS
 
 
 
-<div style='padding-left: 30pt'>
+
    If --links is specified, then symlinks are recre‐
    ated with the same  target  on  the  destination.
    Note that --archive implies --links.
@@ -7988,7 +7988,7 @@ SYMBOLIC LINKS
 
 
 
-<div style='padding-left: 30pt'>
+
    If  --copy-links  is specified, then symlinks are
    "collapsed" by  copying  their  referent,  rather
    than the symlink.
@@ -7996,7 +7996,7 @@ SYMBOLIC LINKS
 
 
 
-<div style='padding-left: 30pt'>
+
    Rsync  can  also  distinguish "safe" and "unsafe"
    symbolic links.  An example where this  might  be
    used  is  a web site mirror that wishes to ensure
@@ -8013,7 +8013,7 @@ SYMBOLIC LINKS
 
 
 
-<div style='padding-left: 30pt'>
+
    Symbolic links are considered unsafe if they  are
    absolute  symlinks  (start  with /), empty, or if
    they contain enough  ".."  components  to  ascend
@@ -8022,7 +8022,7 @@ SYMBOLIC LINKS
 
 
 
-<div style='padding-left: 30pt'>
+
    Here’s  a  summary of how the symlink options are
    interpreted.  The list is in order of precedence,
    so  if  your  combination  of  options isn’t men‐
@@ -8032,10 +8032,10 @@ SYMBOLIC LINKS
 
 
 
-<div style='padding-left: 30pt'>
+
    --copy-links
 
-<div style='padding-left: 90pt'>
+
   Turn all symlinks into normal files (leav‐
   ing no symlinks for any other  options  to
   affect).
@@ -8043,47 +8043,47 @@ SYMBOLIC LINKS
 
 
 
-<div style='padding-left: 30pt'>
+
    --links --copy-unsafe-links
 
-<div style='padding-left: 90pt'>
+
   Turn  all  unsafe  symlinks into files and
   duplicate all safe symlinks.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    --copy-unsafe-links
 
-<div style='padding-left: 90pt'>
+
   Turn all unsafe symlinks into files, nois‐
   ily skip all safe symlinks.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    --links --safe-links
 
-<div style='padding-left: 90pt'>
+
   Duplicate  safe  symlinks  and skip unsafe
   ones.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    --links
 
-<div style='padding-left: 90pt'>
+
   Duplicate all symlinks.
 
 
 
 
 DIAGNOSTICS
-<div style='padding-left: 30pt'>
+
    rsync occasionally produces error  messages  that
    may  seem a little cryptic. The one that seems to
    cause the most  confusion  is  "protocol  version
@@ -8092,7 +8092,7 @@ DIAGNOSTICS
 
 
 
-<div style='padding-left: 30pt'>
+
    This  message  is  usually caused by your startup
    scripts  or  remote  shell   facility   producing
    unwanted  garbage  on  the  stream  that rsync is
@@ -8102,13 +8102,13 @@ DIAGNOSTICS
 
 
 
-<div style='padding-left: 90pt'>
-  ssh remotehost /bin/true &gt; out.dat
+
+  ssh remotehost /bin/true > out.dat
 
 
 
 
-<div style='padding-left: 30pt'>
+
    then  look  at  out.dat. If everything is working
    correctly then out.dat should be  a  zero  length
    file.  If  you  are  getting the above error from
@@ -8123,7 +8123,7 @@ DIAGNOSTICS
 
 
 
-<div style='padding-left: 30pt'>
+
    If you are having trouble debugging  filter  pat‐
    terns,  then  try  specifying the -vv option.  At
    this level of verbosity rsync will show why  each
@@ -8133,34 +8133,34 @@ DIAGNOSTICS
 
 
 EXIT VALUES
-<div style='padding-left: 30pt'>
+
    0      Success
 
 
 
 
-<div style='padding-left: 30pt'>
+
    1      Syntax or usage error
 
 
 
 
-<div style='padding-left: 30pt'>
+
    2      Protocol incompatibility
 
 
 
 
-<div style='padding-left: 30pt'>
+
    3      Errors selecting input/output files, dirs
 
 
 
 
-<div style='padding-left: 30pt'>
+
    4      Requested action not supported: an attempt
 
-<div style='padding-left: 90pt'>
+
   was made to manipulate 64-bit files  on  a
   platform  that  cannot support them; or an
   option was specified that is supported  by
@@ -8169,104 +8169,104 @@ EXIT VALUES
 
 
 
-<div style='padding-left: 30pt'>
+
    5      Error starting client-server protocol
 
 
 
 
-<div style='padding-left: 30pt'>
+
    6      Daemon unable to append to log-file
 
 
 
 
-<div style='padding-left: 30pt'>
+
    10     Error in socket I/O
 
 
 
 
-<div style='padding-left: 30pt'>
+
    11     Error in file I/O
 
 
 
 
-<div style='padding-left: 30pt'>
+
    12     Error in rsync protocol data stream
 
 
 
 
-<div style='padding-left: 30pt'>
+
    13     Errors with program diagnostics
 
 
 
 
-<div style='padding-left: 30pt'>
+
    14     Error in IPC code
 
 
 
 
-<div style='padding-left: 30pt'>
+
    20     Received SIGUSR1 or SIGINT
 
 
 
 
-<div style='padding-left: 30pt'>
+
    21     Some error returned by waitpid()
 
 
 
 
-<div style='padding-left: 30pt'>
+
    22     Error allocating core memory buffers
 
 
 
 
-<div style='padding-left: 30pt'>
+
    23     Partial transfer due to error
 
 
 
 
-<div style='padding-left: 30pt'>
+
    24     Partial  transfer  due  to vanished source
 
-<div style='padding-left: 90pt'>
+
   files
 
 
 
 
-<div style='padding-left: 30pt'>
+
    25     The --max-delete limit stopped deletions
 
 
 
 
-<div style='padding-left: 30pt'>
+
    30     Timeout in data send/receive
 
 
 
 
-<div style='padding-left: 30pt'>
+
    35     Timeout waiting for daemon connection
 
 
 
 
 ENVIRONMENT VARIABLES
-<div style='padding-left: 30pt'>
+
    CVSIGNORE
 
-<div style='padding-left: 90pt'>
+
   The CVSIGNORE environment variable supple‐
   ments  any  ignore  patterns in .cvsignore
   files. See the  --cvs-exclude  option  for
@@ -8275,10 +8275,10 @@ ENVIRONMENT VARIABLES
 
 
 
-<div style='padding-left: 30pt'>
+
    RSYNC_ICONV
 
-<div style='padding-left: 90pt'>
+
   Specify  a  default  --iconv setting using
   this  environment  variable.  (First  sup‐
   ported in 3.0.0.)
@@ -8286,10 +8286,10 @@ ENVIRONMENT VARIABLES
 
 
 
-<div style='padding-left: 30pt'>
+
    RSYNC_PROTECT_ARGS
 
-<div style='padding-left: 90pt'>
+
   Specify  a  non-zero  numeric value if you
   want  the  --protect-args  option  to   be
   enabled  by  default,  or  a zero value to
@@ -8299,10 +8299,10 @@ ENVIRONMENT VARIABLES
 
 
 
-<div style='padding-left: 30pt'>
+
    RSYNC_RSH
 
-<div style='padding-left: 90pt'>
+
   The  RSYNC_RSH environment variable allows
   you to override the default shell used  as
   the  transport  for  rsync.   Command line
@@ -8312,10 +8312,10 @@ ENVIRONMENT VARIABLES
 
 
 
-<div style='padding-left: 30pt'>
+
    RSYNC_PROXY
 
-<div style='padding-left: 90pt'>
+
   The   RSYNC_PROXY   environment   variable
   allows you to redirect your  rsync  client
   to  use  a  web proxy when connecting to a
@@ -8325,10 +8325,10 @@ ENVIRONMENT VARIABLES
 
 
 
-<div style='padding-left: 30pt'>
+
    RSYNC_PASSWORD
 
-<div style='padding-left: 90pt'>
+
   Setting  RSYNC_PASSWORD  to  the  required
   password allows you to  run  authenticated
   rsync connections to an rsync daemon with‐
@@ -8341,10 +8341,10 @@ ENVIRONMENT VARIABLES
 
 
 
-<div style='padding-left: 30pt'>
+
    USER or LOGNAME
 
-<div style='padding-left: 90pt'>
+
   The USER or LOGNAME environment  variables
   are used to determine the default username
   sent to an rsync daemon.   If  neither  is
@@ -8353,37 +8353,37 @@ ENVIRONMENT VARIABLES
 
 
 
-<div style='padding-left: 30pt'>
+
    HOME   The  HOME  environment variable is used to
 
-<div style='padding-left: 90pt'>
+
   find the user’s default .cvsignore file.
 
 
 
 
 FILES
-<div style='padding-left: 30pt'>
+
    /etc/rsyncd.conf or rsyncd.conf
 
 
 
 
 SEE ALSO
-<div style='padding-left: 30pt'>
+
    rsyncd.conf(5)
 
 
 
 
 BUGS
-<div style='padding-left: 30pt'>
+
    times are transferred as *nix time_t values
 
 
 
 
-<div style='padding-left: 30pt'>
+
    When transferring to FAT  filesystems  rsync  may
    re-sync  unmodified  files.   See the comments on
    the --modify-window option.
@@ -8391,20 +8391,20 @@ BUGS
 
 
 
-<div style='padding-left: 30pt'>
+
    file permissions, devices, etc.  are  transferred
    as native numerical values
 
 
 
 
-<div style='padding-left: 30pt'>
+
    see also the comments on the --delete option
 
 
 
 
-<div style='padding-left: 30pt'>
+
    Please   report   bugs!   See  the  web  site  at
    http://rsync.samba.org/
 
@@ -8412,7 +8412,7 @@ BUGS
 
 
 VERSION
-<div style='padding-left: 30pt'>
+
    This man page is current  for  version  3.1.2  of
    rsync.
 
@@ -8420,7 +8420,7 @@ VERSION
 
 
 INTERNAL OPTIONS
-<div style='padding-left: 30pt'>
+
    The options --server and --sender are used inter‐
    nally by rsync, and should never be  typed  by  a
    user  under normal circumstances.  Some awareness
@@ -8436,14 +8436,14 @@ INTERNAL OPTIONS
 
 
 CREDITS
-<div style='padding-left: 30pt'>
+
    rsync is distributed under the GNU General Public
    License.  See the file COPYING for details.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    A      WEB      site      is     available     at
    http://rsync.samba.org/.  The  site  includes  an
    FAQ-O-Matic  which may cover questions unanswered
@@ -8452,14 +8452,14 @@ CREDITS
 
 
 
-<div style='padding-left: 30pt'>
+
    The   primary   ftp    site    for    rsync    is
    ftp://rsync.samba.org/pub/rsync.
 
 
 
 
-<div style='padding-left: 30pt'>
+
    We  would  be  delighted  to hear from you if you
    like this  program.   Please  contact  the  mail‐
    ing-list at rsync@lists.samba.org.
@@ -8467,7 +8467,7 @@ CREDITS
 
 
 
-<div style='padding-left: 30pt'>
+
    This  program uses the excellent zlib compression
    library written  by  Jean-loup  Gailly  and  Mark
    Adler.
@@ -8476,7 +8476,7 @@ CREDITS
 
 
 THANKS
-<div style='padding-left: 30pt'>
+
    Special  thanks  go  out to: John Van Essen, Matt
    McCutchen, Wesley W. Terpstra, David Dykstra, Jos
    Backus,  Sebastian  Krahmer, Martin Pool, and our
@@ -8485,7 +8485,7 @@ THANKS
 
 
 
-<div style='padding-left: 30pt'>
+
    Thanks also to  Richard  Brent,  Brendan  Mackay,
    Bill  Waite,  Stephen  Rothwell  and  David Bell.
    I’ve probably missed some people, my apologies if
@@ -8495,7 +8495,7 @@ THANKS
 
 
 AUTHOR
-<div style='padding-left: 30pt'>
+
    rsync  was  originally written by Andrew Tridgell
    and Paul Mackerras.  Many people have later  con‐
    tributed  to  it.   It is currently maintained by
@@ -8504,7 +8504,7 @@ AUTHOR
 
 
 
-<div style='padding-left: 30pt'>
+
    Mailing lists for  support  and  development  are
    available at http://lists.samba.org
 

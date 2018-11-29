@@ -10,23 +10,23 @@ Created Tuesday 20 February 2018
 
 
 
-sudo ngrok http 80</b> # secure public URL for port 80 web server
+sudo ngrok http 80 # secure public URL for port 80 web server
 
 
 
 DESCRIPTION:
-<div style='padding-left: 30pt'>
+
   ngrok exposes local networked services behinds NATs and firewalls to the
   public internet over a secure tunnel. Share local websites, build/test
   webhook consumers and self-host personal services.
-  Detailed help for each command is available with 'ngrok help &lt;command&gt;'.
+  Detailed help for each command is available with 'ngrok help <command>'.
   Open http://localhost:4040 for ngrok's web interface to inspect traffic.
 
 
 
 
   EXAMPLES:
-  <div style='padding-left: 30pt'>
+  
     ngrok http 80 # secure public URL for port 80 web server
     ngrok http -subdomain=baz 8080 # port 8080 available at baz.ngrok.io
     ngrok http foo.dev:80 # tunnel to host:port instead of localhost
@@ -43,7 +43,7 @@ DESCRIPTION:
 
 
     AUTHOR:
-    inconshreveable - &lt;alan@ngrok.com&gt;
+    inconshreveable - <alan@ngrok.com>
 
 
 

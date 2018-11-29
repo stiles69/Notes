@@ -10,7 +10,7 @@ Created Tuesday 20 March 2018
 
 
 
-gcloud app deploy --version notrunning --no-promote</b>
+gcloud app deploy --version notrunning --no-promote
 The --no-promote will prevent the version from getting traffic.
 
 

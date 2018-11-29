@@ -27,14 +27,14 @@ Add it to your nuxt.config.js file.
 
 
 
-/ ... </b>/
+/ ... /
 modules: [
-<div style='padding-left: 30pt'>
+
   /* ... */
   'nuxt-seo-module'
 
   ]
-  / ... </b>/
+  / ... /
   It will create a robots.txt file and a sitemap.xml with all of your pages
 
 
@@ -44,34 +44,34 @@ modules: [
 
 
 
-  / ... </b>/
+  / ... /
   modules: [
-  <div style='padding-left: 30pt'>
+  
     /* ... */
     ['nuxt-seo-module', {
     robots: {
 
-    <div style='padding-left: 60pt'>
+    
       // ROBOTS.TXT options
 
-      <div style='padding-left: 30pt'>
+      
         },
         sitemap: [
 
-        <div style='padding-left: 60pt'>
+        
           // sitemaps options is an array of object
 
-          <div style='padding-left: 30pt'>
+          
             ]
             }]
 
             ]
-            / ... </b>/
+            / ... /
             robots.txt options
             modules: [
             /* ... */
             ['nuxt-seo-module', {
-            <div style='padding-left: 30pt'>
+            
               robots: {
               UserAgent: '',
               CrawlDelay: '',
@@ -98,7 +98,7 @@ modules: [
               modules: [
               /* ... */
               ['nuxt-seo-module', {
-              <div style='padding-left: 30pt'>
+              
                 sitmap: [{
                 path: 'sitemap.xml',
                 hostname: null,
@@ -106,7 +106,7 @@ modules: [
                 exclude: [],
                 routes: [
 
-                <div style='padding-left: 60pt'>
+                
                   {
                   url: '/page/2',
                   changefreq: 'daily',
@@ -125,21 +125,21 @@ modules: [
                   ]
                   }
 
-                  <div style='padding-left: 30pt'>
+                  
                     ],
                     cacheTime: 1000 * 60 * 15
                     }, {
                     path: 'sitemap-news.xml',
                     hostname: 'my-url.com',
                     generate: false,
-                    routes: getNews().map(news =&gt; {
+                    routes: getNews().map(news => {
 
-                    <div style='padding-left: 60pt'>
+                    
                       return {
                       url: imgPath,
-                      img: news.imgs.map(img =&gt; {
+                      img: news.imgs.map(img => {
 
-                      <div style='padding-left: 90pt'>
+                      
                         return {
                         url: 'http://test.com/img1.jpg',
                         caption: 'An image',
@@ -148,22 +148,22 @@ modules: [
                         license: 'https://creativecommons.org/licenses/by/4.0/'
                         },
 
-                        <div style='padding-left: 60pt'>
+                        
                           }),
-                          video: news.videos.map(video =&gt; {
+                          video: news.videos.map(video => {
 
-                          <div style='padding-left: 90pt'>
+                          
                             return {
                             thumbnail_loc: 'http://test.com/tmbn1.jpg',
                             title: 'A video title',
                             description: 'This is a video'
                             };
 
-                            <div style='padding-left: 60pt'>
+                            
                               })
                               };
 
-                              <div style='padding-left: 30pt'>
+                              
                                 })
                                 }]
 
@@ -173,7 +173,7 @@ modules: [
 
 
 
-                                / ... </b>/
+                                / ... /
                                 modules: [
                                 /* ... */
                                 ['nuxt-seo-module'],
@@ -181,9 +181,9 @@ modules: [
                                 env: {
                                 robots: {},
                                 sitemap: [{
-                                <div style='padding-left: 30pt'>
+                                
                                   generate: true
 
                                   }]
                                   }
-                                  / ... </b>/
+                                  / ... /

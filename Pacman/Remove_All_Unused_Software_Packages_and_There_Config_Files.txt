@@ -10,4 +10,4 @@ Created Sunday 06 May 2018
 
 
 
-sudo pacman -Rns $(pacman -Qtdq)</b>
+sudo pacman -Rns $(pacman -Qtdq)

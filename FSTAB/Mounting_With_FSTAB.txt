@@ -24,7 +24,7 @@ description
 
 
 
-&lt;device&gt;
+<device>
 
 
 
@@ -32,7 +32,7 @@ The device/partition (by /dev location or UUID) that contain a file system.
 
 
 
-&lt;mount point&gt;
+<mount point>
 
 
 
@@ -41,7 +41,7 @@ device/partition (note: swap has no mount point). Mount points should not have s
 
 
 
-&lt;file system type&gt;
+<file system type>
 
 
 
@@ -49,7 +49,7 @@ Type of file system (see LinuxFilesystemsExplained).
 
 
 
-&lt;options&gt;
+<options>
 
 
 
@@ -57,7 +57,7 @@ Mount options of access to the device/partition (see the man page for mount).
 
 
 
-&lt;dump&gt;
+<dump>
 
 
 
@@ -66,7 +66,7 @@ it.
 
 
 
-&lt;pass num&gt;
+<pass num>
 
 
 
@@ -237,7 +237,7 @@ IconsPage/editor.png The contents of the file will look similar to following:
 
 # /etc/fstab: static file system information.
 #
-# &lt;file system&gt; &lt;mount point&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt;
+# <file system> <mount point> <type> <options> <dump> <pass>
 
 
 
@@ -312,7 +312,7 @@ sshfs#user@server:/share fuse user,allow_other 0 0
 # "share" = name of the shared directory
 File System Specific Examples
 IconsPage/example.png Here are a couple of basic examples for different file system types. I will use /dev/sdb1 or
-/dev/hda2 for simplicity, but remember that any /dev location, UUID=&lt;some_id&gt;, or LABEL=&lt;some_label&gt; can
+/dev/hda2 for simplicity, but remember that any /dev location, UUID=<some_id>, or LABEL=<some_label> can
 work.
 
 

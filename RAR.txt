@@ -106,21 +106,21 @@
 
 
 Yubikey Make New
-	Master Key</li>
+	Master Key
 
 
 
 
-RAR</b>
-	<ul>
+RAR
+	
 		
 		
-	</ul>
-</li>
+	
 
-	</ul>
 
-	<div id="content">
+	
+
+	
 		RAR <a name='RAR'>
 
 

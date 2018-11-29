@@ -1,6 +1,6 @@
 ====== Make Temp Dir ======
 
-<style>
+
 	height:100%;
 	font-family:'Open Sans',
 	sans-serif;
@@ -105,4 +105,4 @@
 																							#navigation {
 																								background-color: #FFF;
 
-																								Temp Dir <ul>Make Temp Dir</b></li></ul></li></ul><div id="content">Make Temp Dir <a name='Temp Dir:Make Temp Dir'>Created Saturday 15 September 2018 dir=$(mktemp -p "${TMPDIR:-.}"-d dir-XXXX) || exit 1</b>
+																								Temp Dir Make Temp DirMake Temp Dir <a name='Temp Dir:Make Temp Dir'>Created Saturday 15 September 2018 dir=$(mktemp -p "${TMPDIR:-.}"-d dir-XXXX) || exit 1

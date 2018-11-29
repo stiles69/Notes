@@ -10,4 +10,4 @@ Created Monday 14 May 2018
 
 
 
-find . -name \*.xls -exec cp {} newDir \;</b>
+find . -name \*.xls -exec cp {} newDir \;

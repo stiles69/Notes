@@ -10,4 +10,4 @@ Created Saturday 17 February 2018
 
 
 
-# btrfs subvolume list -p path</b>
+# btrfs subvolume list -p path

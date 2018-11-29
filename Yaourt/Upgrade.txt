@@ -15,4 +15,4 @@ yaourt -Syu --devel --aur
 
 
 Sync database, upgrade packages, search aur and devel (all packages based on dev version) upgrades REBUILDS
-    EVERYTHING!!!!!!!!!!!!!!!!!!!!!!!!</b>
+    EVERYTHING!!!!!!!!!!!!!!!!!!!!!!!!

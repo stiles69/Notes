@@ -17,19 +17,19 @@ Project
 
 
 Install it globally
-yarn global add vuepress</b>
+yarn global add vuepress
 
 
 
 # create a markdown file
-echo '# VuePress' &gt; README.md</b>
+echo '# VuePress' > README.md
 
 
 
 # start writing
-vuepress dev</b>
+vuepress dev
 
 
 
 # build
-vuepress build</b>
+vuepress build

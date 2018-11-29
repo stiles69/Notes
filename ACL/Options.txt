@@ -13,30 +13,30 @@ Created Tuesday 15 May 2018
 
 
 OPTIONS
-<div style='padding-left: 30pt'>
+
     -b, --remove-all
 
-    <div style='padding-left: 60pt'>
+    
         Remove all extended ACL entries. The base ACL entries of the owner,
         group and others are retained.
 
 
 
 
-        <div style='padding-left: 30pt'>
+        
             -k, --remove-default
 
-            <div style='padding-left: 60pt'>
+            
                 Remove the Default ACL. If no Default ACL exists, no warnings are
                 issued.
 
 
 
 
-                <div style='padding-left: 30pt'>
+                
                     -n, --no-mask
 
-                    <div style='padding-left: 60pt'>
+                    
                         Do not recalculate the effective rights mask. The default behavior
                         of setfacl is to recalculate the ACL mask entry, unless a mask
                         entry was explicitly given. The mask entry is set to the union of
@@ -47,20 +47,20 @@ OPTIONS
 
 
 
-                        <div style='padding-left: 30pt'>
+                        
                             --mask
 
-                            <div style='padding-left: 60pt'>
+                            
                                 Do recalculate the effective rights mask, even if an ACL mask entry
                                 was explicitly given. (See the -n option.)
 
 
 
 
-                                <div style='padding-left: 30pt'>
+                                
                                     -d, --default
 
-                                    <div style='padding-left: 60pt'>
+                                    
                                         All operations apply to the Default ACL. Regular ACL entries in the
                                         input set are promoted to Default ACL entries. Default ACL entries
                                         in the input set are discarded. (A warning is issued if that hap‐
@@ -69,10 +69,10 @@ OPTIONS
 
 
 
-                                        <div style='padding-left: 30pt'>
+                                        
                                             --restore=file
 
-                                            <div style='padding-left: 60pt'>
+                                            
                                                 Restore a permission backup created by `getfacl -R' or similar. All
                                                 permissions of a complete directory subtree are restored using this
                                                 mechanism. If the input contains owner comments or group comments,
@@ -86,17 +86,17 @@ OPTIONS
 
 
                                                 --test
-                                                <div style='padding-left: 60pt'>
+                                                
                                                     Test mode. Instead of changing the ACLs of any files, the resulting
                                                     ACLs are listed.
 
 
 
 
-                                                    <div style='padding-left: 30pt'>
+                                                    
                                                         -R, --recursive
 
-                                                        <div style='padding-left: 60pt'>
+                                                        
                                                             Apply operations to all files and directories recursively.
                                                             This
                                                             option cannot be mixed with `--restore'.
@@ -104,10 +104,10 @@ OPTIONS
 
 
 
-                                                            <div style='padding-left: 30pt'>
+                                                            
                                                                 -L, --logical
 
-                                                                <div style='padding-left: 60pt'>
+                                                                
                                                                     Logical walk, follow symbolic links to directories.
                                                                     The default
                                                                     behavior is to follow symbolic link arguments, and
@@ -120,10 +120,10 @@ OPTIONS
 
 
 
-                                                                    <div style='padding-left: 30pt'>
+                                                                    
                                                                         -P, --physical
 
-                                                                        <div style='padding-left: 60pt'>
+                                                                        
                                                                             Physical walk, do not follow symbolic links
                                                                             to directories. This
                                                                             also skips symbolic link arguments. Only
@@ -134,32 +134,32 @@ OPTIONS
 
 
 
-                                                                            <div style='padding-left: 30pt'>
+                                                                            
                                                                                 -v, --version
 
-                                                                                <div style='padding-left: 60pt'>
+                                                                                
                                                                                     Print the version of setfacl and
                                                                                     exit.
 
 
 
 
-                                                                                    <div style='padding-left: 30pt'>
+                                                                                    
                                                                                         -h, --help
 
-                                                                                        <div style='padding-left: 60pt'>
+                                                                                        
                                                                                             Print help explaining the
                                                                                             command line options.
 
 
 
 
-                                                                                            <div style='padding-left: 30pt'>
+                                                                                            
                                                                                                 -- End of command line
                                                                                                 options. All remaining
                                                                                                 parameters are inter‐
 
-                                                                                                <div style='padding-left: 60pt'>
+                                                                                                
                                                                                                     preted as file
                                                                                                     names, even if they
                                                                                                     start with a dash.
@@ -167,14 +167,14 @@ OPTIONS
 
 
 
-                                                                                                    <div style='padding-left: 30pt'>
+                                                                                                    
                                                                                                         - If the file
                                                                                                         name parameter
                                                                                                         is a single
                                                                                                         dash, setfacl
                                                                                                         reads a list
 
-                                                                                                        <div style='padding-left: 60pt'>
+                                                                                                        
                                                                                                             of files
                                                                                                             from
                                                                                                             standard

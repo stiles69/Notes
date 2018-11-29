@@ -20,9 +20,9 @@ FFmpeg utility supports almost all major audio and video formats, if you want to
 
 
 
-<ol type="1" start="1">
-    Get Video File Information</li>
-</ol>
+
+    Get Video File Information
+
 
 
 
@@ -31,7 +31,7 @@ To get information about a file (say video.mp4), run the following command. Reme
 
 
 
-$ ffmpeg -i video.flv -hide_banner</b>
+$ ffmpeg -i video.flv -hide_banner
 
 
 
@@ -49,13 +49,13 @@ For example, if you run the above command without adding -hide_banner option it 
 
 
 
-$ ffmpeg -i video.flv</b>
+$ ffmpeg -i video.flv
 
 
 
-<ol type="1" start="2">
-    Split a video into images</li>
-</ol>
+
+    Split a video into images
+
 
 
 
@@ -64,7 +64,7 @@ To turn a video to number of images, run the command below. The command generate
 
 
 
-$ ffmpeg -i video.flv image%d.jpg</b>
+$ ffmpeg -i video.flv image%d.jpg
 
 
 
@@ -73,13 +73,13 @@ After successful execution of above command you can verify that the video turn i
 
 
 
-$ ls -l</b>
+$ ls -l
 
 
 
-<ol type="1" start="3">
-    Convert images into a video</li>
-</ol>
+
+    Convert images into a video
+
 
 
 
@@ -92,13 +92,13 @@ There are many other image formats (such as jpeg, png, jpg, etc) you can use.
 
 
 
-$ ffmpeg -f image2 -i image%d.jpg imagestovideo.mpg</b>
+$ ffmpeg -f image2 -i image%d.jpg imagestovideo.mpg
 
 
 
-<ol type="1" start="4">
-    Convert a video into mp3 format</li>
-</ol>
+
+    Convert a video into mp3 format
+
 
 
 
@@ -106,7 +106,7 @@ To convert an .flv format video file to Mp3 format, run the following command.
 
 
 
-$ ffmpeg -i video.flv -vn -ar 44100 -ac 2 -ab 192 -f mp3 audio.mp3</b>
+$ ffmpeg -i video.flv -vn -ar 44100 -ac 2 -ab 192 -f mp3 audio.mp3
 
 
 
@@ -114,19 +114,19 @@ Description about the options used in above command:
 
 
 
-<ul>
-    - vn: helps to disable video recording during the conversion.</li>
-    - ar: helps you set audio sampling rate in Hz.</li>
-    - ab: set the audio bitrate.</li>
-    - ac: to set the number of audio channels.</li>
-    - -f: format.</li>
-</ul>
+
+    - vn: helps to disable video recording during the conversion.
+    - ar: helps you set audio sampling rate in Hz.
+    - ab: set the audio bitrate.
+    - ac: to set the number of audio channels.
+    - -f: format.
 
 
 
-<ol type="1" start="5">
-    Covert flv video file to mpg format</li>
-</ol>
+
+
+    Covert flv video file to mpg format
+
 
 
 
@@ -134,13 +134,13 @@ To convert a .flv video file to .mpg, use the following command.
 
 
 
-$ ffmpeg -i video.flv video.mpg</b>
+$ ffmpeg -i video.flv video.mpg
 
 
 
-<ol type="1" start="6">
-    Convert video into animated gif</li>
-</ol>
+
+    Convert video into animated gif
+
 
 
 
@@ -148,13 +148,13 @@ To convert a .flv video file to animated, uncompressed gif file, use the command
 
 
 
-$ ffmpeg -i video.flv animated.gif.mp4</b>
+$ ffmpeg -i video.flv animated.gif.mp4
 
 
 
-<ol type="1" start="7">
-    Convert mpg video file to flv</li>
-</ol>
+
+    Convert mpg video file to flv
+
 
 
 
@@ -162,13 +162,13 @@ To convert a .mpg file to .flv format, use the following command.
 
 
 
-$ ffmpeg -i video.mpg -ab 26k -f flv video1.flv</b>
+$ ffmpeg -i video.mpg -ab 26k -f flv video1.flv
 
 
 
-<ol type="1" start="8">
-    Convert avi video file to mpeg</li>
-</ol>
+
+    Convert avi video file to mpeg
+
 
 
 
@@ -176,7 +176,7 @@ To convert a .avi file to mpeg for dvd players, run the command below:
 
 
 
-$ ffmpeg -i video.avi -target pal-dvd -ps 2000000000 -aspect 16:9 video.mpeg</b>
+$ ffmpeg -i video.avi -target pal-dvd -ps 2000000000 -aspect 16:9 video.mpeg
 
 
 
@@ -184,17 +184,17 @@ Explanation about the options used in above command.
 
 
 
-<ul>
-    - target pal-dvd : Output format</li>
-    - ps 2000000000 maximum size for the output file, in bits (here, 2 Gb).</li>
-    - aspect 16:9 : Widescreen.</li>
-</ul>
+
+    - target pal-dvd : Output format
+    - ps 2000000000 maximum size for the output file, in bits (here, 2 Gb).
+    - aspect 16:9 : Widescreen.
 
 
 
-<ol type="1" start="9">
-    Convert a video to CD or DVD format</li>
-</ol>
+
+
+    Convert a video to CD or DVD format
+
 
 
 
@@ -212,13 +212,13 @@ To create a VCD, you can run the following command:
 
 
 
-$ ffmpeg -i video.mpg -target vcd vcd_video.mpg</b>
+$ ffmpeg -i video.mpg -target vcd vcd_video.mpg
 
 
 
-<ol type="1" start="10">
-    Extract audio from video file</li>
-</ol>
+
+    Extract audio from video file
+
 
 
 
@@ -226,7 +226,7 @@ To extract sound from a video file, and save it as Mp3 file, use the following c
 
 
 
-$ ffmpeg -i video1.avi -vn -ar 44100 -ac 2 -ab 192 -f mp3 audio3.mp3</b>
+$ ffmpeg -i video1.avi -vn -ar 44100 -ac 2 -ab 192 -f mp3 audio3.mp3
 
 
 
@@ -234,18 +234,18 @@ Explanation about the options used in above command.
 
 
 
-<ul>
-    - Source video : video.avi</li>
-    - Audio bitrate : 192kb/s</li>
-    - output format : mp3</li>
-    - Generated sound : audio3.mp3</li>
-</ul>
+
+    - Source video : video.avi
+    - Audio bitrate : 192kb/s
+    - output format : mp3
+    - Generated sound : audio3.mp3
 
 
 
-<ol type="1" start="11">
-    Mix a video and audio together</li>
-</ol>
+
+
+    Mix a video and audio together
+
 
 
 
@@ -253,13 +253,12 @@ You can also mix a video with a sound file as follows:
 
 
 
-$ ffmpeg -i audio.mp3 -i video.avi video_audio_mix.mpg</b>
+$ ffmpeg -i audio.mp3 -i video.avi video_audio_mix.mpg
 
 
 
-<ol type="1" start="12">
-    Increase/Reduce Video Playback Speed</li>
-</ol>
+    Increase/Reduce Video Playback Speed
+
 
 
 
@@ -268,7 +267,7 @@ To increase video play back speed, run this command. The -vf option sets the vid
 
 
 
-$ ffmpeg -i video.mpg -vf "setpts=0.5*PTS" highspeed.mpg</b>
+$ ffmpeg -i video.mpg -vf "setpts=0.5*PTS" highspeed.mpg
 
 
 
@@ -276,13 +275,13 @@ You can also reduce video speed as follows:
 
 
 
-$ ffmpeg -i video.mpg -vf "setpts=4.0*PTS" lowerspeed.mpg -hide_banner</b>
+$ ffmpeg -i video.mpg -vf "setpts=4.0*PTS" lowerspeed.mpg -hide_banner
 
 
 
-<ol type="1" start="13">
-    Compare/Test Video and Audio Quality</li>
-</ol>
+
+    Compare/Test Video and Audio Quality
+
 
 
 
@@ -291,7 +290,7 @@ To compare videos and audios after converting you can use the commands below. Th
 
 
 
-$ ffplay video1.mp4</b>
+$ ffplay video1.mp4
 
 
 
@@ -299,13 +298,13 @@ To test audio quality simply use the name of the audio file as follows:
 
 
 
-$ ffplay audio_filename1.mp3</b>
+$ ffplay audio_filename1.mp3
 
 
 
-<ol type="1" start="14">
-    Add Photo or Banner to Audio</li>
-</ol>
+
+    Add Photo or Banner to Audio
+
 
 
 
@@ -315,13 +314,12 @@ You can add a cover poster or image to an audio file using the following command
 
 
 $ ffmpeg -loop 1 -i image.jpg -i Bryan\ Adams\ -\ Heaven.mp3 -c:v libx264 -c:a aac -strict experimental -b:a 192k
-    -shortest output.mp4</b>
+    -shortest output.mp4
 
 
 
-<ol type="1" start="15">
-    Add subtitles to a Movie</li>
-</ol>
+    Add subtitles to a Movie
+
 
 
 
@@ -330,7 +328,7 @@ If you have a separate subtitle file called subtitle.srt, you can use following 
 
 
 
-$ ffmpeg -i video.mp4 -i subtitles.srt -map 0 -map 1 -c copy -c:v libx264 -crf 23 -preset veryfast video-output.mkv</b>
+$ ffmpeg -i video.mp4 -i subtitles.srt -map 0 -map 1 -c copy -c:v libx264 -crf 23 -preset veryfast video-output.mkv
 
 
 Summary

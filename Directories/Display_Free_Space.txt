@@ -17,5 +17,5 @@ Created Sunday 13 May 2018
 
 
 
- df </b>
-* This will display free space. </b>*
+ df 
+* This will display free space. *

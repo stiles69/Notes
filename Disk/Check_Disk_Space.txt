@@ -1,6 +1,6 @@
 ====== Check Disk Space ======
 
-<style>
+
     height:100%;
     font-family:'Open Sans',
     sans-serif;
@@ -105,8 +105,8 @@
                                                                                             #navigation {
                                                                                                 background-color: #FFF;
 
-                                                                                                Disk <ul>Check Disk Space</b></li></ul></li></ul><div id="content">Check Disk Space <a name='Disk:Check Disk Space'>Created Wednesday 03 October 2018 Linux command to check disk space using:
+                                                                                                Disk Check Disk SpaceCheck Disk Space <a name='Disk:Check Disk Space'>Created Wednesday 03 October 2018 Linux command to check disk space using:
 
 
 
-                                                                                                    <div style='padding-left: 30pt'> df command – Shows the amount of disk space used and available on Linux file systems. du command – Display the amount of disk space used by the specified files and for each subdirectory. btrfs fi df /device/ – Show disk space usage information for a btrfs based mount point/file system. Linux check disk space with df command <div style='padding-left: 30pt'> Open the terminal and type the following command to check disk space. The basic syntax for df is: df [options] [devices] Type: df df -H <span class="backlinks"> </span>
+                                                                                                     df command – Shows the amount of disk space used and available on Linux file systems. du command – Display the amount of disk space used by the specified files and for each subdirectory. btrfs fi df /device/ – Show disk space usage information for a btrfs based mount point/file system. Linux check disk space with df command  Open the terminal and type the following command to check disk space. The basic syntax for df is: df [options] [devices] Type: df df -H  

@@ -10,6 +10,6 @@ Created Saturday 17 February 2018
 
 
 
-btrfs send /root_backup | btrfs receive /backup</b>
+btrfs send /root_backup | btrfs receive /backup
 The snapshot that is sent must be readonly. The above command is useful for copying a subvolume to an external
     device (e.g. a USB disk mounted at /backup above).

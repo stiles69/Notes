@@ -33,7 +33,7 @@ List:
 Backup:
 --check Create snapshot if scheduled
 --create Create snapshot (even if not scheduled)
---comments &lt;string&gt; Set snapshot description
+--comments <string> Set snapshot description
 --tags {O,B,H,D,W,M} Add tags to snapshot (default: O)
 
 
@@ -41,9 +41,9 @@ Backup:
 Restore:
 --restore Restore snapshot
 --clone Clone current system
---snapshot &lt;name&gt; Specify snapshot to restore
---target[-device] &lt;device&gt; Specify target device
---grub[-device] &lt;device&gt; Specify device for installing GRUB2 bootloader
+--snapshot <name> Specify snapshot to restore
+--target[-device] <device> Specify target device
+--grub[-device] <device> Specify device for installing GRUB2 bootloader
 --skip-grub Skip GRUB2 reinstall
 
 
@@ -55,7 +55,7 @@ Delete:
 
 
 Global:
---snapshot-device &lt;device&gt; Specify backup device (default: config)
+--snapshot-device <device> Specify backup device (default: config)
 --yes Answer YES to all confirmation prompts
 --btrfs Switch to BTRFS mode (default: config)
 --rsync Switch to RSYNC mode (default: config)

@@ -10,8 +10,8 @@ Created Saturday 12 May 2018
 
 
 
-scp://.. or </b>
-sftp://user[:password]@other.host[:port]/[relative|/absolute]_path</b>
+scp://.. or 
+sftp://user[:password]@other.host[:port]/[relative|/absolute]_path
 
 
 
@@ -31,7 +31,7 @@ After creating/retrieving a valid cacert file you should copy it to either
 ~/duplicity_cacert.pem 
 /etc/duplicity/cacert.pem
 Duplicity searches it there in the same order and will fail if it can’t find it. You can however specify the option
-    --ssl-cacert-file &lt;file&gt; to point duplicity to a copy in a different location.
+    --ssl-cacert-file <file> to point duplicity to a copy in a different location.
 Finally there is the --ssl-no-check-certificate option to disable certificate verification alltogether, in case some
     ssl library is missing or verification is not wanted. Use it with care, as even with self signed servers manually
     providing the private ca certificate is definitely the safer option.

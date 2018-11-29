@@ -31,7 +31,7 @@ Can install from test branch via
 </p>
 
 
-If you installed an earlier version of pivpn and wish to update OpenVPN to a newer version (&gt; 2.4.3) just do the
+If you installed an earlier version of pivpn and wish to update OpenVPN to a newer version (> 2.4.3) just do the
 following steps:
 </p>
 
@@ -42,15 +42,15 @@ wget -O -
 echo "deb
 ```
 where [osrelease] should be replaced with:
-- wheezy</b> (Debian 7.x)
-- jessie</b> (Debian 8.x)
-- precise</b> (Ubuntu 12.04)
-- trusty</b> (Ubuntu 14.04)
-- xenial</b> (Ubuntu 16.04)
+- wheezy (Debian 7.x)
+- jessie (Debian 8.x)
+- precise (Ubuntu 12.04)
+- trusty (Ubuntu 14.04)
+- xenial (Ubuntu 16.04)
 </p>
 
 
-More information can be found here: &lt;&gt;
+More information can be found here: <>
 </p>
 
 
@@ -60,46 +60,46 @@ More information can be found here: &lt;&gt;
 
 
 
-<ol type="1" start="1">
-	Add this line `client-config-dir /etc/openvpn/ccd` in </li>
-</ol>
+
+	Add this line `client-config-dir /etc/openvpn/ccd` in 
+
 `/etc/openvpn/server.conf`
 </p>
 
 
-<ol type="1" start="2">
-	Create client config directory</li>
-</ol>
+
+	Create client config directory
+
 `sudo mkdir /etc/openvpn/ccd`
 </p>
 
 
-<ol type="1" start="3">
-	Fix permissions</li>
-</ol>
+
+	Fix permissions
+
 `sudo chown -R pi:nogroup /etc/openvpn/ccd`
 (Make sure to enter correct username, in this case it was pi)
 </p>
 
 
-<ol type="1" start="4">
-	Adding clients.</li>
-</ol>
+
+	Adding clients.
+
 `sudo nano /etc/openvpn/ccd/exampleuser`
 (Add clients with their common name, in this case `exampleuser.ovpn`)
 </p>
 
 
-<ol type="1" start="5">
-	Configuring static IP.</li>
-</ol>
+
+	Configuring static IP.
+
 Add this line `ifconfig-push 10.8.0.3 255.255.255.0` to `/etc/openvpn/ccd/exampleuser`
 </p>
 
 
-<ol type="1" start="6">
-	Restart openvpn</li>
-</ol>
+
+	Restart openvpn
+
 `sudo service openvpn restart`
 </p>
 
@@ -109,7 +109,7 @@ step 4)
 </p>
 
 
-Note: You have to assign static IP for all clients in order to avoid IP address conflict</b>
+Note: You have to assign static IP for all clients in order to avoid IP address conflict
 </p>
 
 

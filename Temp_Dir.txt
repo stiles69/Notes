@@ -108,20 +108,20 @@
 
 
 Yubikey Make New
-	Master Key</li>
+	Master Key
 
 
 
 
 
-Temp Dir</b>
-	<ul>
+Temp Dir
+	
 		
-	</ul>
-</li>
-</ul>
+	
 
-<div id="content">
+
+
+
 	Temp Dir <a name='Temp Dir'>
 
 
@@ -131,5 +131,5 @@ Temp Dir</b>
 
 
 
-		<span class="backlinks">
-		</span>
+		
+		

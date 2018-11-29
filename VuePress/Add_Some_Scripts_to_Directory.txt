@@ -9,19 +9,19 @@ Add Some Scripts to Directory
 Created Tuesday 15 May 2018
 
 
-<div class="zim-object">
-  <pre><code class="sh">{
+
+  {
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   }
-}</code></pre>
+}
 
 
   You can now start writing with:
-  yarn docs:dev # OR npm run docs:dev</b>
+  yarn docs:dev # OR npm run docs:dev
 
 
 
   To generate static assets, run:
-  yarn docs:build # Or npm run docs:build</b>
+  yarn docs:build # Or npm run docs:build

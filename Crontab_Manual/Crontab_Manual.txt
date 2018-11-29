@@ -15,14 +15,14 @@ CRONTAB(1) User Commands CRONTAB(1)
 
 
 NAME
-<div style='padding-left: 30pt'>
+
   crontab - maintains crontab files for individual users
 
 
 
 
   SYNOPSIS
-  <div style='padding-left: 30pt'>
+  
     crontab [-u user] file
     crontab [-u user] [-l | -r | -e] [-i] [-s]
     crontab -n [ hostname ]
@@ -32,7 +32,7 @@ NAME
 
 
     DESCRIPTION
-    <div style='padding-left: 30pt'>
+    
       Crontab is the program used to install a crontab table file, remove or list the existing
       tables used to serve the cron(8) daemon. Each user can have their own crontab, and though
       these are files in /var/spool/, they are not intended to be edited directly. For SELinux
@@ -42,7 +42,7 @@ NAME
 
 
 
-      <div style='padding-left: 30pt'>
+      
         In this version of Cron it is possible to use a network-mounted shared /var/spool/cron
         across a cluster of hosts and specify that only one of the hosts should run the crontab
         jobs in the particular directory at any one time. You may also use crontab(1) from any of
@@ -52,7 +52,7 @@ NAME
 
 
 
-        <div style='padding-left: 30pt'>
+        
           Running cron jobs can be allowed or disallowed for different users. For this purpose, use
           the cron.allow and cron.deny files. If the cron.allow file exists, a user must be listed
           in it to be allowed to use cron If the cron.allow file does not exist but the cron.deny
@@ -65,7 +65,7 @@ NAME
 
 
 
-          <div style='padding-left: 30pt'>
+          
             The temporary directory can be set in an environment variable. If it is not set by the
             user, the /tmp directory is used.
 
@@ -73,10 +73,10 @@ NAME
 
 
             OPTIONS
-            <div style='padding-left: 30pt'>
+            
               -u Appends the name of the user whose crontab is to be modified. If this option is
 
-              <div style='padding-left: 90pt'>
+              
                 not used, crontab examines "your" crontab, i.e., the crontab of the person execut‐
                 ing the command. Note that su(8) may confuse crontab, thus, when executing com‐
                 mands under su(8) you should always use the -u option. If no crontab exists for a
@@ -86,51 +86,51 @@ NAME
 
 
 
-                <div style='padding-left: 30pt'>
+                
                   -l Displays the current crontab on standard output.
 
 
 
 
-                  <div style='padding-left: 30pt'>
+                  
                     -r Removes the current crontab.
 
 
 
 
-                    <div style='padding-left: 30pt'>
+                    
                       -e Edits the current crontab using the editor specified by the VISUAL or EDITOR envi‐
 
-                      <div style='padding-left: 90pt'>
+                      
                         ronment variables. After you exit from the editor, the modified crontab will be
                         installed automatically.
 
 
 
 
-                        <div style='padding-left: 30pt'>
+                        
                           -i This option modifies the -r option to prompt the user for a 'y/Y' response before
 
-                          <div style='padding-left: 90pt'>
+                          
                             actually removing the crontab.
 
 
 
 
-                            <div style='padding-left: 30pt'>
+                            
                               -s Appends the current SELinux security context string as an MLS_LEVEL setting to the
 
-                              <div style='padding-left: 90pt'>
+                              
                                 crontab file before editing / replacement occurs - see the documentation of
                                 MLS_LEVEL in crontab(5).
 
 
 
 
-                                <div style='padding-left: 30pt'>
+                                
                                   -n This option is relevant only if cron(8) was started with the -c option, to enable
 
-                                  <div style='padding-left: 90pt'>
+                                  
                                     clustering support. It is used to set the host in the cluster which should run the
                                     jobs specified in the crontab files in the /var/spool/cron directory. If a host‐
                                     name is supplied, the host whose hostname returned by gethostname(2) matches the
@@ -145,11 +145,11 @@ NAME
 
 
 
-                                    <div style='padding-left: 30pt'>
+                                    
                                       -c This option is only relevant if cron(8) was started with the -c option, to
                                       enable
 
-                                      <div style='padding-left: 90pt'>
+                                      
                                         clustering support. It is used to query which host in the cluster is currently
                                         set
                                         to run the jobs specified in the crontab files in the directory /var/spool/cron
@@ -160,14 +160,14 @@ NAME
 
 
                                         SEE ALSO
-                                        <div style='padding-left: 30pt'>
+                                        
                                           crontab(5), cron(8)
 
 
 
 
                                           FILES
-                                          <div style='padding-left: 30pt'>
+                                          
                                             /etc/cron.allow
                                             /etc/cron.deny
 
@@ -175,7 +175,7 @@ NAME
 
 
                                             STANDARDS
-                                            <div style='padding-left: 30pt'>
+                                            
                                               The crontab command conforms to IEEE Std1003.2-1992 (``POSIX''). This new
                                               command syntax
                                               differs from previous versions of Vixie Cron, as well as from the classic
@@ -185,7 +185,7 @@ NAME
 
 
                                               DIAGNOSTICS
-                                              <div style='padding-left: 30pt'>
+                                              
                                                 An informative usage message appears if you run a crontab with a faulty
                                                 command defined in
                                                 it.
@@ -194,7 +194,7 @@ NAME
 
 
                                                 AUTHOR
-                                                <div style='padding-left: 30pt'>
+                                                
                                                   Paul Vixie ⟨vixie@isc.org⟩
                                                   Colin Dean ⟨colin@colin-dean.org⟩
 

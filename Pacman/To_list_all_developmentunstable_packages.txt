@@ -10,4 +10,4 @@ Created Sunday 06 May 2018
 
 
 
-sudo pacman -Qq | awk '/^.+(-cvs|-svn|-git|-hg|-bzr|-darcs)$/'</b>
+sudo pacman -Qq | awk '/^.+(-cvs|-svn|-git|-hg|-bzr|-darcs)$/'

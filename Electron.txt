@@ -19,7 +19,7 @@ dependency in your app:
 
 
 
-npm install electron --save-dev --save-exact</b>
+npm install electron --save-dev --save-exact
 The --save-exact flag is recommended as Electron does not follow semantic versioning. For info on how to manage
 Electron versions in your apps, see Electron versioning.
 
@@ -33,10 +33,10 @@ Clone and run the electron/electron-quick-start repository to see a minimal Elec
 
 
 
-git clone https://github.com/electron/electron-quick-start</b>
-cd electron-quick-start</b>
-npm install</b>
-npm start</b>
+git clone https://github.com/electron/electron-quick-start
+cd electron-quick-start
+npm install
+npm start
 
 
 
@@ -46,15 +46,15 @@ app) it will return the file path to the binary. Use this to spawn Electron from
 
 
 
-const electron = require('electron')</b>
-const proc = require('child_process')</b>
+const electron = require('electron')
+const proc = require('child_process')
 
 
 
-// will print something similar to /Users/maf/.../Electron</b>
-console.log(electron)</b>
+// will print something similar to /Users/maf/.../Electron
+console.log(electron)
 
 
 
-// spawn Electron</b>
-const child = proc.spawn(electron)</b>
+// spawn Electron
+const child = proc.spawn(electron)

@@ -10,4 +10,4 @@ Created Saturday 20 January 2018
 
 
 
-unar &lt;archive&gt;
+unar <archive>

@@ -11,7 +11,7 @@ Created Wednesday 11 July 2018
 
 
 for file in *; do
-<div style='padding-left: 30pt'>
+
     newname=$(echo $file | tr '.' '_' | sed 's/\(.*\)_\([^_]*\)$/\1.\2/g')
     [ "$newname" != "$file" ] &amp;&amp; mv "$file" "$newname"
 

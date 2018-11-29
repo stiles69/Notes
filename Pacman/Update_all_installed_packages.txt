@@ -10,4 +10,4 @@ Created Sunday 18 March 2018
 
 
 
-pacman -Syu</b>
+pacman -Syu

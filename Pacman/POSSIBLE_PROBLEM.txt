@@ -12,4 +12,4 @@ Created Monday 16 April 2018
 
 
 
-warning: /etc/pacman.d/mirrorlist installed as /etc/pacman.d/mirrorlist.pacnew</b>
+warning: /etc/pacman.d/mirrorlist installed as /etc/pacman.d/mirrorlist.pacnew

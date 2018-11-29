@@ -30,7 +30,7 @@ For example, to change the bitrate of the video, you would use it like this:
 
 
 
-ffmpeg -i input.webm -c:a copy -c:v vp9 -b:v 1M output.mkv</b>
+ffmpeg -i input.webm -c:a copy -c:v vp9 -b:v 1M output.mkv
 
 
 

@@ -10,7 +10,7 @@ Created Monday 18 June 2018
 
 
 
-ftp&gt; tick</b>
+ftp> tick
 
 
 

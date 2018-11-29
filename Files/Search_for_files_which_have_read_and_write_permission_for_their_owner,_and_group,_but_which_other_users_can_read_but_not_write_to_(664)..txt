@@ -12,6 +12,6 @@ Created Sunday 13 May 2018
 
 
 
-find . -perm 664</b>
+find . -perm 664
 Files which meet these criteria but have other permissions bits set (for example if someone can execute the file)
 	will not be matched.

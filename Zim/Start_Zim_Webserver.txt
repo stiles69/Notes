@@ -8,5 +8,5 @@ Start the Zim Webserver
 
 
 
-zim --server Notes</b>
+zim --server Notes
 Defaults to port 8080 'Notes' is my Notebook

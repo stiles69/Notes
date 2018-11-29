@@ -10,4 +10,4 @@ Created Tuesday 13 February 2018
 
 
 
-pacman -Qqe &gt; pkglist.txt</b>
+pacman -Qqe > pkglist.txt

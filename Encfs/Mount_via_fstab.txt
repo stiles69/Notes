@@ -15,9 +15,9 @@ Adding an entry in /etc/fstab will allow you to mount the encfs volume with a si
 prompted for your password.
 
 
-<div class="zim-object">
-    <pre><code class="sh">/etc/fstab
-encfs#/path/to/encfs/data  /mnt/decrypted  fuse  noauto,user  0  0</code></pre>
+
+    /etc/fstab
+encfs#/path/to/encfs/data  /mnt/decrypted  fuse  noauto,user  0  0
 
 
 

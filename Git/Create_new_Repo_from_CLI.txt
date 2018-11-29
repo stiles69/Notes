@@ -10,7 +10,7 @@ Created Sunday 11 February 2018
 
 
 
-echo "# Test" &gt;&gt; README.md
+echo "# Test" >> README.md
 git init
 git add README.md
 git commit -m "first commit"

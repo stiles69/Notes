@@ -18,7 +18,7 @@ Paste the following text into a terminal window to create a recommended GPG conf
 
 
 
-$ cat &lt;&lt; EOF &gt; ~/.gnupg/gpg.conf
+$ cat << EOF > ~/.gnupg/gpg.conf
 auto-key-locate keyserver
 keyserver hkps://hkps.pool.sks-keyservers.net
 keyserver-options no-honor-keyserver-url
@@ -54,8 +54,8 @@ Import it from a file:
 
 
 
-$ gpg --import &lt; /mnt/public-usb-key/pubkey.txt
-gpg: key 0xFF3E7D88647EBCDB: public key "Dr Duh &lt;doc@duh.to&gt;" imported
+$ gpg --import < /mnt/public-usb-key/pubkey.txt
+gpg: key 0xFF3E7D88647EBCDB: public key "Dr Duh <doc@duh.to>" imported
 gpg: Total number processed: 1
 gpg: imported: 1 (RSA: 1)
 Or download from a keyserver:
@@ -65,7 +65,7 @@ Or download from a keyserver:
 $ gpg --recv 0xFF3E7D88647EBCDB
 gpg: requesting key 0xFF3E7D88647EBCDB from hkps server hkps.pool.sks-keyservers.net
 [...]
-gpg: key 0xFF3E7D88647EBCDB: public key "Dr Duh &lt;doc@duh.to&gt;" imported
+gpg: key 0xFF3E7D88647EBCDB: public key "Dr Duh <doc@duh.to>" imported
 gpg: Total number processed: 1
 gpg: imported: 1 (RSA: 1)
 You may get an error gpgkeys: HTTP fetch error 1: unsupported protocol -- this means you need to install a special
@@ -99,28 +99,28 @@ Max. PIN lengths .: 127 127 127
 PIN retry counter : 3 3 3
 Signature counter : 0
 Signature key ....: 07AA 7735 E502 C5EB E09E B8B0 BECF A3C1 AE19 1D15
-<div style='padding-left: 30pt'>
+
   created ....: 2016-05-24 23:22:01
 
   Encryption key....: 6F26 6F46 845B BEB8 BDF3 7E9B 5912 A795 E90D D2CF
-  <div style='padding-left: 30pt'>
+  
     created ....: 2016-05-24 23:29:03
 
     Authentication key: 82BE 7837 6A3F 2E7B E556 5E35 3F29 127E 7964 9A3D
-    <div style='padding-left: 30pt'>
+    
       created ....: 2016-05-24 23:36:40
 
-      General key info..: pub 4096R/0xBECFA3C1AE191D15 2016-05-24 Dr Duh &lt;doc@duh.to&gt;
+      General key info..: pub 4096R/0xBECFA3C1AE191D15 2016-05-24 Dr Duh <doc@duh.to>
       sec# 4096R/0xFF3E7D88647EBCDB created: 2016-05-24 expires: never
-      ssb&gt; 4096R/0xBECFA3C1AE191D15 created: 2016-05-24 expires: never
+      ssb> 4096R/0xBECFA3C1AE191D15 created: 2016-05-24 expires: never
       <div style='padding-left: 150pt'>
         card-no: 0006 05553211
 
-        ssb&gt; 4096R/0x5912A795E90DD2CF created: 2016-05-24 expires: never
+        ssb> 4096R/0x5912A795E90DD2CF created: 2016-05-24 expires: never
         <div style='padding-left: 150pt'>
           card-no: 0006 05553211
 
-          ssb&gt; 4096R/0x3F29127E79649A3D created: 2016-05-24 expires: never
+          ssb> 4096R/0x3F29127E79649A3D created: 2016-05-24 expires: never
           <div style='padding-left: 150pt'>
             card-no: 0006 05553211
 
@@ -156,11 +156,11 @@ Signature key ....: 07AA 7735 E502 C5EB E09E B8B0 BECF A3C1 AE19 1D15
               sub 4096R/0xBECFA3C1AE191D15 created: 2016-05-24 expires: never usage: S
               sub 4096R/0x5912A795E90DD2CF created: 2016-05-24 expires: never usage: E
               sub 4096R/0x3F29127E79649A3D created: 2016-05-24 expires: never usage: A
-              [ unknown] (1). Dr Duh &lt;doc@duh.to&gt;
+              [ unknown] (1). Dr Duh <doc@duh.to>
 
 
 
-              gpg&gt; trust
+              gpg> trust
               pub 4096R/0xFF3E7D88647EBCDB created: 2016-05-24 expires: never usage: SC
               <div style='padding-left: 210pt'>
                 trust: unknown validity: unknown
@@ -168,7 +168,7 @@ Signature key ....: 07AA 7735 E502 C5EB E09E B8B0 BECF A3C1 AE19 1D15
                 sub 4096R/0xBECFA3C1AE191D15 created: 2016-05-24 expires: never usage: S
                 sub 4096R/0x5912A795E90DD2CF created: 2016-05-24 expires: never usage: E
                 sub 4096R/0x3F29127E79649A3D created: 2016-05-24 expires: never usage: A
-                [ unknown] (1). Dr Duh &lt;doc@duh.to&gt;
+                [ unknown] (1). Dr Duh <doc@duh.to>
 
 
 
@@ -198,13 +198,13 @@ Signature key ....: 07AA 7735 E502 C5EB E09E B8B0 BECF A3C1 AE19 1D15
                   sub 4096R/0xBECFA3C1AE191D15 created: 2016-05-24 expires: never usage: S
                   sub 4096R/0x5912A795E90DD2CF created: 2016-05-24 expires: never usage: E
                   sub 4096R/0x3F29127E79649A3D created: 2016-05-24 expires: never usage: A
-                  [ unknown] (1). Dr Duh &lt;doc@duh.to&gt;
+                  [ unknown] (1). Dr Duh <doc@duh.to>
                   Please note that the shown key validity is not necessarily correct
                   unless you restart the program.
 
 
 
-                  gpg&gt; quit
+                  gpg> quit
                   Encryption
                   Encrypt some sample text:
 
@@ -259,8 +259,8 @@ Signature key ....: 07AA 7735 E502 C5EB E09E B8B0 BECF A3C1 AE19 1D15
                   -----END PGP MESSAGE-----
                   gpg: encrypted with 4096-bit RSA key, ID 0x5912A795E90DD2CF, created
                   2016-05-24
-                  <div style='padding-left: 30pt'>
-                    "Dr Duh &lt;doc@duh.to&gt;"
+                  
+                    "Dr Duh <doc@duh.to>"
 
 
 
@@ -339,9 +339,9 @@ Signature key ....: 07AA 7735 E502 C5EB E09E B8B0 BECF A3C1 AE19 1D15
 
                     gpg: Signature made Wed 25 May 2016 00:00:00 AM UTC
                     gpg: using RSA key 0xBECFA3C1AE191D15
-                    gpg: Good signature from "Dr Duh &lt;doc@duh.to&gt;" [ultimate]
+                    gpg: Good signature from "Dr Duh <doc@duh.to>" [ultimate]
                     Primary key fingerprint: 011C E16B D45B 27A5 5BA8 776D FF3E 7D88 647E BCDB
-                    <div style='padding-left: 30pt'>
+                    
                       Subkey fingerprint: 07AA 7735 E502 C5EB E09E B8B0 BECF A3C1 AE19 1D15
 
                       Putting it all together:
@@ -351,15 +351,15 @@ Signature key ....: 07AA 7735 E502 C5EB E09E B8B0 BECF A3C1 AE19 1D15
                       $ echo "$(uname -a)" | gpg --encrypt --sign --armor --default-key 0xFF3E7D88647EBCDB --recipient
                       0xBECFA3C1AE191D15 | gpg --decrypt --armor
                       gpg: encrypted with 4096-bit RSA key, ID 0x5912A795E90DD2CF, created 2016-05-24
-                      <div style='padding-left: 30pt'>
-                        "Dr Duh &lt;doc@duh.to&gt;"
+                      
+                        "Dr Duh <doc@duh.to>"
 
                         Linux workstation 3.16.0-4-amd64 #1 SMP Debian 3.16.7-ckt25-2 (2016-04-08) x86_64 GNU/Linux
                         gpg: Signature made Wed 25 May 2016 01:00:00 AM UTC
                         gpg: using RSA key 0xBECFA3C1AE191D15
-                        gpg: Good signature from "Dr Duh &lt;doc@duh.to&gt;" [ultimate]
+                        gpg: Good signature from "Dr Duh <doc@duh.to>" [ultimate]
                         Primary key fingerprint: 011C E16B D45B 27A5 5BA8 776D FF3E 7D88 647E BCDB
-                        <div style='padding-left: 30pt'>
+                        
                           Subkey fingerprint: 07AA 7735 E502 C5EB E09E B8B0 BECF A3C1 AE19 1D15
 
                           SSH
@@ -369,7 +369,7 @@ Signature key ....: 07AA 7735 E502 C5EB E09E B8B0 BECF A3C1 AE19 1D15
 
 
 
-                          $ cat &lt;&lt; EOF &gt; ~/.gnupg/gpg-agent.conf
+                          $ cat << EOF > ~/.gnupg/gpg-agent.conf
                           enable-ssh-support
                           pinentry-program /usr/bin/pinentry-curses
                           default-cache-ttl 60
@@ -424,15 +424,15 @@ Signature key ....: 07AA 7735 E502 C5EB E09E B8B0 BECF A3C1 AE19 1D15
 
 
 
-                          $ ssh-add -L | grep "cardno:000605553211" &gt; ~/.ssh/id_rsa_yubikey.pub
+                          $ ssh-add -L | grep "cardno:000605553211" > ~/.ssh/id_rsa_yubikey.pub
                           Then, you can explicitly associate this Yubikey-stored key for used with the domain
                           github.com (for example) as follows:
 
 
 
-                          $ cat &lt;&lt; EOF &gt;&gt; ~/.ssh/config
+                          $ cat << EOF >> ~/.ssh/config
                           Host github.com
-                          <div style='padding-left: 30pt'>
+                          
                             IdentityFile ~/.ssh/id_rsa_yubikey.pub
 
                             EOF

@@ -10,7 +10,7 @@ Created Tuesday 27 March 2018
 
 
 
-npm install --save-dev webpack-manifest-plugin</b>
+npm install --save-dev webpack-manifest-plugin
 
 
 
@@ -24,7 +24,7 @@ var ManifestPlugin = require('webpack-manifest-plugin');
 
 
 module.exports = {
-<div style='padding-left: 30pt'>
+
   // ...
   plugins: [
   new ManifestPlugin()
@@ -47,12 +47,12 @@ module.exports = {
 
   module.exports = {
   output: {
-  <div style='padding-left: 30pt'>
+  
     publicPath
 
     },
     plugins: [
-    <div style='padding-left: 30pt'>
+    
       new ManifestPlugin(options)
 
       ]

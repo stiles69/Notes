@@ -41,7 +41,7 @@ $ sudo mkfs.ext4 /dev/mapper/encrypted-usb -L encrypted-usb
 mke2fs 1.42.12 (29-Aug-2014)
 Creating filesystem with 7871744 4k blocks and 1970416 inodes
 Superblock backups stored on blocks:
-<div style='padding-left: 60pt'>
+
 	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
 	4096000
 
@@ -63,17 +63,17 @@ Superblock backups stored on blocks:
 
 
 	$ sudo cp -avi $GNUPGHOME /mnt/usb
-	‘/tmp/tmp.aaiTTovYgo’ -&gt; ‘/mnt/usb/tmp.aaiTTovYgo’
-	‘/tmp/tmp.aaiTTovYgo/revoke.txt’ -&gt; ‘/mnt/usb/tmp.aaiTTovYgo/revoke.txt’
-	‘/tmp/tmp.aaiTTovYgo/gpg.conf’ -&gt; ‘/mnt/usb/tmp.aaiTTovYgo/gpg.conf’
-	‘/tmp/tmp.aaiTTovYgo/trustdb.gpg’ -&gt; ‘/mnt/usb/tmp.aaiTTovYgo/trustdb.gpg’
-	‘/tmp/tmp.aaiTTovYgo/random_seed’ -&gt; ‘/mnt/usb/tmp.aaiTTovYgo/random_seed’
-	‘/tmp/tmp.aaiTTovYgo/master.key’ -&gt; ‘/mnt/usb/tmp.aaiTTovYgo/master.key’
-	‘/tmp/tmp.aaiTTovYgo/secring.gpg’ -&gt; ‘/mnt/usb/tmp.aaiTTovYgo/secring.gpg’
-	‘/tmp/tmp.aaiTTovYgo/mastersub.key’ -&gt; ‘/mnt/usb/tmp.aaiTTovYgo/mastersub.key’
-	‘/tmp/tmp.aaiTTovYgo/sub.key’ -&gt; ‘/mnt/usb/tmp.aaiTTovYgo/sub.key’
-	‘/tmp/tmp.aaiTTovYgo/pubring.gpg~’ -&gt; ‘/mnt/usb/tmp.aaiTTovYgo/pubring.gpg~’
-	‘/tmp/tmp.aaiTTovYgo/pubring.gpg’ -&gt; ‘/mnt/usb/tmp.aaiTTovYgo/pubring.gpg’
+	‘/tmp/tmp.aaiTTovYgo’ -> ‘/mnt/usb/tmp.aaiTTovYgo’
+	‘/tmp/tmp.aaiTTovYgo/revoke.txt’ -> ‘/mnt/usb/tmp.aaiTTovYgo/revoke.txt’
+	‘/tmp/tmp.aaiTTovYgo/gpg.conf’ -> ‘/mnt/usb/tmp.aaiTTovYgo/gpg.conf’
+	‘/tmp/tmp.aaiTTovYgo/trustdb.gpg’ -> ‘/mnt/usb/tmp.aaiTTovYgo/trustdb.gpg’
+	‘/tmp/tmp.aaiTTovYgo/random_seed’ -> ‘/mnt/usb/tmp.aaiTTovYgo/random_seed’
+	‘/tmp/tmp.aaiTTovYgo/master.key’ -> ‘/mnt/usb/tmp.aaiTTovYgo/master.key’
+	‘/tmp/tmp.aaiTTovYgo/secring.gpg’ -> ‘/mnt/usb/tmp.aaiTTovYgo/secring.gpg’
+	‘/tmp/tmp.aaiTTovYgo/mastersub.key’ -> ‘/mnt/usb/tmp.aaiTTovYgo/mastersub.key’
+	‘/tmp/tmp.aaiTTovYgo/sub.key’ -> ‘/mnt/usb/tmp.aaiTTovYgo/sub.key’
+	‘/tmp/tmp.aaiTTovYgo/pubring.gpg~’ -> ‘/mnt/usb/tmp.aaiTTovYgo/pubring.gpg~’
+	‘/tmp/tmp.aaiTTovYgo/pubring.gpg’ -> ‘/mnt/usb/tmp.aaiTTovYgo/pubring.gpg’
 	Keep the backup mounted if you plan on setting up two or more keys (as keytocard will delete the local copy on save),
 	otherwise unmount and disconnected the encrypted USB drive:
 

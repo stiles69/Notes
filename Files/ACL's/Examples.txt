@@ -11,42 +11,42 @@ Created Tuesday 15 May 2018
 
 
 Granting an additional user read access
-<div style='padding-left: 90pt'>
-  setfacl -m u:lisa:r file</b>
+
+  setfacl -m u:lisa:r file
 
 
 
 
-  <div style='padding-left: 30pt'>
+  
     Revoking write access from all groups and all named users (using the
     effective rights mask)
 
-    <div style='padding-left: 90pt'>
-      setfacl -m m::rx file</b>
+    
+      setfacl -m m::rx file
 
 
 
 
-      <div style='padding-left: 30pt'>
+      
         Removing a named group entry from a file's ACL
 
-        <div style='padding-left: 90pt'>
-          setfacl -x g:staff file</b>
+        
+          setfacl -x g:staff file
 
 
 
 
-          <div style='padding-left: 30pt'>
+          
             Copying the ACL of one file to another
 
-            <div style='padding-left: 90pt'>
-              getfacl file1 | setfacl --set-file=- file2</b>
+            
+              getfacl file1 | setfacl --set-file=- file2
 
 
 
 
-              <div style='padding-left: 30pt'>
+              
                 Copying the access ACL into the Default ACL
 
-                <div style='padding-left: 90pt'>
-                  getfacl --access dir | setfacl -d -M- dir</b>
+                
+                  getfacl --access dir | setfacl -d -M- dir

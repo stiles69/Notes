@@ -10,4 +10,4 @@ Created Saturday 05 May 2018
 
 
 
-cut -d: -f1 /etc/passwd</b>
+cut -d: -f1 /etc/passwd

@@ -14,7 +14,7 @@ Created Thursday 7 June 2018
 
 
 # How do we Upgrade PiVPN
-A: You don't</b>
+A: You don't
 
 
 

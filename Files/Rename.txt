@@ -10,7 +10,7 @@ Created Tuesday 15 May 2018
 
 
 
-Can Run /home/brettsalemink/BashScripts/Rename-Filenames-With-String.sh [Your String]</b>
+Can Run /home/brettsalemink/BashScripts/Rename-Filenames-With-String.sh [Your String]
 
 
 
@@ -18,30 +18,30 @@ Given the files foo1, ..., foo9, foo10, ..., foo278, the commands
 
 
 
-<div style='padding-left: 90pt'>
+
   rename foo foo00 foo?
   rename foo foo0 foo??
 
 
 
 
-  <div style='padding-left: 30pt'>
+  
     will turn them into foo001, ..., foo009, foo010, ..., foo278. And
 
 
 
 
-    <div style='padding-left: 90pt'>
+    
       rename .htm .html *.htm
 
 
 
 
-      <div style='padding-left: 30pt'>
+      
         will fix the extension of your html files. Provide an empty string for shortening:
 
 
 
 
-        <div style='padding-left: 90pt'>
+        
           rename '_with_long_name' '' file_with_long_name.*

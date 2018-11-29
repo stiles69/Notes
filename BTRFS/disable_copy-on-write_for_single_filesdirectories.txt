@@ -10,4 +10,4 @@ Created Saturday 17 February 2018
 
 
 
-$ chattr +C /dir/file</b>
+$ chattr +C /dir/file

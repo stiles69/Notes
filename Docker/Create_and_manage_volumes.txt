@@ -18,12 +18,12 @@ Create a volume:
 
 
 
-$ docker volume create my-vol</b>
+$ docker volume create my-vol
 List volumes:
 
 
 
-$ docker volume ls</b>
+$ docker volume ls
 
 
 
@@ -32,12 +32,12 @@ Inspect a volume:
 
 
 
-$ docker volume inspect my-vol</b>
+$ docker volume inspect my-vol
 [
-<div style='padding-left: 30pt'>
+
     {
 
-    <div style='padding-left: 60pt'>
+    
         "Driver": "local",
         "Labels": {},
         "Mountpoint": "/var/lib/docker/volumes/my-vol/_data",
@@ -45,7 +45,7 @@ $ docker volume inspect my-vol</b>
         "Options": {},
         "Scope": "local"
 
-        <div style='padding-left: 30pt'>
+        
             }
 
             ]
@@ -53,4 +53,4 @@ $ docker volume inspect my-vol</b>
 
 
 
-            $ docker volume rm my-vol</b>
+            $ docker volume rm my-vol

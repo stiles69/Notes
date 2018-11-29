@@ -19,7 +19,7 @@ The express-generator package installs the express command-line tool. Use the fo
 
 
 
-$ npm install express-generator -g</b>
+$ npm install express-generator -g
 Display the command options with the -h option:
 
 
@@ -28,7 +28,7 @@ Folder Public is Directory Server Serves Files
 
 
 
-$ express -c</b>
+$ express -c
 
 
 
@@ -40,27 +40,27 @@ Options:
 
 
 
-<div style='padding-left: 30pt'>
+
   -h, --help output usage information
 
-  <div style='padding-left: 60pt'>
+  
     --version output the version number
 
-    <div style='padding-left: 30pt'>
+    
       -e, --ejs add ejs engine support
 
-      <div style='padding-left: 60pt'>
+      
         --hbs add handlebars engine support
         --pug add pug engine support
 
-        <div style='padding-left: 30pt'>
+        
           -H, --hogan add hogan.js engine support
-          -v, --view &lt;engine&gt; add view &lt;engine&gt; support (ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
-          -c, --css &lt;engine&gt; add stylesheet &lt;engine&gt; support (less|stylus|compass|sass) (defaults to plain
+          -v, --view <engine> add view <engine> support (ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
+          -c, --css <engine> add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain
           css)
 
-          <div style='padding-left: 60pt'>
+          
             --git add .gitignore
 
-            <div style='padding-left: 30pt'>
+            
               -f, --force force on non-empty directory

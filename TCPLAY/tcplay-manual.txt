@@ -9,39 +9,39 @@ TCPLAY(8) BSD System Manager's Manual TCPLAY(8)
 
 
 NAME
-<div style='padding-left: 30pt'>
+
     tcplay — tool to manage TrueCrypt volumes
 
 
 
 
     SYNOPSIS
-    <div style='padding-left: 30pt'>
+    
         tcplay -c -d device [-g] [-z] [-w] [-a pbkdf_hash] [-b cipher] [-f keyfile_hidden] [-k keyfile] [-x pbkdf_hash]
         [-y cipher]
         tcplay -i -d device [-e] [-f keyfile_hidden] [-k keyfile] [-s system_device] [--fde] [--use-backup]
         [--use-hdr-file hdr_file]
 
-        <div style='padding-left: 90pt'>
+        
             [--use-hidden-hdr-file hdr_file]
 
-            <div style='padding-left: 30pt'>
+            
                 tcplay -j mapping
                 tcplay -m mapping -d device [-e] [-f keyfile_hidden] [-k keyfile] [-s system_device] [-t] [--fde]
                 [--read-only] [--use-backup]
 
-                <div style='padding-left: 90pt'>
+                
                     [--use-hdr-file hdr_file] [--use-hidden-hdr-file hdr_file]
 
-                    <div style='padding-left: 30pt'>
+                    
                         tcplay --modify -d device [-k keyfile] [--new-keyfile new_keyfile] [--new-pbkdf-prf pbkdf_hash]
                         [-s system_device] [--fde]
 
-                        <div style='padding-left: 90pt'>
+                        
                             [--use-backup] [--use-hdr-file hdr_file] [--use-hidden-hdr-file hdr_file]
                             [--save-hdr-backup hdr_file] [-w]
 
-                            <div style='padding-left: 30pt'>
+                            
                                 tcplay --modify -d device [-k keyfile] --restore-from-backup-hdr [-w]
                                 tcplay -u mapping
                                 tcplay -h | -v
@@ -50,7 +50,7 @@ NAME
 
 
                                 DESCRIPTION
-                                <div style='padding-left: 30pt'>
+                                
                                     The tcplay utility provides full support for creating and opening/mapping
                                     TrueCrypt-compatible volumes. It supports the fol‐
                                     lowing commands, each with a set of options detailed further below:
@@ -58,39 +58,39 @@ NAME
 
 
 
-                                    <div style='padding-left: 30pt'>
+                                    
                                         -c, --create
 
-                                        <div style='padding-left: 90pt'>
+                                        
                                             Create a new encrypted TrueCrypt volume on the device specified by
                                             --device.
 
 
 
 
-                                            <div style='padding-left: 30pt'>
+                                            
                                                 -h, --help
 
-                                                <div style='padding-left: 90pt'>
+                                                
                                                     Print help message and exit.
 
 
 
 
-                                                    <div style='padding-left: 30pt'>
+                                                    
                                                         -i, --info
 
-                                                        <div style='padding-left: 90pt'>
+                                                        
                                                             Print out information about the encrypted device specified
                                                             by --device.
 
 
 
 
-                                                            <div style='padding-left: 30pt'>
+                                                            
                                                                 -j mapping, --info-mapped=mapping
 
-                                                                <div style='padding-left: 90pt'>
+                                                                
                                                                     Print out information about the mapped tcplay
                                                                     volume specified by mapping. Information such as
                                                                     key CRC and the PBKDF2
@@ -99,10 +99,10 @@ NAME
 
 
 
-                                                                    <div style='padding-left: 30pt'>
+                                                                    
                                                                         --modify
 
-                                                                        <div style='padding-left: 90pt'>
+                                                                        
                                                                             Modify the volume header. This mode allows
                                                                             changing passphrase, keyfiles, PBKDF2 PRF
                                                                             as well as restoring from a
@@ -111,10 +111,10 @@ NAME
 
 
 
-                                                                            <div style='padding-left: 30pt'>
+                                                                            
                                                                                 -m mapping, --map=mapping
 
-                                                                                <div style='padding-left: 90pt'>
+                                                                                
                                                                                     Map the encrypted TrueCrypt volume
                                                                                     on the device specified by --device
                                                                                     as a dm(4) mapping called mapping.
@@ -125,10 +125,10 @@ NAME
 
 
 
-                                                                                    <div style='padding-left: 30pt'>
+                                                                                    
                                                                                         -u mapping, --unmap=mapping
 
-                                                                                        <div style='padding-left: 90pt'>
+                                                                                        
                                                                                             Removes (unmaps) the dm(4)
                                                                                             mapping specified by
                                                                                             mapping as well as any
@@ -145,17 +145,17 @@ NAME
 
 
 
-                                                                                            <div style='padding-left: 30pt'>
+                                                                                            
                                                                                                 -v, --version
 
-                                                                                                <div style='padding-left: 90pt'>
+                                                                                                
                                                                                                     Print version
                                                                                                     message and exit.
 
 
 
 
-                                                                                                    <div style='padding-left: 30pt'>
+                                                                                                    
                                                                                                         Options common
                                                                                                         to all commands
                                                                                                         are:
@@ -163,11 +163,11 @@ NAME
 
 
 
-                                                                                                        <div style='padding-left: 30pt'>
+                                                                                                        
                                                                                                             -d device,
                                                                                                             --device=device
 
-                                                                                                            <div style='padding-left: 90pt'>
+                                                                                                            
                                                                                                                 Specifies
                                                                                                                 the
                                                                                                                 disk

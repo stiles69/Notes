@@ -27,7 +27,7 @@ Create a file mylist.txt with all the files you want to have concatenated in the
 
 
 
-# this is a commentfile '/path/to/file1'file '/path/to/file2'file '/path/to/file3'</b>
+# this is a commentfile '/path/to/file1'file '/path/to/file2'file '/path/to/file3'
 
 
 
@@ -35,7 +35,7 @@ Note that these can be either relative or absolute paths. Then you can stream co
 
 
 
-ffmpeg -f concat -safe 0 -i mylist.txt -c copy output</b>
+ffmpeg -f concat -safe 0 -i mylist.txt -c copy output
 
 
 

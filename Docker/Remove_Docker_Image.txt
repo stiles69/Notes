@@ -10,4 +10,4 @@ Created Wednesday 23 May 2018
 
 
 
-# docker rmi &lt;image id or name&gt;
+# docker rmi <image id or name>

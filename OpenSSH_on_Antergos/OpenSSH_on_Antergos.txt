@@ -32,7 +32,7 @@ sudo ufw allow 22
 
 
 
-***************************************On Arch Linux</b>************************
+***************************************On Arch Linux************************
 sudo pacman -S openssh
 sudo nano /etc/ssh/sshd_config
 AllowUsers user1 user2

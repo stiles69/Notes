@@ -10,4 +10,4 @@ Created Friday 11 May 2018
 
 
 
-find /home/username/ -name "*.err"</b>
+find /home/username/ -name "*.err"

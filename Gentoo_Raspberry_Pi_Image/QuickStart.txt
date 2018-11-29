@@ -13,8 +13,8 @@ After Boot to Add User:
 pi64 ~ # useradd --create-home --groups "adm,disk,lp,wheel,audio,video,cdrom,usb,users,plugdev,portage" --shell
 /bin/bash --comment "Sakaki" sakaki
 pi64 ~ # passwd sakaki
-New password: &lt;type your desired password for the new user, and press Enter&gt;
-Retype new password: &lt;type the desired password again, and press Enter&gt;
+New password: <type your desired password for the new user, and press Enter>
+Retype new password: <type the desired password again, and press Enter>
 passwd: password updated successfully
 Username: root
 Password: raspberrypi64
@@ -25,8 +25,8 @@ After Boot to Add User:
 pi64 ~ # useradd --create-home --groups "adm,disk,lp,wheel,audio,video,cdrom,usb,users,plugdev,portage" --shell
 /bin/bash --comment "Sakaki" sakaki
 pi64 ~ # passwd sakaki
-New password: &lt;type your desired password for the new user, and press Enter&gt;
-Retype new password: &lt;type the desired password again, and press Enter&gt;
+New password: <type your desired password for the new user, and press Enter>
+Retype new password: <type the desired password again, and press Enter>
 passwd: password updated successfully
 Then, once logged in, you can delete the demouser account if you like. Open a terminal, su to root, then:
 pi64 ~ # userdel --remove demouser
@@ -55,7 +55,7 @@ dev-embedded/rpi3-64bit-meta (which must be retained).
 
 
 
-demouser@pi64 ~ $ sudo mousepad /var/lib/portage/world &amp;&gt;/dev/null&amp;
+demouser@pi64 ~ $ sudo mousepad /var/lib/portage/world &amp;>/dev/null&amp;
 (this will open the file for editing)
 
 
@@ -94,7 +94,7 @@ Extra Commands
 
 
 Remove GUI:
-pi64 ~ # rc-update del xdm default</b>
+pi64 ~ # rc-update del xdm default
 
 
 
@@ -102,7 +102,7 @@ You can also reclaim the memory reserved for the vc4 graphics driver (this is op
 
 
 
-pi64 ~ # vim -w /boot/config.txt</b>
+pi64 ~ # vim -w /boot/config.txt
 and comment out the following line, so it reads:
 
 
@@ -115,7 +115,7 @@ To change the time zone, e.g. for Germany:
 
 
 
-root #timedatectl set-timezone https://wiki.gentoo.org/wiki/Localization/Guide#Environment_variables_for_locales</b>
+root #timedatectl set-timezone https://wiki.gentoo.org/wiki/Localization/Guide#Environment_variables_for_locales
 
 
 
@@ -123,7 +123,7 @@ To set the system clock:
 
 
 
-root #timedatectl set-time "2012-12-17 12:30:59"</b>
+root #timedatectl set-time "2012-12-17 12:30:59"
 
 
 
@@ -131,9 +131,9 @@ At runtime, to check the current hardware clock time:
 
 
 
-root #hwclock --show</b>
+root #hwclock --show
 To set the hardware clock to the current system clock:
 
 
 
-root #hwclock --systohc</b>
+root #hwclock --systohc

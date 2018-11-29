@@ -11,4 +11,4 @@ Created Wednesday 14 March 2018
 
 
 Gulp must be installed
-npm install --save workbox-sw</b>
+npm install --save workbox-sw

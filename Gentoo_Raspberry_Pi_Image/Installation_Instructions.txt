@@ -20,8 +20,8 @@ After Boot to Add User:
 pi64 ~ # useradd --create-home --groups "adm,disk,lp,wheel,audio,video,cdrom,usb,users,plugdev,portage" --shell
 /bin/bash --comment "Sakaki" sakaki
 pi64 ~ # passwd sakaki
-New password: &lt;type your desired password for the new user, and press Enter&gt;
-Retype new password: &lt;type the desired password again, and press Enter&gt;
+New password: <type your desired password for the new user, and press Enter>
+Retype new password: <type the desired password again, and press Enter>
 passwd: password updated successfully
 Username: root
 Password: raspberrypi64
@@ -32,8 +32,8 @@ After Boot to Add User:
 pi64 ~ # useradd --create-home --groups "adm,disk,lp,wheel,audio,video,cdrom,usb,users,plugdev,portage" --shell
 /bin/bash --comment "Sakaki" sakaki
 pi64 ~ # passwd sakaki
-New password: &lt;type your desired password for the new user, and press Enter&gt;
-Retype new password: &lt;type the desired password again, and press Enter&gt;
+New password: <type your desired password for the new user, and press Enter>
+Retype new password: <type the desired password again, and press Enter>
 passwd: password updated successfully
 Then, once logged in, you can delete the demouser account if you like. Open a terminal, su to root, then:
 pi64 ~ # userdel --remove demouser
@@ -76,7 +76,7 @@ If you would rather not use auto-updating, simply edit the file /etc/portage/pac
 # - apps: pull in baseline desktop apps (libreoffice etc.) (requires xfce)
 #
 # NB the main point of the core, xfce, pitop and apps USE flags is just to let
-# you reduce what is in your <span class="zim-tag">@world</span> set (/var/lib/portage/world).
+# you reduce what is in your @world set (/var/lib/portage/world).
 dev-embedded/rpi3-64bit-meta -weekly-genup
 
 
@@ -107,10 +107,10 @@ Found 8 matches
 
 
 demouser@pi64 ~ $ eix --verbose app-editors/shed
-<ul>
-	app-editors/shed</li>
-</ul>
-<div style='padding-left: 30pt'>
+
+	app-editors/shed
+
+
 	Available versions: *1.12 *1.13 ~*1.15
 	Homepage: http://shed.sourceforge.net/
 	Find open bugs: https://bugs.gentoo.org/buglist.cgi?quicksearch=app-editors%2Fshed

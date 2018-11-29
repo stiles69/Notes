@@ -53,7 +53,7 @@ $ ssh root@www1.cyberciti.biz
 
 (E) Get memory information and store result/output to local file /tmp/memory.status:
 $ ssh vivek@www1.cyberciti.biz
-'free -m' &gt; /tmp/memory.status
+'free -m' > /tmp/memory.status
 
 
 

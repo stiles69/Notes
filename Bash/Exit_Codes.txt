@@ -33,4 +33,4 @@ with no output even though the file does not exist.
 
 
 
-cat 'doesnotexist.txt' 2&gt;/dev/null || exit 0
+cat 'doesnotexist.txt' 2>/dev/null || exit 0

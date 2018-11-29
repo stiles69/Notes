@@ -14,4 +14,4 @@ To chmod only files to 644:
 
 
 
-$ find directory -type f -exec chmod 644 {} +</b>
+$ find directory -type f -exec chmod 644 {} +

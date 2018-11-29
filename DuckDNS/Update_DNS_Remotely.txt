@@ -10,7 +10,7 @@ Created Friday 16 March 2018
 
 
 
-You can update your domain(s) with a single HTTPS get to DuckDNS</b>
+You can update your domain(s) with a single HTTPS get to DuckDNS
 domains=roguedesigns
 token=cd586e20-419e-41d9-b7c8-f26501a240cb
 

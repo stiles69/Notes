@@ -14,6 +14,6 @@ To leave a job running but disconnect from it.
 
 
 
-# ctrl-z</b> to get to prompt
-# bg</b> to start job in background
-# disown</b> to leave the job running
+# ctrl-z to get to prompt
+# bg to start job in background
+# disown to leave the job running

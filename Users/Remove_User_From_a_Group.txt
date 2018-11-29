@@ -10,10 +10,10 @@ Created Tuesday 15 May 2018
 
 
 
-# sudo deluser user group</b>
+# sudo deluser user group
 For Debian Based OS
 
 
 
-# sudo gpasswd -d jack mygrp</b>
+# sudo gpasswd -d jack mygrp
 For Arch Linux

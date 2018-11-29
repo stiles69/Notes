@@ -10,7 +10,7 @@ Created Wednesday 02 May 2018
 
 
 
-sudo systemctl start openvpn-client@US-Chicago</b>
+sudo systemctl start openvpn-client@US-Chicago
 
 
 
@@ -18,4 +18,4 @@ To allow executing external scripts automatically when starting the openvpn clie
 
 
 
---script-security 2</b> or add this line to the client config: script-security 2</b>
+--script-security 2 or add this line to the client config: script-security 2

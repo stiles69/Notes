@@ -10,4 +10,4 @@ Created Saturday 12 May 2018
 
 
 
-rsync://user@host.com[:port]/[relative|/absolute]_path</b>
+rsync://user@host.com[:port]/[relative|/absolute]_path

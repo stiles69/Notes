@@ -15,7 +15,7 @@ You can also adjust the dimensions of your video using FFmpeg. The simplest way 
 
 
 
-ffmpeg -i input.mkv -c:a copy -s hd720 output.mkv</b>
+ffmpeg -i input.mkv -c:a copy -s hd720 output.mkv
 
 
 
@@ -23,7 +23,7 @@ This modifies the video to 1280x720 in the output, but you can set the width and
 
 
 
-ffmpeg -i input.mkv -c:a copy -s 1280x720 output.mkv</b>
+ffmpeg -i input.mkv -c:a copy -s 1280x720 output.mkv
 
 
 

@@ -1,6 +1,6 @@
 ====== make rar with parts ======
 
-<style>
+
     height:100%;
     font-family:'Open Sans',
     sans-serif;
@@ -105,8 +105,8 @@
                                                                                             #navigation {
                                                                                                 background-color: #FFF;
 
-                                                                                                RAR <ul>make rar with parts</b></li></ul></li></ul><div id="content">make rar with parts <a name='RAR:make rar with parts'>Created Wednesday 26 September 2018 rar a -v153600k &lt;
-                                                                                                name-of-archive-file&gt;
-                                                                                                &lt;
-                                                                                                files-to-compressed&gt;
-                                                                                                </b><span class="backlinks"></span>
+                                                                                                RAR make rar with partsmake rar with parts <a name='RAR:make rar with parts'>Created Wednesday 26 September 2018 rar a -v153600k <
+                                                                                                name-of-archive-file>
+                                                                                                <
+                                                                                                files-to-compressed>
+                                                                                                

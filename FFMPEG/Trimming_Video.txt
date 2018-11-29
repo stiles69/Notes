@@ -10,7 +10,7 @@ Created Monday 22 January 2018
 
 
 
-ffmpeg -i input.mkv -c:av copy -ss 00:01:00 -t 10 output.mkv</b>
+ffmpeg -i input.mkv -c:av copy -ss 00:01:00 -t 10 output.mkv
 
 
 

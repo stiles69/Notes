@@ -10,4 +10,4 @@ Created Tuesday 19 June 2018
 
 
 
-# sudo etc-update</b>
+# sudo etc-update

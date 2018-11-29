@@ -10,12 +10,12 @@ Created Thursday 08 March 2018
 
 
 
-# NO_HUP</b>
+# NO_HUP
 
 
 
-nohup command [command-argument ...]</b>
+nohup command [command-argument ...]
 
 
 
-To save output to a file named file, use "nohup command &gt; file".
+To save output to a file named file, use "nohup command > file".

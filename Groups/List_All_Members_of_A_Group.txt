@@ -10,4 +10,4 @@ Created Tuesday 15 May 2018
 
 
 
-grep 'grpup-name-here' /etc/group</b>
+grep 'grpup-name-here' /etc/group

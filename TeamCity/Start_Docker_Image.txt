@@ -11,8 +11,8 @@ Created Friday 30 March 2018
 
 
 docker run -it --name teamcity-server-instance \
-<div style='padding-left: 30pt'>
-	-v &lt;path to data directory&gt;:/data/teamcity_server/datadir \
-	-v &lt;path to logs directory&gt;:/opt/teamcity/logs \
-	-p &lt;port on host&gt;:8111 \
+
+	-v <path to data directory>:/data/teamcity_server/datadir \
+	-v <path to logs directory>:/opt/teamcity/logs \
+	-p <port on host>:8111 \
 	jetbrains/teamcity-server

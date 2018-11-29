@@ -47,7 +47,7 @@ app-office/libreoffice, www-client/firefox etc.). Simply open it, and delete any
 
 
 
-demouser@pi64 ~ $ sudo mousepad /var/lib/portage/world &amp;&gt;/dev/null&amp;
+demouser@pi64 ~ $ sudo mousepad /var/lib/portage/world &amp;>/dev/null&amp;
 (this will open the file for editing)
 
 
@@ -117,7 +117,7 @@ With that done, open a terminal at the (slimmed down!) desktop, and issue:
 
 
 
-demouser@pi64 ~ $ sudo mousepad /etc/portage/package.use/rpi3-64bit-meta &amp;&gt;/dev/null&amp;
+demouser@pi64 ~ $ sudo mousepad /etc/portage/package.use/rpi3-64bit-meta &amp;>/dev/null&amp;
 And edit that file, so that at the bottom you have as the only uncommented line (all lines starting with # in this file
 are comments, and may safely be retained):
 

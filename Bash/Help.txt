@@ -11,8 +11,8 @@ Help
 Created Sunday 27 May 2018
 
 
-<div class="zim-object">
-    <pre><code class="sh">usage="$(basename "$0") [-h] [-s n] -- program to calculate the answer to life, the universe and everything
+
+    usage="$(basename "$0") [-h] [-s n] -- program to calculate the answer to life, the universe and everything
 
 where:
     -h  show this help text
@@ -26,14 +26,14 @@ while getopts ':hs:' option; do
        ;;
     s) seed=$OPTARG
        ;;
-    :) printf "missing argument for -%s\n" "$OPTARG" &gt;&amp;2
-       echo "$usage" &gt;&amp;2
+    :) printf "missing argument for -%s\n" "$OPTARG" >&amp;2
+       echo "$usage" >&amp;2
        exit 1
        ;;
-   \?) printf "illegal option: -%s\n" "$OPTARG" &gt;&amp;2
-       echo "$usage" &gt;&amp;2
+   \?) printf "illegal option: -%s\n" "$OPTARG" >&amp;2
+       echo "$usage" >&amp;2
        exit 1
        ;;
   esac
 done
-shift $((OPTIND - 1))</code></pre>
+shift $((OPTIND - 1))

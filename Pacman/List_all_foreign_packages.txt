@@ -14,4 +14,4 @@ List all foreign packages (typically manually downloaded and installed):
 
 
 
-pacman -Qm</b>
+pacman -Qm

@@ -76,10 +76,10 @@ Instructions
 
 
 
-<ol type="1" start="1">
+
   Create a file mylist.txt with all the files you want to have concatenated in the following form (lines starting
-    with a # are ignored):</li>
-</ol>
+    with a # are ignored):
+
 
 
 
@@ -96,7 +96,7 @@ Note that these can be either relative or absolute paths. Then you can stream co
 
 
 
-ffmpeg -f concat -safe 0 -i mylist.txt -c copy output</b>
+ffmpeg -f concat -safe 0 -i mylist.txt -c copy output
 
 
 
@@ -110,11 +110,11 @@ It is possible to generate this list file with a bash for loop, or using printf.
 a list file containing every *.wav in the working directory:
 
 
-<div class="zim-object">
-  <pre><code class="sh"># with a bash for loop
-for f in ./*.wav; do echo "file '$f'" &gt;&gt; mylist.txt; done
+
+  # with a bash for loop
+for f in ./*.wav; do echo "file '$f'" >> mylist.txt; done
 # or with printf
-printf "file '%s'\n" ./*.wav &gt; mylist.txt</code></pre>
+printf "file '%s'\n" ./*.wav > mylist.txt
 
 
   If your shell supports process substitution (like Bash and Zsh), you can avoid explicitly creating a list file and
@@ -124,18 +124,18 @@ printf "file '%s'\n" ./*.wav &gt; mylist.txt</code></pre>
 
 
 
-  ffmpeg -f concat -safe 0 -i &lt;(for f in ./*.wav; do echo "file '$PWD/$f'"; done) -c copy output.wav</b>
-  ffmpeg -f concat -safe 0 -i &lt;(printf "file '$PWD/%s'\n" ./*.wav) -c copy output.wav</b>
-  ffmpeg -f concat -safe 0 -i &lt;(find . -name '*.wav' -printf "file '$PWD/%p'\n") -c copy output.wav</b>
+  ffmpeg -f concat -safe 0 -i <(for f in ./*.wav; do echo "file '$PWD/$f'"; done) -c copy output.wav
+  ffmpeg -f concat -safe 0 -i <(printf "file '$PWD/%s'\n" ./*.wav) -c copy output.wav
+  ffmpeg -f concat -safe 0 -i <(find . -name '*.wav' -printf "file '$PWD/%p'\n") -c copy output.wav
 
 
 
   You can also loop a video. This example will loop input.mkv 10 times:
 
 
-  <div class="zim-object">
-    <pre><code class="sh">for i in {1..10}; do printf "file '%s'\n" input.mkv &gt;&gt; mylist.txt; done
-ffmpeg -f concat -i mylist.txt -c copy output.mkv</code></pre>
+  
+    for i in {1..10}; do printf "file '%s'\n" input.mkv >> mylist.txt; done
+ffmpeg -f concat -i mylist.txt -c copy output.mkv
 
 
 
@@ -145,8 +145,8 @@ ffmpeg -f concat -i mylist.txt -c copy output.mkv</code></pre>
     list:
 
 
-    <div class="zim-object">
-      <pre><code class="sh">#!/bin/bash
+    
+      #!/bin/bash
 
 fn_concat_init() {
 echo "fn_concat_init"
@@ -160,24 +160,24 @@ echo
 fn_concat_feed() {
 echo "fn_concat_feed ${1:?}"
 {
-&gt;&amp;2 echo "removing ${concat_pls:?}"
+>&amp;2 echo "removing ${concat_pls:?}"
 rm "${concat_pls:?}"
 concat_pls=
-&gt;&amp;2 fn_concat_init
+>&amp;2 fn_concat_init
 echo 'ffconcat version 1.0'
 echo "file '${1:?}'"
 echo "file '${concat_pls:?}'"
-} &gt;"${concat_pls:?}"
+} >"${concat_pls:?}"
 echo
 }
 
 fn_concat_end() {
 echo "fn_concat_end"
 {
-&gt;&amp;2 echo "removing ${concat_pls:?}"
+>&amp;2 echo "removing ${concat_pls:?}"
 rm "${concat_pls:?}"
 # not writing header.
-} &gt;"${concat_pls:?}"
+} >"${concat_pls:?}"
 echo
 }
 
@@ -201,7 +201,7 @@ fn_concat_end
 
 wait "${ffplaypid:?}"
 
-echo "done encoding all.mkv"</code></pre>
+echo "done encoding all.mkv"
 
 
 
@@ -220,7 +220,7 @@ echo "done encoding all.mkv"</code></pre>
 
 
 
-      ffmpeg -i "concat:input1.mpg|input2.mpg|input3.mpg" -c copy output.mpg</b>
+      ffmpeg -i "concat:input1.mpg|input2.mpg|input3.mpg" -c copy output.mpg
 
 
 
@@ -229,9 +229,9 @@ echo "done encoding all.mkv"</code></pre>
 
 
 
-      ffmpeg -i input1.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts intermediate1.ts</b>
-      ffmpeg -i input2.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts intermediate2.ts</b>
-      ffmpeg -i "concat:intermediate1.ts|intermediate2.ts" -c copy -bsf:a aac_adtstoasc output.mp4</b>
+      ffmpeg -i input1.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts intermediate1.ts
+      ffmpeg -i input2.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts intermediate2.ts
+      ffmpeg -i "concat:intermediate1.ts|intermediate2.ts" -c copy -bsf:a aac_adtstoasc output.mp4
 
 
 
@@ -240,10 +240,10 @@ echo "done encoding all.mkv"</code></pre>
 
 
 
-      mkfifo temp1 temp2</b>
-      ffmpeg -i input1.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts temp1 2&gt; /dev/null &amp; \</b>
-      ffmpeg -i input2.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts temp2 2&gt; /dev/null &amp; \</b>
-      ffmpeg -f mpegts -i "concat:temp1|temp2" -c copy -bsf:a aac_adtstoasc output.mp4</b>
+      mkfifo temp1 temp2
+      ffmpeg -i input1.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts temp1 2> /dev/null &amp; \
+      ffmpeg -i input2.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts temp2 2> /dev/null &amp; \
+      ffmpeg -f mpegts -i "concat:temp1|temp2" -c copy -bsf:a aac_adtstoasc output.mp4
 
 
 
@@ -272,9 +272,9 @@ echo "done encoding all.mkv"</code></pre>
 
 
 
-      ffmpeg -i input1.mp4 -i input2.webm \</b>
-      -filter_complex "[0:v:0] [0:a:0] [1:v:0] [1:a:0] concat=n=2:v=1:a=1 [v] [a]" \</b>
-      -map "[v]" -map "[a]" &lt;encoding options&gt; output.mkv</b>
+      ffmpeg -i input1.mp4 -i input2.webm \
+      -filter_complex "[0:v:0] [0:a:0] [1:v:0] [1:a:0] concat=n=2:v=1:a=1 [v] [a]" \
+      -map "[v]" -map "[a]" <encoding options> output.mkv
 
 
 
@@ -284,7 +284,7 @@ echo "done encoding all.mkv"</code></pre>
 
 
 
-      [0:v:0] [0:a:0] [1:v:0] [1:a:0]</b>
+      [0:v:0] [0:a:0] [1:v:0] [1:a:0]
 
 
 
@@ -296,7 +296,7 @@ echo "done encoding all.mkv"</code></pre>
 
 
 
-      concat=n=2:v=1:a=1 [v] [a]'</b>
+      concat=n=2:v=1:a=1 [v] [a]'
 
 
 
@@ -312,7 +312,7 @@ echo "done encoding all.mkv"</code></pre>
 
 
 
-      -map '[v]' -map '[a]'</b>
+      -map '[v]' -map '[a]'
 
 
 
@@ -360,14 +360,14 @@ echo "done encoding all.mkv"</code></pre>
 
 
 
-      <ul>
+      
         Save the script in a file named mmcat (or some other name), make it executable (chmod +x mmcat) and run it,
-          using the syntax:</li>
-      </ul>
+          using the syntax:
+      
 
 
 
-      ./mmcat &lt;input1&gt; &lt;input2&gt; &lt;input3&gt; ... &lt;output&gt;</b>
+      ./mmcat <input1> <input2> <input3> ... <output>
 
 
 
@@ -375,7 +375,7 @@ echo "done encoding all.mkv"</code></pre>
 
 
 
-      #/tmp/mcs_v_all: Operation not permitted</b>
+      #/tmp/mcs_v_all: Operation not permitted
 
 
 
@@ -388,8 +388,8 @@ echo "done encoding all.mkv"</code></pre>
 
 
 
-      <div class="zim-object">
-        <pre><code class="sh">#!/bin/bash
+      
+        #!/bin/bash
 
 ################################################################################
 #
@@ -414,7 +414,7 @@ echo "done encoding all.mkv"</code></pre>
 #
 ################################################################################
 #
-# General syntax: mmcat &lt;input1&gt; &lt;input2&gt; &lt;input3&gt; ... &lt;output&gt;
+# General syntax: mmcat <input1> <input2> <input3> ... <output>
 #
 # For example: mmcat file1.flv file2.flv output.flv
 # would create "output.flv" out of "file1.flv" and "file2.flv".
@@ -445,7 +445,7 @@ echo ""
 # syntax check (has to have at least 3 params: infile1, infile2, outfile
 ################################################################################
 if [ -z $3 ]; then
-echo "Syntax: $0 &lt;input1&gt; &lt;input2&gt; &lt;input3&gt; ... &lt;output&gt;"
+echo "Syntax: $0 <input1> <input2> <input3> ... <output>"
 exit 1
 fi
 ################################################################################
@@ -468,12 +468,12 @@ rm -f $TMP/mcs_*
 # kept for each video input, only the header from the first video is needed
 ################################################################################
 mkfifo $TMP/mcs_a1 $TMP/mcs_v1
-ffmpeg -y -i $first -vn -f u16le -acodec pcm_s16le -ac 2 -ar 44100 $TMP/mcs_a1 2&gt;/dev/null &lt;/dev/null &amp;
-ffmpeg -y -i $first -an -f yuv4mpegpipe -vcodec rawvideo $TMP/mcs_v1 2&gt;/dev/null &lt;/dev/null &amp;
+ffmpeg -y -i $first -vn -f u16le -acodec pcm_s16le -ac 2 -ar 44100 $TMP/mcs_a1 2>/dev/null </dev/null &amp;
+ffmpeg -y -i $first -an -f yuv4mpegpipe -vcodec rawvideo $TMP/mcs_v1 2>/dev/null </dev/null &amp;
 # if you need to log the output of decoding processes (usually not necessary)
-# then replace the "2&gt;/dev/null" in 2 lines above with your log file names, like this:
-#ffmpeg -y -i $first -vn -f u16le -acodec pcm_s16le -ac 2 -ar 44100 $TMP/mcs_a1 2&gt;$TMP/log.a.1 &lt;/dev/null &amp;
-#ffmpeg -y -i $first -an -f yuv4mpegpipe -vcodec rawvideo $TMP/mcs_v1 2&gt;$TMP/log.v.1 &lt;/dev/null &amp;
+# then replace the "2>/dev/null" in 2 lines above with your log file names, like this:
+#ffmpeg -y -i $first -vn -f u16le -acodec pcm_s16le -ac 2 -ar 44100 $TMP/mcs_a1 2>$TMP/log.a.1 </dev/null &amp;
+#ffmpeg -y -i $first -an -f yuv4mpegpipe -vcodec rawvideo $TMP/mcs_v1 2>$TMP/log.v.1 </dev/null &amp;
 ################################################################################
 # decode all the other inputs, remove first line of video (header) with tail
 # $all_a and $all_v are lists of all a/v fifos, to be used by "cat" later on
@@ -485,13 +485,13 @@ for f in $inputs
 do
 mkfifo $TMP/mcs_a$i $TMP/mcs_v$i
 
-ffmpeg -y -i $f -vn -f u16le -acodec pcm_s16le -ac 2 -ar 44100 $TMP/mcs_a$i 2&gt;/dev/null &lt;/dev/null &amp;
-{ ffmpeg -y -i $f -an -f yuv4mpegpipe -vcodec rawvideo - 2&gt;/dev/null &lt;/dev/null | tail -n +2 &gt; $TMP/mcs_v$i ; } &amp;
+ffmpeg -y -i $f -vn -f u16le -acodec pcm_s16le -ac 2 -ar 44100 $TMP/mcs_a$i 2>/dev/null </dev/null &amp;
+{ ffmpeg -y -i $f -an -f yuv4mpegpipe -vcodec rawvideo - 2>/dev/null </dev/null | tail -n +2 > $TMP/mcs_v$i ; } &amp;
 
 # if you need to log the output of decoding processes (usually not necessary)
-# then replace the "2&gt;/dev/null" in 2 lines above with your log file names, like this:
-#ffmpeg -y -i $f -vn -f u16le -acodec pcm_s16le -ac 2 -ar 44100 $TMP/mcs_a$i 2&gt;$TMP/log.a.$i &lt;/dev/null &amp;
-#{ ffmpeg -y -i $f -an -f yuv4mpegpipe -vcodec rawvideo - 2&gt;$TMP/log.v.$i &lt;/dev/null | tail -n +2 &gt; $TMP/mcs_v$i ; } &amp;
+# then replace the "2>/dev/null" in 2 lines above with your log file names, like this:
+#ffmpeg -y -i $f -vn -f u16le -acodec pcm_s16le -ac 2 -ar 44100 $TMP/mcs_a$i 2>$TMP/log.a.$i </dev/null &amp;
+#{ ffmpeg -y -i $f -an -f yuv4mpegpipe -vcodec rawvideo - 2>$TMP/log.v.$i </dev/null | tail -n +2 > $TMP/mcs_v$i ; } &amp;
 
 all_a="$all_a $TMP/mcs_a$i"
 all_v="$all_v $TMP/mcs_v$i"
@@ -502,8 +502,8 @@ done
 ################################################################################
 mkfifo $TMP/mcs_a_all
 mkfifo $TMP/mcs_v_all
-cat $all_a &gt; $TMP/mcs_a_all &amp;
-cat $all_v &gt; $TMP/mcs_v_all &amp;
+cat $all_a > $TMP/mcs_a_all &amp;
+cat $all_v > $TMP/mcs_v_all &amp;
 
 ################################################################################
 # finally, encode the raw concatenated audio/video into something useful
@@ -517,7 +517,7 @@ $last
 # remove all fifos
 ################################################################################
 rm -f $TMP/mcs_*
-</code></pre>
+
 
 
 
@@ -542,13 +542,13 @@ rm -f $TMP/mcs_*
 
 
 
-        <div style='padding-left: 30pt'>
+        
           - Concat demuxer
 
 
 
 
-          <div style='padding-left: 30pt'>
+          
             - Concat protocol
 
 
@@ -558,19 +558,19 @@ rm -f $TMP/mcs_*
 
 
 
-            <div style='padding-left: 30pt'>
+            
               - Concat filter
 
 
 
 
-              <div style='padding-left: 30pt'>
+              
                 - Using an external script
 
 
 
 
-                <div style='padding-left: 30pt'>
+                
                   - Pipe-friendly formats
 
 
@@ -641,9 +641,9 @@ rm -f $TMP/mcs_*
 
 
                   # with a bash for loop
-                  for f in ./*.wav; do echo "file '$f'" &gt;&gt; mylist.txt; done
+                  for f in ./*.wav; do echo "file '$f'" >> mylist.txt; done
                   # or with printf
-                  printf "file '%s'\n" ./*.wav &gt; mylist.txt
+                  printf "file '%s'\n" ./*.wav > mylist.txt
 
 
 
@@ -653,7 +653,7 @@ rm -f $TMP/mcs_*
 
 
 
-                  (for %i in (*.wav) do <span class="zim-tag">@echo</span> file '%i') &gt; mylist.txt
+                  (for %i in (*.wav) do @echo file '%i') > mylist.txt
 
 
 
@@ -663,7 +663,7 @@ rm -f $TMP/mcs_*
 
 
 
-                  (for %%i in (*.wav) do <span class="zim-tag">@echo</span> file '%%i') &gt; mylist.txt
+                  (for %%i in (*.wav) do @echo file '%%i') > mylist.txt
 
 
 
@@ -676,9 +676,9 @@ rm -f $TMP/mcs_*
 
 
 
-                  ffmpeg -f concat -safe 0 -i &lt;(for f in ./*.wav; do echo "file '$PWD/$f'"; done) -c copy output.wav
-                  ffmpeg -f concat -safe 0 -i &lt;(printf "file '$PWD/%s'\n" ./*.wav) -c copy output.wav
-                  ffmpeg -f concat -safe 0 -i &lt;(find . -name '*.wav' -printf "file '$PWD/%p'\n") -c copy output.wav
+                  ffmpeg -f concat -safe 0 -i <(for f in ./*.wav; do echo "file '$PWD/$f'"; done) -c copy output.wav
+                  ffmpeg -f concat -safe 0 -i <(printf "file '$PWD/%s'\n" ./*.wav) -c copy output.wav
+                  ffmpeg -f concat -safe 0 -i <(find . -name '*.wav' -printf "file '$PWD/%p'\n") -c copy output.wav
 
 
 
@@ -688,7 +688,7 @@ rm -f $TMP/mcs_*
 
 
 
-                  for i in {1..10}; do printf "file '%s'\n" input.mkv &gt;&gt; mylist.txt; done
+                  for i in {1..10}; do printf "file '%s'\n" input.mkv >> mylist.txt; done
                   ffmpeg -f concat -i mylist.txt -c copy output.mkv
 
 
@@ -706,7 +706,7 @@ rm -f $TMP/mcs_*
 
 
                   fn_concat_init() {
-                  <div style='padding-left: 30pt'>
+                  
                     echo "fn_concat_init"
                     concat_pls=`mktemp -u -p . concat.XXXXXXXXXX.txt`
                     concat_pls="${concat_pls#./}"
@@ -719,21 +719,21 @@ rm -f $TMP/mcs_*
 
 
                     fn_concat_feed() {
-                    <div style='padding-left: 30pt'>
+                    
                       echo "fn_concat_feed ${1:?}"
                       {
 
-                      <div style='padding-left: 60pt'>
-                        &gt;&amp;2 echo "removing ${concat_pls:?}"
+                      
+                        >&amp;2 echo "removing ${concat_pls:?}"
                         rm "${concat_pls:?}"
                         concat_pls=
-                        &gt;&amp;2 fn_concat_init
+                        >&amp;2 fn_concat_init
                         echo 'ffconcat version 1.0'
                         echo "file '${1:?}'"
                         echo "file '${concat_pls:?}'"
 
-                        <div style='padding-left: 30pt'>
-                          } &gt;"${concat_pls:?}"
+                        
+                          } >"${concat_pls:?}"
                           echo
 
                           }
@@ -741,17 +741,17 @@ rm -f $TMP/mcs_*
 
 
                           fn_concat_end() {
-                          <div style='padding-left: 30pt'>
+                          
                             echo "fn_concat_end"
                             {
 
-                            <div style='padding-left: 60pt'>
-                              &gt;&amp;2 echo "removing ${concat_pls:?}"
+                            
+                              >&amp;2 echo "removing ${concat_pls:?}"
                               rm "${concat_pls:?}"
                               # not writing header.
 
-                              <div style='padding-left: 30pt'>
-                                } &gt;"${concat_pls:?}"
+                              
+                                } >"${concat_pls:?}"
                                 echo
 
                                 }
@@ -776,7 +776,7 @@ rm -f $TMP/mcs_*
 
                                 echo "generating some test data..."
                                 i=0; for c in red yellow green blue; do
-                                <div style='padding-left: 30pt'>
+                                
                                   ffmpeg -loglevel warning -y -f lavfi -i testsrc=s=720x576:r=12:d=4 -pix_fmt yuv422p
                                   -vf "drawbox=w=50:h=w:t=w:c=${c:?}" test$i.mkv
                                   fn_concat_feed test$i.mkv
@@ -844,9 +844,9 @@ rm -f $TMP/mcs_*
 
 
                                   mkfifo temp1 temp2
-                                  ffmpeg -i input1.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts temp1 2&gt; /dev/null
+                                  ffmpeg -i input1.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts temp1 2> /dev/null
                                   &amp; \
-                                  ffmpeg -i input2.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts temp2 2&gt; /dev/null
+                                  ffmpeg -i input2.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts temp2 2> /dev/null
                                   &amp; \
                                   ffmpeg -f mpegts -i "concat:temp1|temp2" -c copy -bsf:a aac_adtstoasc output.mp4
 
@@ -883,7 +883,7 @@ rm -f $TMP/mcs_*
 
                                   ffmpeg -i input1.mp4 -i input2.webm \
                                   -filter_complex "[0:v:0] [0:a:0] [1:v:0] [1:a:0] concat=n=2:v=1:a=1 [v] [a]" \
-                                  -map "[v]" -map "[a]" &lt;encoding options&gt; output.mkv
+                                  -map "[v]" -map "[a]" <encoding options> output.mkv
 
 
 
@@ -978,7 +978,7 @@ rm -f $TMP/mcs_*
 
 
 
-                                  ./mmcat &lt;input1&gt; &lt;input2&gt; &lt;input3&gt; ... &lt;output&gt;
+                                  ./mmcat <input1> <input2> <input3> ... <output>
 
 
 
@@ -1032,8 +1032,8 @@ rm -f $TMP/mcs_*
                                   #
                                   ################################################################################
                                   #
-                                  # General syntax: mmcat &lt;input1&gt; &lt;input2&gt; &lt;input3&gt; ...
-                                  &lt;output&gt;
+                                  # General syntax: mmcat <input1> <input2> <input3> ...
+                                  <output>
                                   #
                                   # For example: mmcat file1.flv file2.flv output.flv
                                   # would create "output.flv" out of "file1.flv" and "file2.flv".
@@ -1082,7 +1082,7 @@ rm -f $TMP/mcs_*
                                   # syntax check (has to have at least 3 params: infile1, infile2, outfile
                                   ################################################################################
                                   if [ -z $3 ]; then
-                                  echo "Syntax: $0 &lt;input1&gt; &lt;input2&gt; &lt;input3&gt; ... &lt;output&gt;"
+                                  echo "Syntax: $0 <input1> <input2> <input3> ... <output>"
                                   exit 1
                                   fi
 
@@ -1117,19 +1117,19 @@ rm -f $TMP/mcs_*
 
 
                                   ffmpeg -y -i $first -vn -f u16le -acodec pcm_s16le -ac 2 -ar 44100 $TMP/mcs_a1
-                                  2&gt;/dev/null &lt;/dev/null &amp;
-                                  ffmpeg -y -i $first -an -f yuv4mpegpipe -vcodec rawvideo $TMP/mcs_v1 2&gt;/dev/null
-                                  &lt;/dev/null &amp;
+                                  2>/dev/null </dev/null &amp;
+                                  ffmpeg -y -i $first -an -f yuv4mpegpipe -vcodec rawvideo $TMP/mcs_v1 2>/dev/null
+                                  </dev/null &amp;
 
 
 
                                   # if you need to log the output of decoding processes (usually not necessary)
-                                  # then replace the "2&gt;/dev/null" in 2 lines above with your log file names, like
+                                  # then replace the "2>/dev/null" in 2 lines above with your log file names, like
                                   this:
                                   #ffmpeg -y -i $first -vn -f u16le -acodec pcm_s16le -ac 2 -ar 44100 $TMP/mcs_a1
-                                  2&gt;$TMP/log.a.1 &lt;/dev/null &amp;
+                                  2>$TMP/log.a.1 </dev/null &amp;
                                   #ffmpeg -y -i $first -an -f yuv4mpegpipe -vcodec rawvideo $TMP/mcs_v1
-                                  2&gt;$TMP/log.v.1 &lt;/dev/null &amp;
+                                  2>$TMP/log.v.1 </dev/null &amp;
 
 
 
@@ -1147,19 +1147,19 @@ rm -f $TMP/mcs_*
 
 
                                   ffmpeg -y -i $f -vn -f u16le -acodec pcm_s16le -ac 2 -ar 44100 $TMP/mcs_a$i
-                                  2&gt;/dev/null &lt;/dev/null &amp;
-                                  { ffmpeg -y -i $f -an -f yuv4mpegpipe -vcodec rawvideo - 2&gt;/dev/null &lt;/dev/null
-                                  | tail -n +2 &gt; $TMP/mcs_v$i ; } &amp;
+                                  2>/dev/null </dev/null &amp;
+                                  { ffmpeg -y -i $f -an -f yuv4mpegpipe -vcodec rawvideo - 2>/dev/null </dev/null
+                                  | tail -n +2 > $TMP/mcs_v$i ; } &amp;
 
 
 
                                   # if you need to log the output of decoding processes (usually not necessary)
-                                  # then replace the "2&gt;/dev/null" in 2 lines above with your log file names, like
+                                  # then replace the "2>/dev/null" in 2 lines above with your log file names, like
                                   this:
                                   #ffmpeg -y -i $f -vn -f u16le -acodec pcm_s16le -ac 2 -ar 44100 $TMP/mcs_a$i
-                                  2&gt;$TMP/log.a.$i &lt;/dev/null &amp;
-                                  #{ ffmpeg -y -i $f -an -f yuv4mpegpipe -vcodec rawvideo - 2&gt;$TMP/log.v.$i
-                                  &lt;/dev/null | tail -n +2 &gt; $TMP/mcs_v$i ; } &amp;
+                                  2>$TMP/log.a.$i </dev/null &amp;
+                                  #{ ffmpeg -y -i $f -an -f yuv4mpegpipe -vcodec rawvideo - 2>$TMP/log.v.$i
+                                  </dev/null | tail -n +2 > $TMP/mcs_v$i ; } &amp;
 
 
 
@@ -1175,8 +1175,8 @@ rm -f $TMP/mcs_*
                                   ################################################################################
                                   mkfifo $TMP/mcs_a_all
                                   mkfifo $TMP/mcs_v_all
-                                  cat $all_a &gt; $TMP/mcs_a_all &amp;
-                                  cat $all_v &gt; $TMP/mcs_v_all &amp;
+                                  cat $all_a > $TMP/mcs_a_all &amp;
+                                  cat $all_v > $TMP/mcs_v_all &amp;
 
 
 
@@ -1184,7 +1184,7 @@ rm -f $TMP/mcs_*
                                   # finally, encode the raw concatenated audio/video into something useful
                                   ################################################################################
                                   ffmpeg -f u16le -acodec pcm_s16le -ac 2 -ar 44100 -i $TMP/mcs_a_all \
-                                  <div style='padding-left: 30pt'>
+                                  
                                     -f yuv4mpegpipe -vcodec rawvideo -i $TMP/mcs_v_all \
 
                                     $EXTRA_OPTIONS \

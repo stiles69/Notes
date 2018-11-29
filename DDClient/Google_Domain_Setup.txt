@@ -10,7 +10,7 @@ Created Sunday 29 July 2018
 
 
 
-Examples</b>
+Examples
 DDclient now has support for Google Domains.
 
 
@@ -42,14 +42,14 @@ your_resource.your_domain.tld
 
 
 
-Using the API to update your Dynamic DNS record</b>
+Using the API to update your Dynamic DNS record
 Dynamic DNS client software automatically updates your dynamic DNS record. You can perform updates manually with the
 API by making making a POST request (GET is also allowed) to the following url:
 https://domains.google.com/nic/update
 
 
 
-The API requires HTTPS. Here’s an example request:</b>
+The API requires HTTPS. Here’s an example request:
 https://aDqLBXBWQ2Zyfzos:GeM3D8JK5sBpLF3k@domains.google.com/nic/update?hostname=network.roguedesigns.us&amp;myip=173.29.176.159
 
 
@@ -59,7 +59,7 @@ the above url. In any case, the final HTTP request sent to our servers should lo
 
 
 
-Example HTTP query:</b>
+Example HTTP query:
 
 
 
@@ -73,7 +73,7 @@ Authorization: Basic base64-encoded-auth-string User-Agent: Chrome/41.0 your_ema
 
 
 
-Request Parameters:</b>
+Request Parameters:
 
 
 

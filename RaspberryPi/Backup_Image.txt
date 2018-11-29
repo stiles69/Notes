@@ -14,12 +14,12 @@ f you are running Linux then you can use the dd command to make a full backup of
 
 
 
-dd bs=4M status=progress if=/dev/sdx of=/path/to/image</b>
+dd bs=4M status=progress if=/dev/sdx of=/path/to/image
 or for compression:
 
 
 
-dd bs=4M status=progress if=/dev/sdx | gzip &gt; /path/to/image.gz</b>
+dd bs=4M status=progress if=/dev/sdx | gzip > /path/to/image.gz
 Where sdx is your SD card.
 
 
@@ -28,9 +28,9 @@ To restore the backup, you reverse the commands:
 
 
 
-dd bs=4M status=progress if=/path/to/image of=/dev/sdx</b>
+dd bs=4M status=progress if=/path/to/image of=/dev/sdx
 or when compressed:
 
 
 
-gunzip --stdout --status=progress /path/to/image.gz | sudo dd bs=4M of=/dev/sdx</b>
+gunzip --stdout --status=progress /path/to/image.gz | sudo dd bs=4M of=/dev/sdx

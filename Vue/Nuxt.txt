@@ -10,11 +10,11 @@ Created Monday 26 February 2018
 
 
 
-vue init nuxt-community/starter-template &lt;project-name&gt;</b>
+vue init nuxt-community/starter-template <project-name>
 
 
 
 
 
 For Node Express:
-vue init nuxt-community/express-template &lt;project-name&gt;</b>
+vue init nuxt-community/express-template <project-name>

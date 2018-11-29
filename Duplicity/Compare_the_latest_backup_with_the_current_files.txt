@@ -10,4 +10,4 @@ Created Saturday 12 May 2018
 
 
 
-duplicity verify sftp://uid@other.host/some_dir /home/me</b>
+duplicity verify sftp://uid@other.host/some_dir /home/me

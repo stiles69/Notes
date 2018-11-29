@@ -11,19 +11,19 @@ Created Wednesday 23 May 2018
 
 
 
-<div class="zim-object">
-    <pre><code class="sh">curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs</code></pre>
+
+    curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 
 
 
     ## You may also need development tools to build native addons:
-    <div style='padding-left: 30pt'>
+    
         sudo apt-get install gcc g++ make
 
         ## To install the Yarn package manager, run:
-        <div style='padding-left: 30pt'>
+        
             curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
             echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
             sudo apt-get update &amp;&amp; sudo apt-get install yarn
@@ -96,7 +96,7 @@ sudo apt-get install -y nodejs</code></pre>
 
 
             Manual installation
-            If you're not a fan of curl &lt;url&gt; | bash -, or are using an unsupported distribution, you can try a
+            If you're not a fan of curl <url> | bash -, or are using an unsupported distribution, you can try a
             manual installation.
 
 
@@ -107,9 +107,9 @@ sudo apt-get install -y nodejs</code></pre>
 
 
 
-            <ol type="1" start="1">
-                Remove the old PPA if it exists</li>
-            </ol>
+            
+                Remove the old PPA if it exists
+            
 
 
 
@@ -122,18 +122,18 @@ sudo apt-get install -y nodejs</code></pre>
             sudo add-apt-repository -y -r ppa:chris-lea/node.js
             sudo rm -f /etc/apt/sources.list.d/chris-lea-node_js-*.list
             sudo rm -f /etc/apt/sources.list.d/chris-lea-node_js-*.list.save
-            <ol type="1" start="2">
-                Add the NodeSource package signing key</li>
-            </ol>
+            
+                Add the NodeSource package signing key
+            
 
 
 
             curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
             # wget can also be used:
             # wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
-            <ol type="1" start="3">
-                Add the desired NodeSource repository</li>
-            </ol>
+            
+                Add the desired NodeSource repository
+            
 
 
 
@@ -150,9 +150,9 @@ sudo apt-get install -y nodejs</code></pre>
             /etc/apt/sources.list.d/nodesource.list
             echo "deb-src https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee -a
             /etc/apt/sources.list.d/nodesource.list
-            <ol type="1" start="4">
-                Update package lists and install Node.js</li>
-            </ol>
+            
+                Update package lists and install Node.js
+            
 
 
 

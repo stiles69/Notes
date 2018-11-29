@@ -10,81 +10,81 @@ Created Sunday 21 October 2018
 
 
 
-I am having one xml file (test.xml) looks like this:</b>
-
-<div class="zim-object">
-    <pre><code class="xml">&lt;hudson&gt;
-&lt;job&gt;
-&lt;name&gt;cedge&lt;/name&gt; 
-&lt;/job&gt;
-&lt;job&gt;
-&lt;name&gt;techM&lt;/name&gt; 
-&lt;/job&gt;
-&lt;job&gt;
-&lt;name&gt;infy&lt;/name&gt; 
-&lt;/job&gt;
-&lt;job&gt;
-&lt;name&gt;DevP&lt;/name&gt; 
-&lt;job&gt;
-&lt;name&gt;line&lt;/name&gt; 
-&lt;nextBuildNumber&gt;14&lt;/nextBuildNumber&gt; 
-&lt;/job&gt;
-&lt;job&gt;
-&lt;name&gt;ment&lt;/name&gt; 
-&lt;nextBuildNumber&gt;85&lt;/nextBuildNumber&gt; 
-&lt;/job&gt;
-&lt;job&gt;
-&lt;name&gt;FreeS&lt;/name&gt; 
-&lt;nextBuildNumber&gt;96&lt;/nextBuildNumber&gt; 
-&lt;/job&gt;
-&lt;job&gt;
-&lt;name&gt;test&lt;/name&gt; 
-&lt;/job&gt;
-&lt;/job&gt;
-&lt;job&gt;
-&lt;name&gt;Email&lt;/name&gt; 
-&lt;/job&gt;
-&lt;job&gt;
-&lt;name&gt;investigate&lt;/name&gt; 
-&lt;nextBuildNumber&gt;26&lt;/nextBuildNumber&gt; 
-&lt;/job&gt;
-&lt;job&gt;
-&lt;name&gt;Java&lt;/name&gt; 
-&lt;/job&gt;
-&lt;job&gt;
-&lt;name&gt;Tools&lt;/name&gt; 
-&lt;/job&gt;
-&lt;/hudson&gt;</code></pre>
+I am having one xml file (test.xml) looks like this:
 
 
+    <code class="xml"><hudson>
+<job>
+<name>cedge</name> 
+</job>
+<job>
+<name>techM</name> 
+</job>
+<job>
+<name>infy</name> 
+</job>
+<job>
+<name>DevP</name> 
+<job>
+<name>line</name> 
+<nextBuildNumber>14</nextBuildNumber> 
+</job>
+<job>
+<name>ment</name> 
+<nextBuildNumber>85</nextBuildNumber> 
+</job>
+<job>
+<name>FreeS</name> 
+<nextBuildNumber>96</nextBuildNumber> 
+</job>
+<job>
+<name>test</name> 
+</job>
+</job>
+<job>
+<name>Email</name> 
+</job>
+<job>
+<name>investigate</name> 
+<nextBuildNumber>26</nextBuildNumber> 
+</job>
+<job>
+<name>Java</name> 
+</job>
+<job>
+<name>Tools</name> 
+</job>
+</hudson>
 
 
 
-    xsltproc x.xslt test.xml</b>
+
+
+    xsltproc x.xslt test.xml
 
 
 
     Try this XSLT
 
-    <div class="zim-object">
-        <pre><code class="xml">&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+    
+        <code class="xml"><xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
- &lt;xsl:output method="text" /&gt;
+ <xsl:output method="text" />
 
- &lt;xsl:template match="/"&gt;
- &lt;xsl:apply-templates select="//job[nextBuildNumber]" /&gt;
- &lt;/xsl:template&gt;
+ <xsl:template match="/">
+ <xsl:apply-templates select="//job[nextBuildNumber]" />
+ </xsl:template>
 
- &lt;xsl:template match="job"&gt;
-&lt;xsl:text&gt;"&lt;/xsl:text&gt;
-&lt;xsl:value-of select="name"/&gt;
-&lt;xsl:text&gt;" = "&lt;/xsl:text&gt;
-&lt;xsl:value-of select="nextBuildNumber"/&gt;
-&lt;xsl:text&gt;"&amp;#10;&lt;/xsl:text&gt;
- &lt;/xsl:template&gt;
- &lt;/xsl:stylesheet&gt;</code></pre>
-
-
+ <xsl:template match="job">
+<xsl:text>"</xsl:text>
+<xsl:value-of select="name"/>
+<xsl:text>" = "</xsl:text>
+<xsl:value-of select="nextBuildNumber"/>
+<xsl:text>"&amp;#10;</xsl:text>
+ </xsl:template>
+ </xsl:stylesheet>
 
 
-        xsltproc x.xslt test.xml</b>
+
+
+        xsltproc x.xslt test.xml

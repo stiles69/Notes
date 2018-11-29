@@ -10,4 +10,4 @@ Created Wednesday 14 March 2018
 
 
 
-npm install --global gulp-cli</b>
+npm install --global gulp-cli

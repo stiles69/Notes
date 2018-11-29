@@ -8,16 +8,16 @@ Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
 
 
 
-Cool Hue &gt; npm install --save-dev coolhue
+Cool Hue > npm install --save-dev coolhue
 
 
 
-Material Design Colors &gt; npm i material-colors
+Material Design Colors > npm i material-colors
 
 
 
-Muse-UI &gt; npm install muse-ui -S
+Muse-UI > npm install muse-ui -S
 
 
 
-Polymer &gt; npm i Polymer
+Polymer > npm i Polymer

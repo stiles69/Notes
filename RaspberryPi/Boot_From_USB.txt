@@ -25,8 +25,8 @@ then you can install Raspbian or Raspbian Lite in the normal way - see installin
 
 First, prepare the /boot directory with up to date boot files:
 
-<div class="zim-object">
-    <pre><code class="sh">$ sudo apt-get update &amp;&amp; sudo apt-get upgrade</code></pre>
+
+    $ sudo apt-get update &amp;&amp; sudo apt-get upgrade
 
 
 
@@ -37,8 +37,8 @@ First, prepare the /boot directory with up to date boot files:
 
     Then enable USB boot mode with this code:
 
-    <div class="zim-object">
-        <pre><code class="sh">echo program_usb_boot_mode=1 | sudo tee -a /boot/config.txt</code></pre>
+    
+        echo program_usb_boot_mode=1 | sudo tee -a /boot/config.txt
 
 
 
@@ -46,9 +46,9 @@ First, prepare the /boot directory with up to date boot files:
         This adds program_usb_boot_mode=1 to the end of /boot/config.txt. Reboot the Raspberry Pi with sudo reboot,
         then check that the OTP has been programmed with:
 
-        <div class="zim-object">
-            <pre><code class="sh">$ vcgencmd otp_dump | grep 17:
-17:3020000a</code></pre>
+        
+            $ vcgencmd otp_dump | grep 17:
+17:3020000a
 
 
 

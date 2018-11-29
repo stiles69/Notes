@@ -4,9 +4,9 @@ Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
 
 
 
-# Recursively change filenames with characters ? [ ] / = + &lt; &gt; ; : " , - *
+# Recursively change filenames with characters ? [ ] / = + < > ; : " , - *
 
 
 
-# autoload zmv autoload zmv $ chars='[][?=+&lt;&gt;;",-]' $ zmv '(**/)()' '$1${2//$~chars/%}'
+# autoload zmv autoload zmv $ chars='[][?=+<>;",-]' $ zmv '(**/)()' '$1${2//$~chars/%}'
 #

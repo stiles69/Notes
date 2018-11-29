@@ -4,10 +4,10 @@ Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
 
 
 
-&lt;script&gt;
+<script>
 window.addEventListener("load", function(event) {
-<div style='padding-left: 30pt'>
+
   // here is the Vue code
 
   });
-  &lt;/script&gt;
+  </script>

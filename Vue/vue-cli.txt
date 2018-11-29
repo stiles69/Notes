@@ -10,24 +10,24 @@ Created Tuesday 20 February 2018
 
 
 
-vue init egoist/vuepack &lt;projectname&gt;</b>
-Makes a new project based on github &lt;egoist/vuepack&gt; template.
+vue init egoist/vuepack <projectname>
+Makes a new project based on github <egoist/vuepack> template.
 
 
 
-vue init &lt;template&gt; &lt;projectname&gt;</b>
+vue init <template> <projectname>
 Makes a new vue project
 Default Official templates are:
-<ul>
-	browerify</li>
-	browserify-simple</li>
-	pwa</li>
-	simple</li>
-	webpack</li>
-	webpack-simple</li>
-</ul>
+
+	browerify
+	browserify-simple
+	pwa
+	simple
+	webpack
+	webpack-simple
 
 
 
-vue list</b>
+
+vue list
 Lists Official Templates

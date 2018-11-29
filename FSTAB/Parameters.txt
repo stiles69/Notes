@@ -49,9 +49,9 @@ knowing few them can get you through it. Popular ones are discussed here while r
 
 
 
-<ul>
-	auto/noauto</li>
-</ul>
+
+	auto/noauto
+
 
 
 
@@ -60,9 +60,9 @@ on bootup by editing option to noauto in fstab file.
 
 
 
-<ul>
-	exec/noexec</li>
-</ul>
+
+	exec/noexec
+
 
 
 
@@ -71,9 +71,9 @@ which contains binaries and you don’t want them to execute.
 
 
 
-<ul>
-	ro/rw</li>
-</ul>
+
+	ro/rw
+
 
 
 
@@ -82,9 +82,9 @@ rw option in fstab file.
 
 
 
-<ul>
-	user/nouser</li>
-</ul>
+
+	user/nouser
+
 
 
 
@@ -94,9 +94,9 @@ solution is to update your fstab file.
 
 
 
-<ul>
-	sync/async</li>
-</ul>
+
+	sync/async
+
 
 
 
@@ -108,9 +108,9 @@ If async is set, it might appear that files are successfully written but they mi
 
 
 
-<ul>
-	defaults</li>
-</ul>
+
+	defaults
+
 
 
 

@@ -10,15 +10,15 @@ Created Tuesday 15 May 2018
 
 
 
-setfacl - set file access control lists</b>
+setfacl - set file access control lists
 
 
 
 SYNOPSIS
-<div style='padding-left: 30pt'>
-	setfacl [-bkndRLPvh] [{-m|-x} acl_spec] [{-M|-X} acl_file] file ...</b>
+
+	setfacl [-bkndRLPvh] [{-m|-x} acl_spec] [{-M|-X} acl_file] file ...
 
 
 
 
-	 setfacl --restore=file</b>
+	 setfacl --restore=file

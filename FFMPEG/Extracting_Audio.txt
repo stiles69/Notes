@@ -15,7 +15,7 @@ Sometimes you don't really care about the video, you just want the audio. Luckil
 
 
 
-ffmpeg -i input.mkv -vn audio_only.ogg</b>
+ffmpeg -i input.mkv -vn audio_only.ogg
 
 
 

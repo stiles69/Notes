@@ -12,14 +12,14 @@ Created Saturday 13 October 2018
 
 Now this command should pop up a 'bubble':
 
-<div class="zim-object">
-  <pre><code class="sh">notify-send Test "Hello World"</code></pre>
+
+  notify-send Test "Hello World"
 
 
   The --help option shows basic usage:
-  $notify-send --help</b>
+  $notify-send --help
   Usage:
-  notify-send [OPTION...] &lt;SUMMARY&gt; [BODY] - create a notification
+  notify-send [OPTION...] <SUMMARY> [BODY] - create a notification
 
 
 
@@ -40,66 +40,66 @@ Now this command should pop up a 'bubble':
 
 
 
-  <div style='padding-left: 30pt'>
+  
     Some examples:
 
 
 
 
     <ol style='padding-left: 30pt' type="1" start="1">
-      Basic message with an icon in front of the Title showing 5000 milliseconds</li>
-    </ol>
-    <div style='padding-left: 30pt'>
+      Basic message with an icon in front of the Title showing 5000 milliseconds
+    
+    
       Code:
 
 
 
 
-      <div style='padding-left: 30pt'>
+      
         notify-send "Message Title" "The message body is shown here" -i /usr/share/pixmaps/idle.xpm -t 5000
 
 
 
 
         <ol style='padding-left: 30pt' type="1" start="2">
-          Show contents of a file:</li>
-        </ol>
-        <div style='padding-left: 30pt'>
+          Show contents of a file:
+        
+        
           Code:
 
 
 
 
-          <div style='padding-left: 30pt'>
+          
             notify-send test "`tail /var/log/syslog`"
 
 
 
 
             <ol style='padding-left: 30pt' type="1" start="3">
-              Follow log file:</li>
-            </ol>
-            <div style='padding-left: 30pt'>
+              Follow log file:
+            
+            
               Code:
 
 
 
 
-              <div style='padding-left: 30pt'>
+              
                 tail -n0 -f /var/log/messages | while read line; do notify-send "System Message" "$line"; done
 
 
 
 
                 <ol style='padding-left: 30pt' type="1" start="4">
-                  Format message with HTML:</li>
-                </ol>
-                <div style='padding-left: 30pt'>
+                  Format message with HTML:
+                
+                
                   Code:
 
 
 
 
-                  <div style='padding-left: 30pt'>
-                    notify-send Test "&lt;font size=16 color=blue&gt;&lt;b&gt;&lt;i&gt;Hello
-                    World&lt;/b&gt;&lt;/i&gt;&lt;/font&gt;"
+                  
+                    notify-send Test "<font size=16 color=blue><b><i>Hello
+                    World</b></i></font>"

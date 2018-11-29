@@ -66,7 +66,7 @@ then add the key by doing
 
 
 cp /etc/xdg/autostart/org.gnome.SettingsDaemon.Power.desktop ~/.config/autostart/
-echo "Hidden=true" &gt;&gt; ~.config/autostart/org.gnome.SettingsDaemon.Power.desktop
+echo "Hidden=true" >> ~.config/autostart/org.gnome.SettingsDaemon.Power.desktop
 As provided here by shane
 
 

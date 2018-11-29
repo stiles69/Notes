@@ -10,22 +10,22 @@ Created Tuesday 31 July 2018
 
 
 
-sudo apt-get install build-essential rbp-userland-dev-osmc libvncserver-dev libconfig++-dev unzip</b>
-cd /home/osmc</b>
-sudo wget https://github.com/patrikolausson/dispmanx_vnc/archive/master.zip</b>
-unzip master.zip -d /home/osmc/</b>
-rm master.zip</b>
-cd dispmanx_vnc-master</b>
-make</b>
+sudo apt-get install build-essential rbp-userland-dev-osmc libvncserver-dev libconfig++-dev unzip
+cd /home/osmc
+sudo wget https://github.com/patrikolausson/dispmanx_vnc/archive/master.zip
+unzip master.zip -d /home/osmc/
+rm master.zip
+cd dispmanx_vnc-master
+make
 
 
 
 
 
-sudo cp dispmanx_vncserver /usr/bin</b>
-sudo chmod +x /usr/bin/dispmanx_vncserver</b>
-sudo cp dispmanx_vncserver.conf.sample /etc/dispmanx_vncserver.conf</b>
-sudo vi /etc/dispmanx_vncserver.conf</b>
+sudo cp dispmanx_vncserver /usr/bin
+sudo chmod +x /usr/bin/dispmanx_vncserver
+sudo cp dispmanx_vncserver.conf.sample /etc/dispmanx_vncserver.conf
+sudo vi /etc/dispmanx_vncserver.conf
 
 
 
@@ -48,7 +48,7 @@ Now we’ll create the service file to be able to ‘autoload’ the server on b
 
 
 
-sudo vi /etc/systemd/system/dispmanx_vncserver.service:</b>
+sudo vi /etc/systemd/system/dispmanx_vncserver.service:
 [Unit]
 Description=VNC Server
 After=network-online.target mediacenter.service
@@ -76,6 +76,6 @@ WantedBy=multi-user.target
 
 
 
-sudo systemctl start dispmanx_vncserver.service</b>
-sudo systemctl enable dispmanx_vncserver.service</b>
-sudo systemctl daemon-reload</b>
+sudo systemctl start dispmanx_vncserver.service
+sudo systemctl enable dispmanx_vncserver.service
+sudo systemctl daemon-reload

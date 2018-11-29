@@ -71,8 +71,8 @@ allow any machine on my LAN access.
 
 
 
-"rpc-whitelist": "127.0.0.1,192.168.*.*",</b>
-"umask" parameter</b>
+"rpc-whitelist": "127.0.0.1,192.168.*.*",
+"umask" parameter
 You will also have to set the "umask" parameter in Transmission’s settings file to “2” (default is 18) for the account
 user to have full access to files/folders created by Transmission.
 
@@ -80,21 +80,21 @@ user to have full access to files/folders created by Transmission.
 
 
 
-"umask": 2</b>,
+"umask": 2,
 Transmission Restart
 After configuration change, restart transmission
 
 
 
 sudo service transmission-daemon start
-Default File Directory</b>
-Place a torrent file in this directory for automatic file download</b>
+Default File Directory
+Place a torrent file in this directory for automatic file download
 
 
 
 
 
-/var/lib/transmission-daemon/downloads/</b>
+/var/lib/transmission-daemon/downloads/
 
 
 Configure Users and Permissions
@@ -105,13 +105,13 @@ file and folder access by Transmission as well as your account (let us assume it
 
 
 
-Add the username user to the group debian-transmission:</b>
+Add the username user to the group debian-transmission:
 
 
 
 
 
-sudo usermod -a -G debian-transmission user</b>
+sudo usermod -a -G debian-transmission user
 NOTE: Change "user" to you own Ubuntu user login name.
 
 
@@ -151,13 +151,13 @@ Create shortcuts add the following bash aliases to /home/user/.bash_aliases
 sudo nano /home/user/.bash_aliases
 
 
-<div class="zim-object">
-    <pre><code class="sh">alias t-start='sudo service transmission-daemon start'
+
+    alias t-start='sudo service transmission-daemon start'
 alias t-stop='sudo service transmission-daemon stop'
 alias t-reload='sudo service transmission-daemon reload'
 alias t-list='transmission-remote -n 'transmission:transmission' -l'
 alias t-basicstats='transmission-remote -n 'transmission:transmission' -st'
-alias t-fullstats='transmission-remote -n 'transmission:transmission' -si'</code></pre>
+alias t-fullstats='transmission-remote -n 'transmission:transmission' -si'
 
 
 
@@ -166,8 +166,8 @@ alias t-fullstats='transmission-remote -n 'transmission:transmission' -si'</code
     source /home/user/.bash_aliases
     Example
 
-    <div class="zim-object">
-        <pre><code class="sh">#-------------------Added for Transmission Daemon by Brett Salemink------------------------
+    
+        #-------------------Added for Transmission Daemon by Brett Salemink------------------------
 alias t-start='sudo service transmission-daemon start'
 alias t-stop='sudo service transmission-daemon stop'
 alias t-reload='sudo service transmission-daemon reload'
@@ -176,7 +176,7 @@ alias t-basicstats='transmission-remote -n 'transmission:transmission' -st'
 alias t-fullstats='transmission-remote -n 'transmission:transmission' -si'
 #---------------------------End Transmission--------------------
 
-</code></pre>
+
 
 
 
@@ -208,9 +208,9 @@ alias t-fullstats='transmission-remote -n 'transmission:transmission' -si'
 
 
 
-        user@SVR:~$</b>
+        user@SVR:~$
         will run
-        transmission-remote -n 'transmission:transmission' -l</b>
+        transmission-remote -n 'transmission:transmission' -l
 
 
 
@@ -233,18 +233,18 @@ alias t-fullstats='transmission-remote -n 'transmission:transmission' -si'
 
 
 
-        USE PORT FORWARDING!!!!!!!!!!!! YOU WILL HAVE TO MAP A PORT FROM THE ROUTER!!!!</b>
-        DO NOT ENABLE uTP FOR PEER COMMUNICATON!</b>
+        USE PORT FORWARDING!!!!!!!!!!!! YOU WILL HAVE TO MAP A PORT FROM THE ROUTER!!!!
+        DO NOT ENABLE uTP FOR PEER COMMUNICATON!
 
 
 
         If you port says "closed" you will need to configure your internet router to forward the correct port to
-            your Transmission server/client. Google "How to port forward"</b>
+            your Transmission server/client. Google "How to port forward"
 
 
 
         If you don't use "Port Forward" another option is "UPnP". Once again this depends on you internet router
-            setup.</b>
+            setup.
 
 
 
@@ -326,11 +326,11 @@ alias t-fullstats='transmission-remote -n 'transmission:transmission' -si'
 
 
 
-        transmission-remote -a [path to file].torrent</b>
+        transmission-remote -a [path to file].torrent
 
 
 
-        transmission-remote -n 'transmission:transmission' -a /var/lib/transmission-daemon/downloads/files.torrent</b>
+        transmission-remote -n 'transmission:transmission' -a /var/lib/transmission-daemon/downloads/files.torrent
         Torrent Information
         Display information about torrent's being downloaded
 
@@ -340,80 +340,80 @@ alias t-fullstats='transmission-remote -n 'transmission:transmission' -si'
 
 
 
-        transmission-remote -h</b>
+        transmission-remote -h
         List all torrents
         Note Authentication is required
 
 
 
-        transmission-remote -n 'username:password' -l</b>
+        transmission-remote -n 'username:password' -l
 
 
 
 
 
-        transmission-remote -n 'transmission:transmission' -l </b>
+        transmission-remote -n 'transmission:transmission' -l 
         Basic Stats All Torrents
 
 
 
-        transmission-remote -n 'transmission:transmission' -st</b>
+        transmission-remote -n 'transmission:transmission' -st
         Full Stats All Torrents
 
 
 
-        transmission-remote -n 'transmission:transmission' -si</b>
+        transmission-remote -n 'transmission:transmission' -si
         Torrent #3 Full Stats
 
 
 
-        transmission-remote -n 'transmission:transmission' -t 3 -f</b>
+        transmission-remote -n 'transmission:transmission' -t 3 -f
         Torrent #3 Summary Stats
 
 
 
-        transmission-remote -n 'transmission:transmission' -t 3 -i</b>
+        transmission-remote -n 'transmission:transmission' -t 3 -i
         Transmission Control
         Start all torrents
 
 
 
-        transmission-remote -n 'transmission:transmission' -s</b>
+        transmission-remote -n 'transmission:transmission' -s
         Stop all torrents
 
 
 
-        transmission-remote -n 'transmission:transmission' -S</b>
+        transmission-remote -n 'transmission:transmission' -S
         Start a specific torrent
         transmission-remote -s [hash]
 
 
 
-        transmission-remote -n 'transmission:transmission' -s -t 3</b>
+        transmission-remote -n 'transmission:transmission' -s -t 3
         Stop a specific torrent
         transmission-remote -S [hash]
 
 
 
-        transmission-remote -n 'transmission:transmission' -S -t 3</b>
+        transmission-remote -n 'transmission:transmission' -S -t 3
         Remove all torrents
 
 
 
-        transmission-remote -n 'transmission:transmission' -r</b>
+        transmission-remote -n 'transmission:transmission' -r
         Remove a specific torrent
         transmission-remote -r [hash]
 
 
 
-        transmission-remote -n 'transmission:transmission' -r -t 3</b>
+        transmission-remote -n 'transmission:transmission' -r -t 3
         Get hashes for all torrents
 
 
 
-        transmission-remote -n 'transmission:transmission' -i</b>
+        transmission-remote -n 'transmission:transmission' -i
         Quit the daemon
 
 
 
-        transmission-remote -n 'transmission:transmission' -q</b>
+        transmission-remote -n 'transmission:transmission' -q

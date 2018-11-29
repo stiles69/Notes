@@ -10,4 +10,4 @@ Created Saturday 17 February 2018
 
 
 
-mkfs.btrfs -L mylabel /dev/partition</b>
+mkfs.btrfs -L mylabel /dev/partition

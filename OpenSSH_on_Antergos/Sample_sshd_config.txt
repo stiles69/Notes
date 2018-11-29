@@ -9,8 +9,8 @@ Sample sshd config
 Created Sunday 29 April 2018
 
 
-<div class="zim-object">
-	<pre><code class="sh">#    $OpenBSD: sshd_config,v 1.80 2008/07/02 02:24:18 djm Exp $
+
+	#    $OpenBSD: sshd_config,v 1.80 2008/07/02 02:24:18 djm Exp $
 
 # This is the sshd server system-wide configuration file.  See
 # sshd_config(5) for more information.
@@ -128,4 +128,4 @@ Subsystem    sftp    /usr/lib/ssh/sftp-server
 #Match User anoncvs
 #    X11Forwarding no
 #    AllowTcpForwarding no
-#    ForceCommand cvs server</code></pre>
+#    ForceCommand cvs server

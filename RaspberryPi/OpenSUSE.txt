@@ -41,8 +41,8 @@ A USB key (that can contains the DVD) and a SD card (at least 16GB) are needed.
 Create a bootable SD card with the following partitioning scheme and format it - WARNING all previous data on the
 device will be lost!
 
-<div class="zim-object">
-  <pre><code class="sh"># fdisk -l /dev/&lt;sd_card&gt;</code></pre>
+
+  # fdisk -l /dev/<sd_card>
 
 
 
@@ -60,14 +60,14 @@ device will be lost!
   /dev/mmcblk0p1 * 2048 206847 206847 100M c W95 FAT32 (LBA)
 
 
-  <div class="zim-object">
-    <pre><code class="sh"># mkfs -t vfat /dev/&lt;sd_card&gt;p1</code></pre>
+  
+    # mkfs -t vfat /dev/<sd_card>p1
 
 
     Copy the Raspberry Pi 3 firmware and bootloader on it (note that the u-boot package version can change!)
 
-    <div class="zim-object">
-      <pre><code class="sh"># mount /dev/&lt;sd_card&gt;p1 /mnt
+    
+      # mount /dev/<sd_card>p1 /mnt
 # zypper -n in raspberrypi-firmware-config-rpi3
 # cp -a /boot/vc/* /mnt/
 # zypper -n rm raspberrypi-firmware-config-rpi3 raspberrypi-firmware
@@ -78,7 +78,7 @@ device will be lost!
 # cp boot/vc/* /mnt/
 # cd ..
 # rm -rf tmp_uboot
-# umount /mnt</code></pre>
+# umount /mnt
 
 
 
@@ -87,8 +87,8 @@ device will be lost!
       the device will be lost!
 
 
-      <div class="zim-object">
-        <pre><code class="sh"># dd if=[image].iso of=/dev/&lt;usb_key&gt; bs=4M iflag=direct,fullblock oflag=direct</code></pre>
+      
+        # dd if=[image].iso of=/dev/<usb_key> bs=4M iflag=direct,fullblock oflag=direct
 
 
 
@@ -101,12 +101,12 @@ device will be lost!
         Stop the U-boot procedure by pressing a key (Not needed if you only have u-boot on your sdcard!)
         Change the boot order to force USB boot (Not needed if you only have u-boot on your sdcard!)
         Hit any key to stop autoboot: 0
-        U-Boot&gt; print boot_targets
+        U-Boot> print boot_targets
         boot_targets=mmc0 usb0 pxe dhcp
-        U-Boot&gt; setenv boot_targets usb0
-        U-Boot&gt; print boot_targets
+        U-Boot> setenv boot_targets usb0
+        U-Boot> print boot_targets
         boot_targets=usb0
-        U-Boot&gt; boot
+        U-Boot> boot
         Your Raspberry Pi 3 is now booting the installation DVD!
         As the installation system suppose that you have a *real* UEFI firmware, a little trick is needed after the
         installation to be able to boot the OS.
@@ -116,8 +116,8 @@ device will be lost!
         On your PC, you need to create a Hybrid MBR/GPT on the SD card for the Raspberry Pi 3 to be able to load the
         firmware/bootloader
 
-        <div class="zim-object">
-          <pre><code class="sh"># gdisk /dev/&lt;sd_card&gt;</code></pre>
+        
+          # gdisk /dev/<sd_card>
 
 
           GPT fdisk (gdisk) version 0.8.8

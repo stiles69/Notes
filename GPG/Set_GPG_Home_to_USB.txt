@@ -10,4 +10,4 @@ Created Saturday 03 March 2018
 
 
 
-export GNUPGHOME=/run/media/brettsalemink/encrypted-usb/SanDisk-GPG/gnupg</b>
+export GNUPGHOME=/run/media/brettsalemink/encrypted-usb/SanDisk-GPG/gnupg

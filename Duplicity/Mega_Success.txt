@@ -1,21 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
 ====== Mega Success ======
 
 Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
 
-
-
-
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2018-05-12T22:00:38-05:00
-
-
 Mega Success
-
-
-Created Tuesday 19 June 2018
-
-
 
 duplicity full -v 1 --no-encryption --include="/"
 --exclude="**" /home/brettsalemink

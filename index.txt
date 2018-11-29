@@ -105,10 +105,10 @@
 
 
 Yubikey Make New
-	Master Key</li>
+	Master Key
 
 
-	</ul>
+	
 
-	<div id="content">
+	
 		Index of Computer_Notes <a name='index'>

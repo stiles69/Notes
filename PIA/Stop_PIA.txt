@@ -10,4 +10,4 @@ Created Wednesday 02 May 2018
 
 
 
-sudo systemctl stop openvpn-client@US-Chicago</b>
+sudo systemctl stop openvpn-client@US-Chicago

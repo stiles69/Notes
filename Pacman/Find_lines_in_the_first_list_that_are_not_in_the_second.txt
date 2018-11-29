@@ -10,4 +10,4 @@ Created Sunday 06 May 2018
 
 
 
-comm -23 all_files.txt owned_files.txt</b>
+comm -23 all_files.txt owned_files.txt

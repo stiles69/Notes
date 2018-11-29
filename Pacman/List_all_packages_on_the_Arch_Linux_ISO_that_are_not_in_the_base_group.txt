@@ -10,5 +10,5 @@ Created Sunday 06 May 2018
 
 
 
-comm -23 &lt;(wget -q -O - https://git.archlinux.org/archiso.git/plain/configs/releng/packages.both) &lt;(pacman
-	-Qqg base | sort)</b>
+comm -23 <(wget -q -O - https://git.archlinux.org/archiso.git/plain/configs/releng/packages.both) <(pacman
+	-Qqg base | sort)

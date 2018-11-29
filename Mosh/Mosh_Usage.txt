@@ -12,7 +12,7 @@ Created Saturday 28 July 2018
 
 
 
-Usage</b>
+Usage
 Replaces interactive SSH. Instant keystroke response, robust to roaming. But you'll need working UDP.
 Typical usage
 $ mosh chewbacca.norad.mil
@@ -20,7 +20,7 @@ Mosh will log the user in via SSH, then start a connection on a UDP port between
 
 
 
-Different username</b>
+Different username
 $ mosh potus@ackbar.bls.gov
 Server binary outside path
 $ mosh --server=/tmp/mosh-server r2d2
@@ -29,24 +29,24 @@ in the user's home directory.
 
 
 
-Selecting Mosh UDP port</b>
+Selecting Mosh UDP port
 $ mosh -p 1234 darth
 Useful when the server is behind a port-forwarder or NAT.
 
 
 
-Selecting SSH port</b>
+Selecting SSH port
 $ mosh --ssh="ssh -p 2222" figrindan
-Other SSH options</b>
+Other SSH options
 $ mosh --ssh="~/bin/ssh -i ./identity" fett
-Disable instant echo</b>
+Disable instant echo
 $ mosh --predict=never niennunb
 The -n switch is a synonym. By contrast, passing --predict=always or -a will enable instant local echo even on
 low-delay links.
 
 
 
-With a command</b>
+With a command
 $ mosh pello -- screen -dr
 This reattaches to a long-running screen session.
 

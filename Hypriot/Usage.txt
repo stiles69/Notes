@@ -10,7 +10,7 @@ Created Wednesday 24 October 2018
 
 
 
-$ flash --help</b>
+$ flash --help
 usage: flash [options] [name-of-rpi.img]
 
 
@@ -62,7 +62,7 @@ manage_etc_hosts: true
 
 users:
 - name: pirate
-<div style='padding-left: 30pt'>
+
   gecos: "Hypriot Pirate"
   sudo: ALL=(ALL) NOPASSWD:ALL
   shell: /bin/bash
@@ -110,7 +110,7 @@ users:
   hostname: black-pearl
   wifi:
   interfaces:
-  <div style='padding-left: 30pt'>
+  
     wlan0:
     ssid: "MyNetwork"
     password: "secret_password"
@@ -122,13 +122,13 @@ users:
 
 
     Flash a compressed SD image from the internet
-    flash</b> https://github.com/hypriot/image-builder-rpi/releases/download/v1.7.1/hypriotos-rpi-v1.7.1.img.zip
+    flash https://github.com/hypriot/image-builder-rpi/releases/download/v1.7.1/hypriotos-rpi-v1.7.1.img.zip
     Flash and change the hostname
     This works only for SD card images that already have occi installed.
 
 
 
-    flash --hostname mypi hypriot.img</b>
+    flash --hostname mypi hypriot.img
     Then unplug the SD card from your computer, plug it into your Pi and boot your Pi. After a while the Pi can be
     found via Bonjour/avahi and you can log in with
 
@@ -141,10 +141,10 @@ users:
 
 
 
-    flash --userdata sample/wlan-user-data.yaml --bootconf sample/no-uart-config.txt hypriotos-rpi-v1.7.1.img</b>
+    flash --userdata sample/wlan-user-data.yaml --bootconf sample/no-uart-config.txt hypriotos-rpi-v1.7.1.img
     Automating flash
     For non-interactive usage, you can predefine the user input in the flash command with the -d and -f options:
 
 
 
-    flash -d /dev/mmcblk0 -f hypriotos-rpi-v1.7.1.img</b>
+    flash -d /dev/mmcblk0 -f hypriotos-rpi-v1.7.1.img

@@ -28,8 +28,8 @@ Add ecryptfs module to Linux Kernel
 Load the ecryptfs kernel module:
 
 
-<div class="zim-object">
-  <pre><code class="sh"># modprobe ecryptfs</code></pre>
+
+  # modprobe ecryptfs
 
   
 
@@ -39,8 +39,8 @@ Load the ecryptfs kernel module:
   If we store encrypted file in /home/zma/.private directory and mount it to /home/zma/private/:
 
 
-  <div class="zim-object">
-    <pre><code class="sh"># mount -t ecryptfs /home/zma/.private /home/zma/private</code></pre>
+  
+    # mount -t ecryptfs /home/zma/.private /home/zma/private
 
 
     For the first time you mount the ecryptfs directory, it will ask you to set up the encryption as follows.
@@ -96,15 +96,15 @@ Load the ecryptfs kernel module:
     To make this easier by not choosing so many options, you may store a command as an alias or a script as follows
 
 
-    <div class="zim-object">
-      <pre><code class="sh">mount -t ecryptfs /home/zma/.private /home/zma/private \
--o key=passphrase,ecryptfs_cipher=aes,ecryptfs_key_bytes=32,ecryptfs_passthrough=n,ecryptfs_enable_filename_crypto=y</code></pre>
+    
+      mount -t ecryptfs /home/zma/.private /home/zma/private \
+-o key=passphrase,ecryptfs_cipher=aes,ecryptfs_key_bytes=32,ecryptfs_passthrough=n,ecryptfs_enable_filename_crypto=y
 
 
       The mount process will be like:
 
-      <div class="zim-object">
-        <pre><code class="sh"># mount -t ecryptfs /home/zma/.private /home/zma/private -o key=passphrase,ecryptfs_cipher=aes,ecryptfs_key_bytes=32,ecryptfs_passthrough=n,ecryptfs_enable_filename_crypto=y
+      
+        # mount -t ecryptfs /home/zma/.private /home/zma/private -o key=passphrase,ecryptfs_cipher=aes,ecryptfs_key_bytes=32,ecryptfs_passthrough=n,ecryptfs_enable_filename_crypto=y
 Passphrase: ENTER YOUR PASSPHRASE HERE
 Filename Encryption Key (FNEK) Signature [a-signature-here]: 
 Attempting to mount with the following options:
@@ -113,7 +113,7 @@ Attempting to mount with the following options:
   ecryptfs_key_bytes=32
   ecryptfs_cipher=aes
   ecryptfs_sig=a-signature-here
-Mounted eCryptfs</code></pre>
+Mounted eCryptfs
 
 
         If you do not want to see the FNEK message anymore, you can add the option
@@ -123,11 +123,11 @@ Mounted eCryptfs</code></pre>
 
         After it is mounted, you can check it:
 
-        <div class="zim-object">
-          <pre><code class="sh"># df -hT
+        
+          # df -hT
 Filesystem                      Type      Size  Used Avail Use% Mounted on
 ...
-/home/zma/.private              ecryptfs  473G  4.7G  449G   2% /home/zma/privat</code></pre>
+/home/zma/.private              ecryptfs  473G  4.7G  449G   2% /home/zma/privat
 
           
 
@@ -137,8 +137,8 @@ Filesystem                      Type      Size  Used Avail Use% Mounted on
 
           Umount ecryptfs
 
-          <div class="zim-object">
-            <pre><code class="sh"># umount /home/zma/private</code></pre>
+          
+            # umount /home/zma/private
 
             
 

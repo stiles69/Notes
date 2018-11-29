@@ -15,4 +15,4 @@ The prior example can be applied to both the audio and video streams, allowing y
 
 
 
-ffmpeg -i input.webm -c:av copy output.mkv</b>
+ffmpeg -i input.webm -c:av copy output.mkv

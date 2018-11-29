@@ -10,8 +10,8 @@ Created Wednesday 23 May 2018
 ../idmap.conf
 
 
-<div class="zim-object">
-    <pre><code class="sh">[General]
+
+    [General]
 #Verbosity = 0
 # The following should be set to the local NFSv4 domain name
 # The default is the host's DNS domain name.
@@ -42,8 +42,8 @@ Domain = roguedesigns.us
 
 # The following is a comma-separated list of Kerberos realm
 # names that should be considered to be equivalent to the
-# local realm, such that &lt;user&gt;@REALM.A can be assumed to
-# be the same user as &lt;user&gt;@REALM.B
+# local realm, such that <user>@REALM.A can be assumed to
+# be the same user as <user>@REALM.B
 # If not specified, the default local realm is the domain name,
 # which defaults to the host's DNS domain name,
 # translated to upper-case.
@@ -107,10 +107,10 @@ LDAP_base = dc=local,dc=domain,dc=edu
 #LDAP_canonicalize_name = true
 
 # absolute search base for (people) accounts
-#LDAP_people_base = &lt;LDAP_base&gt;
+#LDAP_people_base = <LDAP_base>
 
 # absolute search base for groups
-#LDAP_group_base = &lt;LDAP_base&gt;
+#LDAP_group_base = <LDAP_base>
 
 # Set to true to enable SSL - anything else is not enabled
 #LDAP_use_ssl = false
@@ -148,4 +148,4 @@ LDAP_base = dc=local,dc=domain,dc=edu
 
 # Mapping for the Group member attribute (usually memberUID)
 # The value of this attribute must match the value of NFSv4_acctname_attr
-#NFSv4_member_attr = memberUID</code></pre>
+#NFSv4_member_attr = memberUID

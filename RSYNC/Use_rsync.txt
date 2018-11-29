@@ -45,19 +45,19 @@ Created Friday 19 January 2018
 
 
 rsync -rvz --progress --chown=brettsalemink:plex --chmod 777 /mnt/Media/Stretch-Share/Media/
-  192.168.1.4:/mnt/FreeAgent/Media/</b>
+  192.168.1.4:/mnt/FreeAgent/Media/
 This will change the owner on the destination directory to brettsalemink:users and the permissions to 777.
 
 
 
 
 
-alias rsync='rsync -avz --progress --chmod=777 -p</b>'
+alias rsync='rsync -avz --progress --chmod=777 -p'
 Changes Permissions on rsync to 0777 on destination
 
 
 
-rsync -avr -o -g /source/directory user@:destinationHost/destination/directory</b>
+rsync -avr -o -g /source/directory user@:destinationHost/destination/directory
 If you don't use these options, the user and group will be changed to the invoking user on the receiving end. If you
   want to specify some other user, you will need to add a chown command to your script.
 
@@ -70,7 +70,7 @@ rsync version 3.1.2 protocol version 31
 Copyright (C) 1996-2015 by Andrew Tridgell, Wayne Davison, and others.
 Web site: http://rsync.samba.org/
 Capabilities:
-<div style='padding-left: 30pt'>
+
   64-bit files, 64-bit inums, 64-bit timestamps, 64-bit long ints,
   socketpairs, hardlinks, symlinks, IPv6, batchfiles, inplace,
   append, ACLs, xattrs, iconv, symtimes, prealloc
@@ -103,32 +103,32 @@ Capabilities:
 
   Options
   -v, --verbose increase verbosity
-  <div style='padding-left: 30pt'>
+  
     --info=FLAGS fine-grained informational verbosity
     --debug=FLAGS fine-grained debug verbosity
     --msgs2stderr special output handling for debugging
 
     -q, --quiet suppress non-error messages
-    <div style='padding-left: 30pt'>
+    
       --no-motd suppress daemon-mode MOTD (see manpage caveat)
 
       -c, --checksum skip based on checksum, not mod-time &amp; size
       -a, --archive archive mode; equals -rlptgoD (no -H,-A,-X)
-      <div style='padding-left: 30pt'>
+      
         --no-OPTION turn off an implied OPTION (e.g. --no-D)
 
         -r, --recursive recurse into directories
         -R, --relative use relative path names
-        <div style='padding-left: 30pt'>
+        
           --no-implied-dirs don't send implied dirs with --relative
 
           -b, --backup make backups (see --suffix &amp; --backup-dir)
-          <div style='padding-left: 30pt'>
+          
             --backup-dir=DIR make backups into hierarchy based in DIR
             --suffix=SUFFIX set backup suffix (default ~ w/o --backup-dir)
 
             -u, --update skip files that are newer on the receiver
-            <div style='padding-left: 30pt'>
+            
               --inplace update destination files in-place (SEE MAN PAGE)
               --append append data onto shorter files
               --append-verify like --append, but with old data in file checksum
@@ -136,7 +136,7 @@ Capabilities:
               -d, --dirs transfer directories without recursing
               -l, --links copy symlinks as symlinks
               -L, --copy-links transform symlink into referent file/dir
-              <div style='padding-left: 30pt'>
+              
                 --copy-unsafe-links only "unsafe" symlinks are transformed
                 --safe-links ignore symlinks that point outside the source tree
                 --munge-links munge symlinks to make them safer (but unusable)
@@ -146,14 +146,14 @@ Capabilities:
                 -H, --hard-links preserve hard links
                 -p, --perms preserve permissions
                 -E, --executability preserve the file's executability
-                <div style='padding-left: 30pt'>
+                
                   --chmod=CHMOD affect file and/or directory permissions
 
                   -A, --acls preserve ACLs (implies --perms)
                   -X, --xattrs preserve extended attributes
                   -o, --owner preserve owner (super-user only)
                   -g, --group preserve group
-                  <div style='padding-left: 30pt'>
+                  
                     --devices preserve device files (super-user only)
                     --specials preserve special files
 
@@ -161,12 +161,12 @@ Capabilities:
                     -t, --times preserve modification times
                     -O, --omit-dir-times omit directories from --times
                     -J, --omit-link-times omit symlinks from --times
-                    <div style='padding-left: 30pt'>
+                    
                       --super receiver attempts super-user activities
                       --fake-super store/recover privileged attrs using xattrs
 
                       -S, --sparse handle sparse files efficiently
-                      <div style='padding-left: 30pt'>
+                      
                         --preallocate allocate dest files before writing them
 
                         -n, --dry-run perform a trial run with no changes made
@@ -174,7 +174,7 @@ Capabilities:
                         -x, --one-file-system don't cross filesystem boundaries
                         -B, --block-size=SIZE force a fixed checksum block-size
                         -e, --rsh=COMMAND specify the remote shell to use
-                        <div style='padding-left: 30pt'>
+                        
                           --rsync-path=PROGRAM specify the rsync to run on the remote machine
                           --existing skip creating new files on receiver
                           --ignore-existing skip updating files that already exist on receiver
@@ -198,7 +198,7 @@ Capabilities:
                           --delay-updates put all updated files into place at transfer's end
 
                           -m, --prune-empty-dirs prune empty directory chains from the file-list
-                          <div style='padding-left: 30pt'>
+                          
                             --numeric-ids don't map uid/gid values by user/group name
                             --usermap=STRING custom username mapping
                             --groupmap=STRING custom groupname mapping
@@ -208,19 +208,19 @@ Capabilities:
 
                             -I, --ignore-times don't skip files that match in size and mod-time
                             -M, --remote-option=OPTION send OPTION to the remote side only
-                            <div style='padding-left: 30pt'>
+                            
                               --size-only skip files that match in size
                               --modify-window=NUM compare mod-times with reduced accuracy
 
                               -T, --temp-dir=DIR create temporary files in directory DIR
                               -y, --fuzzy find similar file for basis if no dest file
-                              <div style='padding-left: 30pt'>
+                              
                                 --compare-dest=DIR also compare destination files relative to DIR
                                 --copy-dest=DIR ... and include copies of unchanged files
                                 --link-dest=DIR hardlink to files in DIR when unchanged
 
                                 -z, --compress compress file data during the transfer
-                                <div style='padding-left: 30pt'>
+                                
                                   --compress-level=NUM explicitly set compression level
                                   --skip-compress=LIST skip compressing files with a suffix in LIST
 
@@ -230,7 +230,7 @@ Capabilities:
                                   <div style='padding-left: 210pt'>
                                     repeated: --filter='- .rsync-filter'
 
-                                    <div style='padding-left: 30pt'>
+                                    
                                       --exclude=PATTERN exclude files matching PATTERN
                                       --exclude-from=FILE read exclude patterns from FILE
                                       --include=PATTERN don't exclude files matching PATTERN
@@ -239,7 +239,7 @@ Capabilities:
 
                                       -0, --from0 all *-from/filter files are delimited by 0s
                                       -s, --protect-args no space-splitting; only wildcard special-chars
-                                      <div style='padding-left: 30pt'>
+                                      
                                         --address=ADDRESS bind address for outgoing socket to daemon
                                         --port=PORT specify double-colon alternate port number
                                         --sockopts=OPTIONS specify custom TCP options
@@ -248,12 +248,12 @@ Capabilities:
 
                                         -8, --8-bit-output leave high-bit chars unescaped in output
                                         -h, --human-readable output numbers in a human-readable format
-                                        <div style='padding-left: 30pt'>
+                                        
                                           --progress show progress during transfer
 
                                           -P same as --partial --progress
                                           -i, --itemize-changes output a change-summary for all updates
-                                          <div style='padding-left: 30pt'>
+                                          
                                             --out-format=FORMAT output updates using the specified FORMAT
                                             --log-file=FILE log what we're doing to the specified FILE
                                             --log-file-format=FMT log updates using the specified FMT
@@ -270,7 +270,7 @@ Capabilities:
 
                                             -4, --ipv4 prefer IPv4
                                             -6, --ipv6 prefer IPv6
-                                            <div style='padding-left: 30pt'>
+                                            
                                               --version print version number
 
                                               (-h) --help show this help (-h is --help only if used alone)

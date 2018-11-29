@@ -10,7 +10,7 @@ Created Monday 22 January 2018
 
 
 
-ffmpeg -i input.mp4 -r 20 -f image2pipe -vcodec ppm - | convert -delay 5 - output.gif</b>
+ffmpeg -i input.mp4 -r 20 -f image2pipe -vcodec ppm - | convert -delay 5 - output.gif
 
 
 Better quality at smaller file size:
@@ -19,4 +19,4 @@ Better quality at smaller file size:
 
 
 ffmpeg -i input.mp4 -r 20 -f image2pipe -vcodec ppm - | convert -delay 5 - gif:- | convert -layers Optimize -
-    output.gif</b>
+    output.gif

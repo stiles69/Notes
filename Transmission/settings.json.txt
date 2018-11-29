@@ -5,7 +5,7 @@ Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
 
 
 {
-<div style='padding-left: 30pt'>
+
     "alt-speed-down": 500,
     "alt-speed-enabled": true,
     "alt-speed-time-begin": 540,
@@ -84,7 +84,7 @@ Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
 
 
 
-    NameTypeRequiredDefaultOptionDescription</b>
+    NameTypeRequiredDefaultOptionDescription
     config_dirpathWhere the configuration files are
     bind_address_ipv4IP Address
     bind_address_ipv6IPv6 Address

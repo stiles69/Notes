@@ -163,8 +163,8 @@ OPTIONS
 																									the "OUTPUT TEMPLATE" for a list of
 																									available keys) to match if the key is
 																									present, !key to check if the key is not
-																									present, key &gt; NUMBER (like "comment_count
-																									&gt; 12", also works with &gt;=, &lt;, &lt;=, !=, =) to
+																									present, key > NUMBER (like "comment_count
+																									> 12", also works with >=, <, <=, !=, =) to
 																									compare against a number, key = 'LITERAL'
 																									(like "uploader = 'Mike Smith'", also works
 																									with !=) to match against a string literal
@@ -176,8 +176,8 @@ OPTIONS
 																									less than 50 times (or the dislike
 																									functionality is not available at the given
 																									service), but who also have a description,
-																									use --match-filter "like_count &gt; 100 &amp;
-																									dislike_count &lt;? 50 &amp; description" .
+																									use --match-filter "like_count > 100 &amp;
+																									dislike_count <? 50 &amp; description" .
 
 																									--no-playlist Download only the video, if the URL refers
 																									<div style='padding-left: 240pt'>
@@ -642,8 +642,8 @@ OPTIONS
 																																																																																													Paradise". Example
 																																																																																													(regex):
 																																																																																													--metadata-from-title
-																																																																																													"(?P&lt;artist&gt;.+?) -
-																																																																																													(?P&lt;title&gt;.+)"
+																																																																																													"(?P<artist>.+?) -
+																																																																																													(?P<title>.+)"
 
 																																																																																													--xattrs Write metadata to
 																																																																																													the video file's xattrs
@@ -730,8 +730,8 @@ OPTIONS
 																																																																																																				locations are
 																																																																																																				%APPDATA%\youtube-dl\config.txt
 																																																																																																				or
-																																																																																																				C:\Users\&lt;user
-																																																																																																				name&gt;\youtube-dl.conf.
+																																																																																																				C:\Users\<user
+																																																																																																				name>\youtube-dl.conf.
 																																																																																																				Note that by
 																																																																																																				default
 																																																																																																				configuration file
@@ -872,10 +872,10 @@ OPTIONS
 
 
 																																																																																																				machine
-																																																																																																				&lt;extractor&gt;
-																																																																																																				login &lt;login&gt;
+																																																																																																				<extractor>
+																																																																																																				login <login>
 																																																																																																				password
-																																																																																																				&lt;password&gt;
+																																																																																																				<password>
 																																																																																																				For example:
 
 
@@ -1653,15 +1653,15 @@ OPTIONS
 																																																																																																				brackets, as in -f
 																																																																																																				"best[height=720]"
 																																																																																																				(or -f
-																																																																																																				"[filesize&gt;10M]").
+																																																																																																				"[filesize>10M]").
 
 
 
 																																																																																																				The following
 																																																																																																				numeric meta fields
 																																																																																																				can be used with
-																																																																																																				comparisons &lt;,
-																																																																																																				&lt;=, &gt;, &gt;=,
+																																																																																																				comparisons <,
+																																																																																																				<=, >, >=,
 																																																																																																				= (equals), != (not
 																																																																																																				equals):
 
@@ -1741,8 +1741,8 @@ OPTIONS
 																																																																																																				after the operator.
 																																																																																																				You can combine
 																																																																																																				format filters, so
-																																																																																																				-f "[height &lt;=?
-																																																																																																				720][tbr&gt;500]"
+																																																																																																				-f "[height <=?
+																																																																																																				720][tbr>500]"
 																																																																																																				selects up to 720p
 																																																																																																				videos (or videos
 																																																																																																				where the height is
@@ -1757,7 +1757,7 @@ OPTIONS
 																																																																																																				two formats into a
 																																																																																																				single file using
 																																																																																																				-f
-																																																																																																				&lt;video-format&gt;+&lt;audio-format&gt;
+																																																																																																				<video-format>+<audio-format>
 																																																																																																				(requires ffmpeg or
 																																																																																																				avconv installed),
 																																																																																																				for example -f
@@ -1781,7 +1781,7 @@ OPTIONS
 																																																																																																				webm formats with a
 																																																																																																				height lower than
 																																																																																																				480 you can use -f
-																																																																																																				'(mp4,webm)[height&lt;480]'.
+																																																																																																				'(mp4,webm)[height<480]'.
 
 
 
@@ -1828,7 +1828,7 @@ OPTIONS
 																																																																																																				a resolution higher
 																																																																																																				than 1080p), you
 																																																																																																				can add -f
-																																																																																																				bestvideo[height&lt;=?1080]+bestaudio/best
+																																																																																																				bestvideo[height<=?1080]+bestaudio/best
 																																																																																																				to your
 																																																																																																				configuration file.
 																																																																																																				Note that if you
@@ -1902,7 +1902,7 @@ OPTIONS
 																																																																																																				but not better that
 																																																																																																				480p
 																																																																																																				$ youtube-dl -f
-																																																																																																				'bestvideo[height&lt;=480]+bestaudio/best[height&lt;=480]'
+																																																																																																				'bestvideo[height<=480]+bestaudio/best[height<=480]'
 
 
 
@@ -1911,7 +1911,7 @@ OPTIONS
 																																																																																																				but no bigger than
 																																																																																																				50 MB
 																																																																																																				$ youtube-dl -f
-																																																																																																				'best[filesize&lt;50M]'
+																																																																																																				'best[filesize<50M]'
 
 
 

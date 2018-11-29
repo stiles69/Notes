@@ -10,4 +10,4 @@ Created Tuesday 19 June 2018
 
 
 
-# mkisofs -dvd-video -iso-level 3 /home/brettsalemink/Videos/DirectoryOne &gt; MOMSBANGTEENS.iso</b>
+# mkisofs -dvd-video -iso-level 3 /home/brettsalemink/Videos/DirectoryOne > MOMSBANGTEENS.iso

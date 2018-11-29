@@ -11,14 +11,14 @@ Created Saturday 17 February 2018
 
 
 Get the volid
-btrfs subvolume list -p path</b>
+btrfs subvolume list -p path
 Will return something like:
-<u>ID 257</u> gen 17 top level 5 path <u>Media</u>
-<u>ID 258</u> gen 17 top level 5 path <u>Data</u>
+ID 257 gen 17 top level 5 path Media
+ID 258 gen 17 top level 5 path Data
 
 
 
 Now mount the subvolume.
-mount -t btrfs -o subvolid=</b><u>257</u> /dev/sda? /mnt/</b><u>Media</u>
-mount -t btrfs -o subvolid=</b><u>258</u> /dev/sda? /mnt/</b><u>Data</u>
+mount -t btrfs -o subvolid=257 /dev/sda? /mnt/Media
+mount -t btrfs -o subvolid=258 /dev/sda? /mnt/Data
 -t = type (in this case btrfs, not needed on all systems)

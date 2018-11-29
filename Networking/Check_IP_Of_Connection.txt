@@ -10,4 +10,4 @@ Created Saturday 16 June 2018
 
 
 
-wget -q -O - ipecho.net/plain</b>
+wget -q -O - ipecho.net/plain

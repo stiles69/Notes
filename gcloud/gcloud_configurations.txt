@@ -15,7 +15,7 @@ To create a configuration, run gcloud config configurations create:
 
 
 
-gcloud config configurations create [NAME]</b>
+gcloud config configurations create [NAME]
 You must activate the new configuration after creation in order to use it.
 
 
@@ -30,7 +30,7 @@ To activate a new configuration or switch to a new active configuration, run: gc
 
 
 
-gcloud config configurations activate [NAME]</b>
+gcloud config configurations activate [NAME]
 gcloud config list will always show you the properties in in your active configuration.
 
 
@@ -40,12 +40,12 @@ To view the properties in a configuration, run: gcloud config configurations des
 
 
 
-gcloud config configurations describe [NAME]</b>
+gcloud config configurations describe [NAME]
 
 
 
 To change the active configuration for a single command invocation, you can use the --configuration flag on any
-	gcloud command.</b>
+	gcloud command.
 
 
 
@@ -59,7 +59,7 @@ To delete a configuration, run: gcloud config configurations delete:
 
 
 
-gcloud config configurations delete [NAME]gcl</b>
+gcloud config configurations delete [NAME]gcl
 Properties and flags
 gcloud supports some global flags and command flags that have the same effect as SDK properties. For example, gcloud
 supports both the --project flag and project property. Properties allow you to maintain the same settings across

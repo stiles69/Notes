@@ -44,5 +44,5 @@ First, we create a file and a directory in mountdir.
 
 
 cd mountdir
-echo "My file content" &gt; myfile
+echo "My file content" > myfile
 mkdir mydirectory

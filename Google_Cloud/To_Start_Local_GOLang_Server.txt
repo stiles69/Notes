@@ -12,9 +12,9 @@ Created Thursday 08 March 2018
 
 
 
-# dev_appserver.py [PATH_TO_YOUR_APP]</b>
-default port is 8080 can be changed with dev_appserver.py -p [PORT TO USE] [PATH_TO_YOUR_APP]</b>
+# dev_appserver.py [PATH_TO_YOUR_APP]
+default port is 8080 can be changed with dev_appserver.py -p [PORT TO USE] [PATH_TO_YOUR_APP]
 
 
 
-# goapp serve</b>
+# goapp serve

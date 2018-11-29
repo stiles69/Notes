@@ -10,8 +10,8 @@ Created Tuesday 13 February 2018
 
 
 
-pacman -Qnq | pacman -S -</b>
+pacman -Qnq | pacman -S -
 
 
 
-Foreign (AUR) packages must be reinstalled separately; you can list them with pacman -Qmq</b>
+Foreign (AUR) packages must be reinstalled separately; you can list them with pacman -Qmq

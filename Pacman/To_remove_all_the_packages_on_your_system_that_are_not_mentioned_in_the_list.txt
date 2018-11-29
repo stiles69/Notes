@@ -10,4 +10,4 @@ Created Tuesday 13 February 2018
 
 
 
-pacman -Rsu $(comm -23 &lt;(pacman -Qq | sort) &lt;(sort pkglist.txt))</b>
+pacman -Rsu $(comm -23 <(pacman -Qq | sort) <(sort pkglist.txt))

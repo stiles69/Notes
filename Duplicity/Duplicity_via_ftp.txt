@@ -10,5 +10,5 @@ Created Saturday 12 May 2018
 
 
 
-FTP_PASSWORD=mypassword duplicity /local/dir ftp://user@other.host/some_dir</b>
+FTP_PASSWORD=mypassword duplicity /local/dir ftp://user@other.host/some_dir
 If a user name is given, the environment variable FTP_PASSWORD is read to determine the password.

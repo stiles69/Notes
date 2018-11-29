@@ -14,4 +14,4 @@ To chmod only directories to 755:
 
 
 
-$ find directory -type d -exec chmod 755 {} +</b>
+$ find directory -type d -exec chmod 755 {} +

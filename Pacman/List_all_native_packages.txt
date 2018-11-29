@@ -14,4 +14,4 @@ List all native packages (installed from the sync database(s)):
 
 
 
-pacman -Qn</b>
+pacman -Qn

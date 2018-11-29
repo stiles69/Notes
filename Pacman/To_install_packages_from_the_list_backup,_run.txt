@@ -10,8 +10,8 @@ Created Tuesday 13 February 2018
 
 
 
-pacman -S - &lt; pkglist.txt</b>
+pacman -S - < pkglist.txt
 To skip already installed packages, use --needed 
 
-<div class="zim-object">
-    <pre><code class="sh">pacman -S --needed - &lt; pkglist.txt</code></pre>
+
+    pacman -S --needed - < pkglist.txt

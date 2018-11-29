@@ -10,4 +10,4 @@ Created Sunday 06 May 2018
 
 
 
-comm -23 &lt;(pacman -Qqt | sort) &lt;(pacman -Sqg base base-devel | sort)</b>
+comm -23 <(pacman -Qqt | sort) <(pacman -Sqg base base-devel | sort)

@@ -8,8 +8,8 @@ Desktop Entry
 
 Created Saturday 06 January 2018
 
-<div class="zim-object">
-    <pre><code class="desktop">[Desktop Entry]
+
+    [Desktop Entry]
 
 # The type as listed above
 Type=Application
@@ -37,4 +37,3 @@ Terminal=false
 
 # Describes the categories in which this entry should be shown
 Categories=Education;Languages;Java;
-</code></pre>

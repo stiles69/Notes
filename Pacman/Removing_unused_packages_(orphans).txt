@@ -10,4 +10,4 @@ Created Tuesday 13 February 2018
 
 
 
-pacman -Rns $(pacman -Qtdq)</b>
+pacman -Rns $(pacman -Qtdq)

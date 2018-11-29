@@ -11,30 +11,30 @@ Created Sunday 01 April 2018
 
 
 HOME DIR
-sudo find /home/brettsalemink -type d -exec chmod 755 {} +</b>
+sudo find /home/brettsalemink -type d -exec chmod 755 {} +
 
 
 
 SSH
-sudo find /home/brettsalemink/.ssh/ -type d -exec chmod 700 {} +</b>
-sudo chmod 644 /home/brettsalemink/.ssh/id_rsa.pub</b>
-sudo chmod 600 /home/brettsalemink/.ssh/id_rsa</b>
+sudo find /home/brettsalemink/.ssh/ -type d -exec chmod 700 {} +
+sudo chmod 644 /home/brettsalemink/.ssh/id_rsa.pub
+sudo chmod 600 /home/brettsalemink/.ssh/id_rsa
 
 
 
 GPG
-chmod 600 ~/.gnupg/</b>*
-chmod 700 ~/.gnupg</b>
+chmod 600 ~/.gnupg/*
+chmod 700 ~/.gnupg
 
 
 
-printf "$SCRIPT:$LINENO: command '$mkdir' not available - aborting\n" &gt;&amp;2
+printf "$SCRIPT:$LINENO: command '$mkdir' not available - aborting\n" >&amp;2
 exit 192
 fi
 
 
-<div class="zim-object">
-    <pre><code class="sh">#===============================================================================
+
+    #===============================================================================
 #   MAIN SCRIPT
 #===============================================================================
 
@@ -68,4 +68,4 @@ echo 'All Done!'
 #===============================================================================
 #   STATISTICS / CLEANUP
 #===============================================================================
-exit 0</code></pre>
+exit 0

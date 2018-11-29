@@ -8,5 +8,5 @@ Search_Directory_Files_For_String
 
 
 
-:vimgrep "\&lt;toUpperCase\_s*(" *.c
+:vimgrep "\<toUpperCase\_s*(" *.c
 :vimgrep "\STRING_TO_SEARCHFOR\_s" Which_Exts_ToSearch

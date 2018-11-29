@@ -20,130 +20,130 @@ gzip -d, bunzip2 (bzip2 -d), unzip commands.
 Compressing files
 
 
-<table>
-  <thead>
-    <tr>
-      <th align="left">Syntax</th>
-      <th align="left">Description</th>
-      <th align="left">Example</th>
-    </tr>
-  </thead>
-  <tr>
-    <td align="left">Syntax</td>
-    <td align="left">Description</td>
-    <td align="left">Example(s)</td>
-  </tr>
-  <tr>
-    <td align="left">gzip {filename}</td>
-    <td align="left">Gzip compress the size of the given files using Lempel-Ziv coding (LZ77). Whenever possible, each
-      file is replaced by one with the extension .gz.</td>
-    <td align="left">gzip mydata.doc</td>
-  </tr>
-  <tr>
-    <td align="left">gzip *.jpg</td>
-    <td align="left">&nbsp;</td>
-    <td align="left">ls -l</td>
-  </tr>
-  <tr>
-    <td align="left">bzip2 {filename}</td>
-    <td align="left">bzip2 compresses files using the Burrows-Wheeler block sorting text compression algorithm, and
+
+  
+    
+      Syntax
+      Description
+      Example
+    
+  
+  
+    Syntax
+    Description
+    Example(s)
+  
+  
+    gzip {filename}
+    Gzip compress the size of the given files using Lempel-Ziv coding (LZ77). Whenever possible, each
+      file is replaced by one with the extension .gz.
+    gzip mydata.doc
+  
+  
+    gzip *.jpg
+  
+    ls -l
+  
+  
+    bzip2 {filename}
+    bzip2 compresses files using the Burrows-Wheeler block sorting text compression algorithm, and
       Huffman coding. Compression is generally considerably better than that achieved by bzip command (LZ77/LZ78-based
-      compressors). Whenever possible, each file is replaced by one with the extension .bz2.</td>
-    <td align="left">bzip2 mydata.doc</td>
-  </tr>
-  <tr>
-    <td align="left">bzip2 *.jpg</td>
-    <td align="left">&nbsp;</td>
-    <td align="left">ls -l</td>
-  </tr>
-  <tr>
-    <td align="left">zip {.zip-filename} {filename-to-compress}</td>
-    <td align="left">zip is a compression and file packaging utility for Unix/Linux. Each file is stored in single .zip
-      {.zip-filename} file with the extension .zip.</td>
-    <td align="left">zip mydata.zip mydata.doc</td>
-  </tr>
-  <tr>
-    <td align="left">tar -zcvf {.tgz-file} {files}</td>
-    <td align="left">&nbsp;</td>
-    <td align="left">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="left">zip data.zip *.doc</td>
-    <td align="left">&nbsp;</td>
-    <td align="left">ls -l</td>
-  </tr>
-  <tr>
-    <td align="left">tar -jcvf {.tbz2-file} {files}</td>
-    <td align="left">The GNU tar is archiving utility but it can be use to compressing large file(s). GNU tar supports
+      compressors). Whenever possible, each file is replaced by one with the extension .bz2.
+    bzip2 mydata.doc
+  
+  
+    bzip2 *.jpg
+  
+    ls -l
+  
+  
+    zip {.zip-filename} {filename-to-compress}
+    zip is a compression and file packaging utility for Unix/Linux. Each file is stored in single .zip
+      {.zip-filename} file with the extension .zip.
+    zip mydata.zip mydata.doc
+  
+  
+    tar -zcvf {.tgz-file} {files}
+  
+  
+  
+  
+    zip data.zip *.doc
+  
+    ls -l
+  
+  
+    tar -jcvf {.tbz2-file} {files}
+    The GNU tar is archiving utility but it can be use to compressing large file(s). GNU tar supports
       both archive compressing through gzip and bzip2. If you have more than 2 files then it is recommended to use tar
-      instead of gzip or bzip2.</td>
-    <td align="left">tar -zcvf data.tgz *.doc</td>
-  </tr>
-  <tr>
-    <td align="left">-z: use gzip compress</td>
-    <td align="left">&nbsp;</td>
-    <td align="left">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="left">-j: use bzip2 compress</td>
-    <td align="left">&nbsp;</td>
-    <td align="left">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="left">tar -zcvf pics.tar.gz *.jpg *.png</td>
-    <td align="left">tar -jcvf data.tbz2 *.doc</td>
-    <td align="left">ls -l</td>
-  </tr>
-  <tr>
-    <td align="left">&nbsp;</td>
-    <td align="left">&nbsp;</td>
-    <td align="left">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="left">Decompressing files</td>
-    <td align="left">&nbsp;</td>
-    <td align="left">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="left">Syntax</td>
-    <td align="left">Description</td>
-    <td align="left">Example(s)</td>
-  </tr>
-  <tr>
-    <td align="left">gzip -d {.gz file} gunzip {.gz file}</td>
-    <td align="left">Decompressed a file that is created using gzip command. File is restored to their original form
-      using this command.</td>
-    <td align="left">gzip -d mydata.doc.gz gunzip mydata.doc.gz</td>
-  </tr>
-  <tr>
-    <td align="left">bzip2 -d {.bz2-file} bunzip2 {.bz2-file}</td>
-    <td align="left">Decompressed a file that is created using bzip2 command. File is restored to their original form
-      using this command.</td>
-    <td align="left">bzip2 -d mydata.doc.bz2 gunzip mydata.doc.bz2</td>
-  </tr>
-  <tr>
-    <td align="left">unzip {.zip file}</td>
-    <td align="left">Extract compressed files in a ZIP archive.</td>
-    <td align="left">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="left">tar -zxvf {.tgz-file}
-      tar -jxvf {.tbz2-file}</td>
-    <td align="left">Untar or decompressed a file(s) that is created using tar compressing through gzip and bzip2
-      filter</td>
-    <td align="left">tar -zxvf data.tgz tar -zxvf pics.tar.gz *.jpg tar -jxvf data.tbz2</td>
-  </tr>
-  <tr>
-    <td align="left">&nbsp;</td>
-    <td align="left">&nbsp;</td>
-    <td align="left">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="left">&nbsp;</td>
-    <td align="left">&nbsp;</td>
-    <td align="left">&nbsp;</td>
-  </tr>
-</table>
+      instead of gzip or bzip2.
+    tar -zcvf data.tgz *.doc
+  
+  
+    -z: use gzip compress
+  
+  
+  
+  
+    -j: use bzip2 compress
+  
+  
+  
+  
+    tar -zcvf pics.tar.gz *.jpg *.png
+    tar -jcvf data.tbz2 *.doc
+    ls -l
+  
+  
+  
+  
+  
+  
+  
+    Decompressing files
+  
+  
+  
+  
+    Syntax
+    Description
+    Example(s)
+  
+  
+    gzip -d {.gz file} gunzip {.gz file}
+    Decompressed a file that is created using gzip command. File is restored to their original form
+      using this command.
+    gzip -d mydata.doc.gz gunzip mydata.doc.gz
+  
+  
+    bzip2 -d {.bz2-file} bunzip2 {.bz2-file}
+    Decompressed a file that is created using bzip2 command. File is restored to their original form
+      using this command.
+    bzip2 -d mydata.doc.bz2 gunzip mydata.doc.bz2
+  
+  
+    unzip {.zip file}
+    Extract compressed files in a ZIP archive.
+  
+  
+  
+    tar -zxvf {.tgz-file}
+      tar -jxvf {.tbz2-file}
+    Untar or decompressed a file(s) that is created using tar compressing through gzip and bzip2
+      filter
+    tar -zxvf data.tgz tar -zxvf pics.tar.gz *.jpg tar -jxvf data.tbz2
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
 
 
 

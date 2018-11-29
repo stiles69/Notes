@@ -10,4 +10,4 @@ Created Sunday 13 May 2018
 
 
 
-$ find . -name 'memo*' -user Maude</b>
+$ find . -name 'memo*' -user Maude

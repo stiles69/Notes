@@ -19,7 +19,7 @@ link, which does not require being logged in:
 
 
 
- mega-get https://mega.nz/#F!ABcD1E2F!gHiJ23k-LMno45PqrSTUvw /path/to/local/folder </b>
+ mega-get https://mega.nz/#F!ABcD1E2F!gHiJ23k-LMno45PqrSTUvw /path/to/local/folder 
 
 
 
@@ -30,8 +30,8 @@ after 10 minutes.
 
 
 
-mega-put /path/to/my/temporary_resource /exportedstuff/</b>
-mega-export -a /exportedstuff/temporary_resource --expire=10M | awk '{print $4}'</b>
+mega-put /path/to/my/temporary_resource /exportedstuff/
+mega-export -a /exportedstuff/temporary_resource --expire=10M | awk '{print $4}'
 
 
 
@@ -40,10 +40,10 @@ some promotional videos previously uploaded to MEGA:
 
 
 
- for i in $(mega-find /enterprise/video/promotional2015/may --pattern="*mpeg") </b>
- do </b> 
- mega-export -a $i | awk '{print $4}'; </b>
- done </b>
+ for i in $(mega-find /enterprise/video/promotional2015/may --pattern="*mpeg") 
+ do  
+ mega-export -a $i | awk '{print $4}'; 
+ done 
 
 
 
@@ -150,7 +150,7 @@ Here is a very simple example of setting up a synchronisation with MEGAcmd:
 
 
 
- sync /path/to/local/folder /folder/in/mega </b>
+ sync /path/to/local/folder /folder/in/mega 
 
 
 
@@ -174,7 +174,7 @@ example that will back up a folder immediately and then at 4am each day, keeping
 
 
 
- backup /path/to/myfolder /remote/path --period="0 0 4 * * *" --num-backups=10 </b>
+ backup /path/to/myfolder /remote/path --period="0 0 4 * * *" --num-backups=10 
 
 
 
@@ -221,9 +221,9 @@ PowerShell:
 
 
 
- $env:PATH += ";$env:LOCALAPPDATA\MEGAcmd" </b>
- mega-cd /my/favourite/folder </b>
- mega-ls </b>
+ $env:PATH += ";$env:LOCALAPPDATA\MEGAcmd" 
+ mega-cd /my/favourite/folder 
+ mega-ls 
 
 
 
@@ -231,9 +231,9 @@ Or in Command Prompt:
 
 
 
- set PATH=%LOCALAPPDATA%\MEGAcmd;%PATH% </b>
- mega-cd /my/favourite/folder </b> 
- mega-ls </b>
+ set PATH=%LOCALAPPDATA%\MEGAcmd;%PATH% 
+ mega-cd /my/favourite/folder  
+ mega-ls 
 
 
 
@@ -275,15 +275,15 @@ Account / Contacts
 
 
 
- signupemail [password] [--name="Your Name"] Register as user with a given email. </b>
- confirmlink email [password] Confirm an account using the link provided after the "signup" process. </b>
- invite[-d|-r] dstemail [--message="MESSAGE"] Invites a contact / deletes an invitation. </b>
- showpcr[--in | --out] Shows incoming and outgoing contact requests. </b>
- ipcemail|handle -a|-d|-i Manages contact incoming invitations. </b>
- users[-s] [-h] [-n] [-d contact@email] List contacts </b>
- userattr[-s attribute value|attribute] [--user=user@email] Lists/updates user attributes </b>
- passwd[oldpassword newpassword] Modifies user password </b>
- masterkeypathtosave Shows your master key. </b>
+ signupemail [password] [--name="Your Name"] Register as user with a given email. 
+ confirmlink email [password] Confirm an account using the link provided after the "signup" process. 
+ invite[-d|-r] dstemail [--message="MESSAGE"] Invites a contact / deletes an invitation. 
+ showpcr[--in | --out] Shows incoming and outgoing contact requests. 
+ ipcemail|handle -a|-d|-i Manages contact incoming invitations. 
+ users[-s] [-h] [-n] [-d contact@email] List contacts 
+ userattr[-s attribute value|attribute] [--user=user@email] Lists/updates user attributes 
+ passwd[oldpassword newpassword] Modifies user password 
+ masterkeypathtosave Shows your master key. 
 
 
 Login / Logout
@@ -291,11 +291,11 @@ Login / Logout
 
 
 
- login[email [password]] | exportedfolderurl#key | session Logs into MEGA </b>
- logout[--keep-session] Logs out </b>
- whoami[-l] Print info of the user </b>
- session Prints (secret) session ID </b>
-killsession[-a|sessionid] Kills a session of current user. </b>
+ login[email [password]] | exportedfolderurl#key | session Logs into MEGA 
+ logout[--keep-session] Logs out 
+ whoami[-l] Print info of the user 
+ session Prints (secret) session ID 
+killsession[-a|sessionid] Kills a session of current user. 
 
 
 Browse
@@ -303,16 +303,16 @@ Browse
 
 
 
- cd[remotepath] Changes the current remote folder</b>
- lcd[localpath] Changes the current local folder for the interactive console</b>
- ls[-lRr] [remotepath] Lists files in a remote path </b>
- pwd Prints the current remote folder </b>
- lpwd Prints the current local folder for the interactive console </b>
- attrremotepath [-s attribute value|-d attribute] Lists/updates node attributes </b>
- du[-h] [remotepath remotepath2 remotepath3 ... ] Prints size used by files/folders </b>
+ cd[remotepath] Changes the current remote folder
+ lcd[localpath] Changes the current local folder for the interactive console
+ ls[-lRr] [remotepath] Lists files in a remote path 
+ pwd Prints the current remote folder 
+ lpwd Prints the current local folder for the interactive console 
+ attrremotepath [-s attribute value|-d attribute] Lists/updates node attributes 
+ du[-h] [remotepath remotepath2 remotepath3 ... ] Prints size used by files/folders 
  find[remotepath] [-l] [--pattern=PATTERN] [--mtime=TIMECONSTRAIN] [--size=SIZECONSTRAIN] Find nodes matching a
-  pattern </b>
- mount Lists all the main nodes </b>
+  pattern 
+ mount Lists all the main nodes 
 
 
 Moving/Copying Files
@@ -320,33 +320,33 @@ Moving/Copying Files
 
 
 
- mkdir[-p] remotepath Creates a directory or a directory hierarchy </b>
- cpsrcremotepath dstremotepath|dstemail Copies a file/folder into a new location (all remotes) </b>
+ mkdir[-p] remotepath Creates a directory or a directory hierarchy 
+ cpsrcremotepath dstremotepath|dstemail Copies a file/folder into a new location (all remotes) 
  put[-c] [-q] [--ignore-quota-warn] localfile [localfile2 localfile3 ...] [dstremotepath] Uploads files/folders to a
-  remote folder </b>
+  remote folder 
  get[-m] [-q] [--ignore-quota-warn] exportedlink#key|remotepath [localpath] Downloads a remote file/folder or a
-  public link </b>
- preview[-s] remotepath localpath To download/upload the preview of a file. </b>
- thumbnail[-s] remotepath localpath To download/upload the thumbnail of a file. </b>
+  public link 
+ preview[-s] remotepath localpath To download/upload the preview of a file. 
+ thumbnail[-s] remotepath localpath To download/upload the thumbnail of a file. 
  mvsrcremotepath [srcremotepath2 srcremotepath3 ..] dstremotepath Moves file(s)/folder(s) into a new location (all
-  remotes) </b>
- rm[-r] [-f] remotepath Deletes a remote file/folder </b>
+  remotes) 
+ rm[-r] [-f] remotepath Deletes a remote file/folder 
  transfers[-c TAG|-a] | [-r TAG|-a] | [-p TAG|-a] [--only-downloads | --only-uploads] [SHOWOPTIONS] List or operate
-  with transfers </b>
- speedlimit[-u|-d] [-h] [NEWLIMIT] Displays/modifies upload/download rate limits </b>
- sync[localpath dstremotepath| [-dsr] [ID|localpath] Controls synchronizations </b>
- exclude[(-a|-d) pattern1 pattern2 pattern3 [--restart-syncs]] Manages exclusions in syncs. </b>
- backuplocalpath remotepath --period="PERIODSTRING" --num-backups=N Set up a new backup folder and/or schedule </b>
+  with transfers 
+ speedlimit[-u|-d] [-h] [NEWLIMIT] Displays/modifies upload/download rate limits 
+ sync[localpath dstremotepath| [-dsr] [ID|localpath] Controls synchronizations 
+ exclude[(-a|-d) pattern1 pattern2 pattern3 [--restart-syncs]] Manages exclusions in syncs. 
+ backuplocalpath remotepath --period="PERIODSTRING" --num-backups=N Set up a new backup folder and/or schedule 
  backup[-lhda] [TAG|localpath] [--period="PERIODSTRING"] [--num-backups=N]) View/Modify an existing backup schedule
-</b>
- cpsrcremotepath dstremotepath|dstemail Moves a file/folder into a new location (all remotes) </b>
- export[-d|-a [--expire=TIMEDELAY]] [remotepath] Prints/Modifies the status of current exports </b>
- importexportedfilelink#key [remotepath] Imports the contents of a remote link into your account </b>
+
+ cpsrcremotepath dstremotepath|dstemail Moves a file/folder into a new location (all remotes) 
+ export[-d|-a [--expire=TIMEDELAY]] [remotepath] Prints/Modifies the status of current exports 
+ importexportedfilelink#key [remotepath] Imports the contents of a remote link into your account 
  share[-p] [-d|-a --with=user@email.com [--level=LEVEL]] [remotepath] Prints/Modifies the status of current shares
-</b>
+
  webdav[ [-d] remotepath [--port=PORT] [--public] [--tls --certificate=/path/to/certificate.pem
   --key=/path/to/certificate.key]] Sets up the ability to download a file from your MEGA account via your PC/device.
-</b>
+
 
 
 Misc
@@ -354,16 +354,16 @@ Misc
 
 
 
-version[-l][-c] Prints MEGAcmd versioning and extra info</b>
- deleteversions[-f] (--all | remotepath1 remotepath2 ...) Delete prior versions of files to save space. </b>
- unicode Toggle unicode input enabled/disabled in interactive shell </b>
- reload Forces a reload of the remote files of the user </b>
- help[-f] Prints list of commands</b>
- https[on|off] Shows if HTTPS is used for transfers. Use https on to enable it. </b>
- clear Clear screen </b>
- log[-sc] level Prints/Modifies the current logs level </b>
- debug Enters debugging mode (HIGHLY VERBOSE) </b>
- exit|quit[--only-shell] Quits MEGAcmd </b>
+version[-l][-c] Prints MEGAcmd versioning and extra info
+ deleteversions[-f] (--all | remotepath1 remotepath2 ...) Delete prior versions of files to save space. 
+ unicode Toggle unicode input enabled/disabled in interactive shell 
+ reload Forces a reload of the remote files of the user 
+ help[-f] Prints list of commands
+ https[on|off] Shows if HTTPS is used for transfers. Use https on to enable it. 
+ clear Clear screen 
+ log[-sc] level Prints/Modifies the current logs level 
+ debug Enters debugging mode (HIGHLY VERBOSE) 
+ exit|quit[--only-shell] Quits MEGAcmd 
 
 
 Command Detail
@@ -371,7 +371,7 @@ Command Detail
 
 
 
-&lt;a name='attr'&gt;attr&lt;/a&gt;
+<a name='attr'>attr</a>
 
 
 
@@ -379,7 +379,7 @@ Lists/updates node attributes
 
 
 
- Usage: attr remotepath [-s attribute value|-d attribute] </b>
+ Usage: attr remotepath [-s attribute value|-d attribute] 
 
 
 
@@ -391,7 +391,7 @@ Options:
 
 
 
-&lt;a name='backup'&gt;backup&lt;/a&gt;
+<a name='backup'>backup</a>
 
 
 
@@ -400,7 +400,7 @@ Sets up or controls backups. (example) (tutorial)
 
 
  Usage: backup (localpath remotepath --period="PERIODSTRING" --num-backups=N | [-lhda] [TAG|localpath]
-  [--period="PERIODSTRING"] [--num-backups=N]) </b>
+  [--period="PERIODSTRING"] [--num-backups=N]) 
 
 
 
@@ -423,13 +423,13 @@ Notice that MEGAcmd server need to be running for backups to be created.
 
 
 
-Display Options:</b>
+Display Options:
 -l Show extended info: period, max number, next scheduled backup
-<div style='padding-left: 60pt'>
+
   or the status of current/last backup
 
   -h Show history of created backups
-  <div style='padding-left: 60pt'>
+  
     Backup states:
     While a backup is being performed, the backup will be considered and labeled as ONGOING
     If a transfer is cancelled or fails, the backup will be considered INCOMPLETE
@@ -447,7 +447,7 @@ Display Options:</b>
 
 
 
-    Configuration Options:</b>
+    Configuration Options:
     --period="PERIODSTRING" Period: either time in TIMEFORMAT (see below) or a cron like expresisions
     <div style='padding-left: 180pt'>
       Cron like period is formatted as follows
@@ -483,7 +483,7 @@ Display Options:</b>
 
 
 
-        Management Options:</b>
+        Management Options:
         -d TAG|localpath Removes a backup by its TAG or local path
         <div style='padding-left: 180pt'>
           Folders created by backup won't be deleted
@@ -501,7 +501,7 @@ Display Options:</b>
 
 
 
-          &lt;a name='cd'&gt;cd&lt;/a&gt;</b>
+          <a name='cd'>cd</a>
 
 
 
@@ -509,14 +509,14 @@ Display Options:</b>
 
 
 
-          Usage: cd [remotepath]</b>
+          Usage: cd [remotepath]
 
 
 
           If no folder is provided, it will be changed to the root folder
 
 
-          &lt;a name='clear'&gt;clear&lt;/a&gt;
+          <a name='clear'>clear</a>
 
           
 
@@ -525,10 +525,10 @@ Display Options:</b>
 
 
 
-          Usage: clear</b>
+          Usage: clear
 
 
-          &lt;a name='confirm'&gt;confirm&lt;/a&gt;
+          <a name='confirm'>confirm</a>
 
           
 
@@ -540,7 +540,7 @@ Display Options:</b>
           Usage: confirm link email [password] It requires the email and the password used to obtain the link.
 
 
-          &lt;a name='cp'&gt;cp&lt;/a&gt;
+          <a name='cp'>cp</a>
 
           
 
@@ -549,7 +549,7 @@ Display Options:</b>
 
 
 
-          Usage: cp srcremotepath dstremotepath|dstemail:</b>
+          Usage: cp srcremotepath dstremotepath|dstemail:
 
 
 
@@ -563,7 +563,7 @@ Display Options:</b>
           Remember the trailing ":", otherwise a file with the name of that user ("user@doma.in") will be created
 
 
-          &lt;a name='debug'&gt;debug&lt;/a&gt;
+          <a name='debug'>debug</a>
 
           
 
@@ -572,14 +572,14 @@ Display Options:</b>
 
 
 
-          Usage: debug</b>
+          Usage: debug
 
 
 
           For a finer control of log level see [`log`](#log)
 
 
-          &lt;a name='deleteversions'&gt;deleteversions&lt;/a&gt;
+          <a name='deleteversions'>deleteversions</a>
 
           
 
@@ -588,7 +588,7 @@ Display Options:</b>
 
 
 
-          Usage: deleteversions [-f] (--all | remotepath1 remotepath2 ...)</b>
+          Usage: deleteversions [-f] (--all | remotepath1 remotepath2 ...)
 
 
 
@@ -608,7 +608,7 @@ Display Options:</b>
           To see space occupied by file versions use `du --versions`.
 
 
-          &lt;a name='du'&gt;du&lt;/a&gt;
+          <a name='du'>du</a>
 
           
 
@@ -617,7 +617,7 @@ Display Options:</b>
 
 
 
-          Usage: du [-h] [--versions] [remotepath remotepath2 remotepath3 ... ]</b>
+          Usage: du [-h] [--versions] [remotepath remotepath2 remotepath3 ... ]
 
 
 
@@ -634,7 +634,7 @@ Display Options:</b>
           You can remove all versions with `deleteversions` and list them with `ls --versions `
 
 
-          &lt;a name='exclude'&gt;exclude&lt;/a&gt;
+          <a name='exclude'>exclude</a>
 
           
 
@@ -643,7 +643,7 @@ Display Options:</b>
 
 
 
-          Usage: exclude [(-a|-d) pattern1 pattern2 pattern3 [--restart-syncs]]</b>
+          Usage: exclude [(-a|-d) pattern1 pattern2 pattern3 [--restart-syncs]]
 
 
 
@@ -669,7 +669,7 @@ Display Options:</b>
 
             
 
-            &lt;a name='exit'&gt;exit&lt;/a&gt;
+            <a name='exit'>exit</a>
 
             
 
@@ -678,7 +678,7 @@ Display Options:</b>
 
 
 
-            Usage: exit [--only-shell]</b>
+            Usage: exit [--only-shell]
 
 
 
@@ -692,7 +692,7 @@ Display Options:</b>
             The session will be resumed when the service is restarted.
 
 
-            &lt;a name='export'&gt;export&lt;/a&gt;
+            <a name='export'>export</a>
 
             
 
@@ -701,7 +701,7 @@ Display Options:</b>
 
 
 
-            Usage: export [-d|-a [--expire=TIMEDELAY] [-f]] [remotepath]</b>
+            Usage: export [-d|-a [--expire=TIMEDELAY] [-f]] [remotepath]
 
 
 
@@ -715,7 +715,7 @@ Display Options:</b>
               12 days and 3 hours after the current moment
 
               -f Implicitly accept copyright terms (only shown the first time an export is made)
-              <div style='padding-left: 60pt'>
+              
                 MEGA respects the copyrights of others and requires that users of the MEGA cloud service
                 comply with the laws of copyright.
                 You are strictly prohibited from using the MEGA cloud service to infringe copyrights.
@@ -731,7 +731,7 @@ Display Options:</b>
                 all the exports existing in the tree of that path
 
 
-                &lt;a name='find'&gt;find&lt;/a&gt;
+                <a name='find'>find</a>
 
                 
 
@@ -740,7 +740,7 @@ Display Options:</b>
 
 
 
-                Usage: find [remotepath] [-l] [--pattern=PATTERN] [--mtime=TIMECONSTRAIN] [--size=SIZECONSTRAIN]</b>
+                Usage: find [remotepath] [-l] [--pattern=PATTERN] [--mtime=TIMECONSTRAIN] [--size=SIZECONSTRAIN]
 
 
 
@@ -767,7 +767,7 @@ Display Options:</b>
 
                     
 
-                    &lt;a name='get'&gt;get&lt;/a&gt;
+                    <a name='get'>get</a>
 
                     
 
@@ -776,7 +776,7 @@ Display Options:</b>
 
 
 
-                    Usage: get [-m] [-q] [--ignore-quota-warn] exportedlink#key|remotepath [localpath]</b>
+                    Usage: get [-m] [-q] [--ignore-quota-warn] exportedlink#key|remotepath [localpath]
 
 
 
@@ -796,7 +796,7 @@ Display Options:</b>
                     --ignore-quota-warn ignore quota surpassing warning. The download will be attempted anyway.
 
 
-                    &lt;a name='help'&gt;help&lt;/a&gt;
+                    <a name='help'>help</a>
 
                     
 
@@ -805,7 +805,7 @@ Display Options:</b>
 
 
 
-                    Usage: help [-f]</b>
+                    Usage: help [-f]
 
 
 
@@ -822,7 +822,7 @@ Display Options:</b>
 
 
 
-                    Usage: https [on|off]</b>
+                    Usage: https [on|off]
 
 
 
@@ -834,7 +834,7 @@ Display Options:</b>
                     This setting is ephemeral: it will reset for the next time you open MEGAcmd
 
 
-                    &lt;a name='import'&gt;import&lt;/a&gt;
+                    <a name='import'>import</a>
 
                     
 
@@ -843,14 +843,14 @@ Display Options:</b>
 
 
 
-                    Usage: import exportedfilelink#key [remotepath]</b>
+                    Usage: import exportedfilelink#key [remotepath]
 
 
 
                     If no remote path is provided, the current local folder will be used
 
 
-                    &lt;a name='invite'&gt;invite&lt;/a&gt;
+                    <a name='invite'>invite</a>
 
                     
 
@@ -859,7 +859,7 @@ Display Options:</b>
 
 
 
-                    Usage: invite [-d|-r] dstemail [--message="MESSAGE"]</b>
+                    Usage: invite [-d|-r] dstemail [--message="MESSAGE"]
 
 
 
@@ -869,7 +869,7 @@ Display Options:</b>
                     --message="MESSAGE" Sends the invitation, including your message.
 
 
-                    &lt;a name='ipc'&gt;ipc&lt;/a&gt;
+                    <a name='ipc'>ipc</a>
 
                     
 
@@ -878,7 +878,7 @@ Display Options:</b>
 
 
 
-                    Usage: ipc email|handle -a|-d|-i</b>
+                    Usage: ipc email|handle -a|-d|-i
 
 
 
@@ -888,7 +888,7 @@ Display Options:</b>
                     -i Ignores invitation [WARNING: do not use unless you know what you are doing]
 
 
-                    &lt;a name='killsession'&gt;killsession&lt;/a&gt;
+                    <a name='killsession'>killsession</a>
 
                     
 
@@ -897,7 +897,7 @@ Display Options:</b>
 
 
 
-                    Usage: killsession [-a|sessionid]</b>
+                    Usage: killsession [-a|sessionid]
 
 
 
@@ -909,7 +909,7 @@ Display Options:</b>
                     To see all sessions use "whoami -l"
 
 
-                    &lt;a name='lcd'&gt;lcd&lt;/a&gt;
+                    <a name='lcd'>lcd</a>
 
                     
 
@@ -918,7 +918,7 @@ Display Options:</b>
 
 
 
-                    Usage: lcd [localpath]</b>
+                    Usage: lcd [localpath]
 
 
 
@@ -930,7 +930,7 @@ Display Options:</b>
                     comands
 
 
-                    &lt;a name='log'&gt;log&lt;/a&gt;
+                    <a name='log'>log</a>
 
                     
 
@@ -939,17 +939,17 @@ Display Options:</b>
 
 
 
-                    Usage: log [-sc] level</b>
+                    Usage: log [-sc] level
 
 
 
                     Options:
                     -c CMD log level (higher level messages).
-                    <div style='padding-left: 60pt'>
+                    
                       Messages captured by MEGAcmd server.
 
                       -s SDK log level (lower level messages).
-                      <div style='padding-left: 60pt'>
+                      
                         Messages captured by the engine and libs
 
 
@@ -959,7 +959,7 @@ Display Options:</b>
                         information given by any command by passing `-v` (`-vv`, `-vvv`, ...)
 
 
-                        &lt;a name='login'&gt;login&lt;/a&gt;
+                        <a name='login'>login</a>
 
                         
 
@@ -968,7 +968,7 @@ Display Options:</b>
 
 
 
-                        Usage: login [email [password]] | exportedfolderurl#key | session</b>
+                        Usage: login [email [password]] | exportedfolderurl#key | session
 
 
 
@@ -977,7 +977,7 @@ Display Options:</b>
                         If logging into a folder indicate url#key
 
 
-                        &lt;a name='logout'&gt;logout&lt;/a&gt;
+                        <a name='logout'>logout</a>
 
                         
 
@@ -987,7 +987,7 @@ Display Options:</b>
 
 
 
-                        Usage: logout [--keep-session]</b>
+                        Usage: logout [--keep-session]
 
 
 
@@ -1001,7 +1001,7 @@ Display Options:</b>
                         --keep-session, similar to exiting it without logging out.
 
 
-                        &lt;a name='lpwd'&gt;lpwd&lt;/a&gt;
+                        <a name='lpwd'>lpwd</a>
 
                         
 
@@ -1010,7 +1010,7 @@ Display Options:</b>
 
 
 
-                        Usage: lpwd</b>
+                        Usage: lpwd
 
 
 
@@ -1022,12 +1022,12 @@ Display Options:</b>
                         that of the shell executing mega comands
 
 
-                        &lt;a name='ls'&gt;lpwd&lt;/a&gt;
+                        <a name='ls'>lpwd</a>
 
                         
 
 
-                        Usage: ls [-halRr] [--versions] [remotepath] Lists files in a remote path</b>
+                        Usage: ls [-halRr] [--versions] [remotepath] Lists files in a remote path
 
 
 
@@ -1039,18 +1039,18 @@ Display Options:</b>
                         Options:
                         -R|-r list folders recursively
                         -l print summary
-                        <div style='padding-left: 60pt'>
+                        
                           SUMMARY contents:
                           FLAGS: Indicate type/status of an element:
 
-                          <div style='padding-left: 90pt'>
+                          
                             xxxx
                             |||+---- Sharing status: (s)hared, (i)n share or not shared(-)
                             ||+----- if exported, whether it is (p)ermanent or (t)temporal
                             |+------ e/- wheter node is (e)xported
                             +-------- Type(d=folder,-=file,r=root,i=inbox,b=rubbish,x=unsupported)
 
-                            <div style='padding-left: 60pt'>
+                            
                               VERS: Number of versions in a file
                               SIZE: Size of the file in bytes:
                               DATE: Modification date for files and creation date for folders:
@@ -1059,14 +1059,14 @@ Display Options:</b>
                               -h Show human readable sizes in summary
                               -a include extra information
                               --versions show historical versions
-                              <div style='padding-left: 60pt'>
+                              
                                 You can delete all versions of a file with "deleteversions"
 
 
 
                                 
 
-                                &lt;a name='masterkey'&gt;masterkey&lt;/a&gt;
+                                <a name='masterkey'>masterkey</a>
 
                                 
 
@@ -1075,7 +1075,7 @@ Display Options:</b>
 
 
 
-                                Usage: masterkey pathtosave</b>
+                                Usage: masterkey pathtosave
 
 
 
@@ -1085,7 +1085,7 @@ Display Options:</b>
                                 storage, or print)
 
 
-                                &lt;a name='mkdir'&gt;mkdir&lt;/a&gt;
+                                <a name='mkdir'>mkdir</a>
 
                                 
 
@@ -1094,7 +1094,7 @@ Display Options:</b>
 
 
 
-                                Usage: mkdir [-p] remotepath</b>
+                                Usage: mkdir [-p] remotepath
 
 
 
@@ -1102,7 +1102,7 @@ Display Options:</b>
                                 -p Allow recursive
 
 
-                                &lt;a name='mount'&gt;mount&lt;/a&gt;
+                                <a name='mount'>mount</a>
 
                                 
 
@@ -1111,10 +1111,10 @@ Display Options:</b>
 
 
 
-                                Usage: mount</b>
+                                Usage: mount
 
 
-                                &lt;a name='mv'&gt;mv&lt;/a&gt;
+                                <a name='mv'>mv</a>
 
                                 
 
@@ -1123,7 +1123,7 @@ Display Options:</b>
 
 
 
-                                Usage: mv srcremotepath [srcremotepath2 srcremotepath3 ..] dstremotepath</b>
+                                Usage: mv srcremotepath [srcremotepath2 srcremotepath3 ..] dstremotepath
 
 
 
@@ -1132,7 +1132,7 @@ Display Options:</b>
                                 dstremotepath leaf name.
 
 
-                                &lt;a name='passwd'&gt;passwd&lt;/a&gt;
+                                <a name='passwd'>passwd</a>
 
                                 
 
@@ -1141,10 +1141,10 @@ Display Options:</b>
 
 
 
-                                Usage: passwd [oldpassword newpassword]</b>
+                                Usage: passwd [oldpassword newpassword]
 
 
-                                &lt;a name='preview'&gt;preview&lt;/a&gt;
+                                <a name='preview'>preview</a>
 
                                 
 
@@ -1153,7 +1153,7 @@ Display Options:</b>
 
 
 
-                                Usage: preview [-s] remotepath localpath</b>
+                                Usage: preview [-s] remotepath localpath
 
 
 
@@ -1165,7 +1165,7 @@ Display Options:</b>
                                 -s Sets the preview to the specified file
 
 
-                                &lt;a name='put'&gt;put&lt;/a&gt;
+                                <a name='put'>put</a>
 
                                 
 
@@ -1175,7 +1175,7 @@ Display Options:</b>
 
 
                                 Usage: put [-c] [-q] [--ignore-quota-warn] localfile [localfile2 localfile3 ...]
-                                  [dstremotepath]</b>
+                                  [dstremotepath]
 
 
 
@@ -1195,7 +1195,7 @@ Display Options:</b>
                                   Mind that using wildcards for local paths will result in multiple paths.
 
 
-                                  &lt;a name='pwd'&gt;pwd&lt;/a&gt;
+                                  <a name='pwd'>pwd</a>
 
                                   
 
@@ -1204,15 +1204,15 @@ Display Options:</b>
 
 
 
-                                  Usage: pwd</b>
+                                  Usage: pwd
 
 
-                                  &lt;a name='quit'&gt;&lt;/a&gt;
+                                  <a name='quit'></a>
 
                                   
 
 
-                                  Usage: quit [--only-shell]</b>
+                                  Usage: quit [--only-shell]
 
 
 
@@ -1229,7 +1229,7 @@ Display Options:</b>
                                   To only exit current shell and keep server running, use "exit --only-shell"
 
 
-                                  &lt;a name='reload'&gt;reload&lt;/a&gt;
+                                  <a name='reload'>reload</a>
 
                                   
 
@@ -1238,14 +1238,14 @@ Display Options:</b>
 
 
 
-                                  Usage: reload</b>
+                                  Usage: reload
 
 
 
                                   It will also resume synchronizations.
 
 
-                                  &lt;a name='rm'&gt;rm&lt;/a&gt;
+                                  <a name='rm'>rm</a>
 
                                   
 
@@ -1254,7 +1254,7 @@ Display Options:</b>
 
 
 
-                                  Usage: rm [-r] [-f] remotepath</b>
+                                  Usage: rm [-r] [-f] remotepath
 
 
 
@@ -1263,7 +1263,7 @@ Display Options:</b>
                                   -f Force (no asking)
 
 
-                                  &lt;a name='session'&gt;&lt;/a&gt;
+                                  <a name='session'></a>
 
                                   
 
@@ -1272,10 +1272,10 @@ Display Options:</b>
 
 
 
-                                  Usage: session</b>
+                                  Usage: session
 
 
-                                  &lt;a name='share'&gt;share&lt;/a&gt;
+                                  <a name='share'>share</a>
 
                                   
 
@@ -1284,7 +1284,7 @@ Display Options:</b>
 
 
 
-                                  Usage: share [-p] [-d|-a --with=user@email.com [--level=LEVEL]] [remotepath]</b>
+                                  Usage: share [-p] [-d|-a --with=user@email.com [--level=LEVEL]] [remotepath]
 
 
 
@@ -1318,7 +1318,7 @@ Display Options:</b>
                                     Use [`mount`](#mount) to list folders shared with you
 
 
-                                    &lt;a name='showpcr'&gt;showpcr&lt;/a&gt;
+                                    <a name='showpcr'>showpcr</a>
 
                                     
 
@@ -1327,7 +1327,7 @@ Display Options:</b>
 
 
 
-                                    Usage: showpcr [--in | --out]</b>
+                                    Usage: showpcr [--in | --out]
 
 
 
@@ -1336,7 +1336,7 @@ Display Options:</b>
                                     --out Shows outgoing invitations
 
 
-                                    &lt;a name='signup'&gt;signup&lt;/a&gt;
+                                    <a name='signup'>signup</a>
 
                                     
 
@@ -1345,7 +1345,7 @@ Display Options:</b>
 
 
 
-                                    Usage: signup email [password] [--name="Your Name"]</b>
+                                    Usage: signup email [password] [--name="Your Name"]
 
 
 
@@ -1359,7 +1359,7 @@ Display Options:</b>
                                     that email with "confirm".
 
 
-                                    &lt;a name='speedlimit'&gt;speedlimit&lt;/a&gt;
+                                    <a name='speedlimit'>speedlimit</a>
 
                                     
 
@@ -1368,7 +1368,7 @@ Display Options:</b>
 
 
 
-                                    Usage: speedlimit [-u|-d] [-h] [NEWLIMIT]</b>
+                                    Usage: speedlimit [-u|-d] [-h] [NEWLIMIT]
 
 
 
@@ -1390,7 +1390,7 @@ Display Options:</b>
                                     will be removed if you logout.
 
 
-                                    &lt;a name='sync'&gt;sync&lt;/a&gt;
+                                    <a name='sync'>sync</a>
 
                                     
 
@@ -1400,7 +1400,7 @@ Display Options:</b>
 
 
 
-                                    Usage: sync [localpath dstremotepath| [-dsr] [ID|localpath]</b>
+                                    Usage: sync [localpath dstremotepath| [-dsr] [ID|localpath]
 
 
 
@@ -1429,7 +1429,7 @@ Display Options:</b>
                                     Syncs are associated with your Session, so logging out will cancel them.
 
 
-                                    &lt;a name='thumbnail'&gt;thumbnail&lt;/a&gt;
+                                    <a name='thumbnail'>thumbnail</a>
 
                                     
 
@@ -1438,7 +1438,7 @@ Display Options:</b>
 
 
 
-                                    Usage: thumbnail [-s] remotepath localpath</b>
+                                    Usage: thumbnail [-s] remotepath localpath
 
 
 
@@ -1450,7 +1450,7 @@ Display Options:</b>
                                     -s Sets the thumbnail to the specified file
 
 
-                                    &lt;a name='transfers'&gt;transfers&lt;/a&gt;
+                                    <a name='transfers'>transfers</a>
 
                                     
 
@@ -1460,7 +1460,7 @@ Display Options:</b>
 
 
                                     Usage: transfers [-c TAG|-a] | [-r TAG|-a] | [-p TAG|-a] [--only-downloads |
-                                      --only-uploads] [SHOWOPTIONS]</b>
+                                      --only-uploads] [SHOWOPTIONS]
 
 
 
@@ -1482,7 +1482,7 @@ Display Options:</b>
                                     --path-display-size=N Use a fixed size of N characters for paths
 
 
-                                    &lt;a name='unicode'&gt;unicode&lt;/a&gt;
+                                    <a name='unicode'>unicode</a>
 
                                     
 
@@ -1491,7 +1491,7 @@ Display Options:</b>
 
 
 
-                                    Usage: unicode</b>
+                                    Usage: unicode
 
 
 
@@ -1500,7 +1500,7 @@ Display Options:</b>
                                     Type "help --unicode" for further info.
 
 
-                                    &lt;a name='userattr'&gt;userattr&lt;/a&gt;
+                                    <a name='userattr'>userattr</a>
 
                                     
 
@@ -1509,7 +1509,7 @@ Display Options:</b>
 
 
 
-                                    Usage: userattr [-s attribute value|attribute] [--user=user@email]</b>
+                                    Usage: userattr [-s attribute value|attribute] [--user=user@email]
 
 
 
@@ -1518,7 +1518,7 @@ Display Options:</b>
                                     --user=user@email select the user to query
 
 
-                                    &lt;a name='users'&gt;users&lt;/a&gt;
+                                    <a name='users'>users</a>
 
                                     
 
@@ -1527,7 +1527,7 @@ Display Options:</b>
 
 
 
-                                    Usage: users [-s] [-h] [-n] [-d contact@email]</b>
+                                    Usage: users [-s] [-h] [-n] [-d contact@email]
 
 
 
@@ -1538,7 +1538,7 @@ Display Options:</b>
                                     -d contact@email Deletes the specified contact
 
 
-                                    &lt;a name='version'&gt;version&lt;/a&gt;
+                                    <a name='version'>version</a>
 
                                     
 
@@ -1547,7 +1547,7 @@ Display Options:</b>
 
 
 
-                                    Usage: version [-l][-c]</b>
+                                    Usage: version [-l][-c]
 
 
 
@@ -1556,7 +1556,7 @@ Display Options:</b>
                                     -l Show extended info: MEGA SDK version and features enabled
 
 
-                                    &lt;a name='webdav'&gt;webdav&lt;/a&gt;
+                                    <a name='webdav'>webdav</a>
 
                                     
 
@@ -1568,7 +1568,7 @@ Display Options:</b>
 
 
                                     Usage: webdav [ [-d] remotepath [--port=PORT] [--public] [--tls
-                                      --certificate=/path/to/certificate.pem --key=/path/to/certificate.key]]</b>
+                                      --certificate=/path/to/certificate.pem --key=/path/to/certificate.key]]
 
 
 
@@ -1601,7 +1601,7 @@ Display Options:</b>
                                     please contact: support@mega.nz
 
 
-                                    &lt;a name='whoami'&gt;whoami&lt;/a&gt;
+                                    <a name='whoami'>whoami</a>
 
                                     
 
@@ -1610,13 +1610,13 @@ Display Options:</b>
 
 
 
-                                    Usage: whoami [-l]</b>
+                                    Usage: whoami [-l]
 
 
 
                                     Options:
                                     -l Show extended info: total storage used, storage per main folder
-                                    <div style='padding-left: 60pt'>
+                                    
                                       (see mount), pro level, account balance, and also the active sessions
 
 
@@ -1632,7 +1632,7 @@ Display Options:</b>
                                       
 
 
-                                      MEGA CMD&gt; signup eg.email_1@example.co.nz --name="test1"</b>
+                                      MEGA CMD> signup eg.email_1@example.co.nz --name="test1"
                                       New Password:
                                       Retype New Password:
                                       Account created succesfully. You will receive a confirmation link. Use "confirm"
@@ -1644,15 +1644,15 @@ Display Options:</b>
                                       
 
 
-                                      MEGA CMD&gt; confirm
+                                      MEGA CMD> confirm
                                         https://mega.nz/#confirmQFSfjtUkExc5M2Us6q5d-klx60RfxVbxjhk
-                                        eg.email_1@example.co.nz</b>
+                                        eg.email_1@example.co.nz
                                       Password:
                                       Account eg.email_1@example.co.nz confirmed succesfully. You can login with it now
 
 
 
-                                      MEGA CMD&gt; signup eg.email_2@example.co.nz --name="test2"</b>
+                                      MEGA CMD> signup eg.email_2@example.co.nz --name="test2"
                                       New Password:
                                       Retype New Password:
                                       Account created succesfully. You will receive a confirmation link. Use "confirm"
@@ -1660,15 +1660,15 @@ Display Options:</b>
 
 
 
-                                      MEGA CMD&gt; confirm
+                                      MEGA CMD> confirm
                                         https://mega.nz/#confirmcz7Ss68ChhMKk8WEFTQCqLMHJg8esAEEpQE
-                                        eg.email_2@example.co.nz</b>
+                                        eg.email_2@example.co.nz
                                       Password:
                                       Account eg.email_2@example.co.nz confirmed succesfully. You can login with it now
 
 
 
-                                      MEGA CMD&gt; login eg.email_1@example.co.nz</b>
+                                      MEGA CMD> login eg.email_1@example.co.nz
                                       Password:
                                       [API:info: 23:19:14] Fetching nodes ...
                                       [API:info: 23:19:17] Loading transfers from local cache
@@ -1680,25 +1680,25 @@ Display Options:</b>
                                       
 
 
-                                      MEGA CMD&gt;</b>
-                                      eg.email_1@example.co.nz:/$ invite eg.email_2@example.co.nz</b>
+                                      MEGA CMD>
+                                      eg.email_1@example.co.nz:/$ invite eg.email_2@example.co.nz
                                       Invitation to user: eg.email_2@example.co.nz sent
 
 
 
-                                      eg.email_1@example.co.nz:/$ showpcr</b>
+                                      eg.email_1@example.co.nz:/$ showpcr
                                       Outgoing PCRs:
                                       eg.email_2@example.co.nz (id: 47Xhz6wvVTk, creation: Thu, 26 Apr 2018 11:20:09
                                       +1200, modification: Thu, 26 Apr 2018 11:20:09 +1200)
 
 
 
-                                      eg.email_1@example.co.nz:/$ logout</b>
+                                      eg.email_1@example.co.nz:/$ logout
                                       Logging out...
 
 
 
-                                      eg.email_1@example.co.nz:/$</b>
+                                      eg.email_1@example.co.nz:/$
 
 
                                       <hr>
@@ -1706,7 +1706,7 @@ Display Options:</b>
                                       
 
 
-                                      MEGA CMD&gt; login eg.email_2@example.co.nz</b>
+                                      MEGA CMD> login eg.email_2@example.co.nz
                                       Password:
                                       [API:info: 23:21:10] Fetching nodes ...
                                       [API:info: 23:21:12] Loading transfers from local cache
@@ -1714,8 +1714,8 @@ Display Options:</b>
 
 
 
-                                      MEGA CMD&gt;</b>
-                                      eg.email_2@example.co.nz:/$ showpcr</b>
+                                      MEGA CMD>
+                                      eg.email_2@example.co.nz:/$ showpcr
                                       Incoming PCRs:
                                       eg.email_1@example.co.nz (id: 47Xhz6wvVTk, creation: Thu, 26 Apr 2018 11:20:09
                                       +1200, modification: Thu, 26 Apr 2018 11:20:09 +1200)
@@ -1726,15 +1726,15 @@ Display Options:</b>
                                       
 
 
-                                      eg.email_2@example.co.nz:/$ ipc 47Xhz6wvVTk -a</b>
+                                      eg.email_2@example.co.nz:/$ ipc 47Xhz6wvVTk -a
                                       Accepted invitation by eg.email_1@example.co.nz
 
 
 
-                                      eg.email_2@example.co.nz:/$ users</b>
-                                      eg.email_1@example.co.nz, visible since Thu, 26 Apr 2018 11:22:02 +1200</b>
-                                      eg.email_2@example.co.nz:/$ userattr --user=eg.email_1@example.co.nz</b>
-                                      <div style='padding-left: 60pt'>
+                                      eg.email_2@example.co.nz:/$ users
+                                      eg.email_1@example.co.nz, visible since Thu, 26 Apr 2018 11:22:02 +1200
+                                      eg.email_2@example.co.nz:/$ userattr --user=eg.email_1@example.co.nz
+                                      
                                         firstname = test1
                                         ed25519 = 5Xl2-mUtsZkaATmSS88Ncepju5805uw66Hfdh_-SwpE
                                         cu25519 = ejoYtpaJIZvlpmPsYviIa6tNvPTdVjfkYf9G1k8PKgM
@@ -1746,13 +1746,13 @@ Display Options:</b>
 
 
 
-                                        eg.email_2@example.co.nz:/$ showpcr</b>
-                                        eg.email_2@example.co.nz:/$ logout</b>
+                                        eg.email_2@example.co.nz:/$ showpcr
+                                        eg.email_2@example.co.nz:/$ logout
                                         Logging out...
 
 
 
-                                        MEGA CMD&gt; login eg.email_1@example.co.nz</b>
+                                        MEGA CMD> login eg.email_1@example.co.nz
                                         Password:
                                         [API:info: 23:24:26] Fetching nodes ...
                                         [API:info: 23:24:27] Loading transfers from local cache
@@ -1764,21 +1764,21 @@ Display Options:</b>
                                         
 
 
-                                        MEGA CMD&gt;</b>
-                                        eg.email_1@example.co.nz:/$ showpcr</b>
-                                        eg.email_1@example.co.nz:/$ users</b>
-                                        eg.email_2@example.co.nz, visible</b>
-                                        eg.email_1@example.co.nz:/$ userattr --user=eg.email_2@example.co.nz</b>
-                                        <div style='padding-left: 60pt'>
-                                          firstname = test2</b>
-                                          ed25519 = M7SLy2RajwUAvynxJQaVkhe6hxGpbwJmvve3dgl8B1o</b>
-                                          cu25519 = VaXluGS2c5xbo0xOHHJciqLRxwMaWZHVK8iuxtlCBTk</b>
+                                        MEGA CMD>
+                                        eg.email_1@example.co.nz:/$ showpcr
+                                        eg.email_1@example.co.nz:/$ users
+                                        eg.email_2@example.co.nz, visible
+                                        eg.email_1@example.co.nz:/$ userattr --user=eg.email_2@example.co.nz
+                                        
+                                          firstname = test2
+                                          ed25519 = M7SLy2RajwUAvynxJQaVkhe6hxGpbwJmvve3dgl8B1o
+                                          cu25519 = VaXluGS2c5xbo0xOHHJciqLRxwMaWZHVK8iuxtlCBTk
                                           rsa =
-                                            AAAAAFrhDWemabQ4JAOtP7zcoy6m74PsFTFCbj04Zh4G8K_TZB5Sm9T5Xj9CXYzwWnpfRd1McPdDouKdsASQ6Er7i4Y4LpEA</b>
+                                            AAAAAFrhDWemabQ4JAOtP7zcoy6m74PsFTFCbj04Zh4G8K_TZB5Sm9T5Xj9CXYzwWnpfRd1McPdDouKdsASQ6Er7i4Y4LpEA
                                           cu255 =
-                                            AAAAAFrhDWcXE_7AHZmvxk5Hk0G7V65UnvFO42tb1gM9SYy3BpsMCas0X-pbqkYwf6_2eBG-ZLvkonGfXB3DWonWNvnVehIB</b>
+                                            AAAAAFrhDWcXE_7AHZmvxk5Hk0G7V65UnvFO42tb1gM9SYy3BpsMCas0X-pbqkYwf6_2eBG-ZLvkonGfXB3DWonWNvnVehIB
 
-                                          eg.email_1@example.co.nz:/$</b>
+                                          eg.email_1@example.co.nz:/$
 
 
                                           <hr>
@@ -1790,7 +1790,7 @@ Display Options:</b>
                                           
 
 
-                                          MEGA CMD&gt; login eg.email_1@example.co.nz</b>
+                                          MEGA CMD> login eg.email_1@example.co.nz
                                           Password:
                                           [API:info: 23:43:14] Fetching nodes ...
                                           [API:info: 23:43:14] Loading transfers from local cache
@@ -1802,28 +1802,28 @@ Display Options:</b>
                                           
 
 
-                                          MEGA CMD&gt;</b>
-                                          eg.email_1@example.co.nz:/$ whoami -l</b>
+                                          MEGA CMD>
+                                          eg.email_1@example.co.nz:/$ whoami -l
                                           Account e-mail:
-                                          <div style='padding-left: 30pt'>
+                                          
                                             Available storage: 50.00 GBytes
 
-                                            <div style='padding-left: 60pt'>
+                                            
                                               In ROOT: 146... KBytes in 1 file(s) and 0 folder(s)
                                               In INBOX: 0.00 Bytes in 0 file(s) and 0 folder(s)
                                               In RUBBISH: 0.00 Bytes in 0 file(s) and 0 folder(s)
                                               Total size taken up by file versions: 0.00 Bytes
 
-                                              <div style='padding-left: 30pt'>
+                                              
                                                 Pro level: 0
                                                 Subscription type:
                                                 Account balance:
 
                                                 Current Active Sessions:
                                                 <ul style='padding-left: 30pt'>
-                                                  Current Session</li>
-                                                </ul>
-                                                <div style='padding-left: 30pt'>
+                                                  Current Session
+                                                
+                                                
                                                   Session ID: m3a8eluyPdo
                                                   Session start: 4/26/2018 11:43:12 AM
                                                   Most recent activity: 4/26/2018 11:43:13 AM
@@ -1836,14 +1836,14 @@ Display Options:</b>
 
 
 
-                                                  eg.email_1@example.co.nz:/$ mount</b>
+                                                  eg.email_1@example.co.nz:/$ mount
                                                   ROOT on /
                                                   INBOX on //in
                                                   RUBBISH on //bin
 
 
 
-                                                  eg.email_1@example.co.nz:/$ ls</b>
+                                                  eg.email_1@example.co.nz:/$ ls
                                                   Welcome to MEGA.pdf
 
                                                   TRANSFERING
@@ -1852,28 +1852,28 @@ Display Options:</b>
 
 
 
-                                                  eg.email_1@example.co.nz:/$ mkdir my-pictures</b>
-                                                  eg.email_1@example.co.nz:/$ cd my-pictures/</b>
+                                                  eg.email_1@example.co.nz:/$ mkdir my-pictures
+                                                  eg.email_1@example.co.nz:/$ cd my-pictures/
                                                   eg.email_1@example.co.nz:/my-pictures$ put
-                                                    C:\Users\MYWINDOWSUSER\Pictures</b>
+                                                    C:\Users\MYWINDOWSUSER\Pictures
                                                   TRANSFERING
                                                   ||################################################################################||(1/1
                                                   MB: 100.00 %)
 
 
 
-                                                  eg.email_1@example.co.nz:/my-pictures$ pwd</b>
+                                                  eg.email_1@example.co.nz:/my-pictures$ pwd
                                                   /my-pictures
 
 
 
-                                                  eg.email_1@example.co.nz:/my-pictures$ ls</b>
+                                                  eg.email_1@example.co.nz:/my-pictures$ ls
                                                   Pictures
 
 
 
-                                                  eg.email_1@example.co.nz:/my-pictures$ cd Pictures/</b>
-                                                  eg.email_1@example.co.nz:/my-pictures/my-pictures$ ls</b>
+                                                  eg.email_1@example.co.nz:/my-pictures$ cd Pictures/
+                                                  eg.email_1@example.co.nz:/my-pictures/my-pictures$ ls
                                                   Camera Roll
                                                   Feedback
                                                   Saved Pictures
@@ -1883,13 +1883,13 @@ Display Options:</b>
 
 
 
-                                                  eg.email_1@example.co.nz:/my-pictures/my-pictures$ pwd</b>
+                                                  eg.email_1@example.co.nz:/my-pictures/my-pictures$ pwd
                                                   /my-pictures/Pictures
 
 
 
-                                                  eg.email_1@example.co.nz:/my-pictures/my-pictures$ cd /</b>
-                                                  eg.email_1@example.co.nz:/$ du my-pictures/</b>
+                                                  eg.email_1@example.co.nz:/my-pictures/my-pictures$ cd /
+                                                  eg.email_1@example.co.nz:/$ du my-pictures/
                                                   FILENAME SIZE
                                                   my-pictures: 1376143
 
@@ -1901,12 +1901,12 @@ Display Options:</b>
 
 
 
-                                                  eg.email_1@example.co.nz:/$ logout</b>
+                                                  eg.email_1@example.co.nz:/$ logout
                                                   Logging out...
 
 
 
-                                                  MEGA CMD&gt;</b>
+                                                  MEGA CMD>
 
 
                                                   <hr>
@@ -1918,24 +1918,24 @@ Display Options:</b>
                                                   
 
 
-                                                  email_1@example.co.nz:/$ sync c:\Go go-backup/</b>
-                                                  email_1@example.co.nz:/$ sync</b>
+                                                  email_1@example.co.nz:/$ sync c:\Go go-backup/
+                                                  email_1@example.co.nz:/$ sync
                                                   ID LOCALPATH REMOTEPATH ActState SyncState SIZE FILES DIRS
                                                   0 \\?\c:\Go /go-backup InitScan Syncing 119.13 KB 10 97 
-                                                  email_1@example.co.nz:/$ sync</b>
+                                                  email_1@example.co.nz:/$ sync
                                                   ID LOCALPATH REMOTEPATH ActState SyncState SIZE FILES DIRS
                                                   0 \\?\c:\Go /go-backup InitScan Syncing 61.22 MB 1252 463
-                                                  email_1@example.co.nz:/$ sync</b>
+                                                  email_1@example.co.nz:/$ sync
                                                   ID LOCALPATH REMOTEPATH ActState SyncState SIZE FILES DIRS
                                                   0 \\?\c:\Go /go-backup InitScan Syncing 232.94 MB 4942 773 
-                                                  email_1@example.co.nz:/$ sync</b>
+                                                  email_1@example.co.nz:/$ sync
                                                   ID LOCALPATH REMOTEPATH ActState SyncState SIZE FILES DIRS
                                                   0 \\?\c:\Go /go-backup Active Synced 285.91 MB 7710 1003
 
 
 
                                                   [back in MEGAcmd- update has been applied to MEGA already] 
-                                                  email_1@example.co.nz:/$ sync</b>
+                                                  email_1@example.co.nz:/$ sync
                                                   ID LOCALPATH REMOTEPATH ActState SyncState SIZE FILES DIRS
                                                   0 \\?\c:\Go /go-backup Active Synced 268.53 MB 7306 961
 
@@ -1950,19 +1950,19 @@ Display Options:</b>
 
 
                                                   eg.email@example.co.nz:/$ backup c:/cmake /cmake-backup
-                                                    --period="0 0 4 * * *" --num-backups=3</b>
+                                                    --period="0 0 4 * * *" --num-backups=3
                                                   Backup established: c:/cmake into /cmake-backup period="0 0 4 * * *"
                                                   Number-of-Backups=3
 
 
 
-                                                  eg.email@example.co.nz:/$ backup</b>
+                                                  eg.email@example.co.nz:/$ backup
                                                   TAG LOCALPATH REMOTEPARENTPATH STATUS
                                                   166 \\?\c:\cmake /cmake-backup ONGOING
 
 
 
-                                                  eg.email@example.co.nz:/$ backup -h</b>
+                                                  eg.email@example.co.nz:/$ backup -h
                                                   TAG LOCALPATH REMOTEPARENTPATH STATUS
                                                   166 \\?\c:\cmake /cmake-backup ONGOING
                                                   -- SAVED BACKUPS --
@@ -1971,7 +1971,7 @@ Display Options:</b>
 
 
 
-                                                  eg.email@example.co.nz:/$</b>
+                                                  eg.email@example.co.nz:/$
 
 
                                                   <hr>
@@ -1983,24 +1983,24 @@ Display Options:</b>
                                                   
 
 
-                                                  eg.email@example.co.nz:/$ webdav myfile.tif --port=1024</b>
+                                                  eg.email@example.co.nz:/$ webdav myfile.tif --port=1024
                                                   Serving via webdav myfile.tif:
                                                   http://127.0.0.1:1024/5mYHQT4B/myfile.tif
 
 
 
-                                                  eg.email@example.co.nz:/$ webdav</b>
+                                                  eg.email@example.co.nz:/$ webdav
                                                   WEBDAV SERVED LOCATIONS:
                                                   /myfile.tif: http://127.0.0.1:1024/5mYHQT4B/myfile.tif
 
 
 
-                                                  eg.email@example.co.nz:/$ webdav -d myfile.tif</b>
+                                                  eg.email@example.co.nz:/$ webdav -d myfile.tif
                                                   myfile.tif no longer served via webdav
 
 
 
-                                                  eg.email@example.co.nz:/$</b>
+                                                  eg.email@example.co.nz:/$
 
 
                                                   <hr>
@@ -2012,7 +2012,7 @@ Display Options:</b>
                                                   
 
 
-                                                  eg.email_1@example.co.nz:/$ export -a Pictures/</b>
+                                                  eg.email_1@example.co.nz:/$ export -a Pictures/
                                                   MEGA respects the copyrights of others and requires that users of the
                                                   MEGA cloud service comply with the laws of copyright.
                                                   You are strictly prohibited from using the MEGA cloud service to
@@ -2028,13 +2028,13 @@ Display Options:</b>
 
 
 
-                                                  eg.email_1@example.co.nz:/$ export</b>
+                                                  eg.email_1@example.co.nz:/$ export
                                                   Pictures (folder, shared as exported permanent folder link:
                                                   https://mega.nz/#F!iaZlEBIL!mQD3rFuJhKov0sco-6s9xg)
 
 
 
-                                                  eg.email_1@example.co.nz:/$ logout --keep-session</b>
+                                                  eg.email_1@example.co.nz:/$ logout --keep-session
                                                   Logging out...
                                                   Session closed but not deleted. Warning: it will be restored the next
                                                   time you execute the application. Execute "logout" to delete the
@@ -2044,7 +2044,7 @@ Display Options:</b>
 
 
 
-                                                  MEGA CMD&gt; login eg.email_2@example.co.nz</b>
+                                                  MEGA CMD> login eg.email_2@example.co.nz
                                                   Password:
                                                   [API:info: 01:55:04] Fetching nodes ...
                                                   [API:info: 01:55:05] Loading transfers from local cache
@@ -2052,25 +2052,25 @@ Display Options:</b>
 
 
 
-                                                  MEGA CMD&gt;</b>
-                                                  eg.email_2@example.co.nz:/$ ls</b>
+                                                  MEGA CMD>
+                                                  eg.email_2@example.co.nz:/$ ls
                                                   Welcome to MEGA.pdf
 
 
 
                                                   eg.email_2@example.co.nz:/$ import
-                                                    https://mega.nz/#F!iaZlEBIL!mQD3rFuJhKov0sco-6s9xg</b>
+                                                    https://mega.nz/#F!iaZlEBIL!mQD3rFuJhKov0sco-6s9xg
                                                   Imported folder complete: /Pictures
 
 
 
-                                                  eg.email_2@example.co.nz:/$ ls</b>
+                                                  eg.email_2@example.co.nz:/$ ls
                                                   Pictures
                                                   Welcome to MEGA.pdf
 
 
 
-                                                  eg.email_2@example.co.nz:/$ ls Pictures/</b>
+                                                  eg.email_2@example.co.nz:/$ ls Pictures/
                                                   Camera Roll
                                                   Feedback
                                                   Saved Pictures
@@ -2080,38 +2080,38 @@ Display Options:</b>
 
 
 
-                                                  eg.email_2@example.co.nz:/$ logout</b>
+                                                  eg.email_2@example.co.nz:/$ logout
                                                   Logging out...
 
 
 
-                                                  eg.email_2@example.co.nz:/$</b>
+                                                  eg.email_2@example.co.nz:/$
 
 
 
-                                                  MEGA CMD&gt; login
-                                                    ARo7aiLAxK-jseOdVBYhj285Twb06ivWsFmT4XAnkTsiaDRRbm5oYS1zRm-V3I0FHHOvwj7P2RPvrSw_</b>
+                                                  MEGA CMD> login
+                                                    ARo7aiLAxK-jseOdVBYhj285Twb06ivWsFmT4XAnkTsiaDRRbm5oYS1zRm-V3I0FHHOvwj7P2RPvrSw_
 
 
 
-                                                  eg.email_1@example.co.nz:/$ export</b>
+                                                  eg.email_1@example.co.nz:/$ export
                                                   Pictures (folder, shared as exported permanent folder link:
                                                   https://mega.nz/#F!iaZlEBIL!mQD3rFuJhKov0sco-6s9xg)
 
 
 
-                                                  eg.email_1@example.co.nz:/$ export -d Pictures/</b>
+                                                  eg.email_1@example.co.nz:/$ export -d Pictures/
                                                   Disabled export: /Pictures
 
 
 
-                                                  eg.email_1@example.co.nz:/$ export</b>
+                                                  eg.email_1@example.co.nz:/$ export
                                                   Couldn't find anything exported below current folder. Use -a to
                                                   export it
 
 
 
-                                                  eg.email_1@example.co.nz:/$</b>
+                                                  eg.email_1@example.co.nz:/$
 
 
                                                   transfers example
@@ -2119,7 +2119,7 @@ Display Options:</b>
                                                   
 
 
-                                                  eg.email@example.co.nz:/tmp-test/Mega.dir$ transfers</b>
+                                                  eg.email@example.co.nz:/tmp-test/Mega.dir$ transfers
                                                   DIR/SYNC TAG SOURCEPATH DESTINYPATH PROGRESS STATE
                                                   U 17361 \\?\C:\Users\ME\...ebug\megaapi.obj
                                                   /tmp-test/Mega.dir/Mega.dir/Debug 100.00% of 2016.62 KB ACTIVE
@@ -2145,17 +2145,17 @@ Display Options:</b>
 
 
 
-                                                  eg.email@example.co.nz:/tmp-test/Mega.dir$ transfers -p 17367</b>
+                                                  eg.email@example.co.nz:/tmp-test/Mega.dir$ transfers -p 17367
                                                   Transfer 17367 paused successfully.
 
 
 
-                                                  eg.email@example.co.nz:/tmp-test/Mega.dir$ transfers -c 17370</b>
+                                                  eg.email@example.co.nz:/tmp-test/Mega.dir$ transfers -c 17370
                                                   Transfer 17370 cancelled successfully.
 
 
 
-                                                  eg.email@example.co.nz:/tmp-test/Mega.dir$ transfers</b>
+                                                  eg.email@example.co.nz:/tmp-test/Mega.dir$ transfers
                                                   DIR/SYNC TAG SOURCEPATH DESTINYPATH PROGRESS STATE
                                                   U 17362 \\?\C:\Users\ME\...megaapi_impl.obj
                                                   /tmp-test/Mega.dir/Mega.dir/Debug 96.32% of 13.85 MB ACTIVE
@@ -2181,4 +2181,4 @@ Display Options:</b>
 
 
 
-                                                  eg.email@example.co.nz:/tmp-test/Mega.dir$</b>
+                                                  eg.email@example.co.nz:/tmp-test/Mega.dir$

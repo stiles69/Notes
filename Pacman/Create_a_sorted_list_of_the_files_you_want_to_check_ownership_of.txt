@@ -10,4 +10,4 @@ Created Sunday 06 May 2018
 
 
 
-find /etc /opt /usr | sort &gt; all_files.txt</b>
+find /etc /opt /usr | sort > all_files.txt

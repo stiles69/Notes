@@ -12,7 +12,7 @@ usage="$(basename "$0") [-h] [-s n] -- program to calculate the answer to life, 
 
 
 where:
-<div style='padding-left: 30pt'>
+
 	-h show this help text
 	-s set the seed value (default: 42)"
 
@@ -22,20 +22,20 @@ where:
 	seed=42
 	while getopts ':hs:' option; do
 	case "$option" in
-	<div style='padding-left: 30pt'>
+	
 		h) echo "$usage"
 		exit
 		;;
 		s) seed=$OPTARG
 		;;
-		:) printf "missing argument for -%s\n" "$OPTARG" &gt;&amp;2
-		echo "$usage" &gt;&amp;2
+		:) printf "missing argument for -%s\n" "$OPTARG" >&amp;2
+		echo "$usage" >&amp;2
 		exit 1
 		;;
 
-		\?) printf "illegal option: -%s\n" "$OPTARG" &gt;&amp;2
-		<div style='padding-left: 30pt'>
-			echo "$usage" &gt;&amp;2
+		\?) printf "illegal option: -%s\n" "$OPTARG" >&amp;2
+		
+			echo "$usage" >&amp;2
 			exit 1
 			;;
 

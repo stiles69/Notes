@@ -11,14 +11,14 @@ Created Thursday 25 January 2018
 
 
 To Use ID File:
-sudo sshfs -o allow_other,IdentityFile=~/.ssh/id_rsa brettsalemink@10.0.0.6:/ /mnt/Stiles</b>
+sudo sshfs -o allow_other,IdentityFile=~/.ssh/id_rsa brettsalemink@10.0.0.6:/ /mnt/Stiles
 
 
 
 To access and/or to see the remote file system, run:
-sudo -s</b>
-cd /mnt/server1</b>
-ls -l</b>
+sudo -s
+cd /mnt/server1
+ls -l
 
 
 

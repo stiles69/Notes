@@ -14,9 +14,9 @@ btrfs filesystem defragment -calg command, where alg is either zlib, lzo or zstd
 
 
 
-# btrfs filesystem defragment -r -v -clzo /</b>
+# btrfs filesystem defragment -r -v -clzo /
 
 
 
 To enable compression when installing Arch to an empty Btrfs partition, use the compress option when mounting the file
-system: mount -o compress=lzo /dev/sdxY /mnt/</b>
+system: mount -o compress=lzo /dev/sdxY /mnt/

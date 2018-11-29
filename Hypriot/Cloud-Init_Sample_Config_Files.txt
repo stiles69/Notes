@@ -33,6 +33,6 @@ Quick installation:
 
 
 $ flash -u your-cloud-init.yml
-    https://github.com/hypriot/image-builder-rpi/releases/download/v1.8.0/hypriotos-rpi-v1.8.0.img.zip</b>
-$ ssh pirate@black-pearl.local</b>
+    https://github.com/hypriot/image-builder-rpi/releases/download/v1.8.0/hypriotos-rpi-v1.8.0.img.zip
+$ ssh pirate@black-pearl.local
 login with username "pirate", password "hypriot"

@@ -10,9 +10,9 @@ Created Saturday 12 May 2018
 
 
 
-ffmpeg -i &lt;source&gt; -c:v libvpx-vp9 -b:v 1000K -threads 4 -speed 1 \</b>
- -tile-columns 6 -frame-parallel 1 -auto-alt-ref 1 -lag-in-frames 25 \</b>
- -c:a libopus -b:a 64k -f webm out.webm</b>
+ffmpeg -i <source> -c:v libvpx-vp9 -b:v 1000K -threads 4 -speed 1 \
+ -tile-columns 6 -frame-parallel 1 -auto-alt-ref 1 -lag-in-frames 25 \
+ -c:a libopus -b:a 64k -f webm out.webm
 
 
 
@@ -34,7 +34,7 @@ Most of the current VP9 decoders use tile-based, multi-threaded decoding. In ord
 
 
 
-Setting auto-alt-ref and lag-in-frames &gt;= 12 will turn on VP9's alt-ref frames, a VP9 feature that enhances
+Setting auto-alt-ref and lag-in-frames >= 12 will turn on VP9's alt-ref frames, a VP9 feature that enhances
     quality.
 
 
@@ -48,7 +48,7 @@ speed 1 is a good speed vs. quality compromise. Produces output quality typicall
 
 
 
-Multi-threaded encoding may be used if -threads &gt; 1 and -tile-columns &gt; 0.
+Multi-threaded encoding may be used if -threads > 1 and -tile-columns > 0.
 
 
 DASH Recommended Settings
@@ -60,9 +60,9 @@ Best Quality (Slowest) Recommended Settings
 
 
 
-ffmpeg -i &lt;source&gt; -c:v libvpx-vp9 -b:v 1000K -threads 4 -speed 0 \</b>
- -tile-columns 0 -frame-parallel 0 -auto-alt-ref 1 -lag-in-frames 25 \</b>
- -g 9999 -aq-mode 0 -c:a libopus -b:a 64k -f webm out.webm</b>
+ffmpeg -i <source> -c:v libvpx-vp9 -b:v 1000K -threads 4 -speed 0 \
+ -tile-columns 0 -frame-parallel 0 -auto-alt-ref 1 -lag-in-frames 25 \
+ -g 9999 -aq-mode 0 -c:a libopus -b:a 64k -f webm out.webm
 
 
 
@@ -73,8 +73,8 @@ tile-columns 0, frame-parallel 0: Turning off tile-columns and frame-parallel sh
 Constant Quality Recommended Settings
 
 
-ffmpeg -i &lt;source&gt; -c:v libvpx -vp9 -b:v 0 -crf 33 -threads 4 -speed 2 \</b>
- -tile-columns 6 -frame-parallel 1 -auto-alt-ref 1 -lag-in-frames 25 \</b>
- -c:a libopus -b:a 64k -f webm out.webm</b>
-crf is the quality value (0-63 for VP9). To trigger this mode, you must use a combination of crf &lt;q-value&gt; and
+ffmpeg -i <source> -c:v libvpx -vp9 -b:v 0 -crf 33 -threads 4 -speed 2 \
+ -tile-columns 6 -frame-parallel 1 -auto-alt-ref 1 -lag-in-frames 25 \
+ -c:a libopus -b:a 64k -f webm out.webm
+crf is the quality value (0-63 for VP9). To trigger this mode, you must use a combination of crf <q-value> and
     b:v 0. bv MUST be 0.

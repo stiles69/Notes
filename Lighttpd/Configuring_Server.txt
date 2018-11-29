@@ -104,8 +104,8 @@ mod_fastcgi : FastCGI for perl/PHP etc
 mod_rewrite : Good for writing SEO urls
 mod_auth: Authntication (password protected directory)
 mimetype.assign = (
-“.pdf” =&gt; “application/pdf”,
-“.sig” =&gt; “application/pgp-signature”
+“.pdf” => “application/pdf”,
+“.sig” => “application/pgp-signature”
 ): Use to setup mimetype mapping.
 
 

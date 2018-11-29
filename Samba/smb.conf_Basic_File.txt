@@ -11,13 +11,13 @@ Created Tuesday 15 May 2018
 
 
 [global]
-<div style='padding-left: 60pt'>
+
     map to guest = Bad User
 
 
 
 
-    <div style='padding-left: 60pt'>
+    
         log file = /var/log/samba/%m
         log level = 1
 
@@ -27,7 +27,7 @@ Created Tuesday 15 May 2018
 
 
         [guest]
-        <div style='padding-left: 60pt'>
+        
             # This share allows anonymous (guest) access
             # without authentication!
             path = /srv/samba/guest/
@@ -38,7 +38,7 @@ Created Tuesday 15 May 2018
 
 
             [demo]
-            <div style='padding-left: 60pt'>
+            
                 # This share requires authentication to access
                 path = /srv/samba/demo/
                 read only = no

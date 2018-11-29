@@ -10,4 +10,4 @@ Created Tuesday 15 May 2018
 
 
 
-# sudo groupdel groupname</b>
+# sudo groupdel groupname

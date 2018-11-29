@@ -10,4 +10,4 @@ Created Monday 22 January 2018
 
 
 
-ffmpeg -i LostInTranslation.mkv -vcodec copy -acodec copy LostInTranslation.mp4</b>
+ffmpeg -i LostInTranslation.mkv -vcodec copy -acodec copy LostInTranslation.mp4

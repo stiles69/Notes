@@ -14,7 +14,7 @@ Another way we can impact quality is to adjust the frame rate of the video using
 
 
 
-ffmpeg -i input.webm -c:a copy -c:v vp9 -r 30 output.mkv</b>
+ffmpeg -i input.webm -c:a copy -c:v vp9 -r 30 output.mkv
 
 
 

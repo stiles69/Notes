@@ -1,17 +1,17 @@
 ====== Disk ======
 
 Yubikey Make New
-	Master Key</li>
+	Master Key
 
-Disk</b>
-	<ul>
+Disk
+	
 		
-	</ul>
-</li>
+	
 
-	</ul>
 
-	<div id="content">
+	
+
+	
 		Disk <a name='Disk'>
 
 			Created Wednesday 03 October 2018

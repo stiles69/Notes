@@ -13,13 +13,13 @@ Created Thursday 7 June 2018
 # FAQ (Frequently Asked Questions)
 ## What boards/OSes does PiVPN support?
 PiVPN runs at least on the following boards:
-<ul>
-	Raspberry Pi 1/2/3 running Raspbian Jessie, Raspbian Jessie Lite.</li>
+
+	Raspberry Pi 1/2/3 running Raspbian Jessie, Raspbian Jessie Lite.
 	All SBC's running DietPi. This is currently: Raspberry Pi's (all models), Odroid C1, Odroid C2 (arm64), Odroid
 		XU3/4, Pine A64, NanoPi NEO, NanoPi NEO Air, NanoPi M1, NanoPi M2/T2, NanoPi M3/T3, Banana Pi Pro Banana Pi M2+,
-		OrangePi PC and OrangePi One</li>
-	Most servers running a Debian or Ubuntu based distro.</li>
-</ul>
+		OrangePi PC and OrangePi One
+	Most servers running a Debian or Ubuntu based distro.
+
 
 
 
@@ -31,7 +31,7 @@ Yes. To change the hostname or IP address, you will need to change `/etc/openvpn
 
 ## My ISP doesn't give me a static external IP address, so my servers IP address keeps changing!
 You will need a dynamic DNS service and a hostname. If your IP address changes, your hostname will then automatically
-point to the new IP address. Some free dynamic DNS services are &lt;&gt;.
+point to the new IP address. Some free dynamic DNS services are <>.
 
 
 

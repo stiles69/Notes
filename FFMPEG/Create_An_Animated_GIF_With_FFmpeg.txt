@@ -16,7 +16,7 @@ Using the -an flag, similar to what we did above, is better than creating an ani
 
 
 
-ffmpeg -i input.mkv output.gif</b>
+ffmpeg -i input.mkv output.gif
 
 
 

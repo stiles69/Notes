@@ -11,7 +11,7 @@ Created Monday 22 January 2018
 
 
 ffmpeg -f v4l2 -framerate 20 -video_size 320x232 -i /dev/video0 -c:v libx264 -preset veryfast -maxrate 3000k
-  -bufsize 10000k -vf "format=yuvj422p" output.mp4</b>
+  -bufsize 10000k -vf "format=yuvj422p" output.mp4
 
 
 
@@ -58,7 +58,7 @@ compression_quality (int) : min=50 max=87 step=1 default=75 value=75
 
 
 ffmpeg -f v4l2 -i /dev/video0 \
-<div style='padding-left: 30pt'>
+
   -f alsa -i hw:0 \
   -map 0:0 \
   -c:v libvpx-vp9 \
@@ -111,7 +111,7 @@ ffmpeg -f v4l2 -i /dev/video0 \
 
 
 
-  v4l2-ctl -c &lt;option&gt;=&lt;value&gt;
+  v4l2-ctl -c <option>=<value>
 
 
 

@@ -16,7 +16,7 @@ and everything goes to the background with one command.
 
 
 
-nohup command &amp;&gt;/dev/null &amp;
+nohup command &amp;>/dev/null &amp;
 
 
 
@@ -64,7 +64,7 @@ redirecting the command to /dev/null.
 
 
 
-command &amp;&gt;/dev/null &amp;
+command &amp;>/dev/null &amp;
 
 
 

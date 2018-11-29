@@ -10,4 +10,4 @@ Created Tuesday 13 February 2018
 
 
 
-pacman -R package_name</b>
+pacman -R package_name

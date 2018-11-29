@@ -14,7 +14,7 @@ you install the necessary dependencies
 
 
 
-npm install -D node-sass sass-loader</b>
+npm install -D node-sass sass-loader
 
 
 
@@ -22,12 +22,12 @@ for global styles, simply import the file into main.js:
 
 
 
-import './styles/my-styles.scss'</b>
+import './styles/my-styles.scss'
 
 
 
-in .vue files, add the lang to the &lt;style&gt; element.
+in .vue files, add the lang to the <style> element.
 
 
 
-&lt;style lang="scss"&gt;</b>
+<style lang="scss">

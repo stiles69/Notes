@@ -10,4 +10,4 @@ Created Saturday 13 October 2018
 
 
 
-sudo apt-get install notify-osd</b>
+sudo apt-get install notify-osd

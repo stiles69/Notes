@@ -10,7 +10,7 @@ Created Wednesday 09 May 2018
 
 
 
-encfs ~/.name ~/name</b>
+encfs ~/.name ~/name
 
 
 

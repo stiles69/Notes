@@ -52,15 +52,15 @@ Install cli-real-favicon:
 npm install -g cli-real-favicon
 Create a file named faviconDescription.json and populate it with:
 {
-<div style='padding-left: 30pt'>
+
     "masterPicture": "TODO: Path to your master picture",
     "iconsPath": "/",
     "design": {
 
-    <div style='padding-left: 60pt'>
+    
         "ios": {
 
-        <div style='padding-left: 90pt'>
+        
             "pictureAspect": "noChange",
             "assets": {
 
@@ -70,15 +70,15 @@ Create a file named faviconDescription.json and populate it with:
                 "precomposedIcons": false,
                 "declareOnlyDefaultIcon": true
 
-                <div style='padding-left: 90pt'>
+                
                     }
 
-                    <div style='padding-left: 60pt'>
+                    
                         },
                         "desktopBrowser": {},
                         "windows": {
 
-                        <div style='padding-left: 90pt'>
+                        
                             "pictureAspect": "noChange",
                             "backgroundColor": "#ffc40d",
                             "onConflict": "override",
@@ -97,14 +97,14 @@ Create a file named faviconDescription.json and populate it with:
                                     <div style='padding-left: 120pt'>
                                         }
 
-                                        <div style='padding-left: 90pt'>
+                                        
                                             }
 
-                                            <div style='padding-left: 60pt'>
+                                            
                                                 },
                                                 "androidChrome": {
 
-                                                <div style='padding-left: 90pt'>
+                                                
                                                     "pictureAspect": "noChange",
                                                     "themeColor": "#ffffff",
                                                     "manifest": {
@@ -115,7 +115,7 @@ Create a file named faviconDescription.json and populate it with:
                                                         "onConflict": "override",
                                                         "declared": true
 
-                                                        <div style='padding-left: 90pt'>
+                                                        
                                                             },
                                                             "assets": {
 
@@ -123,26 +123,26 @@ Create a file named faviconDescription.json and populate it with:
                                                                 "legacyIcon": false,
                                                                 "lowResolutionIcons": false
 
-                                                                <div style='padding-left: 90pt'>
+                                                                
                                                                     }
 
-                                                                    <div style='padding-left: 60pt'>
+                                                                    
                                                                         },
                                                                         "safariPinnedTab": {
 
-                                                                        <div style='padding-left: 90pt'>
+                                                                        
                                                                             "pictureAspect": "blackAndWhite",
                                                                             "threshold": 50,
                                                                             "themeColor": "#5bbad5"
 
-                                                                            <div style='padding-left: 60pt'>
+                                                                            
                                                                                 }
 
-                                                                                <div style='padding-left: 30pt'>
+                                                                                
                                                                                     },
                                                                                     "settings": {
 
-                                                                                    <div style='padding-left: 60pt'>
+                                                                                    
                                                                                         "compression": 3,
                                                                                         "scalingAlgorithm": "Mitchell",
                                                                                         "errorOnImageTooSmall": false,
@@ -150,16 +150,16 @@ Create a file named faviconDescription.json and populate it with:
                                                                                         "htmlCodeFile": false,
                                                                                         "usePathAsIs": false
 
-                                                                                        <div style='padding-left: 30pt'>
+                                                                                        
                                                                                             },
                                                                                             "versioning": {
 
-                                                                                            <div style='padding-left: 60pt'>
+                                                                                            
                                                                                                 "paramName": "v",
                                                                                                 "paramValue":
                                                                                                 "Jy7wJm0d5k"
 
-                                                                                                <div style='padding-left: 30pt'>
+                                                                                                
                                                                                                     }
 
                                                                                                     }

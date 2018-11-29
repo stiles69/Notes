@@ -1,9 +1,19 @@
-====== Creating a FSTAB Entry ====== Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4 <img src="https://storage.googleapis.com/stiles-images/StilesLogo.png"
- alt="Stiles Logo" /> Creating a FSTAB Entry Created Saturday 17 February 2018
-<u>Volumes</u> /dev/sdc? /path/to/mnt/point btrfs defaults01</b> Do not setup compress on the whole
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== Creating a FSTAB Entry ====== Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4 ======
+Creating a FSTAB Entry 
+Created Saturday 17 February 2018
+Volumes
+ /dev/sdc? /path/to/mnt/point btrfs defaults
+01 Do not setup compress on the whole
 	device, instead use compress=lzo for subvolumes you want to compress.
-<u>Subvolumes</u> /dev/sdc? /Path/To/Mnt/Pointbtrfs defaults,compress=lzo,subvolid=?01</b>
+Subvolumes 
+/dev/sdc1 [[/Path/To/Mnt/Point]]	btrfs defaults,compress=lzo,subvolid=257	0		0
+
 To get the subvolid you need to manually mount main btrfs partition first then get the subvoid's with the following
-command: $ btrfs subvolume list -p /path/to/mount/</b>
-It will return something like: ID 257 gen 378 parent 5 top level 5 path Media ID 258 gen
-	356 parent 5 top level 5 path Data
+command: 
+$ btrfs subvolume list -p /path/to/mount/
+It will return something like: 			 	ID 257 gen 378 parent 5 top level 5 path Data
+							  				ID 258 gen 356 parent 5 top level 5 path Media
+

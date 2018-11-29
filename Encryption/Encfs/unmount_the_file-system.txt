@@ -10,4 +10,4 @@ Created Wednesday 09 May 2018
 
 
 
-fusermount -u ~/name</b>
+fusermount -u ~/name

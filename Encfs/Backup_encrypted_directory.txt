@@ -23,5 +23,5 @@ location to encfs via the ENCFS6_CONFIG environment variable. For the #Usage exa
 
 
 
-$ mv ~/.name/encfs6.xml ~/.</b>
-$ ENCFS6_CONFIG=~/encfs6.xml encfs ~/.name ~/name</b>
+$ mv ~/.name/encfs6.xml ~/.
+$ ENCFS6_CONFIG=~/encfs6.xml encfs ~/.name ~/name
