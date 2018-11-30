@@ -9,5 +9,7 @@ Created Friday 30 November 2018
 **--all** //Gives all data//
 **/dev/sdb** //Must specify which device you want to health info//
 
+**GSmartControl** is gui version of smartctl
+
 Also see:
 [[../Check_For_Badblocks.txt|Check For Badblocks]]
