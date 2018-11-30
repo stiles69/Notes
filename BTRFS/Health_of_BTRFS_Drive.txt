@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-11-30T12:37:00-06:00
+
+====== Health of BTRFS Drive ======
+Created Friday 30 November 2018
+
+=== To get information of a volume: ===
+**# sudo btrfs device stats /MountPoint**
+//Will give plenty of hints on the state of the filesystem//
+
+=== For an unmounted volume: ===
+**# sudo btrfs check --repair /dev/TheDevice**
+//Will check and repair the filesystem//
