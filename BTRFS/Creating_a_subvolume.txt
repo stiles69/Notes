@@ -3,9 +3,6 @@ Wiki-Format: zim 0.4
 
 ====== Creating a subvolume ======
 
-====== Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4 ======
-Created Saturday 17 February 2018
-
 **Creating a subvolume** 
 This will scan for btrfs filesystems to get the sd letter? btrfs device scan /dev/sd?
 First mount the Main device 

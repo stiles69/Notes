@@ -1,13 +1,6 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
 ====== Deleting a subvolume ======
 
-Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
-
-
-Deleting a subvolume
-
-
-Created Saturday 17 February 2018
-
-
-
-# btrfs subvolume delete /path/to/subvolume
+**# btrfs subvolume delete /path/to/subvolume**

@@ -1,39 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
 ====== Help ======
 
-
-
-Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
-
-
-Help
-
-
-Created Sunday 27 May 2018
-
-
-
-    usage="$(basename "$0") [-h] [-s n] -- program to calculate the answer to life, the universe and everything
+{{{code: lang="sh" linenumbers="True"
+usage="$(basename "$0") [-h] [-s n] -- program to calculate the answer to life, the universe and everything
 
 where:
-    -h  show this help text
-    -s  set the seed value (default: 42)"
+	-h  show this help text
+	-s  set the seed value (default: 42)"
 
 seed=42
 while getopts ':hs:' option; do
   case "$option" in
-    h) echo "$usage"
-       exit
-       ;;
-    s) seed=$OPTARG
-       ;;
-    :) printf "missing argument for -%s\n" "$OPTARG" >&amp;2
-       echo "$usage" >&amp;2
-       exit 1
-       ;;
+	h) echo "$usage"
+	   exit
+	   ;;
+	s) seed=$OPTARG
+	   ;;
+	:) printf "missing argument for -%s\n" "$OPTARG" >&amp;2
+	   echo "$usage" >&amp;2
+	   exit 1
+	   ;;
    \?) printf "illegal option: -%s\n" "$OPTARG" >&amp;2
-       echo "$usage" >&amp;2
-       exit 1
-       ;;
+	   echo "$usage" >&amp;2
+	   exit 1
+	   ;;
   esac
 done
 shift $((OPTIND - 1))
+}}}
+
+

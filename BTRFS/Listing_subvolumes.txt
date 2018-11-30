@@ -1,13 +1,6 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
 ====== Listing subvolumes ======
 
-Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
-
-
-Listing subvolumes
-
-
-Created Saturday 17 February 2018
-
-
-
-# btrfs subvolume list -p path
+**# btrfs subvolume list -p path**

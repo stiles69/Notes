@@ -1,10 +1,4 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
 ====== Bash ======
-
-
-Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
-
-
-Bash
-
-
-Created Wednesday 23 May 2018

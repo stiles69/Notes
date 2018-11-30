@@ -1,17 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
 ====== disable copy-on-write on existing files in a directory ======
 
-Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
 
-
-disable copy-on-write on existing files in a directory
-
-
-Created Saturday 17 February 2018
-
-
-
-    $ mv /path/to/dir /path/to/dir_old
-$ mkdir /path/to/dir
-$ chattr +C /path/to/dir
-$ cp -a /path/to/dir_old/* /path/to/dir
-$ rm -rf /path/to/dir_old
+**$ mv /path/to/dir /path/to/dir_old**
+**$ mkdir /path/to/dir**
+**$ chattr +C /path/to/dir**
+**$ cp -a /path/to/dir_old/* /path/to/dir**
+**$ rm -rf /path/to/dir_old**

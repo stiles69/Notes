@@ -1,14 +1,5 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
 ====== Antergos ======
 
-Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
-
-
-Antergos
-
-
-Created Tuesday 20 March 2018
-
-
-
-+Share
-Antergos Public Folder

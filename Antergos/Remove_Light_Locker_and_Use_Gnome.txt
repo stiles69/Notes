@@ -1,37 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
 ====== Remove Light Locker and Use Gnome ======
 
-
-Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
-
-
-Remove Light Locker and Use Gnome
-
-
-Created Thursday 07 June 2018
-
-
-
-uninstall lightlocker
-
-
-
-sudo pacman -Rsc light-locker
-
-
+=== uninstall lightlocker ===
+**sudo pacman -Rsc light-locker**
 
 remove light-locker autostart settings:
 
+**rm ~/.config/autostart/screensaver-settings.desktop**
 
 
-rm ~/.config/autostart/screensaver-settings.desktop
-now use gnome-control-center for setup:
-0_1510061243817_Bildschirmfoto vom 2017-11-07 14-26-53.png
-
-
-
-[updates once a week] = [90% less problems]
-antergos:_rescue
-how to add system logs:
-wget http://bit.ly/2GCG9k2 &amp;&amp;
-sh 2GCG9k2
-:handshake: donate antergos

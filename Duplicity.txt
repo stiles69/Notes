@@ -1,17 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
 ====== Duplicity ======
 
 Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
 
-
-Duplicity
-
-
 Created Saturday 12 May 2018
 
 
-
-<a href="./Duplicity/Compare_the_latest_backup_with_the_current_files.html" title="+Compare the latest backup with the current files"
- class="page">+Compare the latest backup with the current files
+Compare the latest backup with the current files
 	<a href="./Duplicity/Destination_is_the_local_directory_usrlocalbackup..html" title="+Destination is the local directory usrlocalbackup."
 	 class="page">+Destination is the local directory usrlocalbackup.
 		+Duplicity via ftp

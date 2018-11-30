@@ -1,14 +1,5 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
 ====== BashScripts ======
-
-
-Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
-
-
-BashScripts
-
-
-Created Wednesday 23 May 2018
-
-
-
-+BashScripts List
+[[../BashScripts_List.txt]]
