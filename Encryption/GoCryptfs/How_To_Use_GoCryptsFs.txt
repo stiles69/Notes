@@ -1,8 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
 ====== How To Use GoCryptsFs ======
-
 Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
-
-
 
 Create and Mount Filesystem
 
