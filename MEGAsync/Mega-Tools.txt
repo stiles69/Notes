@@ -14,7 +14,7 @@ Install from AUR with packer.
 **packer -S megatools**
  
 
-Create Mega Account
+==== Create Mega Account ====
 Register a mega.nz account.
 
 **megareg --register --email user@email.com --name "Name" --password "***************"**
@@ -29,7 +29,7 @@ Replace IGwJmwtJHkTetRAC6pmibg==:d+RdmwAAAAAAAAAA0gAHCG==:kpG5wukvSBY with the s
 
  
 
-Configure Mega Tools
+==== Configure Mega Tools ====
 Create and open the configuration file.
 
 **nano ~/.megarc**
@@ -51,8 +51,9 @@ Set the configuration file permissions.
 
  
 
-=== Use Megatools ===
-__Sync local files to the cloud.__
+==== Use Megatools ====
+
+=== Sync local files to the cloud. ===
 
 **megacopy -l /mnt/virtual/pictures -r /Root --disable-previews -n**
 //Specify local directory to sync with -l option. Remote directory is similarly specified with -r option. Before executing the command it is prudent to see what actions will actually be performed by executing a dry run with -n option. For backup purposes previews are not particularly useful and can be disabled with --disable-previews option.//
@@ -61,22 +62,22 @@ __Sync local files to the cloud.__
 
  
 
-__List current files store in the cloud account.__
+=== List current files store in the cloud account. ===
 
 **megals**
  
 
-__Check account storage use.__
+=== Check account storage use. ===
 
 **megadf -h**
  
 
-__Run Mega Copy__
+=== Run Mega Copy ===
 Since in this case only a single directory owned by a single user is going to be synced, no multi user functionality is needed. A common user case may be backing up user home directories
 
  
 
-__Create a new systemd service.__
+=== Create a new systemd service. ===
 
 **nano ~/.config/systemd/user/mega.service**
  
@@ -98,13 +99,13 @@ WantedBy=multi-user.target
 
  
 
-__Start the Mega service.__
+=== Start the Mega service. ===
 
 **systemctl --user start mega**
  
 
-__Run Mega Copy on a Schedule__
-__Create a new systemd timer.__
+=== Run Mega Copy on a Schedule ===
+=== Create a new systemd timer. ===
 
 **nano ~/.config/systemd/user/mega.timer**
  
@@ -123,11 +124,11 @@ WantedBy=timers.target
 
 
 
-__Start the systemd timer.__
+=== Start the systemd timer. ===
 
 **systemctl --user start mega.timer**
  
 
-__Enable timer to run on boot.__
+=== Enable timer to run on boot. ===
 
 **systemctl --user enable mega.timer**
