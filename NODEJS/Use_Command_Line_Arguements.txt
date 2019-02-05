@@ -12,3 +12,12 @@ This returns:
 
 $ node server.js one two=three four
 ['node', '/home/server.js', 'one', 'two=three', 'four']
+
+Example:
+
+$ node yourscript.js banana monkey
+
+var program_name = process.argv[0]; //value will be "node"
+var script_path = process.argv[1]; //value will be "yourscript.js"
+var first_value = process.argv[2]; //value will be "banana"
+var second_value = process.argv[3]; //value will be "monkey"
