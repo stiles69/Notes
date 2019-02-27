@@ -5,6 +5,12 @@ Creation-Date: 2019-02-26 23:06:55-06:00
 ====== webpack starter basic ======
 Created Tue 26 February 2019
 
+===== Website =====
+https://github.com/stiles69/webpack-starter-basic
+
+(https://github.com/stiles69/webpack-starter-basic "Webpack Starter Basic")
+
+
 ====== Usage ======
 **git clone https://github.com/lifenautjoe/webpack-starter-basic PROJECT-NAME**
 
