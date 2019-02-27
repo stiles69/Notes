@@ -5,7 +5,7 @@ Creation-Date: 2019-02-26 23:06:55-06:00
 ====== webpack starter basic ======
 Created Tue 26 February 2019
 
-=== Usage ===
+====== Usage ======
 **git clone https://github.com/lifenautjoe/webpack-starter-basic PROJECT-NAME**
 
 **cd PROJECT-NAME**
@@ -14,16 +14,16 @@ Created Tue 26 February 2019
 
 **npm run kickstart**
 
-=== After the project has been kickstarted ===
+====== After the project has been kickstarted ======
 
-==== To start the development server ====
+====== To start the development server ======
 
 **npm start**
 
-==== To build for production ====
+====== To build for production ======
 
 **npm run build**
 
-==== To preview the production build ====
+====== To preview the production build ======
 
 **npm run preview**
