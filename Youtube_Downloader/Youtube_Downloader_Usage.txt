@@ -1,3 +1,6 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
 ====== Youtube Downloader Usage ======
 
 Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4
@@ -8,6 +11,8 @@ Youtube Downloader Usage
 
 Created Monday 02 April 2018
 
+=== To Correct Filenames ===
+ **-o '%(autonumber)s-%(title)s.%(ext)s'**
 
 
 youtube-dl -f [Number of filetype can be gotten by (youtube-dl -F [URL])] -o '%(autonumber)s-%(title)s.%(ext)s'
